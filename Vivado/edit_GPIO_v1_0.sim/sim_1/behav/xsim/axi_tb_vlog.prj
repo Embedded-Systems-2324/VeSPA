@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../GPIO_1_0/src/GPIO_PORT.v" \
+"../../../../GPIO_1_0/hdl/GPIO_v1_0.v" \
+"../../../../GPIO_1_0/hdl/GPIO_v1_0_S00_AXI.v" \
+"../../../../GPIO_1_0/src/axi_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
