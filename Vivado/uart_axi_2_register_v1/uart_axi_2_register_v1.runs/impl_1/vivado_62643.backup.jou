@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Mar  8 03:13:58 2024
+# Process ID: 62643
+# Current directory: /home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.runs/impl_1
+# Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.runs/impl_1/top.vdi
+# Journal file: /home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.runs/impl_1/vivado.jou
+# Running On: araujojLinux, OS: Linux, CPU Frequency: 3894.370 MHz, CPU Physical cores: 10, Host memory: 16363 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
