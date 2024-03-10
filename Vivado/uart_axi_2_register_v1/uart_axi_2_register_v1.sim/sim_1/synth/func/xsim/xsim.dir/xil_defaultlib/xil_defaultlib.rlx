@@ -1,6 +1,0 @@
-0.7
-2020.2
-May  7 2023
-15:10:42
-/home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.sim/sim_1/synth/func/xsim/control_tb_func_synth.v,1709917278,verilog,,/home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.srcs/sim_1/new/control_tb.v,,glbl;top;uartAxi;uart_axi_slave_0;uart_axi_slave_0_uart;uart_axi_slave_0_uart_axi_slave_v3_0;uart_axi_slave_0_uart_axi_slave_v3_0_S00_AXI;uart_axi_slave_0_uart_baudrate_generator;uart_axi_slave_0_uart_rx;uart_axi_slave_0_uart_tx,,,,,,,,
-/home/araujoj/Documents/VivadoProjects/uart_axi_2_register_v1/uart_axi_2_register_v1.srcs/sim_1/new/control_tb.v,1709917104,verilog,,,,control_tb,,,,,,,,

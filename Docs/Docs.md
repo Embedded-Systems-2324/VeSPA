@@ -3,15 +3,23 @@
 ## Word Documentation
 ***UART_AXI_Doc.docx***
 
-## Photos
+## Drawio
+Drawio files to edit and use in the report
+## Images
 
-### Logic Analyser
+### Doc Images
+Drawio images for use in the report
+
+### Tests Images
+Prints of tests carried out with the peripheral
+
+#### Logic Analyser
 - ***RxTx_a_la_ascii***: Sending a character "a" to the FPGA and transmitting it (ASCII representation)
 - ***RxTx_a_la_hex***: Sending a character "a" to the FPGA and transmitting it (HEX representation)
 - ***txStart_always_enable***: UART transmission always active and consequently, transmission of the character present in the transmission register, in this case an "a"
-### Terminal
+#### Terminal
 - ***RxTx_terminal***: Sending characters from "a" to "i" through the terminal, and receiving and transmitting them by the FPGA.
-### Simulation
+#### Simulation
 - ***Synthesis_sim***: UART Synthesis Simulation, where the UART transmission is active whenever there is a reception and then activates the transmission 3 times to demonstrate the sending of the character present in the transmission register
 
 ## Video

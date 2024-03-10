@@ -1,0 +1,22 @@
+transcript off
+onbreak {quit -force}
+onerror {quit -force}
+transcript on
+
+vlib work
+vmap -link {/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.cache/compile_simlib/riviera}
+vlib riviera/xil_defaultlib
+
+vlog -work xil_defaultlib  -incr -v2k5 -l xil_defaultlib \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/hdl/uart_axi_slave_v3_0_S00_AXI.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/hdl/uart_axi_slave_v3_0.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_baudrate_generator.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_rx.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_tx.v" \
+"../../../../uart_axi.gen/sources_1/ip/uart_axi_slave_0/sim/uart_axi_slave_0.v" \
+
+
+vlog -work xil_defaultlib \
+"glbl.v"
+

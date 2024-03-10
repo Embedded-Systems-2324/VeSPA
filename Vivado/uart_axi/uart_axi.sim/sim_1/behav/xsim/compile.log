@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/hdl/uart_axi_slave_v3_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_axi_slave_v3_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/hdl/uart_axi_slave_v3_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_axi_slave_v3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_baudrate_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_baudrate_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/src/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.gen/sources_1/ip/uart_axi_slave_0/sim/uart_axi_slave_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_axi_slave_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.srcs/sources_1/new/testUart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testUart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.srcs/sources_1/new/uartAxi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uartAxi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.srcs/sim_1/new/uartTb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uartTb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/araujoj/Documents/VivadoProjects/VeSPA/Vivado/uart_axi/uart_axi.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
