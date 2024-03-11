@@ -1,5 +1,5 @@
 # VeSPA SoC
-This repository is dedicated to the VeSPA (Very Small Processor Architecture) SoC (System-on-Chip) designed for the Embedded Systems 2023/2024  class.
+PS2
 
 ## Repository Layout
 On the main branch it is possible to find the latest working version of the VeSPA SoC.  Contributors must ensure the main branch is always a fully functional working copy. For testing changes to the VeSPA SoC, temporary branches can be created, changes can first be performed on this branches and later on merged back to the main branch.
