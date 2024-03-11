@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../AXI_Master_Demo.ip_user_files/bd/TestBlockDesign/ip/TestBlockDesign_rst_clk_wiz_100M_0/sim/TestBlockDesign_rst_clk_wiz_100M_0.vhd" \
+"../../../../AXI_Master_Demo.ip_user_files/bd/TestBlockDesign/ip/TestBlockDesign_axi_bram_ctrl_0_1/sim/TestBlockDesign_axi_bram_ctrl_0_1.vhd" \
+
+# Do not sort compile order
+nosort

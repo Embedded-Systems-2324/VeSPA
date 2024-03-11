@@ -1,0 +1,7 @@
+Running: xsim.dir/vespa_AXI_tb_behav/xsimk -simmode gui -wdb vespa_AXI_tb_behav.wdb -simrunnum 0 -socket 34267
+Design successfully loaded
+Design Loading Memory Usage: 25980 KB (Peak: 25988 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 115724 KB (Peak: 165248 KB)
+Simulation CPU Usage: 60 ms

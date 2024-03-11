@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.565197",
+   "Default View_TopLeft":"-117,-232",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_reset_rtl -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace portBus out_temp -pg 1 -lvl 7 -x 1840 -y 10 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 120 -y 140 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 410 -y 110 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1110 -y 160 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 6 -x 1680 -y 370 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -x 1410 -y 370 -defaultsOSRD
+preplace inst AXI4_Lite_Master_0 -pg 1 -lvl 3 -x 780 -y 120 -defaultsOSRD
+preplace netloc blk_mem_gen_0_rsta_busy 1 2 5 620 230 930J 30 NJ 30 NJ 30 1810
+preplace netloc blk_mem_gen_0_rstb_busy 1 2 5 630 0 NJ 0 NJ 0 NJ 0 1820
+preplace netloc clk_wiz_clk_out1 1 1 4 230 10 590 240 950 40 1270J
+preplace netloc clk_wiz_locked 1 1 1 N 150
+preplace netloc reset_rtl_1 1 0 2 20 70 220
+preplace netloc rst_clk_wiz_100M_interconnect_aresetn 1 2 5 600 10 N 10 N 10 N 10 N
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 2 3 610 250 960 390 NJ
+preplace netloc sys_clock_1 1 0 1 NJ 150
+preplace netloc AXI4_Lite_Master_0_M_AXI 1 3 1 N 100
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 5 1 N 360
+preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 5 1 N 380
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1260 160n
+levelinfo -pg 1 0 120 410 780 1110 1410 1680 1840
+pagesize -pg 1 -db -bbox -sgen -120 -10 2000 590
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_board_cnt":"3",
+   "da_bram_cntlr_cnt":"4"
+}
