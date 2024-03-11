@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ps2_axi.ip_user_files/bd/ps2_design/ipshared/0bca/hdl/ps2AXI_v1_0_PS2.v" \
+"../../../../ps2_axi.ip_user_files/bd/ps2_design/ipshared/0bca/src/ps2_new.v" \
+"../../../../ps2_axi.ip_user_files/bd/ps2_design/ipshared/0bca/hdl/ps2AXI_v1_0.v" \
+"../../../../ps2_axi.ip_user_files/bd/ps2_design/ip/ps2_design_ps2AXI_0_0/sim/ps2_design_ps2AXI_0_0.v" \
+"../../../../ps2_axi.ip_user_files/bd/ps2_design/sim/ps2_design.v" \
+"../../../../ps2_axi.srcs/sources_1/imports/hdl/ps2_design_wrapper.v" \
+"../../../../ps2_axi.srcs/sources_1/new/top_ps2.v" \
+"../../../../ps2_axi.srcs/sim_1/new/ps2_axi_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

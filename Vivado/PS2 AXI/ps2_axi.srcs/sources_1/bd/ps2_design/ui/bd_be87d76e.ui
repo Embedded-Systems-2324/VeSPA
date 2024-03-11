@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.933798",
+   "Default View_TopLeft":"-588,3",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port port-id_PS2C -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace port port-id_PS2D -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace port port-id_i_arvalid -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port port-id_o_rvalid -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD -left
+preplace port port-id_o_arready -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD -left
+preplace port port-id_i_rready -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_i_bready -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port port-id_o_bvalid -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD -left
+preplace port port-id_o_wready -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD -left
+preplace port port-id_i_wvalid -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_i_awvalid -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_o_awready -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD -left
+preplace portBus i_araddr -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace portBus i_arprot -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace portBus o_rdata -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD -left
+preplace portBus o_rresp -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD -left
+preplace portBus o_bresp -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD -left
+preplace portBus i_wstrb -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus i_wdata -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus i_awaddr -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus i_awprot -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace inst ps2AXI_0 -pg 1 -lvl 1 -x 140 -y 290 -defaultsOSRD
+preplace netloc PS2C_1 1 0 1 NJ 500
+preplace netloc PS2D_1 1 0 1 NJ 520
+preplace netloc clk_1 1 0 1 NJ 460
+preplace netloc i_arprot_1 1 0 1 NJ 320
+preplace netloc i_awaddr_1 1 0 1 NJ 80
+preplace netloc i_awprot_1 1 0 1 NJ 100
+preplace netloc i_awvalid_1 1 0 1 NJ 120
+preplace netloc i_bready_1 1 0 1 NJ 280
+preplace netloc i_rready_1 1 0 1 NJ 440
+preplace netloc i_wdata_1 1 0 1 NJ 160
+preplace netloc i_wstrb_1 1 0 1 NJ 180
+preplace netloc i_wvalid_1 1 0 1 NJ 200
+preplace netloc ps2AXI_0_ps2_arready 1 0 1 NJ 360
+preplace netloc ps2AXI_0_ps2_awready 1 0 1 NJ 140
+preplace netloc ps2AXI_0_ps2_bresp 1 0 1 NJ 240
+preplace netloc ps2AXI_0_ps2_bvalid 1 0 1 NJ 260
+preplace netloc ps2AXI_0_ps2_rdata 1 0 1 NJ 380
+preplace netloc ps2AXI_0_ps2_rresp 1 0 1 NJ 400
+preplace netloc ps2AXI_0_ps2_rvalid 1 0 1 NJ 420
+preplace netloc ps2AXI_0_ps2_wready 1 0 1 NJ 220
+preplace netloc read_address_1 1 0 1 NJ 300
+preplace netloc reset_1 1 0 1 NJ 480
+preplace netloc valid_address_1 1 0 1 NJ 340
+levelinfo -pg 1 0 140 260
+pagesize -pg 1 -db -bbox -sgen -150 0 260 580
+"
+}
+0

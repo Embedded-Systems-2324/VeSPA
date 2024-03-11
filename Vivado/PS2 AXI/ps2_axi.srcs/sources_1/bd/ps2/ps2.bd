@@ -1,0 +1,24 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../ps2_axi.gen/sources_1/bd/ps2",
+      "name": "ps2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "ps2AXI_0": ""
+    },
+    "components": {
+      "ps2AXI_0": {
+        "vlnv": "user.org:user:ps2AXI:1.0",
+        "xci_name": "ps2_ps2AXI_0_0",
+        "xci_path": "ip/ps2_ps2AXI_0_0_1/ps2_ps2AXI_0_0.xci",
+        "inst_hier_path": "ps2AXI_0"
+      }
+    }
+  }
+}

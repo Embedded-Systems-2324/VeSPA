@@ -1,0 +1,294 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4520D18046DDBF52",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../ps2_axi.gen/sources_1/bd/ps2_design",
+      "name": "ps2_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ps2AXI_0": ""
+    },
+    "ports": {
+      "reset": {
+        "direction": "I"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "ps2_design_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "PS2C": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "PS2D": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_araddr": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "i_arvalid": {
+        "direction": "I"
+      },
+      "o_rvalid": {
+        "direction": "O"
+      },
+      "i_arprot": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "o_arready": {
+        "direction": "O"
+      },
+      "o_rdata": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "o_rresp": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "i_rready": {
+        "direction": "I"
+      },
+      "i_bready": {
+        "direction": "I"
+      },
+      "o_bvalid": {
+        "direction": "O"
+      },
+      "o_bresp": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "o_wready": {
+        "direction": "O"
+      },
+      "i_wvalid": {
+        "direction": "I"
+      },
+      "i_wstrb": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "i_wdata": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "i_awaddr": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "i_awprot": {
+        "direction": "I",
+        "left": "2",
+        "right": "0"
+      },
+      "i_awvalid": {
+        "direction": "I"
+      },
+      "o_awready": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "ps2AXI_0": {
+        "vlnv": "user.org:user:ps2AXI:1.0",
+        "xci_name": "ps2_design_ps2AXI_0_0",
+        "xci_path": "ip/ps2_design_ps2AXI_0_0/ps2_design_ps2AXI_0_0.xci",
+        "inst_hier_path": "ps2AXI_0"
+      }
+    },
+    "nets": {
+      "PS2C_1": {
+        "ports": [
+          "PS2C",
+          "ps2AXI_0/PS2C"
+        ]
+      },
+      "PS2D_1": {
+        "ports": [
+          "PS2D",
+          "ps2AXI_0/PS2D"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "ps2AXI_0/ps2_aclk"
+        ]
+      },
+      "i_arprot_1": {
+        "ports": [
+          "i_arprot",
+          "ps2AXI_0/ps2_arprot"
+        ]
+      },
+      "i_awaddr_1": {
+        "ports": [
+          "i_awaddr",
+          "ps2AXI_0/ps2_awaddr"
+        ]
+      },
+      "i_awprot_1": {
+        "ports": [
+          "i_awprot",
+          "ps2AXI_0/ps2_awprot"
+        ]
+      },
+      "i_awvalid_1": {
+        "ports": [
+          "i_awvalid",
+          "ps2AXI_0/ps2_awvalid"
+        ]
+      },
+      "i_bready_1": {
+        "ports": [
+          "i_bready",
+          "ps2AXI_0/ps2_bready"
+        ]
+      },
+      "i_rready_1": {
+        "ports": [
+          "i_rready",
+          "ps2AXI_0/ps2_rready"
+        ]
+      },
+      "i_wdata_1": {
+        "ports": [
+          "i_wdata",
+          "ps2AXI_0/ps2_wdata"
+        ]
+      },
+      "i_wstrb_1": {
+        "ports": [
+          "i_wstrb",
+          "ps2AXI_0/ps2_wstrb"
+        ]
+      },
+      "i_wvalid_1": {
+        "ports": [
+          "i_wvalid",
+          "ps2AXI_0/ps2_wvalid"
+        ]
+      },
+      "ps2AXI_0_ps2_arready": {
+        "ports": [
+          "ps2AXI_0/ps2_arready",
+          "o_arready"
+        ]
+      },
+      "ps2AXI_0_ps2_awready": {
+        "ports": [
+          "ps2AXI_0/ps2_awready",
+          "o_awready"
+        ]
+      },
+      "ps2AXI_0_ps2_bresp": {
+        "ports": [
+          "ps2AXI_0/ps2_bresp",
+          "o_bresp"
+        ]
+      },
+      "ps2AXI_0_ps2_bvalid": {
+        "ports": [
+          "ps2AXI_0/ps2_bvalid",
+          "o_bvalid"
+        ]
+      },
+      "ps2AXI_0_ps2_rdata": {
+        "ports": [
+          "ps2AXI_0/ps2_rdata",
+          "o_rdata"
+        ]
+      },
+      "ps2AXI_0_ps2_rresp": {
+        "ports": [
+          "ps2AXI_0/ps2_rresp",
+          "o_rresp"
+        ]
+      },
+      "ps2AXI_0_ps2_rvalid": {
+        "ports": [
+          "ps2AXI_0/ps2_rvalid",
+          "o_rvalid"
+        ]
+      },
+      "ps2AXI_0_ps2_wready": {
+        "ports": [
+          "ps2AXI_0/ps2_wready",
+          "o_wready"
+        ]
+      },
+      "read_address_1": {
+        "ports": [
+          "i_araddr",
+          "ps2AXI_0/ps2_araddr"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "ps2AXI_0/ps2_aresetn"
+        ]
+      },
+      "valid_address_1": {
+        "ports": [
+          "i_arvalid",
+          "ps2AXI_0/ps2_arvalid"
+        ]
+      }
+    }
+  }
+}

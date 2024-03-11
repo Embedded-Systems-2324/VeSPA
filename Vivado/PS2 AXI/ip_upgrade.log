@@ -1,0 +1,226 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Mon Mar 11 11:54:06 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 22) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Sun Mar 10 16:56:32 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 19:45:03 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 18) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 04:37:32 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 04:32:32 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 04:30:10 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 14) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 04:27:04 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 12) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 04:21:49 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar  8 03:20:22 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 9) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Mar  6 14:03:40 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_design_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_design_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 7) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Mar  6 12:16:06 2024
+| Host         : tiago running 64-bit Ubuntu 23.04
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ps2_ps2AXI_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ps2_ps2AXI_0_0 (user.org:user:ps2AXI:1.0) from (Rev. 6) to (Rev. 7)
+

@@ -1,0 +1,167 @@
+
+*** Running vivado
+    with args -log top_ps2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_ps2.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_ps2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tiago/Documents'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/tiago/Documents' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/tiago/Documents/PS2 AXI/ps2_axi.runs/synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental {/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/utils_1/imports/synth_1/top_ps2.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/tiago/Documents/PS2 AXI/ps2_axi.srcs/utils_1/imports/synth_1/top_ps2.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_ps2 -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 33800
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2032.609 ; gain = 379.738 ; free physical = 5938 ; free virtual = 15198
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_ps2' [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ps2_design_wrapper' [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/imports/hdl/ps2_design_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ps2_design' [/home/tiago/Documents/PS2 AXI/ps2_axi.gen/sources_1/bd/ps2_design/synth/ps2_design.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ps2_design_ps2AXI_0_0' [/home/tiago/Documents/PS2 AXI/ps2_axi.runs/synth_1/.Xil/Vivado-33768-tiago/realtime/ps2_design_ps2AXI_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_design_ps2AXI_0_0' (0#1) [/home/tiago/Documents/PS2 AXI/ps2_axi.runs/synth_1/.Xil/Vivado-33768-tiago/realtime/ps2_design_ps2AXI_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_design' (0#1) [/home/tiago/Documents/PS2 AXI/ps2_axi.gen/sources_1/bd/ps2_design/synth/ps2_design.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_design_wrapper' (0#1) [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/imports/hdl/ps2_design_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'top_ps2' (0#1) [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:23]
+WARNING: [Synth 8-6014] Unused sequential element i_awvalid_reg was removed.  [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:78]
+WARNING: [Synth 8-6014] Unused sequential element i_wvalid_reg was removed.  [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:79]
+WARNING: [Synth 8-6014] Unused sequential element i_rready_reg was removed.  [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:80]
+WARNING: [Synth 8-6014] Unused sequential element i_bready_reg was removed.  [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:81]
+WARNING: [Synth 8-3848] Net i_arprot in module/entity top_ps2 does not have driver. [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:34]
+WARNING: [Synth 8-3848] Net i_awprot in module/entity top_ps2 does not have driver. [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/sources_1/new/top_ps2.v:37]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2097.578 ; gain = 444.707 ; free physical = 5795 ; free virtual = 15109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2115.391 ; gain = 462.520 ; free physical = 5793 ; free virtual = 15107
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2115.391 ; gain = 462.520 ; free physical = 5793 ; free virtual = 15107
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2115.391 ; gain = 0.000 ; free physical = 5793 ; free virtual = 15107
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.gen/sources_1/bd/ps2_design/ip/ps2_design_ps2AXI_0_0/ps2_design_ps2AXI_0_0/ps2_design_ps2AXI_0_0_in_context.xdc] for cell 'ps2_ip/ps2_design_i/ps2AXI_0'
+Finished Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.gen/sources_1/bd/ps2_design/ip/ps2_design_ps2AXI_0_0/ps2_design_ps2AXI_0_0/ps2_design_ps2AXI_0_0_in_context.xdc] for cell 'ps2_ip/ps2_design_i/ps2AXI_0'
+Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/constrs_1/new/constr_axips2.xdc]
+Finished Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/constrs_1/new/constr_axips2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/tiago/Documents/PS2 AXI/ps2_axi.srcs/constrs_1/new/constr_axips2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_ps2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_ps2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tiago/Documents/PS2 AXI/ps2_axi.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.172 ; gain = 0.000 ; free physical = 5897 ; free virtual = 15163
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.172 ; gain = 0.000 ; free physical = 5897 ; free virtual = 15163
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 7430 ; free virtual = 16682
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 7430 ; free virtual = 16682
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for ps2_ip/ps2_design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ps2_ip/ps2_design_i/ps2AXI_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 7430 ; free virtual = 16682
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 7439 ; free virtual = 16689
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 7427 ; free virtual = 16681
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 8333 ; free virtual = 17468
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 8376 ; free virtual = 17511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2251.172 ; gain = 598.301 ; free physical = 8383 ; free virtual = 17519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------

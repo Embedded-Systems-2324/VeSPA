@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Mar 10 16:55:14 2024
+# Process ID: 8972
+# Current directory: /home/tiago/Documents/ip_repo/edit_ps2AXI_v1_0.runs/impl_1
+# Command line: vivado -log ps2AXI_v1_0.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ps2AXI_v1_0.tcl -notrace
+# Log file: /home/tiago/Documents/ip_repo/edit_ps2AXI_v1_0.runs/impl_1/ps2AXI_v1_0.vdi
+# Journal file: /home/tiago/Documents/ip_repo/edit_ps2AXI_v1_0.runs/impl_1/vivado.jou
+# Running On: tiago, OS: Linux, CPU Frequency: 3600.056 MHz, CPU Physical cores: 6, Host memory: 16403 MB
+#-----------------------------------------------------------
+source ps2AXI_v1_0.tcl -notrace

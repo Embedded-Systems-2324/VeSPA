@@ -1,3 +1,9 @@
 # Documentation Folder
-All relevant documentation files should be placed in this folder.
-If you have anything to indicate about how said docs are organized, please do so in this file.
+This folder contains the documentation of the PS/2 AXI4 Lite project.
+
+## Images
+ - Flowchart of the state-machine implemented to detect and identify the pressed key.
+ - Logic analyzer capture of the Data and Clock signals of the PS/2 protocol when the key 'A' is pressed.
+ 
+## Documents
+ - Full report of the development of the PS/2 module and the AXI4 Lite IP adaptation.
