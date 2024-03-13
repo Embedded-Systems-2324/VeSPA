@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  8 00:11:33 2024" VIVADOVERSION="2023.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="VeSPA_AXI_Timer" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk_0" SIGIS="clk" SIGNAME="External_Ports_s00_axi_aclk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s00_axi_aresetn_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_s00_axi_aresetn_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="S00_AXI_0_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awaddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_awaddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="S00_AXI_0_awprot" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awprot">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_awprot"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="S00_AXI_0_awvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_awvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="S00_AXI_0_awready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_awready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="S00_AXI_0_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_wdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="S00_AXI_0_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wstrb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_wstrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="S00_AXI_0_wvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_wvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="S00_AXI_0_wready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_wready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="S00_AXI_0_bresp" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_bresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="S00_AXI_0_bvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_bvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="S00_AXI_0_bready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_bready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="S00_AXI_0_araddr" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_araddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_araddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="S00_AXI_0_arprot" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arprot">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_arprot"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="S00_AXI_0_arvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_arvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="S00_AXI_0_arready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_arready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="S00_AXI_0_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_rdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="S00_AXI_0_rresp" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_rresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="S00_AXI_0_rvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_rvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="S00_AXI_0_rready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VespaAXITimer_0" PORT="s00_axi_rready"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_S00_AXI_0" DATAWIDTH="32" NAME="S00_AXI_0" TYPE="SLAVE">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+      <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ADDR_WIDTH" VALUE="4"/>
+      <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+      <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+      <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+      <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+      <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+      <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+      <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+      <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+      <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+      <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+      <PARAMETER NAME="PHASE" VALUE="0.0"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="VeSPA_AXI_Timer_s00_axi_aclk_0"/>
+      <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+      <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="AWADDR" PHYSICAL="S00_AXI_0_awaddr"/>
+        <PORTMAP LOGICAL="AWPROT" PHYSICAL="S00_AXI_0_awprot"/>
+        <PORTMAP LOGICAL="AWVALID" PHYSICAL="S00_AXI_0_awvalid"/>
+        <PORTMAP LOGICAL="AWREADY" PHYSICAL="S00_AXI_0_awready"/>
+        <PORTMAP LOGICAL="WDATA" PHYSICAL="S00_AXI_0_wdata"/>
+        <PORTMAP LOGICAL="WSTRB" PHYSICAL="S00_AXI_0_wstrb"/>
+        <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_0_wvalid"/>
+        <PORTMAP LOGICAL="WREADY" PHYSICAL="S00_AXI_0_wready"/>
+        <PORTMAP LOGICAL="BRESP" PHYSICAL="S00_AXI_0_bresp"/>
+        <PORTMAP LOGICAL="BVALID" PHYSICAL="S00_AXI_0_bvalid"/>
+        <PORTMAP LOGICAL="BREADY" PHYSICAL="S00_AXI_0_bready"/>
+        <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_0_araddr"/>
+        <PORTMAP LOGICAL="ARPROT" PHYSICAL="S00_AXI_0_arprot"/>
+        <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_0_arvalid"/>
+        <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_0_arready"/>
+        <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_0_rdata"/>
+        <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_0_rresp"/>
+        <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_0_rvalid"/>
+        <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_0_rready"/>
+      </PORTMAPS>
+      <MEMORYMAP/>
+      <PERIPHERALS/>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="7" FULLNAME="/VespaAXITimer_0" HWVERSION="1.0" INSTANCE="VespaAXITimer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="VespaAXITimer" VLNV="user.org:user:VespaAXITimer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S00_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S00_AXI_ADDR_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_S00_AXI_BASEADDR" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_S00_AXI_HIGHADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="VeSPA_AXI_Timer_VespaAXITimer_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="s00_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_awprot" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_awvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_awready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s00_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_wvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_wready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_bvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_bready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s00_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s00_axi_arprot" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_arvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_arready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s00_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s00_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s00_axi_rvalid" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_rready" SIGIS="undef" SIGNAME="VespaAXITimer_0_s00_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VeSPA_AXI_Timer_imp" PORT="S00_AXI_0_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s00_axi_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s00_axi_aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s00_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_s00_axi_aresetn_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s00_axi_aresetn_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_S00_AXI_0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="WIZ_DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="WIZ_NUM_REG" VALUE="4"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="4"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="VeSPA_AXI_Timer_s00_axi_aclk_0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s00_axi_awaddr"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="s00_axi_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s00_axi_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s00_axi_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s00_axi_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s00_axi_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s00_axi_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s00_axi_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s00_axi_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s00_axi_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s00_axi_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s00_axi_araddr"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="s00_axi_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s00_axi_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s00_axi_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s00_axi_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s00_axi_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s00_axi_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s00_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

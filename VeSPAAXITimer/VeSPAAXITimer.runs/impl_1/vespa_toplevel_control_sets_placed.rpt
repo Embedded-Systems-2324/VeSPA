@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Sun Jan 28 01:50:50 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.3 LTS
+| Command      : report_control_sets -verbose -file vespa_toplevel_control_sets_placed.rpt
+| Design       : vespa_toplevel
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              51 |           23 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              72 |           35 |
+| Yes          | No                    | No                     |              19 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             139 |           49 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+-----------------------------------------+----------------------------+------------------+----------------+--------------+
+|             Clock Signal             |              Enable Signal              |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+-----------------------------------------+----------------------------+------------------+----------------+--------------+
+|  DATAPATH/IR_reg[23]_0               |                                         |                            |                1 |              1 |         1.00 |
+|  CONTROLUNIT/C1_out                  |                                         | rst_IBUF                   |                1 |              1 |         1.00 |
+|  CONTROLUNIT/state_reg[4]_0          |                                         | rst_IBUF                   |                1 |              1 |         1.00 |
+|  baudrate_tick                       | UART/TX/tx_bit_i_1_n_1                  | rst_IBUF                   |                1 |              1 |         1.00 |
+|  CONTROLUNIT/alu_en                  |                                         | rst_IBUF                   |                1 |              2 |         2.00 |
+|  IRQ/int_sources_prev_reg[3]_i_1_n_1 |                                         | rst_IBUF                   |                1 |              3 |         3.00 |
+|  CONTROLUNIT/state_reg[4]_4[0]       |                                         | rst_IBUF                   |                1 |              3 |         3.00 |
+|  clk_IBUF_BUFG                       | CONTROLUNIT/state_reg[4]_1[0]           | rst_IBUF                   |                3 |              4 |         1.33 |
+|  baudrate_tick                       | UART/RX/buffer[6]_i_2_n_1               | UART/RX/counter[3]_i_1_n_1 |                1 |              4 |         4.00 |
+|  baudrate_tick                       |                                         |                            |                5 |              7 |         1.40 |
+|  baudrate_tick                       | UART/RX/buffer[6]_i_2_n_1               | UART/RX/buffer[6]_i_1_n_1  |                2 |              7 |         3.50 |
+|  baudrate_tick                       | UART/RX/data_out[7]_i_1_n_1             |                            |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG                       | DATAPATH/regFile/SP_reg[3][0]           | rst_IBUF                   |                3 |              9 |         3.00 |
+|  baudrate_tick                       | UART/TX/FSM_sequential_state[1]_i_1_n_1 |                            |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG                       | DATAPATH/regFile/E[0]                   | rst_IBUF                   |                3 |             20 |         6.67 |
+|  clk_IBUF_BUFG                       | CONTROLUNIT/sp_load                     | rst_IBUF                   |                8 |             30 |         3.75 |
+|  clk_IBUF_BUFG                       |                                         | rst_IBUF                   |               12 |             30 |         2.50 |
+|  n_0_611_BUFG                        |                                         | rst_IBUF                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG                       | CONTROLUNIT/state_reg[3]_2[0]           | rst_IBUF                   |               16 |             32 |         2.00 |
+|  clk_IBUF_BUFG                       | CONTROLUNIT/E[0]                        | rst_IBUF                   |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG                       |                                         |                            |               17 |             49 |         2.88 |
++--------------------------------------+-----------------------------------------+----------------------------+------------------+----------------+--------------+
+
+

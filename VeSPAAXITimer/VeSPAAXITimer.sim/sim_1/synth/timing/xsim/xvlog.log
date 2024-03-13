@@ -1,0 +1,29 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/embedded_systems/VESPA_BHV/VESPA_BHV.sim/sim_1/synth/timing/xsim/vespa_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32M_HD146
+INFO: [VRFC 10-311] analyzing module RAM32M_HD147
+INFO: [VRFC 10-311] analyzing module RAM32M_HD148
+INFO: [VRFC 10-311] analyzing module RAM32M_HD150
+INFO: [VRFC 10-311] analyzing module RAM32X1D_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32X1D_HD149
+INFO: [VRFC 10-311] analyzing module RAM64M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM64M_HD136
+INFO: [VRFC 10-311] analyzing module RAM64M_HD137
+INFO: [VRFC 10-311] analyzing module RAM64M_HD138
+INFO: [VRFC 10-311] analyzing module RAM64M_HD139
+INFO: [VRFC 10-311] analyzing module RAM64M_HD140
+INFO: [VRFC 10-311] analyzing module RAM64M_HD141
+INFO: [VRFC 10-311] analyzing module RAM64M_HD142
+INFO: [VRFC 10-311] analyzing module RAM64M_HD143
+INFO: [VRFC 10-311] analyzing module RAM64M_HD144
+INFO: [VRFC 10-311] analyzing module RAM64M_HD145
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-311] analyzing module check_cond
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-311] analyzing module datapath
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-311] analyzing module registerFile
+INFO: [VRFC 10-311] analyzing module vespa_toplevel
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/embedded_systems/VESPA_BHV/VESPA_BHV.srcs/sim_1/new/vespa_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vespa_tb

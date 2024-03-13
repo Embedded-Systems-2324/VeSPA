@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1706406554">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="vespa_toplevel_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="vespa_toplevel_routed.rqs"/>
+  <File Type="RBD_FILE" Name="vespa_toplevel.rbd"/>
+  <File Type="NPI_FILE" Name="vespa_toplevel.npi"/>
+  <File Type="RNPI_FILE" Name="vespa_toplevel.rnpi"/>
+  <File Type="CFI_FILE" Name="vespa_toplevel.cfi"/>
+  <File Type="RCFI_FILE" Name="vespa_toplevel.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="vespa_toplevel_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="vespa_toplevel_boot.pdi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="vespa_toplevel_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="vespa_toplevel_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="vespa_toplevel_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="vespa_toplevel_methodology_drc_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="vespa_toplevel_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="vespa_toplevel_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="vespa_toplevel_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="vespa_toplevel_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="vespa_toplevel_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="vespa_toplevel_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="vespa_toplevel_postroute_physopt_bb.dcp"/>
+  <File Type="PLACE-IO" Name="vespa_toplevel_io_placed.rpt"/>
+  <File Type="OPT-DRC" Name="vespa_toplevel_drc_opted.rpt"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="vespa_toplevel.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="vespa_toplevel.sysdef"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="vespa_toplevel_postroute_physopt.dcp"/>
+  <File Type="BITSTR-MMI" Name="vespa_toplevel.mmi"/>
+  <File Type="BITSTR-BMM" Name="vespa_toplevel_bd.bmm"/>
+  <File Type="PHYSOPT-DCP" Name="vespa_toplevel_physopt.dcp"/>
+  <File Type="PLACE-UTIL-PB" Name="vespa_toplevel_utilization_placed.pb"/>
+  <File Type="BG-BGN" Name="vespa_toplevel.bgn"/>
+  <File Type="OPT-DCP" Name="vespa_toplevel_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="vespa_toplevel.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="vespa_toplevel.bit"/>
+  <File Type="ROUTE-BUS-SKEW" Name="vespa_toplevel_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="vespa_toplevel.tcl"/>
+  <File Type="REPORTS-TCL" Name="vespa_toplevel_reports.tcl"/>
+  <File Type="PLACE-UTIL" Name="vespa_toplevel_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="vespa_toplevel.drc"/>
+  <File Type="PLACE-CTRL" Name="vespa_toplevel_control_sets_placed.rpt"/>
+  <File Type="PDI-FILE" Name="vespa_toplevel.pdi"/>
+  <File Type="RDI-RDI" Name="vespa_toplevel.vdi"/>
+  <File Type="BG-BIN" Name="vespa_toplevel.bin"/>
+  <File Type="PLACE-DCP" Name="vespa_toplevel_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="vespa_toplevel.msk"/>
+  <File Type="PWROPT-DCP" Name="vespa_toplevel_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="vespa_toplevel_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BITSTR-RBT" Name="vespa_toplevel.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="vespa_toplevel_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="vespa_toplevel.nky"/>
+  <File Type="ROUTE-DRC" Name="vespa_toplevel_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="vespa_toplevel_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="vespa_toplevel_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="vespa_toplevel_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="vespa_toplevel_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="vespa_toplevel_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="vespa_toplevel_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="vespa_toplevel_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="vespa_toplevel_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="vespa_toplevel_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="vespa_toplevel_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="vespa_toplevel_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="vespa_toplevel_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="vespa_toplevel_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="vespa_toplevel_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="vespa_toplevel_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="vespa_toplevel_bus_skew_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/alu.v"/>
+        <Attr Name="ImportTime" Val="1705021940"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/controlUnit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/controlUnit.v"/>
+        <Attr Name="ImportTime" Val="1705337436"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/datapath.v"/>
+        <Attr Name="ImportTime" Val="1705435206"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/interrupt_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/interrupt_controller.v"/>
+        <Attr Name="ImportTime" Val="1705436736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memorySynthesis.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/memorySynthesis.v"/>
+        <Attr Name="ImportTime" Val="1705338018"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/registerFile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/registerFile.v"/>
+        <Attr Name="ImportTime" Val="1705338018"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/uart.v"/>
+        <Attr Name="ImportTime" Val="1705442004"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_baudrate_generator.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/uart_baudrate_generator.v"/>
+        <Attr Name="ImportTime" Val="1705333752"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_rx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/uart_rx.v"/>
+        <Attr Name="ImportTime" Val="1705338018"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/uart_tx.v"/>
+        <Attr Name="ImportTime" Val="1705443160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vespa_toplevel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/vespa_toplevel.v"/>
+        <Attr Name="ImportTime" Val="1705436190"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/memory.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/sources_1/new/memory.v"/>
+        <Attr Name="ImportTime" Val="1705335158"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/registerfile.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/code.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/code00.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/code01.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/code10.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/code11.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="vespa_toplevel"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/pinout.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/constrs_1/new/pinout.xdc"/>
+        <Attr Name="ImportTime" Val="1705434876"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pinout.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/vespa_toplevel.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Documentos/VESPA_MARIO_AFONSO/VESPA_BHV.srcs/utils_1/imports/synth_1/vespa_toplevel.dcp"/>
+        <Attr Name="ImportTime" Val="1706406550"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="MEM10"/>
+  <BlockFileSet Type="BlockSrcs" Name="MEM00"/>
+  <BlockFileSet Type="BlockSrcs" Name="MEM11"/>
+  <BlockFileSet Type="BlockSrcs" Name="MEM01"/>
+  <BlockFileSet Type="BlockSrcs" Name="RAM32X32B"/>
+</GenRun>

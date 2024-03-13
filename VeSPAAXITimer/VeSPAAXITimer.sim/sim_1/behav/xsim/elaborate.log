@@ -1,0 +1,9 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot vespa_tb_behav xil_defaultlib.vespa_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <timer> not found while processing module instance <timer> [/home/luizalex/VeSPAAXITimer/VeSPAAXITimer.ip_user_files/bd/VeSPA_AXI_Timer/ipshared/dd21/hdl/VespaAXITimer_v1_0_S00_AXI.v:147]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
