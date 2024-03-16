@@ -1,9 +1,0 @@
-0.7
-2020.2
-May  7 2023
-15:24:31
-c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/hdl/GPIO_v1_0.v,1709843014,verilog,,c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/hdl/GPIO_v1_0_S00_AXI.v,,GPIO_v1_0,,,,,,,,
-c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/hdl/GPIO_v1_0_S00_AXI.v,1709843003,verilog,,c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/src/axi_tb.v,,GPIO_v1_0_S00_AXI,,,,,,,,
-c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/src/GPIO_PORT.v,1708197049,verilog,,c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/hdl/GPIO_v1_0.v,,GPIO_PORT_V3,,,,,,,,
-c:/Projects/FPGA/SoC/GPIO/ip_repo/GPIO_1_0/src/axi_tb.v,1709498615,verilog,,,,axi_tb,,,,,,,,
-c:/Projects/FPGA/SoC/GPIO/ip_repo/edit_GPIO_v1_0.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,

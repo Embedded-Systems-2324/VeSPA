@@ -1,0 +1,2 @@
+Time resolution is 1 ps
+$finish called at time : 275 ns : File "c:/Projects/FPGA/SoC/GPIO_IP/ip_repo/AXI_GPIO_1_0/src/axi_tb.v" Line 192
