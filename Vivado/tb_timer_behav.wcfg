@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_timer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_timer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="766.933333 us"></ZoomStartTime>
+      <ZoomEndTime time="806.733334 us"></ZoomEndTime>
+      <Cursor1Time time="800.100000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject type="logic" fp_name="/tb_timer/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/clkscaled">
+      <obj_property name="ElementShortName">clkscaled</obj_property>
+      <obj_property name="ObjectShortName">clkscaled</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/prescaler">
+      <obj_property name="ElementShortName">prescaler[1:0]</obj_property>
+      <obj_property name="ObjectShortName">prescaler[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/autoreload">
+      <obj_property name="ElementShortName">autoreload</obj_property>
+      <obj_property name="ObjectShortName">autoreload</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/timer_mode">
+      <obj_property name="ElementShortName">timer_mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">timer_mode[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/start">
+      <obj_property name="ElementShortName">start[31:0]</obj_property>
+      <obj_property name="ObjectShortName">start[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/timer0/start_timer">
+      <obj_property name="ElementShortName">start_timer</obj_property>
+      <obj_property name="ObjectShortName">start_timer</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/timer0/start_counter">
+      <obj_property name="ElementShortName">start_counter</obj_property>
+      <obj_property name="ObjectShortName">start_counter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/timer0/start_pwm">
+      <obj_property name="ElementShortName">start_pwm</obj_property>
+      <obj_property name="ObjectShortName">start_pwm</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/timer0/start_onepulse">
+      <obj_property name="ElementShortName">start_onepulse</obj_property>
+      <obj_property name="ObjectShortName">start_onepulse</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/timer0/timer_start">
+      <obj_property name="ElementShortName">timer_start[31:0]</obj_property>
+      <obj_property name="ObjectShortName">timer_start[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/timer0/count">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/timer0/preset">
+      <obj_property name="ElementShortName">preset[31:0]</obj_property>
+      <obj_property name="ObjectShortName">preset[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/en">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_timer/pwm">
+      <obj_property name="ElementShortName">pwm[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/overflow">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_timer/pulse">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+</wave_config>
