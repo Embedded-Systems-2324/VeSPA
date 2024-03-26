@@ -1,0 +1,33 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/df67/src/CustomInterconnect.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/sim/vespa_soc_CustomInterconnect_0_0.v" \
+
+verilog blk_mem_gen_v8_4_6  --include "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_DataMemory_0_0/src/VeSPA_RAM/simulation/blk_mem_gen_v8_4.v" \
+
+verilog xil_defaultlib  --include "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_DataMemory_0_0/src/VeSPA_RAM/sim/VeSPA_RAM.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/561f/src/SlaveInterface.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_DataMemory_0_0/sim/vespa_soc_DataMemory_0_0.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0/src/code_memory/sim/code_memory.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0/src/RAM32X32B/sim/RAM32X32B.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src/alu.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src/controlUnit.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src/datapath.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src/registerFile.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/8873/src/vespa_cpu.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0/sim/vespa_soc_vespa_cpu_0_0.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/7faa/src/UartBaudRate.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/7faa/src/UartRx.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/7faa/src/UartTx.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/7faa/src/Uart.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_UartSlave_0_0/sim/vespa_soc_UartSlave_0_0.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/sim/vespa_soc.v" \
+"../../../../vespa_soc.srcs/sim_1/new/soc_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
