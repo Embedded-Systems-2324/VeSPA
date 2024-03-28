@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Sun Mar 24 02:29:43 2024
+-- Date        : Thu Mar 28 11:23:46 2024
 -- Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ vespa_soc_CustomInterconnect_0_0_stub.vhdl
@@ -62,7 +62,13 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     o_WData_6 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     o_REnable_6 : out STD_LOGIC;
     o_RAddr_6 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    i_RData_6 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    i_RData_6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_WEnable_7 : out STD_LOGIC;
+    o_WAddr_7 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_WData_7 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    o_REnable_7 : out STD_LOGIC;
+    o_RAddr_7 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    i_RData_7 : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
@@ -71,7 +77,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_WEnable_0,o_WAddr_0[31:0],o_WData_0[31:0],o_REnable_0,o_RAddr_0[31:0],i_RData_0[31:0],o_WEnable_1,o_WAddr_1[31:0],o_WData_1[31:0],o_REnable_1,o_RAddr_1[31:0],i_RData_1[31:0],o_WEnable_2,o_WAddr_2[31:0],o_WData_2[31:0],o_REnable_2,o_RAddr_2[31:0],i_RData_2[31:0],o_WEnable_3,o_WAddr_3[31:0],o_WData_3[31:0],o_REnable_3,o_RAddr_3[31:0],i_RData_3[31:0],o_WEnable_4,o_WAddr_4[31:0],o_WData_4[31:0],o_REnable_4,o_RAddr_4[31:0],i_RData_4[31:0],o_WEnable_5,o_WAddr_5[31:0],o_WData_5[31:0],o_REnable_5,o_RAddr_5[31:0],i_RData_5[31:0],o_WEnable_6,o_WAddr_6[31:0],o_WData_6[31:0],o_REnable_6,o_RAddr_6[31:0],i_RData_6[31:0]";
+attribute black_box_pad_pin of stub : architecture is "i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_WEnable_0,o_WAddr_0[31:0],o_WData_0[31:0],o_REnable_0,o_RAddr_0[31:0],i_RData_0[31:0],o_WEnable_1,o_WAddr_1[31:0],o_WData_1[31:0],o_REnable_1,o_RAddr_1[31:0],i_RData_1[31:0],o_WEnable_2,o_WAddr_2[31:0],o_WData_2[31:0],o_REnable_2,o_RAddr_2[31:0],i_RData_2[31:0],o_WEnable_3,o_WAddr_3[31:0],o_WData_3[31:0],o_REnable_3,o_RAddr_3[31:0],i_RData_3[31:0],o_WEnable_4,o_WAddr_4[31:0],o_WData_4[31:0],o_REnable_4,o_RAddr_4[31:0],i_RData_4[31:0],o_WEnable_5,o_WAddr_5[31:0],o_WData_5[31:0],o_REnable_5,o_RAddr_5[31:0],i_RData_5[31:0],o_WEnable_6,o_WAddr_6[31:0],o_WData_6[31:0],o_REnable_6,o_RAddr_6[31:0],i_RData_6[31:0],o_WEnable_7,o_WAddr_7[31:0],o_WData_7[31:0],o_REnable_7,o_RAddr_7[31:0],i_RData_7[31:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "CustomInterconnect,Vivado 2023.1";
 begin

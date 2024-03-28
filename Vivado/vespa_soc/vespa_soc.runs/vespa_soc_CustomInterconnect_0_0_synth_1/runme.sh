@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1'
+HD_PWD='/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

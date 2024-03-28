@@ -3,18 +3,17 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Mar 24 02:29:17 2024
-# Process ID: 63488
-# Current directory: /home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1
+# Start of session at: Thu Mar 28 11:23:27 2024
+# Process ID: 19701
+# Current directory: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1
 # Command line: vivado -log vespa_soc_CustomInterconnect_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vespa_soc_CustomInterconnect_0_0.tcl
-# Log file: /home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.vds
-# Journal file: /home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vivado.jou
-# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 749.150 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+# Log file: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.vds
+# Journal file: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vivado.jou
+# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 4399.663 MHz, CPU Physical cores: 14, Host memory: 16471 MB
 #-----------------------------------------------------------
 source vespa_soc_CustomInterconnect_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1297.645 ; gain = 13.023 ; free physical = 266 ; free virtual = 7194
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mariolima/Desktop/VESPA_SOC_V2/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: vespa_soc_CustomInterconnect_0_0
 Command: synth_design -top vespa_soc_CustomInterconnect_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
@@ -24,57 +23,57 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 63636
+INFO: [Synth 8-7075] Helper process launched with PID 19779
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2029.438 ; gain = 378.770 ; free physical = 165 ; free virtual = 4344
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2029.473 ; gain = 376.801 ; free physical = 1166 ; free virtual = 7975
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'vespa_soc_CustomInterconnect_0_0' [/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/synth/vespa_soc_CustomInterconnect_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'CustomInterconnect' [/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/df67/src/CustomInterconnect.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'CustomInterconnect' (0#1) [/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/df67/src/CustomInterconnect.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'vespa_soc_CustomInterconnect_0_0' (0#1) [/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/synth/vespa_soc_CustomInterconnect_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vespa_soc_CustomInterconnect_0_0' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/synth/vespa_soc_CustomInterconnect_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'CustomInterconnect' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/d598/src/CustomInterconnect.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'CustomInterconnect' (0#1) [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/d598/src/CustomInterconnect.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'vespa_soc_CustomInterconnect_0_0' (0#1) [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/synth/vespa_soc_CustomInterconnect_0_0.v:53]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2099.375 ; gain = 448.707 ; free physical = 207 ; free virtual = 4210
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2100.410 ; gain = 447.738 ; free physical = 1068 ; free virtual = 7876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2114.219 ; gain = 463.551 ; free physical = 255 ; free virtual = 4182
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.254 ; gain = 462.582 ; free physical = 1066 ; free virtual = 7873
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2114.219 ; gain = 463.551 ; free physical = 255 ; free virtual = 4182
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2115.254 ; gain = 462.582 ; free physical = 1066 ; free virtual = 7873
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2114.219 ; gain = 0.000 ; free physical = 272 ; free virtual = 4168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2115.254 ; gain = 0.000 ; free physical = 1066 ; free virtual = 7873
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.969 ; gain = 0.000 ; free physical = 267 ; free virtual = 4017
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2267.004 ; gain = 0.000 ; free physical = 977 ; free virtual = 7838
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2260.969 ; gain = 0.000 ; free physical = 260 ; free virtual = 4013
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2267.004 ; gain = 0.000 ; free physical = 977 ; free virtual = 7837
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 205 ; free virtual = 3476
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1017 ; free virtual = 7877
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 204 ; free virtual = 3475
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1017 ; free virtual = 7877
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 204 ; free virtual = 3475
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1017 ; free virtual = 7877
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 186 ; free virtual = 3463
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1016 ; free virtual = 7878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -82,7 +81,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 3     
-	   6 Input   32 Bit        Muxes := 1     
+	   7 Input   32 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -100,25 +99,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 283 ; free virtual = 3475
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1052 ; free virtual = 7862
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 348 ; free virtual = 3559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1049 ; free virtual = 7860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 348 ; free virtual = 3559
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1049 ; free virtual = 7860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 347 ; free virtual = 3560
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1049 ; free virtual = 7860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -135,38 +134,6 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_0' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_1' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_2' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_3' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_4' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_5' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_6' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_7' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_8' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_9' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_10' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_11' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_12' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_13' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_14' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_15' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_16' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_17' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_18' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_19' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_20' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_21' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_22' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_23' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_24' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_25' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_26' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_27' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_28' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_29' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_30' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_31' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_32' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_33' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_34' to logic
@@ -235,39 +202,71 @@ CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_96' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_97' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_98' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_99' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_100' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_101' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_102' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_103' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_104' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_105' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_106' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_107' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_108' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_109' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_110' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_111' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_112' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_113' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_114' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_115' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_116' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_117' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_118' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_119' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_120' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_121' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_122' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_123' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_124' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_125' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_126' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_127' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_128' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_129' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_130' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'insti_131' to logic
 INFO: [Common 17-14] Message 'Synth 8-5799' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 242 ; free virtual = 3559
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 235 ; free virtual = 3552
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 235 ; free virtual = 3552
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 234 ; free virtual = 3552
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 231 ; free virtual = 3549
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 231 ; free virtual = 3549
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -283,34 +282,35 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LUT2 |    96|
-|2     |LUT4 |    44|
-|3     |LUT5 |   228|
-|4     |LUT6 |   424|
+|1     |LUT2 |   107|
+|2     |LUT3 |     2|
+|3     |LUT4 |    52|
+|4     |LUT5 |   219|
+|5     |LUT6 |   514|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 231 ; free virtual = 3549
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 718 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2260.969 ; gain = 463.551 ; free physical = 226 ; free virtual = 3548
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2260.969 ; gain = 610.301 ; free physical = 226 ; free virtual = 3549
+Synthesis finished with 0 errors, 784 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2267.004 ; gain = 462.582 ; free physical = 1046 ; free virtual = 7857
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2267.004 ; gain = 614.332 ; free physical = 1046 ; free virtual = 7857
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.969 ; gain = 0.000 ; free physical = 204 ; free virtual = 3561
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2267.004 ; gain = 0.000 ; free physical = 1327 ; free virtual = 8137
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.969 ; gain = 0.000 ; free physical = 423 ; free virtual = 3836
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2267.004 ; gain = 0.000 ; free physical = 1328 ; free virtual = 8138
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 94174fb4
+Synth Design complete | Checksum: 27b56ed7
 INFO: [Common 17-83] Releasing license: Synthesis
 22 Infos, 1 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2260.969 ; gain = 924.668 ; free physical = 416 ; free virtual = 3835
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1538.793; main = 1257.783; forked = 287.795
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3209.066; main = 2260.973; forked = 980.109
-INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2267.004 ; gain = 931.637 ; free physical = 1328 ; free virtual = 8138
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1800.368; main = 1474.738; forked = 373.969
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3213.105; main = 2267.008; forked = 978.113
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/VESPA_SOC_V2/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_CustomInterconnect_0_0_synth_1/vespa_soc_CustomInterconnect_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vespa_soc_CustomInterconnect_0_0_utilization_synth.rpt -pb vespa_soc_CustomInterconnect_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 24 02:29:44 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 11:23:47 2024...

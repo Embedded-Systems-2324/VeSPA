@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:CustomInterconnect:1.0
-// IP Revision: 2
+// IP Revision: 4
 
 `timescale 1ns/1ps
 
@@ -102,7 +102,13 @@ module vespa_soc_CustomInterconnect_0_0 (
   o_WData_6,
   o_REnable_6,
   o_RAddr_6,
-  i_RData_6
+  i_RData_6,
+  o_WEnable_7,
+  o_WAddr_7,
+  o_WData_7,
+  o_REnable_7,
+  o_RAddr_7,
+  i_RData_7
 );
 
 input wire i_WEnable;
@@ -153,6 +159,12 @@ output wire [31 : 0] o_WData_6;
 output wire o_REnable_6;
 output wire [31 : 0] o_RAddr_6;
 input wire [31 : 0] i_RData_6;
+output wire o_WEnable_7;
+output wire [31 : 0] o_WAddr_7;
+output wire [31 : 0] o_WData_7;
+output wire o_REnable_7;
+output wire [31 : 0] o_RAddr_7;
+input wire [31 : 0] i_RData_7;
 
   CustomInterconnect inst (
     .i_WEnable(i_WEnable),
@@ -202,6 +214,12 @@ input wire [31 : 0] i_RData_6;
     .o_WData_6(o_WData_6),
     .o_REnable_6(o_REnable_6),
     .o_RAddr_6(o_RAddr_6),
-    .i_RData_6(i_RData_6)
+    .i_RData_6(i_RData_6),
+    .o_WEnable_7(o_WEnable_7),
+    .o_WAddr_7(o_WAddr_7),
+    .o_WData_7(o_WData_7),
+    .o_REnable_7(o_REnable_7),
+    .o_RAddr_7(o_RAddr_7),
+    .i_RData_7(i_RData_7)
   );
 endmodule

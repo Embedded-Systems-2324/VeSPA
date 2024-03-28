@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Mar 28 10:48:35 2024
+# Process ID: 11554
+# Current directory: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_PS2_Slave_0_0_synth_1
+# Command line: vivado -log vespa_soc_PS2_Slave_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vespa_soc_PS2_Slave_0_0.tcl
+# Log file: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_PS2_Slave_0_0_synth_1/vespa_soc_PS2_Slave_0_0.vds
+# Journal file: /home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_PS2_Slave_0_0_synth_1/vivado.jou
+# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 2217.354 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+#-----------------------------------------------------------
+source vespa_soc_PS2_Slave_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1344.438 ; gain = 0.023 ; free physical = 319 ; free virtual = 8227
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: vespa_soc_PS2_Slave_0_0
+Command: synth_design -top vespa_soc_PS2_Slave_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11701
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2029.574 ; gain = 373.832 ; free physical = 241 ; free virtual = 5864
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'vespa_soc_PS2_Slave_0_0' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_PS2_Slave_0_0/synth/vespa_soc_PS2_Slave_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'custom_ps2_interface' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/custom_ps2_interface.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ps2_new' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/ps2_new.v:21]
+INFO: [Synth 8-226] default block is never used [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/ps2_new.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_new' (0#1) [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/ps2_new.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'custom_ps2_interface' (0#1) [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/custom_ps2_interface.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'vespa_soc_PS2_Slave_0_0' (0#1) [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_PS2_Slave_0_0/synth/vespa_soc_PS2_Slave_0_0.v:53]
+WARNING: [Synth 8-7129] Port i_WData[31] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[30] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[29] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[28] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[27] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[26] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[25] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[24] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[23] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[22] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[21] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[20] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[19] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[18] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[17] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[16] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[15] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[14] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[13] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[12] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[11] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[10] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[9] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[8] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[7] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[6] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[5] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[4] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[3] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[2] in module custom_ps2_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[1] in module custom_ps2_interface is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2099.512 ; gain = 443.770 ; free physical = 233 ; free virtual = 5599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2114.355 ; gain = 458.613 ; free physical = 233 ; free virtual = 5599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2114.355 ; gain = 458.613 ; free physical = 233 ; free virtual = 5598
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2114.355 ; gain = 0.000 ; free physical = 231 ; free virtual = 5596
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2261.105 ; gain = 0.000 ; free physical = 185 ; free virtual = 5567
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2261.105 ; gain = 0.000 ; free physical = 182 ; free virtual = 5565
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 270 ; free virtual = 5550
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 270 ; free virtual = 5550
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 269 ; free virtual = 5550
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ps2_new'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0001 |                               01
+               S_RECEIVE |                             0010 |                               10
+           S_CHECK_ERROR |                             0100 |                               11
+                 S_CLEAN |                             1000 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ps2_new'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 270 ; free virtual = 5553
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   4 Input   12 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port i_WData[31] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[30] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[29] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[28] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[27] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[26] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[25] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[24] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[23] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[22] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[21] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[20] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[19] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[18] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[17] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[16] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[15] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[14] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[13] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[12] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[11] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[10] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[9] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[8] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[7] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[6] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[5] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[4] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[3] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[2] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_WData[1] in module vespa_soc_PS2_Slave_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 220 ; free virtual = 5504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 176 ; free virtual = 5486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 175 ; free virtual = 5486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 174 ; free virtual = 5485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin o_Err with 1st driver pin 'inst/o_Err_reg/Q' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/custom_ps2_interface.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin o_Err with 2nd driver pin 'inst/ps2/error_reg/Q' [/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/cc2e/src/ps2_new.v:46]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     3|
+|2     |LUT2   |    19|
+|3     |LUT3   |     6|
+|4     |LUT4   |    13|
+|5     |LUT5   |    13|
+|6     |LUT6   |    14|
+|7     |FDRE   |    49|
+|8     |FDSE   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 190 ; free virtual = 5498
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2261.105 ; gain = 458.613 ; free physical = 477 ; free virtual = 5785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2261.105 ; gain = 605.363 ; free physical = 476 ; free virtual = 5784
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2261.105 ; gain = 0.000 ; free physical = 760 ; free virtual = 6068
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2261.105 ; gain = 0.000 ; free physical = 756 ; free virtual = 6064
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 692222e4
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 63 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2261.105 ; gain = 916.668 ; free physical = 746 ; free virtual = 6057
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1640.565; main = 1336.664; forked = 323.242
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3210.203; main = 2261.109; forked = 981.109
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_PS2_Slave_0_0_synth_1/vespa_soc_PS2_Slave_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.runs/vespa_soc_PS2_Slave_0_0_synth_1/vespa_soc_PS2_Slave_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vespa_soc_PS2_Slave_0_0_utilization_synth.rpt -pb vespa_soc_PS2_Slave_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 10:49:00 2024...
