@@ -4,7 +4,7 @@ onerror {quit -force}
 transcript on
 
 vlib work
-vmap -link {/home/mariolima/Desktop/Vespa_git/VeSPA/Vivado/vespa_soc/vespa_soc.cache/compile_simlib/riviera}
+vmap -link {/home/def4ltt/Git/VeSPA/Vivado/vespa_soc/vespa_soc.cache/compile_simlib/riviera}
 vlib riviera/xpm
 vlib riviera/blk_mem_gen_v8_4_6
 vlib riviera/xil_defaultlib
@@ -43,6 +43,9 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../vespa_soc.gen/source
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_interruptControllerS_0_0/sim/vespa_soc_interruptControllerS_0_0.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/d598/src/CustomInterconnect.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/sim/vespa_soc_CustomInterconnect_0_0.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/371b/src/timer.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/371b/src/timerSlave.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_timerSlave_0_0/sim/vespa_soc_timerSlave_0_0.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/sim/vespa_soc.v" \
 
 vlog -work xil_defaultlib \

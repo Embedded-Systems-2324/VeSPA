@@ -11,99 +11,169 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="86.618667 us"></ZoomStartTime>
-      <ZoomEndTime time="1,738.618668 us"></ZoomEndTime>
-      <Cursor1Time time="361.952000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="10.110001 us"></ZoomEndTime>
+      <Cursor1Time time="10.110000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="139"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
-   <wvobject type="logic" fp_name="/soc_tb/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <WVObjectSize size="39" />
+   <wvobject type="logic" fp_name="/soc_tb/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/CONTROLUNIT/state">
-      <obj_property name="ElementShortName">state[4:0]</obj_property>
-      <obj_property name="ObjectShortName">state[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/o_OnePulse_0">
+      <obj_property name="ElementShortName">o_OnePulse_0</obj_property>
+      <obj_property name="ObjectShortName">o_OnePulse_0</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/DATAPATH/PC">
-      <obj_property name="ElementShortName">PC[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/o_PWMChannel1_0">
+      <obj_property name="ElementShortName">o_PWMChannel1_0</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel1_0</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/DATAPATH/IR">
+   <wvobject type="logic" fp_name="/soc_tb/o_PWMChannel2_0">
+      <obj_property name="ElementShortName">o_PWMChannel2_0</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel2_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/o_PWMChannel3_0">
+      <obj_property name="ElementShortName">o_PWMChannel3_0</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel3_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/o_PWMChannel4_0">
+      <obj_property name="ElementShortName">o_PWMChannel4_0</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel4_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/o_TimerOverflow_0">
+      <obj_property name="ElementShortName">o_TimerOverflow_0</obj_property>
+      <obj_property name="ObjectShortName">o_TimerOverflow_0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/uut/vespa_cpu_0/inst/DATAPATH/IR">
       <obj_property name="ElementShortName">IR[31:0]</obj_property>
       <obj_property name="ObjectShortName">IR[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/test/CustomInterconnect_0/i_WEnable">
-      <obj_property name="ElementShortName">i_WEnable</obj_property>
-      <obj_property name="ObjectShortName">i_WEnable</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/vespa_cpu_0/inst/DATAPATH/PC">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_WAddr">
-      <obj_property name="ElementShortName">i_WAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_WAddr[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_clk">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_WData">
-      <obj_property name="ElementShortName">i_WData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_WData[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_rst">
+      <obj_property name="ElementShortName">i_rst</obj_property>
+      <obj_property name="ObjectShortName">i_rst</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/test/CustomInterconnect_0/i_REnable">
-      <obj_property name="ElementShortName">i_REnable</obj_property>
-      <obj_property name="ObjectShortName">i_REnable</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_Period">
+      <obj_property name="ElementShortName">i_Period[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_Period[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_RAddr">
-      <obj_property name="ElementShortName">i_RAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RAddr[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_Divisor">
+      <obj_property name="ElementShortName">i_Divisor[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_Divisor[1:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_RData">
-      <obj_property name="ElementShortName">o_RData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_RData[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_Mode">
+      <obj_property name="ElementShortName">i_Mode[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_Mode[1:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_WAddr_3">
-      <obj_property name="ElementShortName">o_WAddr_3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_WAddr_3[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_OnePulseLength">
+      <obj_property name="ElementShortName">i_OnePulseLength[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_OnePulseLength[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_WData_3">
-      <obj_property name="ElementShortName">o_WData_3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_WData_3[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_ChannelEnable">
+      <obj_property name="ElementShortName">i_ChannelEnable[3:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ChannelEnable[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/i_WAddr">
-      <obj_property name="ElementShortName">i_WAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_WAddr[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_PulseChannel1">
+      <obj_property name="ElementShortName">i_PulseChannel1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PulseChannel1[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/i_WData">
-      <obj_property name="ElementShortName">i_WData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_WData[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_PulseChannel2">
+      <obj_property name="ElementShortName">i_PulseChannel2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PulseChannel2[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartBaudRate/baudrate_counter">
-      <obj_property name="ElementShortName">baudrate_counter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">baudrate_counter[31:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_PulseChannel3">
+      <obj_property name="ElementShortName">i_PulseChannel3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PulseChannel3[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tx_bit">
-      <obj_property name="ElementShortName">tx_bit</obj_property>
-      <obj_property name="ObjectShortName">tx_bit</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_PulseChannel4">
+      <obj_property name="ElementShortName">i_PulseChannel4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PulseChannel4[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tx_start">
-      <obj_property name="ElementShortName">tx_start</obj_property>
-      <obj_property name="ObjectShortName">tx_start</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_Enable">
+      <obj_property name="ElementShortName">i_Enable</obj_property>
+      <obj_property name="ObjectShortName">i_Enable</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/data_in">
-      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/i_AutoReload">
+      <obj_property name="ElementShortName">i_AutoReload</obj_property>
+      <obj_property name="ObjectShortName">i_AutoReload</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/state">
-      <obj_property name="ElementShortName">state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_EventCounter">
+      <obj_property name="ElementShortName">o_EventCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_EventCounter[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tick">
-      <obj_property name="ElementShortName">tick</obj_property>
-      <obj_property name="ObjectShortName">tick</obj_property>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_TimerOverflow">
+      <obj_property name="ElementShortName">o_TimerOverflow</obj_property>
+      <obj_property name="ObjectShortName">o_TimerOverflow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_PWMChannel1">
+      <obj_property name="ElementShortName">o_PWMChannel1</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_PWMChannel2">
+      <obj_property name="ElementShortName">o_PWMChannel2</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_PWMChannel3">
+      <obj_property name="ElementShortName">o_PWMChannel3</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel3</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_PWMChannel4">
+      <obj_property name="ElementShortName">o_PWMChannel4</obj_property>
+      <obj_property name="ObjectShortName">o_PWMChannel4</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/o_OnePulseOut">
+      <obj_property name="ElementShortName">o_OnePulseOut</obj_property>
+      <obj_property name="ObjectShortName">o_OnePulseOut</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_Counter">
+      <obj_property name="ElementShortName">r_Counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_Counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_EventCounter">
+      <obj_property name="ElementShortName">r_EventCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_EventCounter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_PWMCounter">
+      <obj_property name="ElementShortName">r_PWMCounter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_PWMCounter[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_TimerOverflow">
+      <obj_property name="ElementShortName">r_TimerOverflow</obj_property>
+      <obj_property name="ObjectShortName">r_TimerOverflow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_PulseGeneration">
+      <obj_property name="ElementShortName">r_PulseGeneration</obj_property>
+      <obj_property name="ObjectShortName">r_PulseGeneration</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_DivisorClk2">
+      <obj_property name="ElementShortName">r_DivisorClk2</obj_property>
+      <obj_property name="ObjectShortName">r_DivisorClk2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_DivisorClk4">
+      <obj_property name="ElementShortName">r_DivisorClk4</obj_property>
+      <obj_property name="ObjectShortName">r_DivisorClk4</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/r_DivisorClk8">
+      <obj_property name="ElementShortName">r_DivisorClk8</obj_property>
+      <obj_property name="ObjectShortName">r_DivisorClk8</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uut/timerSlave_0/inst/inst/w_TimerClk">
+      <obj_property name="ElementShortName">w_TimerClk</obj_property>
+      <obj_property name="ObjectShortName">w_TimerClk</obj_property>
    </wvobject>
 </wave_config>

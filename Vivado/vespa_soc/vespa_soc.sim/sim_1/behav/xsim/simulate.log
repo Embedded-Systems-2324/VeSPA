@@ -1,85 +1,14 @@
 Time resolution is 1 ps
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module soc_tb.uut.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module soc_tb.uut.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module soc_tb.uut.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-Block Memory Generator module soc_tb.test.DataMemory_0.inst._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module soc_tb.test.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
-blk_mem_gen_v8_4_6 collision detected at time: 124000, Instance: soc_tb.test.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
+Block Memory Generator module soc_tb.uut.vespa_cpu_0.inst.DATAPATH.CODE_MEM.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+$finish called at time : 110 ns : File "/home/def4ltt/Git/VeSPA/Vivado/vespa_soc/vespa_soc.srcs/sim_1/new/soc_tb.v" Line 62
+blk_mem_gen_v8_4_6 collision detected at time: 155000, Instance: soc_tb.uut.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf1.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0
+blk_mem_gen_v8_4_6 collision detected at time: 155000, Instance: soc_tb.uut.vespa_cpu_0.inst.DATAPATH.REG_FILE.rf2.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst , A read address: 0, B write address: 0

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 28 11:23:25 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 29 03:17:36 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="vespa_soc" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -22,6 +22,36 @@
     <PORT DIR="O" NAME="uartTx" SIGIS="undef" SIGNAME="UartSlave_0_o_Tx">
       <CONNECTIONS>
         <CONNECTION INSTANCE="UartSlave_0" PORT="o_Tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel4_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel3_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel2_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel1_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_OnePulse_0" SIGIS="undef" SIGNAME="timerSlave_0_o_OnePulse">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_OnePulse"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_TimerOverflow_0" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_TimerOverflow"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -204,12 +234,36 @@
         <PORT DIR="O" NAME="o_REnable_6" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="o_RAddr_6" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="31" NAME="i_RData_6" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_WEnable_7" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_WAddr_7" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_WData_7" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_REnable_7" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_RAddr_7" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="i_RData_7" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_WEnable_7" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_7" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_7" RIGHT="0" SIGIS="undef" SIGNAME="timerSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -455,6 +509,87 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/timerSlave_0" HWVERSION="1.0" INSTANCE="timerSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="timerSlave" VLNV="user.org:user:timerSlave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="vespa_soc_timerSlave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="vespa_cpu_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vespa_cpu_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="vespa_cpu_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vespa_cpu_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="timerSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TimerOverflow" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_TimerOverflow_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel1" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel1_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel2" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel3" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel3_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel4" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel4_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_OnePulse" SIGIS="undef" SIGNAME="timerSlave_0_o_OnePulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_OnePulse_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="6" FULLNAME="/vespa_cpu_0" HWVERSION="1.0" INSTANCE="vespa_cpu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vespa_cpu" VLNV="user.org:user:vespa_cpu:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -478,6 +613,7 @@
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="vespa_cpu_0_o_Rst">
@@ -486,6 +622,7 @@
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="vespa_cpu_0_o_WEnable">

@@ -1,6 +1,153 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 02:56:51 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 02:49:02 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 02:45:18 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 01:23:40 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 00:50:27 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 00:46:13 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Mar 29 00:27:29 2024
+| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
 | Date         : Thu Mar 28 11:23:23 2024
 | Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip

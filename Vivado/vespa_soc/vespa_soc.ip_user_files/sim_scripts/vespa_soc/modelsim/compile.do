@@ -43,6 +43,9 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../vespa_soc.gen/so
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_interruptControllerS_0_0/sim/vespa_soc_interruptControllerS_0_0.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/d598/src/CustomInterconnect.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0/sim/vespa_soc_CustomInterconnect_0_0.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/371b/src/timer.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ipshared/371b/src/timerSlave.v" \
+"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_timerSlave_0_0/sim/vespa_soc_timerSlave_0_0.v" \
 "../../../../vespa_soc.gen/sources_1/bd/vespa_soc/sim/vespa_soc.v" \
 
 vlog -work xil_defaultlib \
