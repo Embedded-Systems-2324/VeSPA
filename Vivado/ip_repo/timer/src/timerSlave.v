@@ -89,6 +89,8 @@ Timer inst
     .o_OnePulseOut(o_OnePulse)              // One Pulse output
 );
 
+assign o_TimerOverflow = r_TimerOverflow;
+
 // May cause sythesis problem
 always @(posedge w_TimerOverflow) r_TimerOverflow <= 1;
 
@@ -99,6 +101,7 @@ always @(posedge i_Clk) begin
         r_Mode <= 0;
         r_OnePulseLength <= 0;
         r_ChannelEnable <= 0;
+        r_TimerOverflow <= 0;
         r_PulseChannel1 <= 0;
         r_PulseChannel2 <= 0;
         r_PulseChannel3 <= 0;
