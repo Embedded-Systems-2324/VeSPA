@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 02:56:51 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Fri Apr 12 10:27:03 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip
 | Device       : xc7z010clg400-1
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
 1. Summary
 ----------
 
-SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 30) to (Rev. 31)
 
 
 
@@ -22,8 +22,8 @@ SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (R
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 02:49:02 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Fri Apr 12 10:22:32 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip
 | Device       : xc7z010clg400-1
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
 1. Summary
 ----------
 
-SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 29) to (Rev. 30)
 
 
 
@@ -43,92 +43,8 @@ SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (R
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 02:45:18 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
-| Command      : upgrade_ip
-| Device       : xc7z010clg400-1
----------------------------------------------------------------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
-
-
-
-
-
-
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 01:23:40 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
-| Command      : upgrade_ip
-| Device       : xc7z010clg400-1
----------------------------------------------------------------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
-
-
-
-
-
-
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 00:50:27 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
-| Command      : upgrade_ip
-| Device       : xc7z010clg400-1
----------------------------------------------------------------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
-
-
-
-
-
-
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 00:46:13 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
-| Command      : upgrade_ip
-| Device       : xc7z010clg400-1
----------------------------------------------------------------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'vespa_soc_timerSlave_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the update of vespa_soc_timerSlave_0_0 (user.org:user:timerSlave:1.0 (Rev. 2)) to current project options.
-
-
-
-
-
-
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Mar 29 00:27:29 2024
-| Host         : Lenovo-Legion running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Fri Apr 12 10:18:17 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip
 | Device       : xc7z010clg400-1
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -138,7 +54,7 @@ Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
 1. Summary
 ----------
 
-SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (Rev. 6)) to current project options.
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 28) to (Rev. 29)
 
 
 
@@ -148,39 +64,18 @@ SUCCESS in the update of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0 (R
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Thu Mar 28 11:23:23 2024
-| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Fri Apr 12 10:13:44 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip
 | Device       : xc7z010clg400-1
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'vespa_soc_CustomInterconnect_0_0'
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
 
 1. Summary
 ----------
 
-CAUTION (success, with warnings) in the upgrade of vespa_soc_CustomInterconnect_0_0 (user.org:user:CustomInterconnect:1.0) from (Rev. 3) to (Rev. 4)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'vespa_soc_CustomInterconnect_0_0'. These changes may impact your design.
-
-
--Upgrade has added port 'i_RData_7'
-
--Upgrade has added port 'o_RAddr_7'
-
--Upgrade has added port 'o_REnable_7'
-
--Upgrade has added port 'o_WAddr_7'
-
--Upgrade has added port 'o_WData_7'
-
--Upgrade has added port 'o_WEnable_7'
-
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 27) to (Rev. 28)
 
 
 
@@ -190,8 +85,218 @@ Detected external port differences while upgrading 'vespa_soc_CustomInterconnect
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Thu Mar 28 10:48:28 2024
-| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Date         : Fri Apr 12 10:09:39 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 25) to (Rev. 27)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 10:03:33 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 23) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:59:39 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 22) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:48:20 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 20) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:45:02 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 18) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:39:50 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 12) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:26:36 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 10) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Apr 12 09:21:24 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Thu Mar 28 09:50:36 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Thu Mar 28 09:46:00 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_vespa_cpu_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_vespa_cpu_0_0 (user.org:user:vespa_cpu:1.0) from (Rev. 6) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Thu Mar 28 09:46:00 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip
 | Device       : xc7z010clg400-1
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -202,6 +307,48 @@ Upgrade Log for IP 'vespa_soc_CustomInterconnect_0_0'
 ----------
 
 SUCCESS in the upgrade of vespa_soc_CustomInterconnect_0_0 (user.org:user:CustomInterconnect:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Mar 27 18:38:03 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_interruptControllerS_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of vespa_soc_interruptControllerS_0_0 (user.org:user:interruptControllerSlave:1.0) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Mar 27 18:25:00 2024
+| Host         : afonso running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vespa_soc_interruptControllerS_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of vespa_soc_interruptControllerS_0_0 (user.org:user:interruptControllerSlave:1.0 (Rev. 1)) to current project options.
 
 
 

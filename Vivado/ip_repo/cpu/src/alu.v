@@ -48,7 +48,7 @@ module alu(
     
     
     //check if is a sub operation
-    //used to update ovrflow flag 
+    //used to update overflow flag 
     wire sub;
     assign sub = (operation == `SUB_ALU) ? 1'b1 : 1'b0;
     

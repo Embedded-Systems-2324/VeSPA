@@ -4,7 +4,7 @@
     "xci_name": "vespa_soc_CustomInterconnect_0_0",
     "cell_name": "CustomInterconnect_0",
     "component_reference": "user.org:user:CustomInterconnect:1.0",
-    "ip_revision": "4",
+    "ip_revision": "3",
     "gen_directory": "../../../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "4" } ],
+        "IPREVISION": [ { "value": "3" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_CustomInterconnect_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -83,13 +83,7 @@
         "o_WData_6": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "o_REnable_6": [ { "direction": "out" } ],
         "o_RAddr_6": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "i_RData_6": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
-        "o_WEnable_7": [ { "direction": "out" } ],
-        "o_WAddr_7": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "o_WData_7": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "o_REnable_7": [ { "direction": "out" } ],
-        "o_RAddr_7": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "i_RData_7": [ { "direction": "in", "size_left": "31", "size_right": "0" } ]
+        "i_RData_6": [ { "direction": "in", "size_left": "31", "size_right": "0" } ]
       }
     }
   }

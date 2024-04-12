@@ -215,9 +215,6 @@ module controlUnit(
                      
 endmodule
 
-
-
-
 //check branch condition module
 module check_cond(
     input [3:0]cond, 
@@ -228,7 +225,7 @@ module check_cond(
     output reg out
     );
     
-    //BRANCH CONDITIONS PARAMETERS
+        //BRANCH CONDITIONS PARAMETERS
     parameter BRA = 4'd0,
               BCC = 4'd1,
               BVC = 4'd2,

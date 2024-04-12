@@ -7,16 +7,16 @@
       "name": "vespa_soc",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "DataMemory_0": "",
-      "vespa_cpu_0": "",
       "UartSlave_0": "",
       "PS2_Slave_0": "",
       "interruptControllerS_0": "",
       "CustomInterconnect_0": "",
-      "timerSlave_0": ""
+      "vespa_cpu_0": ""
     },
     "ports": {
       "CLK": {
@@ -38,12 +38,6 @@
         "xci_name": "vespa_soc_DataMemory_0_0",
         "xci_path": "ip/vespa_soc_DataMemory_0_0/vespa_soc_DataMemory_0_0.xci",
         "inst_hier_path": "DataMemory_0"
-      },
-      "vespa_cpu_0": {
-        "vlnv": "user.org:user:vespa_cpu:1.0",
-        "xci_name": "vespa_soc_vespa_cpu_0_0",
-        "xci_path": "ip/vespa_soc_vespa_cpu_0_0/vespa_soc_vespa_cpu_0_0.xci",
-        "inst_hier_path": "vespa_cpu_0"
       },
       "UartSlave_0": {
         "vlnv": "user.org:user:UartSlave:1.0",
@@ -69,11 +63,11 @@
         "xci_path": "ip/vespa_soc_CustomInterconnect_0_0/vespa_soc_CustomInterconnect_0_0.xci",
         "inst_hier_path": "CustomInterconnect_0"
       },
-      "timerSlave_0": {
-        "vlnv": "user.org:user:timerSlave:1.0",
-        "xci_name": "vespa_soc_timerSlave_0_0",
-        "xci_path": "ip/vespa_soc_timerSlave_0_0/vespa_soc_timerSlave_0_0.xci",
-        "inst_hier_path": "timerSlave_0"
+      "vespa_cpu_0": {
+        "vlnv": "user.org:user:vespa_cpu:1.0",
+        "xci_name": "vespa_soc_vespa_cpu_0_0",
+        "xci_path": "ip/vespa_soc_vespa_cpu_0_0/vespa_soc_vespa_cpu_0_0.xci",
+        "inst_hier_path": "vespa_cpu_0"
       }
     },
     "nets": {
@@ -107,12 +101,6 @@
           "PS2_Slave_0/i_RAddr"
         ]
       },
-      "CustomInterconnect_0_o_RAddr_7": {
-        "ports": [
-          "CustomInterconnect_0/o_RAddr_7",
-          "timerSlave_0/i_RAddr"
-        ]
-      },
       "CustomInterconnect_0_o_RData": {
         "ports": [
           "CustomInterconnect_0/o_RData",
@@ -143,12 +131,6 @@
           "PS2_Slave_0/i_REnable"
         ]
       },
-      "CustomInterconnect_0_o_REnable_7": {
-        "ports": [
-          "CustomInterconnect_0/o_REnable_7",
-          "timerSlave_0/i_REnable"
-        ]
-      },
       "CustomInterconnect_0_o_WAddr_0": {
         "ports": [
           "CustomInterconnect_0/o_WAddr_0",
@@ -171,12 +153,6 @@
         "ports": [
           "CustomInterconnect_0/o_WAddr_5",
           "PS2_Slave_0/i_WAddr"
-        ]
-      },
-      "CustomInterconnect_0_o_WAddr_7": {
-        "ports": [
-          "CustomInterconnect_0/o_WAddr_7",
-          "timerSlave_0/i_WAddr"
         ]
       },
       "CustomInterconnect_0_o_WData_0": {
@@ -203,12 +179,6 @@
           "PS2_Slave_0/i_WData"
         ]
       },
-      "CustomInterconnect_0_o_WData_7": {
-        "ports": [
-          "CustomInterconnect_0/o_WData_7",
-          "timerSlave_0/i_WData"
-        ]
-      },
       "CustomInterconnect_0_o_WEnable_0": {
         "ports": [
           "CustomInterconnect_0/o_WEnable_0",
@@ -231,12 +201,6 @@
         "ports": [
           "CustomInterconnect_0/o_WEnable_5",
           "PS2_Slave_0/i_WEnable"
-        ]
-      },
-      "CustomInterconnect_0_o_WEnable_7": {
-        "ports": [
-          "CustomInterconnect_0/o_WEnable_7",
-          "timerSlave_0/i_WEnable"
         ]
       },
       "DataMemory_0_o_MemBusy": {
@@ -293,12 +257,6 @@
           "CustomInterconnect_0/i_RData_1"
         ]
       },
-      "timerSlave_0_o_RData": {
-        "ports": [
-          "timerSlave_0/o_RData",
-          "CustomInterconnect_0/i_RData_7"
-        ]
-      },
       "uartRx_1": {
         "ports": [
           "uartRx",
@@ -323,8 +281,7 @@
           "DataMemory_0/i_Clk",
           "UartSlave_0/i_Clk",
           "PS2_Slave_0/i_Clk",
-          "interruptControllerS_0/i_Clk",
-          "timerSlave_0/i_Clk"
+          "interruptControllerS_0/i_Clk"
         ]
       },
       "vespa_cpu_0_o_RAddr": {
@@ -345,8 +302,7 @@
           "DataMemory_0/i_Rst",
           "UartSlave_0/i_Rst",
           "PS2_Slave_0/i_Rst",
-          "interruptControllerS_0/i_Rst",
-          "timerSlave_0/i_Rst"
+          "interruptControllerS_0/i_Rst"
         ]
       },
       "vespa_cpu_0_o_WAddr": {

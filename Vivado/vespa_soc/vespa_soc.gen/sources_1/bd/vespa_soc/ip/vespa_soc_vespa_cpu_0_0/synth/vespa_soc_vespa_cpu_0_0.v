@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:vespa_cpu:1.0
-// IP Revision: 6
+// IP Revision: 31
 
 (* X_CORE_INFO = "vespa_cpu,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "vespa_soc_vespa_cpu_0_0,vespa_cpu,{}" *)

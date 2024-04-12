@@ -99,7 +99,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2d9edfe7</spirit:value>
+            <spirit:value>e5d01b81</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -118,7 +118,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2d9edfe7</spirit:value>
+            <spirit:value>e5d01b81</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -367,13 +367,7 @@
         <spirit:name>src/code_memory/code_memory.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_DATAPATH/CODE_MEM</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/RAM32X32B/RAM32X32B.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_DATAPATH/REG_FILE/rf1</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fetch/CODE_MEM</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/defines.v</spirit:name>
@@ -382,29 +376,15 @@
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/alu.v</spirit:name>
+        <spirit:name>src/fetch.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/controlUnit.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/datapath.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/registerFile.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_807dbddf</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/vespa_cpu.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_0221ab72</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_21de7151</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -429,13 +409,7 @@
         <spirit:name>src/code_memory/code_memory.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_DATAPATH/CODE_MEM</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/RAM32X32B/RAM32X32B.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_DATAPATH/REG_FILE/rf1</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_fetch/CODE_MEM</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/defines.v</spirit:name>
@@ -443,22 +417,7 @@
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/alu.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/controlUnit.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/datapath.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/registerFile.v</spirit:name>
+        <spirit:name>src/fetch.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
@@ -508,13 +467,13 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>6</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-03-24T02:42:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>31</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-12T09:26:58Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3e764b74"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="93aab19b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9cc6ac95"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="8e9fb448"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="f9debe05"/>
     </xilinx:packagingInfo>

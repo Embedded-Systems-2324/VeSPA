@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:interruptControllerSlave:1.0
-// IP Revision: 1
+// IP Revision: 2
 
 (* X_CORE_INFO = "interruptController_wrapper,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "vespa_soc_interruptControllerS_0_0,interruptController_wrapper,{}" *)

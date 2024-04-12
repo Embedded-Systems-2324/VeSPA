@@ -4,7 +4,7 @@
     "xci_name": "vespa_soc_vespa_cpu_0_0",
     "cell_name": "vespa_cpu_0",
     "component_reference": "user.org:user:vespa_cpu:1.0",
-    "ip_revision": "6",
+    "ip_revision": "31",
     "gen_directory": "../../../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "6" } ],
+        "IPREVISION": [ { "value": "31" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

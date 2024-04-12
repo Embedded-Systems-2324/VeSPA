@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:vespa_cpu:1.0
-// IP Revision: 6
+// IP Revision: 31
 
 `timescale 1ns/1ps
 

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "code_memory",
-    "cell_name": "DATAPATH/CODE_MEM",
+    "cell_name": "fetch/CODE_MEM",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "6",
     "gen_directory": "../../../../vespa_soc/vespa_soc.tmp/vespa_cpu_v1_0_project/vespa_cpu_v1_0_project.gen/sources_1/ip/code_memory",
