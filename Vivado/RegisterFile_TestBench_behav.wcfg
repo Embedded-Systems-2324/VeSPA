@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="RegisterFile_Tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="RegisterFile_Tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="37,969.740 ns"></ZoomStartTime>
+      <ZoomEndTime time="42,859.741 ns"></ZoomEndTime>
+      <Cursor1Time time="39,969.740 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="297"></NameColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/RegisterFile_Tb/r_Clk">
+      <obj_property name="ElementShortName">r_Clk</obj_property>
+      <obj_property name="ObjectShortName">r_Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/RegisterFile_Tb/r_Rst">
+      <obj_property name="ElementShortName">r_Rst</obj_property>
+      <obj_property name="ObjectShortName">r_Rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/RegisterFile_Tb/r_WrEnable">
+      <obj_property name="ElementShortName">r_WrEnable</obj_property>
+      <obj_property name="ObjectShortName">r_WrEnable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/RegisterFile_Tb/r_Rdy">
+      <obj_property name="ElementShortName">r_Rdy</obj_property>
+      <obj_property name="ObjectShortName">r_Rdy</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/r_DataIn">
+      <obj_property name="ElementShortName">r_DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_DataIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/r_WrAddr">
+      <obj_property name="ElementShortName">r_WrAddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">r_WrAddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/r_RdAddrA">
+      <obj_property name="ElementShortName">r_RdAddrA[4:0]</obj_property>
+      <obj_property name="ObjectShortName">r_RdAddrA[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/r_RdAddrB">
+      <obj_property name="ElementShortName">r_RdAddrB[4:0]</obj_property>
+      <obj_property name="ObjectShortName">r_RdAddrB[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/w_DataOutA">
+      <obj_property name="ElementShortName">w_DataOutA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_DataOutA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/RegisterFile_Tb/w_DataOutB">
+      <obj_property name="ElementShortName">w_DataOutB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_DataOutB[31:0]</obj_property>
+   </wvobject>
+</wave_config>
