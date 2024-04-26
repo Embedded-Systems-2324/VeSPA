@@ -1,2 +1,0 @@
-CodeMemory.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/sim/CodeMemory.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

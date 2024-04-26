@@ -1,0 +1,372 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5CB8398F81612B8",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../vespa_soc.gen/sources_1/bd/vespa_soc",
+      "name": "vespa_soc",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "DataMemory_0": "",
+      "vespa_cpu_0": "",
+      "UartSlave_0": "",
+      "PS2_Slave_0": "",
+      "interruptControllerS_0": "",
+      "CustomInterconnect_0": "",
+      "timerSlave_0": ""
+    },
+    "ports": {
+      "CLK": {
+        "direction": "I"
+      },
+      "RST": {
+        "direction": "I"
+      },
+      "uartRx": {
+        "direction": "I"
+      },
+      "uartTx": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "DataMemory_0": {
+        "vlnv": "user.org:user:DataMemory:1.0",
+        "xci_name": "vespa_soc_DataMemory_0_0",
+        "xci_path": "ip/vespa_soc_DataMemory_0_0/vespa_soc_DataMemory_0_0.xci",
+        "inst_hier_path": "DataMemory_0"
+      },
+      "vespa_cpu_0": {
+        "vlnv": "user.org:user:vespa_cpu:1.0",
+        "xci_name": "vespa_soc_vespa_cpu_0_0",
+        "xci_path": "ip/vespa_soc_vespa_cpu_0_0/vespa_soc_vespa_cpu_0_0.xci",
+        "inst_hier_path": "vespa_cpu_0"
+      },
+      "UartSlave_0": {
+        "vlnv": "user.org:user:UartSlave:1.0",
+        "xci_name": "vespa_soc_UartSlave_0_0",
+        "xci_path": "ip/vespa_soc_UartSlave_0_0/vespa_soc_UartSlave_0_0.xci",
+        "inst_hier_path": "UartSlave_0"
+      },
+      "PS2_Slave_0": {
+        "vlnv": "user.org:user:PS2_Slave:1.0",
+        "xci_name": "vespa_soc_PS2_Slave_0_0",
+        "xci_path": "ip/vespa_soc_PS2_Slave_0_0/vespa_soc_PS2_Slave_0_0.xci",
+        "inst_hier_path": "PS2_Slave_0"
+      },
+      "interruptControllerS_0": {
+        "vlnv": "user.org:user:interruptControllerSlave:1.0",
+        "xci_name": "vespa_soc_interruptControllerS_0_0",
+        "xci_path": "ip/vespa_soc_interruptControllerS_0_0/vespa_soc_interruptControllerS_0_0.xci",
+        "inst_hier_path": "interruptControllerS_0"
+      },
+      "CustomInterconnect_0": {
+        "vlnv": "user.org:user:CustomInterconnect:1.0",
+        "xci_name": "vespa_soc_CustomInterconnect_0_0",
+        "xci_path": "ip/vespa_soc_CustomInterconnect_0_0/vespa_soc_CustomInterconnect_0_0.xci",
+        "inst_hier_path": "CustomInterconnect_0"
+      },
+      "timerSlave_0": {
+        "vlnv": "user.org:user:timerSlave:1.0",
+        "xci_name": "vespa_soc_timerSlave_0_0",
+        "xci_path": "ip/vespa_soc_timerSlave_0_0/vespa_soc_timerSlave_0_0.xci",
+        "inst_hier_path": "timerSlave_0"
+      }
+    },
+    "nets": {
+      "CLK_1": {
+        "ports": [
+          "CLK",
+          "vespa_cpu_0/i_Clk"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_0": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_0",
+          "DataMemory_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_1": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_1",
+          "interruptControllerS_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_3": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_3",
+          "UartSlave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_5": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_5",
+          "PS2_Slave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_7": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_7",
+          "timerSlave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RData": {
+        "ports": [
+          "CustomInterconnect_0/o_RData",
+          "vespa_cpu_0/i_RData"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_0": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_0",
+          "DataMemory_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_1": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_1",
+          "interruptControllerS_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_3": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_3",
+          "UartSlave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_5": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_5",
+          "PS2_Slave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_7": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_7",
+          "timerSlave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_0",
+          "DataMemory_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_1",
+          "interruptControllerS_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_3",
+          "UartSlave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_5": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_5",
+          "PS2_Slave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_7",
+          "timerSlave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_0",
+          "DataMemory_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_1",
+          "interruptControllerS_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_3",
+          "UartSlave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_5": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_5",
+          "PS2_Slave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_7",
+          "timerSlave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_0",
+          "DataMemory_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_1",
+          "interruptControllerS_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_3",
+          "UartSlave_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_5": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_5",
+          "PS2_Slave_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_7",
+          "timerSlave_0/i_WEnable"
+        ]
+      },
+      "DataMemory_0_o_MemBusy": {
+        "ports": [
+          "DataMemory_0/o_MemBusy",
+          "vespa_cpu_0/data_mem_initialized"
+        ]
+      },
+      "DataMemory_0_o_RData": {
+        "ports": [
+          "DataMemory_0/o_RData",
+          "CustomInterconnect_0/i_RData_0"
+        ]
+      },
+      "PS2_Slave_0_o_RData": {
+        "ports": [
+          "PS2_Slave_0/o_RData",
+          "CustomInterconnect_0/i_RData_5"
+        ]
+      },
+      "RST_1": {
+        "ports": [
+          "RST",
+          "vespa_cpu_0/i_Rst"
+        ]
+      },
+      "UartSlave_0_o_RData": {
+        "ports": [
+          "UartSlave_0/o_RData",
+          "CustomInterconnect_0/i_RData_3"
+        ]
+      },
+      "UartSlave_0_o_Tx": {
+        "ports": [
+          "UartSlave_0/o_Tx",
+          "uartTx"
+        ]
+      },
+      "interruptControllerS_0_irq_number": {
+        "ports": [
+          "interruptControllerS_0/irq_number",
+          "vespa_cpu_0/int_number"
+        ]
+      },
+      "interruptControllerS_0_irq_req": {
+        "ports": [
+          "interruptControllerS_0/irq_req",
+          "vespa_cpu_0/int_req"
+        ]
+      },
+      "interruptControllerS_0_o_RData": {
+        "ports": [
+          "interruptControllerS_0/o_RData",
+          "CustomInterconnect_0/i_RData_1"
+        ]
+      },
+      "timerSlave_0_o_RData": {
+        "ports": [
+          "timerSlave_0/o_RData",
+          "CustomInterconnect_0/i_RData_7"
+        ]
+      },
+      "uartRx_1": {
+        "ports": [
+          "uartRx",
+          "UartSlave_0/i_Rx"
+        ]
+      },
+      "vespa_cpu_0_int_ack_attended": {
+        "ports": [
+          "vespa_cpu_0/int_ack_attended",
+          "interruptControllerS_0/ack_attended"
+        ]
+      },
+      "vespa_cpu_0_int_ack_complete": {
+        "ports": [
+          "vespa_cpu_0/int_ack_complete",
+          "interruptControllerS_0/ack_complete"
+        ]
+      },
+      "vespa_cpu_0_o_Clk": {
+        "ports": [
+          "vespa_cpu_0/o_Clk",
+          "DataMemory_0/i_Clk",
+          "UartSlave_0/i_Clk",
+          "PS2_Slave_0/i_Clk",
+          "interruptControllerS_0/i_Clk",
+          "timerSlave_0/i_Clk"
+        ]
+      },
+      "vespa_cpu_0_o_RAddr": {
+        "ports": [
+          "vespa_cpu_0/o_RAddr",
+          "CustomInterconnect_0/i_RAddr"
+        ]
+      },
+      "vespa_cpu_0_o_REnable": {
+        "ports": [
+          "vespa_cpu_0/o_REnable",
+          "CustomInterconnect_0/i_REnable"
+        ]
+      },
+      "vespa_cpu_0_o_Rst": {
+        "ports": [
+          "vespa_cpu_0/o_Rst",
+          "DataMemory_0/i_Rst",
+          "UartSlave_0/i_Rst",
+          "PS2_Slave_0/i_Rst",
+          "interruptControllerS_0/i_Rst",
+          "timerSlave_0/i_Rst"
+        ]
+      },
+      "vespa_cpu_0_o_WAddr": {
+        "ports": [
+          "vespa_cpu_0/o_WAddr",
+          "CustomInterconnect_0/i_WAddr"
+        ]
+      },
+      "vespa_cpu_0_o_WData": {
+        "ports": [
+          "vespa_cpu_0/o_WData",
+          "CustomInterconnect_0/i_WData"
+        ]
+      },
+      "vespa_cpu_0_o_WEnable": {
+        "ports": [
+          "vespa_cpu_0/o_WEnable",
+          "CustomInterconnect_0/i_WEnable"
+        ]
+      }
+    }
+  }
+}

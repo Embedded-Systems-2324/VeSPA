@@ -1,0 +1,72 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.778361",
+   "Default View_TopLeft":"574,781",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_CLK -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD
+preplace port port-id_RST -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace port port-id_uartRx -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_uartTx -pg 1 -lvl 6 -x 2390 -y 630 -defaultsOSRD
+preplace inst DataMemory_0 -pg 1 -lvl 4 -x 1790 -y 200 -defaultsOSRD
+preplace inst vespa_cpu_0 -pg 1 -lvl 1 -x 510 -y 620 -defaultsOSRD
+preplace inst UartSlave_0 -pg 1 -lvl 4 -x 1790 -y 610 -defaultsOSRD
+preplace inst PS2_Slave_0 -pg 1 -lvl 4 -x 1790 -y 910 -defaultsOSRD
+preplace inst interruptControllerS_0 -pg 1 -lvl 5 -x 2200 -y 380 -defaultsOSRD
+preplace inst CustomInterconnect_0 -pg 1 -lvl 2 -x 940 -y 730 -defaultsOSRD
+preplace inst timerSlave_0 -pg 1 -lvl 3 -x 1380 -y 1120 -defaultsOSRD
+preplace netloc CLK_1 1 0 1 NJ 570
+preplace netloc CustomInterconnect_0_o_RAddr_0 1 2 2 1180 260 N
+preplace netloc CustomInterconnect_0_o_RAddr_1 1 2 3 1200 410 N 410 NJ
+preplace netloc CustomInterconnect_0_o_RAddr_3 1 2 2 NJ 730 1650
+preplace netloc CustomInterconnect_0_o_RAddr_5 1 2 2 1120 940 1630
+preplace netloc CustomInterconnect_0_o_RData 1 0 3 320 190 N 190 1120
+preplace netloc CustomInterconnect_0_o_REnable_0 1 2 2 1170 230 1640
+preplace netloc CustomInterconnect_0_o_REnable_1 1 2 3 1210 420 N 420 2030J
+preplace netloc CustomInterconnect_0_o_REnable_3 1 2 2 NJ 710 1640
+preplace netloc CustomInterconnect_0_o_REnable_5 1 2 2 1120 920 1530
+preplace netloc CustomInterconnect_0_o_WAddr_0 1 2 2 N 370 1540
+preplace netloc CustomInterconnect_0_o_WAddr_1 1 2 3 1220 450 N 450 2020J
+preplace netloc CustomInterconnect_0_o_WAddr_3 1 2 2 NJ 670 1540
+preplace netloc CustomInterconnect_0_o_WAddr_5 1 2 2 1210 880 1530
+preplace netloc CustomInterconnect_0_o_WData_0 1 2 2 N 390 1560
+preplace netloc CustomInterconnect_0_o_WData_1 1 2 3 1230 470 N 470 2040J
+preplace netloc CustomInterconnect_0_o_WData_3 1 2 2 NJ 690 1570
+preplace netloc CustomInterconnect_0_o_WData_5 1 2 2 1120 900 1630
+preplace netloc CustomInterconnect_0_o_WEnable_0 1 2 2 1130 180 N
+preplace netloc CustomInterconnect_0_o_WEnable_1 1 2 3 1190 430 N 430 2010J
+preplace netloc CustomInterconnect_0_o_WEnable_3 1 2 2 NJ 650 1530
+preplace netloc CustomInterconnect_0_o_WEnable_5 1 2 2 1230 870 N
+preplace netloc DataMemory_0_o_MemBusy 1 0 5 310 60 NJ 60 N 60 N 60 1950
+preplace netloc DataMemory_0_o_RData 1 1 4 770 70 N 70 N 70 1940
+preplace netloc PS2_Slave_0_o_RData 1 1 4 790 1250 NJ 1250 N 1250 1930
+preplace netloc RST_1 1 0 1 NJ 590
+preplace netloc UartSlave_0_o_RData 1 1 4 780 80 NJ 80 N 80 1930J
+preplace netloc UartSlave_0_o_Tx 1 4 2 N 630 N
+preplace netloc interruptControllerS_0_irq_number 1 0 6 330 200 NJ 200 NJ 200 1530 320 1960J 220 2360
+preplace netloc interruptControllerS_0_irq_req 1 0 6 340 210 NJ 210 NJ 210 1650 330 1980J 230 2350
+preplace netloc interruptControllerS_0_o_RData 1 1 5 790 260 1160J 270 1570 340 1970J 210 2370
+preplace netloc uartRx_1 1 0 4 20J 220 NJ 220 NJ 220 1550
+preplace netloc vespa_cpu_0_int_ack_attended 1 1 4 710 230 1160J 240 1590 460 2050J
+preplace netloc vespa_cpu_0_int_ack_complete 1 1 4 730 250 NJ 250 1580 440 2030J
+preplace netloc vespa_cpu_0_o_Clk 1 1 4 720J 270 1140J 280 1620 350 1990
+preplace netloc vespa_cpu_0_o_RAddr 1 1 1 680 660n
+preplace netloc vespa_cpu_0_o_REnable 1 1 1 690 640n
+preplace netloc vespa_cpu_0_o_Rst 1 1 4 700J 240 1150J 290 1630 360 2000
+preplace netloc vespa_cpu_0_o_WAddr 1 1 1 740 600n
+preplace netloc vespa_cpu_0_o_WData 1 1 1 700 620n
+preplace netloc vespa_cpu_0_o_WEnable 1 1 1 750 580n
+preplace netloc CustomInterconnect_0_o_WEnable_7 1 2 1 1130 1050n
+preplace netloc CustomInterconnect_0_o_WAddr_7 1 2 1 1120 1070n
+preplace netloc CustomInterconnect_0_o_WData_7 1 2 1 1110 1090n
+preplace netloc CustomInterconnect_0_o_REnable_7 1 2 1 1100 1110n
+preplace netloc CustomInterconnect_0_o_RAddr_7 1 2 1 1090 1130n
+preplace netloc timerSlave_0_o_RData 1 1 3 780 1260 NJ 1260 1530
+levelinfo -pg 1 0 510 940 1380 1790 2200 2390
+pagesize -pg 1 -db -bbox -sgen -100 -230 2490 1470
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}
