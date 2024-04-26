@@ -31,6 +31,7 @@ module DecodeExecuteReg
     input [`ALU_SEL_MSB:0] i_AluCtrl,
     input i_AluEn,
     input i_AluOp2Sel,
+    input i_UpdateCondCodes,
     
     input i_WrEnMem,    //WE MEM
     input i_RdEnMem,    //RD MEM
@@ -66,6 +67,7 @@ module DecodeExecuteReg
     output reg [`ALU_SEL_MSB:0] o_AluCtrl,
     output reg o_AluEn,
     output reg o_AluOp2Sel,
+    output reg o_UpdateCondCodesExe,
     
     output reg o_WrEnMem,    //WE MEM
     output reg o_RdEnMem,    //RD MEM
@@ -78,74 +80,75 @@ module DecodeExecuteReg
 
 
 always @(posedge i_Clk) begin
-    
     if(i_Rst || i_Flush) begin
-        o_ProgramCounter <= 0;
-        o_IrRst          <= 0;
-        o_R1Out          <= 0;
-        o_R2Out          <= 0;
-        o_Branch_Cond    <= 0;
-        o_Imm16          <= 0;
-        o_Imm17          <= 0;
-        o_Imm22          <= 0;
-        o_Imm23          <= 0;
-        o_AluCtrl        <= 0;    
-        o_AluEn          <= 0; 
-        o_AluOp2Sel      <= 0;  
-        o_WrEnMem        <= 0;
-        o_RdEnMem        <= 0;
-        o_WrEnRf         <= 0;
-        o_PcSel          <= 0;
-        o_MemAddrSel     <= 0;
-        o_RfDataInSel    <= 0;
-        o_JmpBit         <= 0;
-        o_BranchBit      <= 0;
+        o_ProgramCounter     <= 0;
+        o_IrRst              <= 0;
+        o_R1Out              <= 0;
+        o_R2Out              <= 0;
+        o_Branch_Cond        <= 0;
+        o_Imm16              <= 0;
+        o_Imm17              <= 0;
+        o_Imm22              <= 0;
+        o_Imm23              <= 0;
+        o_AluCtrl            <= 0;    
+        o_AluEn              <= 0; 
+        o_AluOp2Sel          <= 0;  
+        o_WrEnMem            <= 0;
+        o_RdEnMem            <= 0;
+        o_WrEnRf             <= 0;
+        o_PcSel              <= 0;
+        o_MemAddrSel         <= 0;
+        o_RfDataInSel        <= 0;
+        o_JmpBit             <= 0;
+        o_BranchBit          <= 0;
+        o_UpdateCondCodesExe <= 0;
     end
     else begin
         if(i_Stall) begin                
-                o_ProgramCounter <= o_ProgramCounter;
-                o_IrRst          <= o_IrRst;
-                o_R1Out          <= o_R1Out;
-                o_R2Out          <= o_R2Out;
-                o_Branch_Cond    <= o_Branch_Cond;
-                o_Imm16          <= o_Imm16;
-                o_Imm17          <= o_Imm17;
-                o_Imm22          <= o_Imm22;
-                o_Imm23          <= o_Imm23;
-                o_AluCtrl        <= o_AluCtrl;    
-                o_AluEn          <= o_AluEn; 
-                o_AluOp2Sel      <= o_AluOp2Sel;  
-                o_WrEnMem        <= o_WrEnMem;
-                o_RdEnMem        <= o_RdEnMem;
-                o_WrEnRf         <= o_WrEnRf;
-                o_PcSel          <= o_PcSel;
-                o_MemAddrSel     <= o_MemAddrSel;
-                o_RfDataInSel    <= o_RfDataInSel;
-                o_JmpBit         <= o_JmpBit;
-                o_BranchBit      <= o_BranchBit;
-
+                o_ProgramCounter     <= o_ProgramCounter;
+                o_IrRst              <= o_IrRst;
+                o_R1Out              <= o_R1Out;
+                o_R2Out              <= o_R2Out;
+                o_Branch_Cond        <= o_Branch_Cond;
+                o_Imm16              <= o_Imm16;
+                o_Imm17              <= o_Imm17;
+                o_Imm22              <= o_Imm22;
+                o_Imm23              <= o_Imm23;
+                o_AluCtrl            <= o_AluCtrl;    
+                o_AluEn              <= o_AluEn; 
+                o_AluOp2Sel          <= o_AluOp2Sel;  
+                o_WrEnMem            <= o_WrEnMem;
+                o_RdEnMem            <= o_RdEnMem;
+                o_WrEnRf             <= o_WrEnRf;
+                o_PcSel              <= o_PcSel;
+                o_MemAddrSel         <= o_MemAddrSel;
+                o_RfDataInSel        <= o_RfDataInSel;
+                o_JmpBit             <= o_JmpBit;
+                o_BranchBit          <= o_BranchBit;
+                o_UpdateCondCodesExe <= o_UpdateCondCodesExe;
             end
             else begin
-                o_ProgramCounter <= i_ProgramCounter;
-                o_IrRst          <= i_IrRst;
-                o_R1Out          <= i_R1Out;
-                o_R2Out          <= i_R2Out;
-                o_Branch_Cond    <= i_Branch_Cond;
-                o_Imm16          <= i_Imm16;
-                o_Imm17          <= i_Imm17;
-                o_Imm22          <= i_Imm22;
-                o_Imm23          <= i_Imm23;
-                o_AluCtrl        <= i_AluCtrl;    
-                o_AluEn          <= i_AluEn; 
-                o_AluOp2Sel      <= i_AluOp2Sel;  
-                o_WrEnMem        <= i_WrEnMem;
-                o_RdEnMem        <= i_RdEnMem;
-                o_WrEnRf         <= i_WrEnRf;
-                o_PcSel          <= i_PcSel;
-                o_MemAddrSel     <= i_MemAddrSel;
-                o_RfDataInSel    <= i_RfDataInSel;
-                o_JmpBit         <= i_JmpBit;
-                o_BranchBit      <= i_BranchBit;
+                o_ProgramCounter      <= i_ProgramCounter;
+                o_IrRst               <= i_IrRst;
+                o_R1Out               <= i_R1Out;
+                o_R2Out               <= i_R2Out;
+                o_Branch_Cond         <= i_Branch_Cond;
+                o_Imm16               <= i_Imm16;
+                o_Imm17               <= i_Imm17;
+                o_Imm22               <= i_Imm22;
+                o_Imm23               <= i_Imm23;
+                o_AluCtrl             <= i_AluCtrl;    
+                o_AluEn               <= i_AluEn; 
+                o_AluOp2Sel           <= i_AluOp2Sel;  
+                o_WrEnMem             <= i_WrEnMem;
+                o_RdEnMem             <= i_RdEnMem;
+                o_WrEnRf              <= i_WrEnRf;
+                o_PcSel               <= i_PcSel;
+                o_MemAddrSel          <= i_MemAddrSel;
+                o_RfDataInSel         <= i_RfDataInSel;
+                o_JmpBit              <= i_JmpBit;
+                o_BranchBit           <= i_BranchBit;
+                o_UpdateCondCodesExe  <= i_UpdateCondCodes;
             end
     end
 end

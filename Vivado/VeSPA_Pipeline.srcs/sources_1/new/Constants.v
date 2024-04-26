@@ -65,4 +65,14 @@
 `define MEM_SEL_IMM     0
 `define MEM_SEL_OPX     1
 
+`define PC_INC          4
+
+`define CCODES_WIDTH    4
+`define CCODES_MSB      3
+
+`define CCODE_CARRY     3
+`define CCODE_ZERO      2   
+`define CCODE_NEG       1   
+`define CCODE_OVF       0   
+
 `endif

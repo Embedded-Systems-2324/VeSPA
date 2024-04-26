@@ -7,8 +7,9 @@ module CPU
     input i_DataMemRdy
 );
 
-wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
-wire w_StallFe, w_StallDec, w_FlushDec, w_StallExe, w_FlushExe;
+wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
+wire w_StallFe, w_StallDec, w_FlushDec, w_StallExe, w_FlushExe, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
+
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
 wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe;
@@ -32,6 +33,7 @@ wire [`BUS_MSB:0] w_Imm22Dec, w_Imm22Exe;
 wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
 
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
+wire w_UpdateCondCodes, w_UpdateCondCodesExe;
 
 
 ControlUnit _ControlUnit
@@ -55,8 +57,9 @@ ControlUnit _ControlUnit
     .o_RfRdAddrBSel(w_RfRdAddrBSelDec),    
     .o_RfDataInSel(w_RfDataInSelDec),
     .o_JmpBit(w_JmpBit),
-    .o_BranchBit(w_BranchBit)          
-    //.o_Clk(w_Clk)
+    .o_BranchBit(w_BranchBit),
+    .o_Enable(w_Enable), 
+    .o_UpdateCondCodes(w_UpdateCondCodes)     
 );
 
 InstructionFetch _InstrFetch
@@ -64,13 +67,12 @@ InstructionFetch _InstrFetch
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
     .i_Enable(w_Enable),
-    .i_Stall(w_StallFe),
-    .i_PcSel(`PC_SEL_ADD4),       //aqui é pc_sel_execute
+    .i_Stall(0), //w_StallFe
+    .i_PcSel(w_PcSelExe),       //aqui é pc_sel_execute
     .i_PcJmp(w_PcJmpExe),
     .i_PcBxx(w_PcBxxExe),
     .i_PcRet(w_PcRetExe),
     .i_PcInt(w_PcIntExe),
-
     //outputs
     .o_Rdy(w_FetchRdy),
     .o_InstructionRegister(w_InstructionRegisterFe),
@@ -148,7 +150,8 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_AluCtrl(w_AluCtrlDec),
     .i_AluEn(w_AluEnDec),
     .i_AluOp2Sel(w_AluOp2SelDec),
-    
+    .i_UpdateCondCodes(w_UpdateCondCodes),
+
     .i_WrEnMem(w_WrEnMemDec),
     .i_RdEnMem(w_RdEnMemDec),
     .i_WrEnRf(w_WrEnRfDec),
@@ -181,6 +184,7 @@ DecodeExecuteReg _DecodeExecuteReg
     .o_AluCtrl(w_AluCtrlExe),
     .o_AluEn(w_AluEnExe),
     .o_AluOp2Sel(w_AluOp2SelExe),
+    .o_UpdateCondCodesExe(w_UpdateCondCodesExe),
     
     .o_WrEnMem(w_WrEnMemExe),
     .o_RdEnMem(w_RdEnMemExe),

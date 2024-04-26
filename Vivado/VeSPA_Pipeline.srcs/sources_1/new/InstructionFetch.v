@@ -52,8 +52,7 @@ always @(posedge i_Clk) begin
         o_ProgramCounter <= 0;    
     end
     else begin
-        if (w_CodeMemBusy == 1'b0) begin
-        //if (i_Enable) begin
+        if (i_Enable) begin
             if (i_Stall) begin
                 o_ProgramCounter <= o_ProgramCounter;
             end
@@ -75,11 +74,7 @@ always @(posedge i_Clk) begin
                         o_ProgramCounter <= i_PcInt;
                     end
 
-                    `PC_SEL_ADD4: begin
-                        o_ProgramCounter <= o_ProgramCounter + 4;
-                    end
-
-                    default: o_ProgramCounter <= o_ProgramCounter;
+                    default: o_ProgramCounter <= o_ProgramCounter + `PC_INC;
                 endcase
             end
         end

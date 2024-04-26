@@ -19,6 +19,7 @@ module ControlUnit
     output [`ALU_SEL_MSB:0] o_AluCtrl,
     output o_AluEn,
     output o_AluOp2Sel,
+    output o_UpdateCondCodes,
     
     //Data Bus Signals 
     output o_WrEnMem,
@@ -86,7 +87,9 @@ end
 assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
                                                (i_OpCode == `OP_JMP) ? `PC_SEL_JMP :
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
-                                               (i_OpCode == `OP_RETI) ? `PC_SEL_RETI : `PC_SEL_ADD4) : (r_CurrentState == ST_INT) ? `PC_SEL_INT : 0;
+                                               (i_OpCode == `OP_RETI) ? `PC_SEL_RETI : `PC_SEL_ADD4) :
+                                               (r_CurrentState == ST_INT) ? `PC_SEL_INT : 
+                                               (r_CurrentState == ST_INIT) ? `PC_SEL_ADD4 : 0;
 
 assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 
                         (i_OpCode == `OP_RET) ? `RF_SEL_RET :
@@ -124,5 +127,7 @@ assign o_JmpBit = (i_OpCode == `OP_JMP) ? 1'b1 : 1'b0;
 assign o_BranchBit = (i_OpCode == `OP_BXX) ? 1'b1 : 1'b0;
 
 assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT); 
+
+assign o_UpdateCondCodes = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 1'b1 : 1'b0;
 
 endmodule
