@@ -97,7 +97,7 @@ output wire rsta_busy;
     .C_LOAD_INIT_FILE(1),
     .C_INIT_FILE_NAME("CodeMemory.mif"),
     .C_INIT_FILE("CodeMemory.mem"),
-    .C_USE_DEFAULT_DATA(0),
+    .C_USE_DEFAULT_DATA(1),
     .C_DEFAULT_DATA("0"),
     .C_HAS_RSTA(1),
     .C_RST_PRIORITY_A("CE"),

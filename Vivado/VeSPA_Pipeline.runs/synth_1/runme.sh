@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/Vitis/2023.1/bin:/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2023.1/bin
+  PATH=/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/ids_lite/ISE/bin/lin64:/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/bin
 else
-  PATH=/tools/Xilinx/Vitis/2023.1/bin:/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2023.1/bin:$PATH
+  PATH=/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/ids_lite/ISE/bin/lin64:/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/andre/VeSPA_Pipeline/VeSPA_Pipeline.runs/synth_1'
+HD_PWD='/home/alfredo/Desktop/VeSPA-NewPipeline/Vivado/VeSPA_Pipeline.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log InstructionFetch.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source InstructionFetch.tcl
+EAStep vivado -log CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl

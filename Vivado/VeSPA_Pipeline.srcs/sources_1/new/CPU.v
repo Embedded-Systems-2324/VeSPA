@@ -18,7 +18,6 @@ wire [`BUS_MSB:0] w_PcJmpExe, w_PcBxxExe, w_PcRetDec, w_PcIntExe;
 wire [`BUS_MSB:0] w_InstructionRegisterFe,  w_InstructionRegisterDec;
 wire [`BUS_MSB:0] w_ProgramCounterFe, w_ProgramCounterDec, w_ProgramCounterExe, w_ProgramCounterMem, w_ProgramCounterWb;
 
-wire [1:0] w_Read2AddrSelDec;
 wire w_RfWeDec, w_RfWeExe, w_RfWeMem, w_RfWeWb;
 wire [4:0] w_RfWrAddrDec, w_RfWrAddrExe, w_RfWrAddrMem, w_RfWrAddrWb;
 wire [`BUS_MSB:0] w_RfDataInFe, w_RfDataInDec, w_RfDataInExe, w_RfDataInMem, w_RfDataInWb; 
@@ -54,7 +53,7 @@ ControlUnit _ControlUnit
     .o_PcSel(w_PcSelDec),
     .o_MemAddrSel(w_MemAddrSelDec),
     .o_RfRdAddrBSel(w_RfRdAddrBSelDec),    
-    .o_RfDataInSel(w_RfDataInSelWb),
+    .o_RfDataInSel(w_RfDataInSelDec),
     .o_JmpBit(w_JmpBit),
     .o_BranchBit(w_BranchBit)          
     //.o_Clk(w_Clk)
@@ -97,7 +96,7 @@ InstructionDecode _InstrDecode
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
     .i_InstructionRegister(w_InstructionRegisterDec),
-    .i_Read2AddrSel(w_Read2AddrSelDec),
+    .i_Read2AddrSel(w_RfRdAddrBSelDec),
     .i_RfWe(w_RfWeWb),
     .i_RfWrAddr(w_RfWrAddrWb),
     .i_RfDataIn(w_RfDataInWb),
@@ -156,7 +155,7 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .i_PcSel(w_PcSelDec),  
     .i_MemAddrSel(w_MemAddrSelDec),
-    .i_RfDataInSel(),
+    .i_RfDataInSel(w_RfDataInSelDec),
     
     .i_JmpBit(w_JmpBit),
     .i_BranchBit(w_BranchBit),
@@ -189,7 +188,7 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .o_PcSel(w_PcSelExe),
     .o_MemAddrSel(w_MemAddrSelExe),
-    .o_RfDataInSel(w_RfDataInSelDec)
+    .o_RfDataInSel(w_RfDataInSelExe)
 );
 
 

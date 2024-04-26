@@ -27,7 +27,7 @@ module InstructionDecode
     input i_Clk,
     input i_Rst,
     input [`BUS_MSB:0] i_InstructionRegister,
-    input [1:0] i_Read2AddrSel,
+    input [`RF_SEL_MSB:0] i_Read2AddrSel,
     input i_RfWe,
     input [4:0] i_RfWrAddr,
     input [`BUS_MSB:0] i_RfDataIn,
@@ -55,6 +55,8 @@ wire [4:0] w_IrRs1;     //IR_RS1 [21:17]
 wire [4:0] w_IrRs2;     //IR_RS2 [15:11]
 wire [4:0] w_IrRst;     //IR_RST [26:22]
 
+wire [4:0] w_IrRs2_in;
+
 wire [15:0] w_Imm16;
 wire [16:0] w_Imm17;
 wire [21:0] w_Imm22;
@@ -62,7 +64,7 @@ wire [22:0] w_Imm23;
 
 
 assign o_IrRs1 = w_IrRs1;
-assign o_IrRs2 = w_IrRs2;
+assign o_IrRs2 = w_IrRs2_in;
 assign o_IrRst = w_IrRst;
 
 //Decode IR Register
@@ -88,8 +90,8 @@ assign o_Imm22 = {10'b0, w_Imm22};
 assign o_Imm23 = {9'b0, w_Imm23};
 
 
-
-assign w_IrRs2 = (i_Read2AddrSel == 2'b00) ? w_IrRs2 : 
+    
+assign w_IrRs2_in = (i_Read2AddrSel == 2'b00) ? w_IrRs2 :               //w_IrRs2_in is the read adress B to register file after the mux i_Read2AddrSel
                    (i_Read2AddrSel == 2'b01) ? w_IrRst :
                    (i_Read2AddrSel == 2'b00) ? `RET_REG : `RETI_REG;
 
@@ -102,7 +104,7 @@ RegisterFile rf
     .i_DataIn(i_RfDataIn),
     .i_WrAddr(i_RfWrAddr),
     .i_RdAddrA(w_IrRs1),
-    .i_RdAddrB(w_IrRs2),
+    .i_RdAddrB(w_IrRs2_in),
     .o_DataOutA(o_R1Out),
     .o_DataOutB(o_R2Out)
 );

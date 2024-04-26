@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="150.001 ns"></ZoomEndTime>
-      <Cursor1Time time="150.000 ns"></Cursor1Time>
+      <ZoomStartTime time="83.366 ns"></ZoomStartTime>
+      <ZoomEndTime time="198.667 ns"></ZoomEndTime>
+      <Cursor1Time time="144.066 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="297"></NameColumnWidth>
-      <ValueColumnWidth column_width="69"></ValueColumnWidth>
+      <NameColumnWidth column_width="280"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="39" />
    <wvobject type="logic" fp_name="/Pipeline_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -52,16 +52,128 @@
       <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
       <obj_property name="ObjectShortName">o_InstructionRegister[31:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_ControlUnit/o_AluCtrl">
+      <obj_property name="ElementShortName">o_AluCtrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">o_AluCtrl[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_AluEn">
+      <obj_property name="ElementShortName">o_AluEn</obj_property>
+      <obj_property name="ObjectShortName">o_AluEn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_AluOp2Sel">
+      <obj_property name="ElementShortName">o_AluOp2Sel</obj_property>
+      <obj_property name="ObjectShortName">o_AluOp2Sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_WrEnMem">
+      <obj_property name="ElementShortName">o_WrEnMem</obj_property>
+      <obj_property name="ObjectShortName">o_WrEnMem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_RdEnMem">
+      <obj_property name="ElementShortName">o_RdEnMem</obj_property>
+      <obj_property name="ObjectShortName">o_RdEnMem</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_WrEnRf">
       <obj_property name="ElementShortName">o_WrEnRf</obj_property>
       <obj_property name="ObjectShortName">o_WrEnRf</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/i_WrEnRf">
-      <obj_property name="ElementShortName">i_WrEnRf</obj_property>
-      <obj_property name="ObjectShortName">i_WrEnRf</obj_property>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_ControlUnit/o_PcSel">
+      <obj_property name="ElementShortName">o_PcSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PcSel[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_MemAddrSel">
+      <obj_property name="ElementShortName">o_MemAddrSel</obj_property>
+      <obj_property name="ObjectShortName">o_MemAddrSel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_ControlUnit/o_RfRdAddrBSel">
+      <obj_property name="ElementShortName">o_RfRdAddrBSel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RfRdAddrBSel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_ControlUnit/o_RfDataInSel">
+      <obj_property name="ElementShortName">o_RfDataInSel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RfDataInSel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_JmpBit">
+      <obj_property name="ElementShortName">o_JmpBit</obj_property>
+      <obj_property name="ObjectShortName">o_JmpBit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_ControlUnit/o_BranchBit">
+      <obj_property name="ElementShortName">o_BranchBit</obj_property>
+      <obj_property name="ObjectShortName">o_BranchBit</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_ProgramCounter">
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_IrRst">
+      <obj_property name="ElementShortName">o_IrRst[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRst[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_R1Out">
+      <obj_property name="ElementShortName">o_R1Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_R1Out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_R2Out">
+      <obj_property name="ElementShortName">o_R2Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_R2Out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_Branch_Cond">
+      <obj_property name="ElementShortName">o_Branch_Cond[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Branch_Cond[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_AluCtrl">
+      <obj_property name="ElementShortName">o_AluCtrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">o_AluCtrl[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_AluEn">
+      <obj_property name="ElementShortName">o_AluEn</obj_property>
+      <obj_property name="ObjectShortName">o_AluEn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_AluOp2Sel">
+      <obj_property name="ElementShortName">o_AluOp2Sel</obj_property>
+      <obj_property name="ObjectShortName">o_AluOp2Sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_WrEnMem">
+      <obj_property name="ElementShortName">o_WrEnMem</obj_property>
+      <obj_property name="ObjectShortName">o_WrEnMem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_RdEnMem">
+      <obj_property name="ElementShortName">o_RdEnMem</obj_property>
+      <obj_property name="ObjectShortName">o_RdEnMem</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_WrEnRf">
       <obj_property name="ElementShortName">o_WrEnRf</obj_property>
       <obj_property name="ObjectShortName">o_WrEnRf</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_PcSel">
+      <obj_property name="ElementShortName">o_PcSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PcSel[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_MemAddrSel">
+      <obj_property name="ElementShortName">o_MemAddrSel</obj_property>
+      <obj_property name="ObjectShortName">o_MemAddrSel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_RfDataInSel">
+      <obj_property name="ElementShortName">o_RfDataInSel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RfDataInSel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_MemAddrSel">
+      <obj_property name="ElementShortName">o_MemAddrSel</obj_property>
+      <obj_property name="ObjectShortName">o_MemAddrSel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_InstrDecode/i_Read2AddrSel">
+      <obj_property name="ElementShortName">i_Read2AddrSel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_Read2AddrSel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_InstrDecode/rf/i_RdAddrA">
+      <obj_property name="ElementShortName">i_RdAddrA[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_RdAddrA[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_InstrDecode/w_IrRs2_in">
+      <obj_property name="ElementShortName">w_IrRs2_in[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w_IrRs2_in[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/_DecodeExecuteReg/o_IrRst">
+      <obj_property name="ElementShortName">o_IrRst[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRst[4:0]</obj_property>
    </wvobject>
 </wave_config>

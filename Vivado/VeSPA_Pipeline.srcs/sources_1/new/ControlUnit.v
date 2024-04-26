@@ -105,7 +105,7 @@ assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? 1'b1 : 1'b0;
 
 assign o_RdEnMem = (i_OpCode == `OP_LD || i_OpCode == `OP_LDX) ? 1'b1 : 1'b0;
 
-assign o_MemAddrSel = (i_OpCode == `OP_LDX || i_OpCode == `OP_LDX) ? `MEM_SEL_IMM : `MEM_SEL_OPX;
+assign o_MemAddrSel = (i_OpCode == `OP_LDX || i_OpCode == `OP_LDX) ? `MEM_SEL_OPX : `MEM_SEL_IMM ;
 
 assign o_AluCtrl =  (i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 3'b001 :
                     (i_OpCode == `OP_OR)  ? 3'b010 : 

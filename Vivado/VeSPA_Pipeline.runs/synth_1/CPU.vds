@@ -1,15 +1,16 @@
-
-*** Running vivado
-    with args -log CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
-
-
-****** Vivado v2023.1 (64-bit)
-  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
-  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
-  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Apr 26 20:43:46 2024
+# Process ID: 63115
+# Current directory: /home/alfredo/Desktop/VeSPA-NewPipeline/Vivado/VeSPA_Pipeline.runs/synth_1
+# Command line: vivado -log CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
+# Log file: /home/alfredo/Desktop/VeSPA-NewPipeline/Vivado/VeSPA_Pipeline.runs/synth_1/CPU.vds
+# Journal file: /home/alfredo/Desktop/VeSPA-NewPipeline/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
+# Running On: alfredo-HP-Pavilion-Laptop-15-cs3xxx, OS: Linux, CPU Frequency: 3500.000 MHz, CPU Physical cores: 4, Host memory: 12301 MB
+#-----------------------------------------------------------
 source CPU.tcl -notrace
 create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1341.781 ; gain = 0.023 ; free physical = 670 ; free virtual = 8656
 Command: synth_design -top CPU -part xc7z010clg400-1
