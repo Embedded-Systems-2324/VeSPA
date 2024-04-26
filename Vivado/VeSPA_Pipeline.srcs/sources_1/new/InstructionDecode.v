@@ -7,7 +7,7 @@
 /// \input i_InstructionRegister Current instruction
 /// \input i_Read2_Addr Choose the second address to read from the register file
 /// \input i_We_rf Enable Write into Register File 
-/// \input i_WrAddr Address to write into Register File
+/// \input i_RfWrAddr Address to write into Register File
 /// \input i_W_dataIn Data to be writen int o Register File
 /// \output o_Opcode opcode from the current instruction to control unit decide the control signals required
 /// \output o_ImmOp bit 16 from current instruction send to control unit, indicate if will use a immediate value or not 
@@ -27,17 +27,17 @@ module InstructionDecode
     input i_Clk,
     input i_Rst,
     input [`BUS_MSB:0] i_InstructionRegister,
-    input [1:0] i_Read2Addr,
-    input i_WeRf,
-    input [4:0] i_WrAddr,
-    input [`BUS_MSB:0] i_DataIn,
+    input [1:0] i_Read2AddrSel,
+    input i_RfWe,
+    input [4:0] i_RfWrAddr,
+    input [`BUS_MSB:0] i_RfDataIn,
     
     output [4:0] o_Opcode,         //output to CU 
     output o_ImmOp,                //output to CU  
 
     //hazard signals
-    output [4:0] o_IrRs2,          //R1_Addr
-    output [4:0] o_IrRs1,          //R2_Addr
+    output [4:0] o_IrRs2,          //R2_Addr
+    output [4:0] o_IrRs1,          //R1_Addr
         
     output [4:0] o_IrRst,          //IR_RDST
     output [`BUS_MSB:0] o_R1Out,   //RF_Read1
@@ -54,7 +54,6 @@ module InstructionDecode
 wire [4:0] w_IrRs1;     //IR_RS1 [21:17]
 wire [4:0] w_IrRs2;     //IR_RS2 [15:11]
 wire [4:0] w_IrRst;     //IR_RST [26:22]
-wire [4:0] w_IrRs2;     //
 
 wire [15:0] w_Imm16;
 wire [16:0] w_Imm17;
@@ -64,7 +63,7 @@ wire [22:0] w_Imm23;
 
 assign o_IrRs1 = w_IrRs1;
 assign o_IrRs2 = w_IrRs2;
-assign o_IrRst = W_IrRst;
+assign o_IrRst = w_IrRst;
 
 //Decode IR Register
 assign w_IrRs1 = i_InstructionRegister[21:17];
@@ -89,18 +88,18 @@ assign o_Imm23 = {9'b0, w_Imm23};
 
 
 
-assign w_IrRs2 = (i_Read2Addr == 2'b00) ? w_IrRs2 : 
-                   (i_Read2Addr == 2'b01) ? w_IrRst :
-                   (i_Read2Addr == 2'b00) ? RET_REG : RETI_REG;
+assign w_IrRs2 = (i_Read2AddrSel == 2'b00) ? w_IrRs2 : 
+                   (i_Read2AddrSel == 2'b01) ? w_IrRst :
+                   (i_Read2AddrSel == 2'b00) ? `RET_REG : `RETI_REG;
 
 
 RegisterFile rf
 (
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
-    .i_WrEnable(i_WeRf),
-    .i_DataIn(i_DataIn),
-    .i_WrAddr(i_WrAddr),
+    .i_WrEnable(i_RfWe),
+    .i_DataIn(i_RfDataIn),
+    .i_WrAddr(i_RfWrAddr),
     .i_RdAddrA(w_IrRs1),
     .i_RdAddrB(w_IrRs2),
     .o_DataOutA(o_R1Out),

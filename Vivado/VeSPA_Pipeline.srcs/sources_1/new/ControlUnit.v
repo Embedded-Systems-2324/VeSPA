@@ -16,7 +16,7 @@ module ControlUnit
     input i_DataMemRdy, 
     
     //ALU Control
-    output [ALU_SEL_MSB:0] o_AluCtrl,
+    output [`ALU_SEL_MSB:0] o_AluCtrl,
     output o_AluEn,
     output o_AluOp2Sel,
     
@@ -88,7 +88,7 @@ assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_OpCode == `OP_BXX) ? `PC_SEL_B
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
                                                (i_OpCode == `OP_RETI) ? `PC_SEL_RETI : `PC_SEL_ADD4) : (r_CurrentState == ST_INT) ? `PC_SEL_INT : 0;
 
-assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == ``OP_STX) ? `RF_SEL_RST : 
+assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 
                         (i_OpCode == `OP_RET) ? `RF_SEL_RET :
                         (i_OpCode == `OP_RETI) ? `RF_SEL_RETI : `RF_SEL_RS2;
 
@@ -99,29 +99,29 @@ assign o_RfDataInSel = (i_OpCode == `OP_JMP && i_ImmOp == 1'b1) ? `RF_IN_PC :
 assign o_WrEnRf = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_OR  ||
                 i_OpCode == `OP_AND || i_OpCode == `OP_NOT || i_OpCode == `OP_XOR ||
                 i_OpCode == `OP_LDI || i_OpCode == `OP_LDX || i_OpCode == `OP_LD  ||
-                (i_OpCode == `OP_JMP && imm_op == 1'b1)) ? 1'b1 : 1'b0;
+                (i_OpCode == `OP_JMP && i_ImmOp == 1'b1)) ? 1'b1 : 1'b0;
 
 assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? 1'b1 : 1'b0;
 
 assign o_RdEnMem = (i_OpCode == `OP_LD || i_OpCode == `OP_LDX) ? 1'b1 : 1'b0;
 
-assign o_MemAddrSel = (opcode == `OP_LDX || opcode == `OP_LDX) ? `MEM_SEL_IMM : `MEM_SEL_OPX;
+assign o_MemAddrSel = (i_OpCode == `OP_LDX || i_OpCode == `OP_LDX) ? `MEM_SEL_IMM : `MEM_SEL_OPX;
 
-assign o_AluCtrl =  (opcode == `OP_SUB || opcode == `OP_CMP) ? 3'b001 :
-                    (opcode == `OP_OR)  ? 3'b010 : 
-                    (opcode == `OP_AND) ? 3'b011 :
-                    (opcode == `OP_NOT) ? 3'b100 : 
-                    (opcode == `OP_XOR) ? 3'b101 : 3'b000;
+assign o_AluCtrl =  (i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 3'b001 :
+                    (i_OpCode == `OP_OR)  ? 3'b010 : 
+                    (i_OpCode == `OP_AND) ? 3'b011 :
+                    (i_OpCode == `OP_NOT) ? 3'b100 : 
+                    (i_OpCode == `OP_XOR) ? 3'b101 : 3'b000;
 
 assign o_AluOp2Sel = (i_ImmOp == 1'b1) ? 1'b1 : 1'b0;
 
-assign o_AluEn = (opcode == `OP_ADD || opcode == `OP_SUB || opcode == `OP_OR  ||
-                  opcode == `OP_AND || opcode == `OP_NOT || opcode == `OP_XOR ||
-                  opcode == `OP_CMP) ? 1'b1 : 1'b0;
+assign o_AluEn = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_OR  ||
+                  i_OpCode == `OP_AND || i_OpCode == `OP_NOT || i_OpCode == `OP_XOR ||
+                  i_OpCode == `OP_CMP) ? 1'b1 : 1'b0;
 
-assign o_JmpBit = (opcode == `OP_JMP) ? 1'b1 : 1'b0;
+assign o_JmpBit = (i_OpCode == `OP_JMP) ? 1'b1 : 1'b0;
 
-assign o_BranchBit = (opcode == `OP_BXX) ? 1'b1 : 1'b0;
+assign o_BranchBit = (i_OpCode == `OP_BXX) ? 1'b1 : 1'b0;
 
 assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT); 
 

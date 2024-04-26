@@ -28,7 +28,7 @@ module DecodeExecuteReg
     input [`BUS_MSB:0] i_Imm23,
 
     //CONTROL UNIT INPUTS
-    input [ALU_SEL_MSB:0] i_AluCtrl,
+    input [`ALU_SEL_MSB:0] i_AluCtrl,
     input i_AluEn,
     input i_AluOp2Sel,
     
@@ -63,7 +63,7 @@ module DecodeExecuteReg
     output reg [`BUS_MSB:0] o_Imm23,
 
     //CONTROL UNIT OUTPUTS
-    output reg [ALU_SEL_MSB:0] o_AluCtrl,
+    output reg [`ALU_SEL_MSB:0] o_AluCtrl,
     output reg o_AluEn,
     output reg o_AluOp2Sel,
     

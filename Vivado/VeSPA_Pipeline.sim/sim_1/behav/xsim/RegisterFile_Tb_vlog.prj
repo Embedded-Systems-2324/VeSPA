@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib "/home/andre/VeSPA_Pipeline/VeSPA_Pipeline.srcs/sources_1/new/Constants.v" --include "../../../../VeSPA_Pipeline.srcs/sources_1/new" -d "BUS_MSB=31" -d "BUS_WIDTH=32" \
+verilog xil_defaultlib "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v" --include "../../../../VeSPA_Pipeline.srcs/sources_1/new" -d "BUS_MSB=31" -d "BUS_WIDTH=32" \
 "../../../../VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v" \
 "../../../../VeSPA_Pipeline.srcs/sim_1/new/RegisterFile_Tb.v" \
 
