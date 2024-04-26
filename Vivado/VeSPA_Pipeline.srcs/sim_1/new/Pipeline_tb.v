@@ -21,15 +21,18 @@
 
 
 module Pipeline_tb(
+);
 
-reg clk, rst;
+reg clk;
+reg rst;
+reg data_initialize;
 
-vespa_soc test(.i_Clk(clk), .i_Rst(rst));
+CPU test(.i_Clk(clk), .i_Rst(rst), .i_DataMemRdy(data_initialize));
 
 initial begin
     clk <= 0;
     rst <= 1;
-    
+    data_initialize <= 0;
     
     #10 
     rst <= 0;
@@ -41,6 +44,6 @@ end
     
 always #4 clk=~clk;    
 
-);
+
 
 endmodule

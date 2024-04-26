@@ -11,7 +11,7 @@ wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2S
 wire w_StallFe, w_StallDec, w_FlushDec, w_StallExe, w_FlushExe;
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
-wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelDec, w_PcSelExe;
+wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe;
 wire [`RF_SEL_MSB:0] w_RfRdAddrBSelDec;
 wire [`RF_IN_SEL_MSB:0] w_RfDataInSelDec, w_RfDataInSelExe, w_RfDataInSelMem, w_RfDataInSelWb;
 wire [`BUS_MSB:0] w_PcJmpExe, w_PcBxxExe, w_PcRetDec, w_PcIntExe;
@@ -66,7 +66,7 @@ InstructionFetch _InstrFetch
     .i_Rst(i_Rst),
     .i_Enable(w_Enable),
     .i_Stall(w_StallFe),
-    .i_PcSel(w_PcSelExe),
+    .i_PcSel(`PC_SEL_ADD4),       //aqui é pc_sel_execute
     .i_PcJmp(w_PcJmpExe),
     .i_PcBxx(w_PcBxxExe),
     .i_PcRet(w_PcRetExe),
@@ -123,6 +123,7 @@ InstructionDecode _InstrDecode
 
 DecodeExecuteReg _DecodeExecuteReg
 (
+    //inputs
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
     .i_Stall(w_StallExe),
@@ -153,14 +154,14 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_RdEnMem(w_RdEnMemDec),
     .i_WrEnRf(w_WrEnRfDec),
     
-    .i_PcSel(w_PcSelDec),
+    .i_PcSel(w_PcSelDec),  
     .i_MemAddrSel(w_MemAddrSelDec),
     .i_RfDataInSel(),
     
     .i_JmpBit(w_JmpBit),
     .i_BranchBit(w_BranchBit),
     
-    
+    //outputs
     .o_JmpBit(w_JmpBit_Exe),
     .o_BranchBit(w_BranchBit_Exe),
     

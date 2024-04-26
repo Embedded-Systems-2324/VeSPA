@@ -33,7 +33,7 @@ module InstructionFetch
 wire w_CodeMemBusy;
 wire [`BUS_MSB:0] w_CodeMemOut;
 
-assign o_Rdy = !w_CodeMemBusy;
+assign o_Rdy = w_CodeMemBusy;
 assign o_InstructionRegister = w_CodeMemOut;
 
 CodeMemory _CodeMem
@@ -47,12 +47,13 @@ CodeMemory _CodeMem
     .rsta_busy(w_CodeMemBusy)
 );
 
-always @(i_Clk) begin
+always @(posedge i_Clk) begin
     if (i_Rst) begin
         o_ProgramCounter <= 0;    
     end
     else begin
-        if (i_Enable) begin
+        if (w_CodeMemBusy == 1'b0) begin
+        //if (i_Enable) begin
             if (i_Stall) begin
                 o_ProgramCounter <= o_ProgramCounter;
             end

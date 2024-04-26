@@ -77,6 +77,7 @@ assign w_Imm23 = i_InstructionRegister[22:0];
 
 assign o_BranchCond = i_InstructionRegister[26:23];
 assign o_ImmOp = i_InstructionRegister[16];
+assign o_Opcode = i_InstructionRegister[31:27];
 
 
 

@@ -46,7 +46,7 @@ parameter ST_HALT   = 2'b10;
 parameter ST_INT    = 2'b11;
 
 wire w_PeripheralsRdy;
-assign w_PeripheralsRdy = i_DataMemRdy && i_FetchRdy;
+assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;
 
 reg [2:0] r_CurrentState;
 
@@ -57,7 +57,7 @@ always @(posedge i_Clk) begin
     else begin
         case (r_CurrentState)
             ST_INIT: begin
-                if (w_PeripheralsRdy) begin
+                if (w_PeripheralsRdy == 1'b0) begin
                     r_CurrentState <= ST_RUN;    
                 end
                 else begin
