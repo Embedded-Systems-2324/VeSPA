@@ -56,6 +56,9 @@ module DecodeExecuteReg
     output reg [`BUS_MSB:0] o_R1Out,  
     output reg [`BUS_MSB:0] o_R2Out,
 
+    output reg [4:0] o_IrRs2,         //R1_Addr
+    output reg[4:0] o_IrRs1,         //R2_Addr
+
     output reg [3:0] o_Branch_Cond,
     
     output reg [`BUS_MSB:0] o_Imm16,
@@ -102,6 +105,8 @@ always @(posedge i_Clk) begin
         o_JmpBit             <= 0;
         o_BranchBit          <= 0;
         o_UpdateCondCodesExe <= 0;
+        o_IrRs2              <= 0;   
+        o_IrRs1              <= 0;
     end
     else begin
         if(i_Stall) begin                
@@ -126,6 +131,8 @@ always @(posedge i_Clk) begin
                 o_JmpBit             <= o_JmpBit;
                 o_BranchBit          <= o_BranchBit;
                 o_UpdateCondCodesExe <= o_UpdateCondCodesExe;
+                o_IrRs2              <= o_IrRs2;
+                o_IrRs1              <= o_IrRs1;
             end
             else begin
                 o_ProgramCounter      <= i_ProgramCounter;
@@ -149,6 +156,8 @@ always @(posedge i_Clk) begin
                 o_JmpBit              <= i_JmpBit;
                 o_BranchBit           <= i_BranchBit;
                 o_UpdateCondCodesExe  <= i_UpdateCondCodes;
+                o_IrRs1               <= i_IrRs1;
+                o_IrRs2               <= i_IrRs2;
             end
     end
 end

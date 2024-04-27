@@ -4,16 +4,16 @@ onerror {quit -force}
 transcript on
 
 vlib work
-vmap -link {/home/andre/workspace/VeSPAwPipeline/VeSPA/Vivado/VeSPA_Pipeline.cache/compile_simlib/riviera}
+vmap -link {/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.cache/compile_simlib/riviera}
 vlib riviera/xpm
 vlib riviera/blk_mem_gen_v8_4_6
 vlib riviera/xil_defaultlib
 
 vlog -work xpm  -incr  +define+BUS_MSB=31  +define+BUS_WIDTH=32 -l xpm -l blk_mem_gen_v8_4_6 -l xil_defaultlib \
-"/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93  -incr \
-"/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
+"/media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work blk_mem_gen_v8_4_6  -incr -v2k5  +define+BUS_MSB=31  +define+BUS_WIDTH=32 -l xpm -l blk_mem_gen_v8_4_6 -l xil_defaultlib \
 "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \

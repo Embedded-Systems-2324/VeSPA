@@ -20,8 +20,10 @@ module ExecuteMemoryReg
     input [`BUS_MSB:0] i_AluOut,
     input [`BUS_MSB:0] i_AluOp2,
     input [`BUS_MSB:0] i_Imm22,
+    input [`BUS_MSB:0] i_ImmOpX,
 
-
+    output reg [`BUS_MSB:0] o_ProgramCounter,  
+    output reg  [4:0] o_IrRst,      
     output reg [`BUS_MSB:0] o_AluOut,
     output reg [`BUS_MSB:0] o_AluOp2,
     output reg [`BUS_MSB:0] o_Imm22,
@@ -45,6 +47,10 @@ always @(posedge i_Clk) begin
         o_WrEnRf         <= 0;
         o_MemAddrSel     <= 0;
         o_RfDataInSel    <= 0;
+        o_AluOut         <= 0;
+        o_AluOp2         <= 0;
+        o_Imm22          <= 0;
+        o_ImmOpX         <= 0;
     end
     else begin
         if (i_Stall) begin                
@@ -55,6 +61,10 @@ always @(posedge i_Clk) begin
             o_WrEnRf         <= o_WrEnRf;
             o_MemAddrSel     <= o_MemAddrSel;
             o_RfDataInSel    <= o_RfDataInSel;
+            o_AluOut         <= o_AluOut;
+            o_AluOp2         <= o_AluOp2;
+            o_Imm22          <= o_Imm22;
+            o_ImmOpX         <= o_ImmOpX;
         end
         else begin
             o_ProgramCounter <= i_ProgramCounter;
@@ -64,6 +74,10 @@ always @(posedge i_Clk) begin
             o_WrEnRf         <= i_WrEnRf;
             o_MemAddrSel     <= i_MemAddrSel;
             o_RfDataInSel    <= i_RfDataInSel;
+            o_AluOut         <= i_AluOut;
+            o_AluOp2         <= i_AluOp2;
+            o_Imm22          <= i_Imm22;
+            o_ImmOpX         <= i_ImmOpX;
         end
     end
 end

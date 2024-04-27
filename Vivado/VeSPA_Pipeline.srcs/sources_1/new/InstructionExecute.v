@@ -7,7 +7,6 @@ module InstructionExecute
     input i_Rst,
 
     input [`BUS_MSB:0] i_ProgramCounter,
-    input [`BUS_MSB:0] i_IrRst,             // IR_RDST
 
     //alu signals
     input [`ALU_SEL_MSB:0] i_AluCtrl,
@@ -60,7 +59,7 @@ assign w_AluOp1 = (i_ForwardOp1 == 2'b00) ? i_R1Out :
 assign o_AluOp2 = (i_ForwardOp2 == 2'b00) ? i_R2Out :
                   (i_ForwardOp2 == 2'b01) ? i_MemOutValue : i_RfOutValue;
 
-assign w_AluIn2 = (i_AluOp2Sel == 0'b0) ? o_AluOp2 : i_Imm16;
+assign w_AluIn2 = (i_AluOp2Sel == 1'b0) ? o_AluOp2 : i_Imm16;
 
 ALU alu
 (

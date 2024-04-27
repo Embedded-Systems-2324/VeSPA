@@ -27,12 +27,11 @@ reg clk;
 reg rst;
 reg data_initialize;
 
-CPU test(.i_Clk(clk), .i_Rst(rst), .i_DataMemRdy(data_initialize));
+top_level test(.i_Clk(clk), .i_Rst(rst));
 
 initial begin
     clk <= 0;
     rst <= 1;
-    data_initialize <= 0;
     
     #10 
     rst <= 0;

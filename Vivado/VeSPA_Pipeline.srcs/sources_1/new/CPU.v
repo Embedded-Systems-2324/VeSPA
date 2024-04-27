@@ -1,23 +1,40 @@
 `timescale 1ns / 1ps
 
+`include "Constants.v"
+
 module CPU
 (
     input i_Clk,
     input i_Rst,
+    
+    //bus signals
+     output o_Clk,
+     output o_Rst,
+     output o_WEnable,
+     output [`BUS_MSB:0] o_WAddr,
+     output [`BUS_MSB:0] o_WData,
+     output o_REnable,
+     output [`BUS_MSB:0] o_RAddr,
+     input [`BUS_MSB:0] i_RData,        //vai diretamente ao write back, skip MEM/EXE reg
+
     input i_DataMemRdy
 );
+
 
 wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
 wire w_StallFe, w_StallDec, w_FlushDec, w_StallExe, w_FlushExe, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
 
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
+wire [`BUS_MSB:0] w_AluOutExe, w_AluOutMem, w_AluOutWB;
+wire [`BUS_MSB:0] w_AluOp2Exe, w_AluOp2Mem;
 wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe;
 wire [`RF_SEL_MSB:0] w_RfRdAddrBSelDec;
 wire [`RF_IN_SEL_MSB:0] w_RfDataInSelDec, w_RfDataInSelExe, w_RfDataInSelMem, w_RfDataInSelWb;
 wire [`BUS_MSB:0] w_PcJmpExe, w_PcBxxExe, w_PcRetDec, w_PcIntExe;
 wire [`BUS_MSB:0] w_InstructionRegisterFe,  w_InstructionRegisterDec;
 wire [`BUS_MSB:0] w_ProgramCounterFe, w_ProgramCounterDec, w_ProgramCounterExe, w_ProgramCounterMem, w_ProgramCounterWb;
+wire [`BUS_MSB:0] o_dataMemAddress;
 
 wire w_RfWeDec, w_RfWeExe, w_RfWeMem, w_RfWeWb;
 wire [4:0] w_RfWrAddrDec, w_RfWrAddrExe, w_RfWrAddrMem, w_RfWrAddrWb;
@@ -31,9 +48,20 @@ wire [`BUS_MSB:0] w_Imm16Dec, w_Imm16Exe;
 wire [`BUS_MSB:0] w_Imm17Dec, w_Imm17Exe;
 wire [`BUS_MSB:0] w_Imm22Dec, w_Imm22Exe;
 wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
+wire [`BUS_MSB:0] w_ImmOpXExe, w_ImmOpXMem;
 
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
 wire w_UpdateCondCodes, w_UpdateCondCodesExe;
+wire [3:0] w_AluConditionCodes;
+
+//assigns for data stage
+assign o_WEnable = w_WrEnMemMem;
+assign o_WData = w_AluOp2Mem;
+assign o_REnable = w_RdEnMemMem;
+
+assign o_WAddr = o_dataMemAddress;
+assign o_RAddr = o_dataMemAddress;
+
 
 
 ControlUnit _ControlUnit
@@ -169,11 +197,15 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .o_ProgramCounter(w_ProgramCounterExe),
     
+    //used for hazards to
     .o_IrRst(w_RfWrAddrExe),                             // IR_RDST output
     
     .o_R1Out(w_R1OutExe),                                // RF_Read1 output
-    .o_R2Out(w_R1OutExe),                                // RF_Read2 output
+    .o_R2Out(w_R2OutExe),                                // RF_Read2 output
     
+    .o_IrRs2(w_IrRs2Exe),                   // R1_Addr
+    .o_IrRs1(w_IrRs1Exe),                   // R2_Addr
+
     .o_Branch_Cond(w_BranchCondExe),
     
     .o_Imm16(w_Imm16Exe),
@@ -194,6 +226,104 @@ DecodeExecuteReg _DecodeExecuteReg
     .o_MemAddrSel(w_MemAddrSelExe),
     .o_RfDataInSel(w_RfDataInSelExe)
 );
+
+
+
+InstructionExecute _InstrExecute
+(
+    .i_Clk(i_Clk),
+    .i_Rst(i_Rst),
+
+    .i_ProgramCounter(w_ProgramCounterExe),
+
+    //alu signals
+    .i_AluCtrl(w_AluCtrlExe),
+    .i_AluEn(w_AluEnExe),
+    .i_AluOp2Sel(w_AluOp2SelExe),
+    .i_UpdateCondCodes(w_UpdateCondCodesExe),
+
+    //hazard multiplexers
+    .i_ForwardOp1(0),
+    .i_ForwardOp2(0),
+
+    .i_MemOutValue(w_AluOutMem),   //register value from MEM stage
+    .i_RfOutValue(0),    //register value from EXE stage
+
+    .i_R1Out(w_R1OutExe),         //RF_Read1
+    .i_R2Out(w_R2OutExe),         //RF_Read2
+    .i_Imm16(w_Imm16Exe),
+    .i_Imm17(w_Imm17Exe),
+    .i_Imm22(w_Imm22Exe),
+    .i_Imm23(w_Imm23Exe),
+
+    //outputs
+    .o_PcJmp(w_PcJmpExe),
+    .o_PcBranch(w_PcBxxExe),
+    
+    .o_AluOut(w_AluOutExe),
+    .o_AluOp2(w_AluOp2Exe),
+    
+    .o_Imm22(w_Imm22Exe),
+    .o_ImmOpX(w_ImmOpXExe),
+
+    //flags
+    .o_AluConditionCodes(w_AluConditionCodes)     //ConditionCodes <= {Carry, Zero, Negative, Overflow}; -> branch module
+);
+
+
+
+ExecuteMemoryReg _ExecuteMemoryReg
+(
+    .i_Clk(i_Clk),                         
+    .i_Rst(i_Rst),                         
+    .i_Stall(w_StallMem),                   
+    .i_Flush(w_FlushMem),                      
+
+    .i_ProgramCounter(w_ProgramCounterExe),    
+    .i_IrRst(w_RfWrAddrExe),                   // IR_RDST  
+
+    .i_WrEnMem(w_WrEnMemExe),                  // WE MEM
+    .i_RdEnMem(w_RdEnMemExe),                  // RD MEM
+    .i_WrEnRf(w_WrEnRfExe),                    // WE RF
+        
+    .i_MemAddrSel(w_MemAddrSelExe),            // Memory address select
+    .i_RfDataInSel(w_RfDataInSelExe),          // Register File Write Address
+
+    .i_AluOut(w_AluOutExe),                 
+    .i_AluOp2(w_AluOp2Exe),                 
+    .i_Imm22(w_Imm22Exe),                      // Immediate 22-bit
+    .i_ImmOpX(w_ImmOpXExe),
+
+
+    .o_ProgramCounter(w_ProgramCounterMem),          
+    .o_IrRst(w_RfWrAddrMem),                   // IR_RDST  
+    .o_AluOut(w_AluOutMem),                     //ALU_OutM               
+    .o_AluOp2(w_AluOp2Mem),               
+    .o_Imm22(w_Imm22Mem),                   
+    .o_ImmOpX(w_ImmOpXMem),                            
+
+    .o_WrEnMem(w_WrEnMemMem),                  // WE MEM
+    .o_RdEnMem(w_RdEnMemMem),                  // RD MEM
+    .o_WrEnRf(w_WrEnRfMem),                    // WE RF
+        
+    .o_MemAddrSel(w_MemAddrSelMem),            // Memory address select
+    .o_RfDataInSel(w_RfDataInSelMem)           // Register File Write Address
+);
+
+InstructionMemory _InstrMemory
+(
+    .i_Clk(i_Clk),                         
+    .i_Rst(i_Rst),   
+    .i_Imm22(w_Imm22Mem),
+    .i_ImmOpX(w_ImmOpXMem),
+    .i_MemAddrSel(w_MemAddrSelMem),
+    .o_dataMemAddress(o_dataMemAddress)
+);
+
+
+
+
+
 
 
 endmodule
