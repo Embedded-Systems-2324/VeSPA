@@ -34,7 +34,8 @@ wire w_CodeMemBusy;
 wire [`BUS_MSB:0] w_CodeMemOut;
 
 assign o_Rdy = w_CodeMemBusy;
-assign o_InstructionRegister = w_CodeMemOut;
+//assign o_InstructionRegister = w_CodeMemOut;
+assign o_InstructionRegister = (i_Enable == 1'b1) ? w_CodeMemOut : 32'd0;
 
 CodeMemory _CodeMem
 (

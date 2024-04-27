@@ -25,7 +25,7 @@ module MemoryWriteBackReg
     output reg [`BUS_MSB:0] o_Imm22,
 
     output reg o_WrEnRf,
-    output reg o_RfDataInSel
+    output reg [1:0] o_RfDataInSel
      
 );
     

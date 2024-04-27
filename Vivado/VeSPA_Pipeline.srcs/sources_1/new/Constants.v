@@ -17,7 +17,7 @@
 `define PC_SEL_INT      3
 `define PC_SEL_ADD4     4
 
-`define REG_FILE_SIZE   32
+`define REG_FILE_SIZE   31
 `define REG_FILE_WIDTH  5
 `define REG_FILE_MSB    4
 

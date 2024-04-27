@@ -22,7 +22,7 @@ module RegisterFile
 reg r_WritePending;
 reg [`BUS_MSB:0] r_ShadowAddr;
 reg [`REG_FILE_MSB:0] r_ShadowReg;
-reg [`REG_FILE_SIZE:0] r_RegFile [(32 - 1):0];
+reg [(32 - 1):0] r_RegFile [`REG_FILE_SIZE:0] ;
 
 integer i;
 
@@ -64,12 +64,22 @@ always @(posedge i_Clk) begin
     end
 end
 
+
 always @(negedge i_Clk) begin
     if (i_Rst) begin
         //Do nothing
     end
     else begin
-        if (r_WritePending) begin
+        if(i_WrEnable) begin 
+        r_RegFile[i_WrAddr] <= i_DataIn;
+        end
+        else begin
+            //do nothing
+        end
+    end    
+/*
+    else begin
+        if (r_WritePending) begin                     // -> é necessário corrigir o uso do registo interm
             r_RegFile[r_ShadowAddr] <= r_ShadowReg;
             r_WritePending <= 0;
         end
@@ -77,6 +87,8 @@ always @(negedge i_Clk) begin
             //Do nothing
         end
     end
+*/    
+    
 end
 
 endmodule
