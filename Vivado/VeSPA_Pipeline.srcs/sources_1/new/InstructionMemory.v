@@ -32,7 +32,7 @@ input [`BUS_MSB:0] i_ImmOpX,
 //ControlUnit
 input i_MemAddrSel,
 
-output o_dataMemAddress
+output [`BUS_MSB:0] o_dataMemAddress
 
 );
 

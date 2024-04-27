@@ -97,24 +97,25 @@ assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RS
 
 assign o_RfDataInSel = (i_OpCode == `OP_JMP && i_ImmOp == 1'b1) ? `RF_IN_PC :
                        (i_OpCode == `OP_LD || i_OpCode == `OP_LDX) ? `RF_IN_MEM_OUT:
-                       (i_OpCode == `OP_LDI) ? `RF_IN_MEM_OUT : `RF_IN_ALU;
+                       (i_OpCode == `OP_LDI) ? `RF_IN_IMM : `RF_IN_ALU;
 
 assign o_WrEnRf = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_OR  ||
                 i_OpCode == `OP_AND || i_OpCode == `OP_NOT || i_OpCode == `OP_XOR ||
                 i_OpCode == `OP_LDI || i_OpCode == `OP_LDX || i_OpCode == `OP_LD  ||
                 (i_OpCode == `OP_JMP && i_ImmOp == 1'b1)) ? 1'b1 : 1'b0;
 
-assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? 1'b1 : 1'b0;
+assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX || i_OpCode == `OP_ADD) ? 1'b1 : 1'b0;
 
 assign o_RdEnMem = (i_OpCode == `OP_LD || i_OpCode == `OP_LDX) ? 1'b1 : 1'b0;
 
 assign o_MemAddrSel = (i_OpCode == `OP_LDX || i_OpCode == `OP_LDX) ? `MEM_SEL_OPX : `MEM_SEL_IMM ;
 
-assign o_AluCtrl =  (i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 3'b001 :
-                    (i_OpCode == `OP_OR)  ? 3'b010 : 
-                    (i_OpCode == `OP_AND) ? 3'b011 :
-                    (i_OpCode == `OP_NOT) ? 3'b100 : 
-                    (i_OpCode == `OP_XOR) ? 3'b101 : 3'b000;
+assign o_AluCtrl =  (i_OpCode == `OP_ADD) ? 3'b001 :
+                    (i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 3'b010 :
+                    (i_OpCode == `OP_OR)  ? 3'b011 : 
+                    (i_OpCode == `OP_AND) ? 3'b100 :
+                    (i_OpCode == `OP_NOT) ? 3'b101 : 
+                    (i_OpCode == `OP_XOR) ? 3'b110 : 3'b000;
 
 assign o_AluOp2Sel = (i_ImmOp == 1'b1) ? 1'b1 : 1'b0;
 

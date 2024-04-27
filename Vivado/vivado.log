@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Apr 26 02:20:43 2024
-# Process ID: 62542
+# Start of session at: Sat Apr 27 13:58:17 2024
+# Process ID: 7168
 # Current directory: /home/bruno/gitreps/VeSPA/Vivado
 # Command line: vivado VeSPA_Pipeline.xpr
 # Log file: /home/bruno/gitreps/VeSPA/Vivado/vivado.log
@@ -39,17 +39,49 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from '/home/andre/VeSPA_Pipeline' since last save.
+INFO: [Project 1-313] Project file moved from '/home/bruno/gitreps/VeSPA-NewPipeline/Vivado' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 8563.934 ; gain = 422.746 ; free physical = 674 ; free virtual = 14512
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 8622.234 ; gain = 493.039 ; free physical = 642 ; free virtual = 14266
 update_compile_order -fileset sources_1
+close [ open /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v w ]
+add_files /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v
+close [ open /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v w ]
+add_files /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp with file /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.dcp
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:34:45 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:35:31 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:36:21 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:37:13 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:40:01 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'RegisterFile_Tb'
+INFO: [Vivado 12-12493] Simulation top is 'Pipeline_tb'
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
 INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
@@ -58,53 +90,200 @@ INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'RegisterFile_Tb' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'Pipeline_tb' in fileset 'sim_1'...
 INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/CodeMemory.mif'
-INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/Code.coe'
+INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/code.coe'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj RegisterFile_Tb_vlog.prj
+xvlog --incr --relax -prj Pipeline_tb_vlog.prj
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v" into library xil_defaultlib
 WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'BUS_WIDTH' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v:4]
 WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'BUS_MSB' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/sim/CodeMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CodeMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/sim/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DecodeExecuteReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ExecuteMemoryReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FetchDecodeReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionDecode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionExecute
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionFetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionWriteBack
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MemoryWriteBackReg
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RegisterFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/RegisterFile_Tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RegisterFile_Tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/Pipeline_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 Waiting for jobs to finish...
 No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log
+xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'i_ImmOpX' on this module [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:344]
+ERROR: [VRFC 10-3180] cannot find port 'i_AluOp2' on this module [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:342]
+ERROR: [VRFC 10-3180] cannot find port 'i_MemAddrSel' on this module [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:338]
+ERROR: [VRFC 10-3180] cannot find port 'i_RdEnMem' on this module [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:335]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Pipeline_tb'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Pipeline_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/CodeMemory.mif'
+INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/code.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj Pipeline_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'BUS_WIDTH' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v:4]
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'BUS_MSB' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/sim/CodeMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CodeMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/sim/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DecodeExecuteReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ExecuteMemoryReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FetchDecodeReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionDecode
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionExecute
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionFetch
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionWriteBack
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MemoryWriteBackReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/Pipeline_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'o_RAddr' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:70]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_Stall' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:100]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:104]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'i_ForwardOp1' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:248]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'i_ForwardOp2' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:249]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'o_RfDataInSel' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:347]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.memory_wrapper
+Compiling module xil_defaultlib.ControlUnit
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.CodeMemory
+Compiling module xil_defaultlib.InstructionFetch
+Compiling module xil_defaultlib.FetchDecodeReg
 Compiling module xil_defaultlib.RegisterFile
-Compiling module xil_defaultlib.RegisterFile_Tb
+Compiling module xil_defaultlib.InstructionDecode
+Compiling module xil_defaultlib.DecodeExecuteReg
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.InstructionExecute
+Compiling module xil_defaultlib.ExecuteMemoryReg
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.MemoryWriteBackReg
+Compiling module xil_defaultlib.InstructionWriteBack
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.top_level
+Compiling module xil_defaultlib.Pipeline_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot RegisterFile_Tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Built simulation snapshot Pipeline_tb_behav
+execute_script: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 13639.602 ; gain = 0.000 ; free physical = 2187 ; free virtual = 13766
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "RegisterFile_Tb_behav -key {Behavioral:sim_1:Functional:RegisterFile_Tb} -tclbatch {RegisterFile_Tb.tcl} -view {/home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg} -log {simulate.log}"
+   with args "Pipeline_tb_behav -key {Behavioral:sim_1:Functional:Pipeline_tb} -tclbatch {Pipeline_tb.tcl} -view {/home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
 open_wave_config /home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg
-source RegisterFile_Tb.tcl
+source Pipeline_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -115,1312 +294,20 @@ source RegisterFile_Tb.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'RegisterFile_Tb_behav' loaded.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Pipeline_tb.test.memory_instance._Bram.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module Pipeline_tb.test.cpu_instance._InstrFetch._CodeMem.inst.\native_mem_mapped_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Pipeline_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 9184.676 ; gain = 75.191 ; free physical = 146 ; free virtual = 13405
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'RegisterFile_Tb'
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'RegisterFile_Tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/CodeMemory.mif'
-INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/Code.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj RegisterFile_Tb_vlog.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "RegisterFile_Tb_behav -key {Behavioral:sim_1:Functional:RegisterFile_Tb} -tclbatch {RegisterFile_Tb.tcl} -view {/home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg
-source RegisterFile_Tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'RegisterFile_Tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/Pipeline_tb.v w ]
-add_files -fileset sim_1 /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/Pipeline_tb.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'RegisterFile_Tb'
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'RegisterFile_Tb' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/CodeMemory.mif'
-INFO: [SIM-utils-43] Exported '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim/Code.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj RegisterFile_Tb_vlog.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot RegisterFile_Tb_behav xil_defaultlib.RegisterFile_Tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "RegisterFile_Tb_behav -key {Behavioral:sim_1:Functional:RegisterFile_Tb} -tclbatch {RegisterFile_Tb.tcl} -view {/home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/bruno/gitreps/VeSPA/Vivado/RegisterFile_TestBench_behav.wcfg
-source RegisterFile_Tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'RegisterFile_Tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-generate_target all [get_files /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/CodeMemory/CodeMemory.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'CodeMemory'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'CodeMemory'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'CodeMemory'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'CodeMemory'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'CodeMemory'...
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Device 21-403] Loading part xc7z010clg400-1
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'ALU_SEL_MSB' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:19]
-ERROR: [Synth 8-9960] range must be bounded by constant expressions [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:19]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-3 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 12020.938 ; gain = 670.281 ; free physical = 420 ; free virtual = 12954
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'ALU_SEL_MSB' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:19]
-ERROR: [Synth 8-9960] range must be bounded by constant expressions [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:19]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:120]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:122]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:120]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:122]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:120]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:122]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-2329] missing compiler directive [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'OP_STX' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:91]
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:120]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:122]
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 0 Critical Warnings and 19 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-36] 'imm_op' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:102]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:108]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:110]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:111]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:112]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:113]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:114]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:118]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:119]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:120]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:122]
-ERROR: [Synth 8-36] 'opcode' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:124]
-INFO: [Synth 8-10285] module 'ControlUnit' is ignored due to previous errors [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:128]
-INFO: [Synth 8-9084] Verilog file '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v' ignored due to errors
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-4 Infos, 0 Warnings, 0 Critical Warnings and 18 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-ERROR: [Synth 8-36] 'ALU_SEL_MSB' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:31]
-ERROR: [Synth 8-9960] range must be bounded by constant expressions [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:31]
-ERROR: [Synth 8-36] 'ALU_SEL_MSB' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:66]
-ERROR: [Synth 8-9960] range must be bounded by constant expressions [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:66]
-INFO: [Synth 8-10285] module 'DecodeExecuteReg' is ignored due to previous errors [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:154]
-INFO: [Synth 8-9084] Verilog file '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v' ignored due to errors
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-4 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-CRITICAL WARNING: [Synth 8-9339] data object 'w_IrRs2' is already declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:57]
-INFO: [Synth 8-6826] previous declaration of 'w_IrRs2' is from here [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:55]
-CRITICAL WARNING: [Synth 8-11152] second declaration of 'w_IrRs2' is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:57]
-ERROR: [Synth 8-36] 'RET_REG' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:94]
-ERROR: [Synth 8-36] 'RETI_REG' is not declared [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:94]
-INFO: [Synth 8-10285] module 'InstructionDecode' is ignored due to previous errors [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:112]
-INFO: [Synth 8-9084] Verilog file '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v' ignored due to errors
-Failed to read verilog '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v'
-INFO: [Common 17-83] Releasing license: Synthesis
-5 Infos, 0 Warnings, 2 Critical Warnings and 2 Errors encountered.
-synth_design completed successfully
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Synth 8-11241] undeclared symbol 'w_Clk', assumed default net type 'wire' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:60]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12276.930 ; gain = 0.000 ; free physical = 926 ; free virtual = 12705
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-ERROR: [Synth 8-11365] for the instance '_ControlUnit' of module 'ControlUnit' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5', named port connection 'o_Clk' does not exist [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:60]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-WARNING: [Synth 8-567] referenced signal 'i_Rst' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Enable' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Stall' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'o_ProgramCounter' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcSel' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcBxx' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcJmp' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcRet' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcInt' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-ERROR: [Synth 8-6156] failed synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-ERROR: [Synth 8-6156] failed synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 12545.406 ; gain = 268.477 ; free physical = 642 ; free virtual = 12427
----------------------------------------------------------------------------------
-RTL Elaboration failed
-INFO: [Common 17-83] Releasing license: Synthesis
-7 Infos, 11 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 12545.406 ; gain = 278.453 ; free physical = 642 ; free virtual = 12427
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Synth 8-11241] undeclared symbol 'w_Clk', assumed default net type 'wire' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:60]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12561.414 ; gain = 0.000 ; free physical = 572 ; free virtual = 12390
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-ERROR: [Synth 8-11365] for the instance '_ControlUnit' of module 'ControlUnit' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5', named port connection 'o_Clk' does not exist [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:60]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-WARNING: [Synth 8-567] referenced signal 'i_Rst' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Enable' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Stall' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'o_ProgramCounter' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcSel' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcBxx' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcJmp' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcRet' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcInt' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-ERROR: [Synth 8-6156] failed synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-ERROR: [Synth 8-6156] failed synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 12561.414 ; gain = 0.000 ; free physical = 594 ; free virtual = 12390
----------------------------------------------------------------------------------
-RTL Elaboration failed
-INFO: [Common 17-83] Releasing license: Synthesis
-7 Infos, 11 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 12561.414 ; gain = 0.000 ; free physical = 594 ; free virtual = 12390
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12571.418 ; gain = 0.000 ; free physical = 636 ; free virtual = 12424
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-WARNING: [Synth 8-7071] port 'o_Enable' of module 'ControlUnit' is unconnected for instance '_ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-WARNING: [Synth 8-7023] instance '_ControlUnit' of module 'ControlUnit' has 19 connections declared, but only 18 given [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 0 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: CodeMemory.mif - type: string 
-	Parameter C_INIT_FILE bound to: CodeMemory.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_HAS_RSTA bound to: 1 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
-	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_USE_URAM bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
-	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (12#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-WARNING: [Synth 8-567] referenced signal 'i_Rst' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Enable' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Stall' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'o_ProgramCounter' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcSel' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcBxx' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcJmp' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcRet' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcInt' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (13#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (14#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (15#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-WARNING: [Synth 8-3848] Net o_Opcode in module/entity InstructionDecode does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (16#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-ERROR: [Synth 8-11365] for the instance '_InstrDecode' of module 'InstructionDecode' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25', named port connection 'i_WeRf' does not exist [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:101]
-INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-ERROR: [Synth 8-6156] failed synthesizing module 'DecodeExecuteReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-ERROR: [Synth 8-6156] failed synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 12572.418 ; gain = 1.000 ; free physical = 606 ; free virtual = 12417
----------------------------------------------------------------------------------
-RTL Elaboration failed
-INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 14 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 12572.418 ; gain = 1.000 ; free physical = 606 ; free virtual = 12417
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
-ERROR: [Common 17-39] 'synth_design' failed due to earlier errors.
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12641.348 ; gain = 8.879 ; free physical = 612 ; free virtual = 12420
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-WARNING: [Synth 8-7071] port 'o_Enable' of module 'ControlUnit' is unconnected for instance '_ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-WARNING: [Synth 8-7023] instance '_ControlUnit' of module 'ControlUnit' has 19 connections declared, but only 18 given [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 0 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: CodeMemory.mif - type: string 
-	Parameter C_INIT_FILE bound to: CodeMemory.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_HAS_RSTA bound to: 1 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
-	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_USE_URAM bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
-	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (12#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-WARNING: [Synth 8-567] referenced signal 'i_Rst' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Enable' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Stall' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'o_ProgramCounter' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcSel' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcBxx' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcJmp' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcRet' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcInt' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (13#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (14#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (15#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-WARNING: [Synth 8-3848] Net o_Opcode in module/entity InstructionDecode does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (16#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (17#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-WARNING: [Synth 8-3848] Net w_Enable in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:10]
-WARNING: [Synth 8-3848] Net w_StallFe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_StallDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_FlushDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_StallExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_FlushExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_PcJmpExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcBxxExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcIntExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_Read2AddrSelDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:21]
-WARNING: [Synth 8-3848] Net w_RfWeWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:22]
-WARNING: [Synth 8-3848] Net w_RfWrAddrWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:23]
-WARNING: [Synth 8-3848] Net w_RfDataInWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (18#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 12641.348 ; gain = 8.879 ; free physical = 622 ; free virtual = 12419
----------------------------------------------------------------------------------
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Apr 26 16:17:38 2024
-| Host         : brunoPC running 64-bit Ubuntu 20.04.6 LTS
----------------------------------------------------------------------------------------------------------------------------------------------
-
-RTL Linter Report
-
-Table of Contents
------------------
-1. Summary
-
-1. Summary
-----------
-
-+-----------+--------------+----------+
-| Rule ID   | # Violations | # Waived |
-+-----------+--------------+----------+
-| ASSIGN-5  | 32           | 0        |
-| ASSIGN-6  | 18           | 0        |
-| ASSIGN-7  | 35           | 0        |
-| ASSIGN-9  | 1            | 0        |
-| ASSIGN-10 | 3            | 0        |
-| INFER-1   | 1            | 0        |
-| CLOCK-1   | 1            | 0        |
-+-----------+--------------+----------+
-
-
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_BranchCondExe' are not set. First unset bit index is 0. 
-RTL Name 'w_BranchCondExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 35.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_CodeMemRdy' declared and are not set.
-RTL Name 'w_CodeMemRdy', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_Enable' declared and are not set.
-RTL Name 'w_Enable', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_FlushDec' declared and are not set.
-RTL Name 'w_FlushDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_FlushExe' declared and are not set.
-RTL Name 'w_FlushExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_IrRs1Exe' are not set. First unset bit index is 0. 
-RTL Name 'w_IrRs1Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 26.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_IrRs2Exe' are not set. First unset bit index is 0. 
-RTL Name 'w_IrRs2Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 26.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_OpCodeDec' are not set. First unset bit index is 0. 
-RTL Name 'w_OpCodeDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 12.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcBxxExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcBxxExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcIntExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcIntExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcJmpExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcJmpExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcRetExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcRetExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcSelDec' are not set. First unset bit index is 0. 
-RTL Name 'w_PcSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 14.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcSelFe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcSelFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 14.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_ProgramCounterMem' are not set. First unset bit index is 0. 
-RTL Name 'w_ProgramCounterMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_ProgramCounterWb' are not set. First unset bit index is 0. 
-RTL Name 'w_ProgramCounterWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_R2OutExe' are not set. First unset bit index is 0. 
-RTL Name 'w_R2OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_Read2AddrSelDec' are not set. First unset bit index is 0. 
-RTL Name 'w_Read2AddrSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 21.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInDec' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInExe' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInFe' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInMem' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInWb' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeDec' declared and are not set.
-RTL Name 'w_RfWeDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeExe' declared and are not set.
-RTL Name 'w_RfWeExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeMem' declared and are not set.
-RTL Name 'w_RfWeMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeWb' declared and are not set.
-RTL Name 'w_RfWeWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfWrAddrMem' are not set. First unset bit index is 0. 
-RTL Name 'w_RfWrAddrMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfWrAddrWb' are not set. First unset bit index is 0. 
-RTL Name 'w_RfWrAddrWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallDec' declared and are not set.
-RTL Name 'w_StallDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallExe' declared and are not set.
-RTL Name 'w_StallExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallFe' declared and are not set.
-RTL Name 'w_StallFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluCtrlExe' was assigned but not read. 
-RTL Name 'w_AluCtrlExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 13.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluEnExe' was assigned but not read. 
-RTL Name 'w_AluEnExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluOp2SelExe' was assigned but not read. 
-RTL Name 'w_AluOp2SelExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_BranchBit' was assigned but not read. 
-RTL Name 'w_BranchBit', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm16Exe' was assigned but not read. 
-RTL Name 'w_Imm16Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 30.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm17Exe' was assigned but not read. 
-RTL Name 'w_Imm17Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 31.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm22Exe' was assigned but not read. 
-RTL Name 'w_Imm22Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 32.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm23Exe' was assigned but not read. 
-RTL Name 'w_Imm23Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 33.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_JmpBit' was assigned but not read. 
-RTL Name 'w_JmpBit', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_MemAddrSel' was assigned but not read. 
-RTL Name 'w_MemAddrSel', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_ProgramCounterExe' was assigned but not read. 
-RTL Name 'w_ProgramCounterExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_R1OutExe' was assigned but not read. 
-RTL Name 'w_R1OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RdEnMem' was assigned but not read. 
-RTL Name 'w_RdEnMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfDataInSelWb' was assigned but not read. 
-RTL Name 'w_RfDataInSelWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 16.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfRdAddrBSelDec' was assigned but not read. 
-RTL Name 'w_RfRdAddrBSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 15.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfWrAddrExe' was assigned but not read. 
-RTL Name 'w_RfWrAddrExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_WrEnMem' was assigned but not read. 
-RTL Name 'w_WrEnMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_WrEnRf' was assigned but not read. 
-RTL Name 'w_WrEnRf', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array w_R1OutExe, first multi-driven bit index is 0.
-RTL Name 'w_R1OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_IrRs1' are not read. First unused bit index is 0. 
-RTL Name 'i_IrRs1', Hierarchy 'DecodeExecuteReg', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v', Line 21.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_IrRs2' are not read. First unused bit index is 0. 
-RTL Name 'i_IrRs2', Hierarchy 'DecodeExecuteReg', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v', Line 20.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array w_IrRs2, first multi-driven bit index is 0.
-RTL Name 'w_IrRs2', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 55.
-WARNING: [Synth 37-101] [ASSIGN-9]All bits in IO 'o_Opcode' are not set. First unset bit index is 0. 
-RTL Name 'o_Opcode', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 35.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_InstructionRegister' are not read. First unused bit index is 27. 
-RTL Name 'i_InstructionRegister', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 29.
-WARNING: [Synth 37-88] [INFER-1]Inferred latch found for o_ProgramCounter_reg. 
-RTL Name 'o_ProgramCounter_reg', Hierarchy 'InstructionFetch', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v', Line 44.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[0], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[0]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[10], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[10]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[11], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[11]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[12], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[12]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[13], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[13]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[14], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[14]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[15], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[15]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[16], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[16]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[17], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[17]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[18], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[18]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[19], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[19]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[1], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[1]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[20], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[20]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[21], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[21]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[22], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[22]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[23], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[23]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[24], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[24]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[25], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[25]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[26], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[26]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[27], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[27]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[28], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[28]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[29], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[29]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[2], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[2]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[30], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[30]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[31], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[31]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[3], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[3]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[4], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[4]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[5], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[5]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[6], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[6]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[7], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[7]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[8], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[8]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[9], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[9]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-96] [ASSIGN-7]Multiple assignments detected on signal 'r_WritePending'.
-RTL Name 'r_WritePending', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 22.
-WARNING: [Synth 37-94] [CLOCK-1]Module 'RegisterFile' has registers with different clock edges. Clock name: 'i_Clk'. First register: 'r_ShadowReg_reg'. Second register: 'r_WritePending_reg'. 
-RTL Name 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 70.
-INFO: [Synth 37-85] Total of 91 linter message(s) generated.
-INFO: [Synth 37-45] Linter Run Finished!
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 12656.191 ; gain = 0.000 ; free physical = 610 ; free virtual = 12421
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12761.992 ; gain = 0.000 ; free physical = 560 ; free virtual = 12415
-INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 12761.992 ; gain = 129.523 ; free physical = 554 ; free virtual = 12415
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
-synth_design -top CPU -part xc7z010clg400-1 -lint 
-Command: synth_design -top CPU -part xc7z010clg400-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12761.992 ; gain = 0.000 ; free physical = 551 ; free virtual = 12411
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-WARNING: [Synth 8-7071] port 'o_Enable' of module 'ControlUnit' is unconnected for instance '_ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-WARNING: [Synth 8-7023] instance '_ControlUnit' of module 'ControlUnit' has 19 connections declared, but only 18 given [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:38]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
-	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
-	Parameter C_AXI_TYPE bound to: 1 - type: integer 
-	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
-	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
-	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 0 - type: integer 
-	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
-	Parameter C_ALGORITHM bound to: 1 - type: integer 
-	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
-	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
-	Parameter C_INIT_FILE_NAME bound to: CodeMemory.mif - type: string 
-	Parameter C_INIT_FILE bound to: CodeMemory.mem - type: string 
-	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
-	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
-	Parameter C_HAS_RSTA bound to: 1 - type: integer 
-	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
-	Parameter C_RSTRAM_A bound to: 0 - type: integer 
-	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 4096 - type: integer 
-	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_RSTB bound to: 0 - type: integer 
-	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
-	Parameter C_RSTRAM_B bound to: 0 - type: integer 
-	Parameter C_INITB_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENB bound to: 0 - type: integer 
-	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
-	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 4096 - type: integer 
-	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
-	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
-	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
-	Parameter C_USE_ECC bound to: 0 - type: integer 
-	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
-	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
-	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
-	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
-	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_USE_URAM bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
-	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
-	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
-	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
-	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
-	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (12#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-WARNING: [Synth 8-567] referenced signal 'i_Rst' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Enable' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_Stall' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'o_ProgramCounter' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcSel' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcBxx' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcJmp' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcRet' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-WARNING: [Synth 8-567] referenced signal 'i_PcInt' should be on the sensitivity list [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (13#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (14#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (15#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-WARNING: [Synth 8-3848] Net o_Opcode in module/entity InstructionDecode does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (16#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (17#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-WARNING: [Synth 8-3848] Net w_Enable in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:10]
-WARNING: [Synth 8-3848] Net w_StallFe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_StallDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_FlushDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_StallExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_FlushExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
-WARNING: [Synth 8-3848] Net w_PcJmpExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcBxxExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_PcIntExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:17]
-WARNING: [Synth 8-3848] Net w_Read2AddrSelDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:21]
-WARNING: [Synth 8-3848] Net w_RfWeWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:22]
-WARNING: [Synth 8-3848] Net w_RfWrAddrWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:23]
-WARNING: [Synth 8-3848] Net w_RfDataInWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (18#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:3]
-WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 12761.992 ; gain = 0.000 ; free physical = 567 ; free virtual = 12406
----------------------------------------------------------------------------------
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Apr 26 16:18:50 2024
-| Host         : brunoPC running 64-bit Ubuntu 20.04.6 LTS
----------------------------------------------------------------------------------------------------------------------------------------------
-
-RTL Linter Report
-
-Table of Contents
------------------
-1. Summary
-
-1. Summary
-----------
-
-+-----------+--------------+----------+
-| Rule ID   | # Violations | # Waived |
-+-----------+--------------+----------+
-| ASSIGN-5  | 32           | 0        |
-| ASSIGN-6  | 18           | 0        |
-| ASSIGN-7  | 35           | 0        |
-| ASSIGN-9  | 1            | 0        |
-| ASSIGN-10 | 3            | 0        |
-| INFER-1   | 1            | 0        |
-| CLOCK-1   | 1            | 0        |
-+-----------+--------------+----------+
-
-
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_BranchCondExe' are not set. First unset bit index is 0. 
-RTL Name 'w_BranchCondExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 35.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_CodeMemRdy' declared and are not set.
-RTL Name 'w_CodeMemRdy', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_Enable' declared and are not set.
-RTL Name 'w_Enable', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_FlushDec' declared and are not set.
-RTL Name 'w_FlushDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_FlushExe' declared and are not set.
-RTL Name 'w_FlushExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_IrRs1Exe' are not set. First unset bit index is 0. 
-RTL Name 'w_IrRs1Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 26.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_IrRs2Exe' are not set. First unset bit index is 0. 
-RTL Name 'w_IrRs2Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 26.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_OpCodeDec' are not set. First unset bit index is 0. 
-RTL Name 'w_OpCodeDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 12.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcBxxExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcBxxExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcIntExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcIntExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcJmpExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcJmpExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcRetExe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcRetExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 17.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcSelDec' are not set. First unset bit index is 0. 
-RTL Name 'w_PcSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 14.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_PcSelFe' are not set. First unset bit index is 0. 
-RTL Name 'w_PcSelFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 14.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_ProgramCounterMem' are not set. First unset bit index is 0. 
-RTL Name 'w_ProgramCounterMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_ProgramCounterWb' are not set. First unset bit index is 0. 
-RTL Name 'w_ProgramCounterWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_R2OutExe' are not set. First unset bit index is 0. 
-RTL Name 'w_R2OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_Read2AddrSelDec' are not set. First unset bit index is 0. 
-RTL Name 'w_Read2AddrSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 21.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInDec' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInExe' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInFe' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInMem' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfDataInWb' are not set. First unset bit index is 0. 
-RTL Name 'w_RfDataInWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 24.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeDec' declared and are not set.
-RTL Name 'w_RfWeDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeExe' declared and are not set.
-RTL Name 'w_RfWeExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeMem' declared and are not set.
-RTL Name 'w_RfWeMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_RfWeWb' declared and are not set.
-RTL Name 'w_RfWeWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 22.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfWrAddrMem' are not set. First unset bit index is 0. 
-RTL Name 'w_RfWrAddrMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-87] [ASSIGN-5]All bits in array 'w_RfWrAddrWb' are not set. First unset bit index is 0. 
-RTL Name 'w_RfWrAddrWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallDec' declared and are not set.
-RTL Name 'w_StallDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallExe' declared and are not set.
-RTL Name 'w_StallExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'w_StallFe' declared and are not set.
-RTL Name 'w_StallFe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 11.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluCtrlExe' was assigned but not read. 
-RTL Name 'w_AluCtrlExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 13.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluEnExe' was assigned but not read. 
-RTL Name 'w_AluEnExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_AluOp2SelExe' was assigned but not read. 
-RTL Name 'w_AluOp2SelExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_BranchBit' was assigned but not read. 
-RTL Name 'w_BranchBit', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm16Exe' was assigned but not read. 
-RTL Name 'w_Imm16Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 30.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm17Exe' was assigned but not read. 
-RTL Name 'w_Imm17Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 31.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm22Exe' was assigned but not read. 
-RTL Name 'w_Imm22Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 32.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_Imm23Exe' was assigned but not read. 
-RTL Name 'w_Imm23Exe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 33.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_JmpBit' was assigned but not read. 
-RTL Name 'w_JmpBit', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_MemAddrSel' was assigned but not read. 
-RTL Name 'w_MemAddrSel', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_ProgramCounterExe' was assigned but not read. 
-RTL Name 'w_ProgramCounterExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 19.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_R1OutExe' was assigned but not read. 
-RTL Name 'w_R1OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RdEnMem' was assigned but not read. 
-RTL Name 'w_RdEnMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfDataInSelWb' was assigned but not read. 
-RTL Name 'w_RfDataInSelWb', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 16.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfRdAddrBSelDec' was assigned but not read. 
-RTL Name 'w_RfRdAddrBSelDec', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 15.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_RfWrAddrExe' was assigned but not read. 
-RTL Name 'w_RfWrAddrExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 23.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_WrEnMem' was assigned but not read. 
-RTL Name 'w_WrEnMem', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-93] [ASSIGN-6]Signal 'w_WrEnRf' was assigned but not read. 
-RTL Name 'w_WrEnRf', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 10.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array w_R1OutExe, first multi-driven bit index is 0.
-RTL Name 'w_R1OutExe', Hierarchy 'CPU', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v', Line 28.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_IrRs1' are not read. First unused bit index is 0. 
-RTL Name 'i_IrRs1', Hierarchy 'DecodeExecuteReg', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v', Line 21.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_IrRs2' are not read. First unused bit index is 0. 
-RTL Name 'i_IrRs2', Hierarchy 'DecodeExecuteReg', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v', Line 20.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array w_IrRs2, first multi-driven bit index is 0.
-RTL Name 'w_IrRs2', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 55.
-WARNING: [Synth 37-101] [ASSIGN-9]All bits in IO 'o_Opcode' are not set. First unset bit index is 0. 
-RTL Name 'o_Opcode', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 35.
-WARNING: [Synth 37-102] [ASSIGN-10]All bits in IO 'i_InstructionRegister' are not read. First unused bit index is 27. 
-RTL Name 'i_InstructionRegister', Hierarchy 'InstructionDecode', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v', Line 29.
-WARNING: [Synth 37-88] [INFER-1]Inferred latch found for o_ProgramCounter_reg. 
-RTL Name 'o_ProgramCounter_reg', Hierarchy 'InstructionFetch', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v', Line 44.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[0], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[0]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[10], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[10]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[11], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[11]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[12], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[12]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[13], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[13]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[14], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[14]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[15], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[15]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[16], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[16]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[17], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[17]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[18], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[18]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[19], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[19]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[1], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[1]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[20], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[20]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[21], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[21]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[22], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[22]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[23], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[23]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[24], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[24]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[25], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[25]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[26], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[26]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[27], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[27]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[28], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[28]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[29], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[29]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[2], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[2]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[30], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[30]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[31], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[31]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[3], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[3]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[4], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[4]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[5], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[5]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[6], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[6]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[7], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[7]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[8], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[8]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-90] [ASSIGN-7]Multiple assignments detected on array r_RegFile[9], first multi-driven bit index is 0.
-RTL Name 'r_RegFile[9]', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 25.
-WARNING: [Synth 37-96] [ASSIGN-7]Multiple assignments detected on signal 'r_WritePending'.
-RTL Name 'r_WritePending', Hierarchy 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 22.
-WARNING: [Synth 37-94] [CLOCK-1]Module 'RegisterFile' has registers with different clock edges. Clock name: 'i_Clk'. First register: 'r_ShadowReg_reg'. Second register: 'r_WritePending_reg'. 
-RTL Name 'RegisterFile', File '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v', Line 70.
-INFO: [Synth 37-85] Total of 91 linter message(s) generated.
-INFO: [Synth 37-45] Linter Run Finished!
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12761.992 ; gain = 0.000 ; free physical = 571 ; free virtual = 12410
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12770.902 ; gain = 0.000 ; free physical = 570 ; free virtual = 12409
-INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 12770.902 ; gain = 8.910 ; free physical = 570 ; free virtual = 12409
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 13726.863 ; gain = 87.262 ; free physical = 2153 ; free virtual = 13755
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sat Apr 27 14:42:42 2024] Launched synth_1...
+Run output will be captured here: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/runme.log
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 18:53:49 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 27 14:43:33 2024...

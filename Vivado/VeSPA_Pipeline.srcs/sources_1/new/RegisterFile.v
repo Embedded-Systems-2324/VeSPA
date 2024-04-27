@@ -22,13 +22,15 @@ module RegisterFile
 reg r_WritePending;
 reg [`BUS_MSB:0] r_ShadowAddr;
 reg [`REG_FILE_MSB:0] r_ShadowReg;
-reg [`REG_FILE_MSB:0] r_RegFile [(32 - 1):0];
+reg [`REG_FILE_SIZE:0] r_RegFile [(32 - 1):0];
 
 integer i;
+
 always @(posedge i_Clk) begin
     if (i_Rst) begin
         for (i = 0; i < 32; i = i + 1) begin
             r_RegFile[i] <= 0;
+            r_RegFile[0] <= 1; // LINHA SÓ PARA TESTES ANTES DE TERMOS WRITE BACK, TEM DE SER APAGADA
         end
         
         r_ShadowReg <= 0;

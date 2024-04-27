@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "Constants.v"
+
 module ALU
 (
     input i_Clk,

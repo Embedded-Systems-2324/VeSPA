@@ -4,4 +4,4 @@
 # IP: ip/CodeMemory/CodeMemory.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CodeMemory || ORIG_REF_NAME==CodeMemory} -quiet] -quiet
 
-# XDC: /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc
+# XDC: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc

@@ -3,47 +3,45 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sat Apr 27 00:44:50 2024
-# Process ID: 161392
-# Current directory: /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1
+# Start of session at: Sat Apr 27 14:42:44 2024
+# Process ID: 27185
+# Current directory: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1
 # Command line: vivado -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
-# Log file: /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.vds
-# Journal file: /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
-# Running On: alfredo-HP-Pavilion-Laptop-15-cs3xxx, OS: Linux, CPU Frequency: 2142.551 MHz, CPU Physical cores: 4, Host memory: 12301 MB
+# Log file: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.vds
+# Journal file: /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
+# Running On: brunoPC, OS: Linux, CPU Frequency: 2800.000 MHz, CPU Physical cores: 4, Host memory: 8090 MB
 #-----------------------------------------------------------
 source top_level.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1337.266 ; gain = 0.023 ; free physical = 1486 ; free virtual = 5431
-Command: read_checkpoint -auto_incremental -incremental /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2033.586 ; gain = 125.023 ; free physical = 823 ; free virtual = 12458
+Command: read_checkpoint -auto_incremental -incremental /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top_level -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
 INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 161502
-INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:102]
-INFO: [Synth 8-11241] undeclared symbol 'w_StallMem', assumed default net type 'wire' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:279]
-INFO: [Synth 8-11241] undeclared symbol 'w_FlushMem', assumed default net type 'wire' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:280]
-INFO: [Synth 8-11241] undeclared symbol 'w_Imm22Mem', assumed default net type 'wire' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:302]
-INFO: [Synth 8-11241] undeclared symbol 'o_Err_CPU', assumed default net type 'wire' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:45]
+INFO: [Synth 8-7075] Helper process launched with PID 27230
+INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:104]
+INFO: [Synth 8-11241] undeclared symbol 'o_Err_CPU', assumed default net type 'wire' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:56]
+INFO: [Synth 8-11241] undeclared symbol 'rdaddr', assumed default net type 'wire' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:70]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2031.332 ; gain = 377.730 ; free physical = 529 ; free virtual = 4473
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2766.348 ; gain = 377.801 ; free physical = 154 ; free virtual = 11499
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_level' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
-INFO: [Synth 8-6157] synthesizing module 'memory_wrapper' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-161392-alfredo-HP-Pavilion-Laptop-15-cs3xxx/realtime/RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-161392-alfredo-HP-Pavilion-Laptop-15-cs3xxx/realtime/RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'memory_wrapper' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
+INFO: [Synth 8-6157] synthesizing module 'top_level' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
+INFO: [Synth 8-6157] synthesizing module 'memory_wrapper' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-27185-brunoPC/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-27185-brunoPC/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'memory_wrapper' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
+INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
+INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -119,52 +117,707 @@ INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/alfredo/Desktop/codi
 	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
-WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
-INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
-INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6157] synthesizing module 'InstructionExecute' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:4]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionExecute' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:4]
-INFO: [Synth 8-6157] synthesizing module 'ExecuteMemoryReg' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ExecuteMemoryReg' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v:3]
-WARNING: [Synth 8-689] width (1) of port connection 'o_Imm22' does not match port width (32) of module 'ExecuteMemoryReg' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:302]
-INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'o_dataMemAddress' does not match port width (1) of module 'InstructionMemory' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:320]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'i_WEnable' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:53]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'i_WAddr' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:54]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'i_WData' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:55]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'i_REnable' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:56]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'i_RAddr' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:57]
-ERROR: [Synth 8-11365] for the instance 'cpu_instance' of module 'CPU' declared at '/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5', named port connection 'o_RData' does not exist [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:58]
-WARNING: [Synth 8-7071] port 'o_Clk' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_Rst' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_WEnable' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_WAddr' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_WData' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_REnable' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'o_RAddr' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7071] port 'i_RData' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-WARNING: [Synth 8-7023] instance 'cpu_instance' of module 'CPU' has 11 connections declared, but only 3 given [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:50]
-ERROR: [Synth 8-6156] failed synthesizing module 'top_level' [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:237]
+INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/synth/CodeMemory.vhd:71]
+WARNING: [Synth 8-151] case item 32'b00000000000000000000000000000010 is unreachable [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:17]
+INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v:11]
+INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:5]
+INFO: [Synth 8-6157] synthesizing module 'InstructionExecute' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionExecute' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ExecuteMemoryReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ExecuteMemoryReg' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MemoryWriteBackReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'MemoryWriteBackReg' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v:5]
+WARNING: [Synth 8-689] width (2) of port connection 'o_RfDataInSel' does not match port width (1) of module 'MemoryWriteBackReg' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:347]
+INFO: [Synth 8-6157] synthesizing module 'InstructionWriteBack' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionWriteBack' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
+WARNING: [Synth 8-689] width (1) of port connection 'o_RAddr' does not match port width (32) of module 'CPU' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'top_level' (0#1) [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
+WARNING: [Synth 8-3848] Net o_Err in module/entity memory_wrapper does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:33]
+WARNING: [Synth 8-3848] Net o_Imm22 in module/entity InstructionExecute does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:38]
+WARNING: [Synth 8-3848] Net o_Clk in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
+WARNING: [Synth 8-3848] Net o_Rst in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:12]
+WARNING: [Synth 8-3848] Net w_StallMem in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_FlushMem in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_StallExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_FlushExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_StallDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_FlushDec in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:104]
+WARNING: [Synth 8-3848] Net w_PcIntExe in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:34]
+WARNING: [Synth 8-3848] Net w_StallWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net w_FlushWb in module/entity CPU does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:25]
+WARNING: [Synth 8-3848] Net o_RData in module/entity top_level does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:27]
+WARNING: [Synth 8-3848] Net raddr in module/entity top_level does not have driver. [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:32]
+WARNING: [Synth 8-7129] Port i_Clk in module InstructionWriteBack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Rst in module InstructionWriteBack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_RfDataInSel[1] in module MemoryWriteBackReg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Clk in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Rst in module InstructionMemory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[31] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[30] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[29] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[28] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[27] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[26] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[25] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[24] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[23] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[22] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[21] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[20] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[19] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[18] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[17] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[16] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[15] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[14] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[13] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[12] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[11] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[10] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[9] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[8] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[7] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[6] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[5] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[4] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[3] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[2] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[1] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_Imm22[0] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[31] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[30] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[29] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[28] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[27] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[26] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[25] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[24] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[23] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[22] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[21] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[20] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[19] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[18] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[17] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[16] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[15] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[14] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[13] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[12] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[11] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[10] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[9] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[8] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[7] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[6] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[5] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[4] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[3] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[2] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[1] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_Imm22[0] in module InstructionExecute is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[31] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[30] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[29] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[28] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[27] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[26] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[25] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[24] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[23] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[22] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[21] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[20] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[19] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[18] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[17] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[16] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[15] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[14] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[13] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[12] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[11] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[10] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[9] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[8] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[7] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[6] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[5] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[4] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[3] in module blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTB_I[2] in module blk_mem_output_block is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2307.777 ; gain = 654.176 ; free physical = 217 ; free virtual = 4162
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3034.957 ; gain = 646.410 ; free physical = 164 ; free virtual = 11290
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3034.957 ; gain = 646.410 ; free physical = 163 ; free virtual = 11289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 3034.957 ; gain = 646.410 ; free physical = 163 ; free virtual = 11289
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3034.957 ; gain = 0.000 ; free physical = 163 ; free virtual = 11290
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/RAM/RAM_in_context.xdc] for cell 'memory_instance/_Bram'
+Finished Parsing XDC File [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/RAM/RAM_in_context.xdc] for cell 'memory_instance/_Bram'
+Parsing XDC File [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3098.988 ; gain = 0.000 ; free physical = 139 ; free virtual = 11276
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3098.988 ; gain = 0.000 ; free physical = 139 ; free virtual = 11276
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 140 ; free virtual = 11247
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 140 ; free virtual = 11247
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_instance/_InstrFetch/_CodeMem. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for memory_instance/_Bram. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 140 ; free virtual = 11247
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_CurrentState_reg' in module 'ControlUnit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_INIT |                                0 |                              000
+                  ST_RUN |                                1 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_CurrentState_reg' using encoding 'sequential' in module 'ControlUnit'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 137 ; free virtual = 11245
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               32 Bit    Registers := 21    
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 15    
+	   4 Input   32 Bit        Muxes := 2     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][32]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][31]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][30]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][29]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][28]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][27]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][26]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][25]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][24]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][23]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][22]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][21]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][20]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][19]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][18]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][17]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][16]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][15]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][14]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][13]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][12]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][11]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][10]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][9]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][8]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][7]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][6]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][5]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][32]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][31]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][30]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][29]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][28]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][27]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][26]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][25]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][24]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][23]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][22]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][21]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][20]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][19]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][18]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][17]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][16]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][15]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][14]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][13]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][12]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][11]/Q' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 145 ; free virtual = 11260
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 129 ; free virtual = 11254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 129 ; free virtual = 11254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[31][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[30][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[29][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[28][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[27][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[26][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[25][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[24][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[23][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[22][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[21][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[20][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[19][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[18][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[17][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[16][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[15][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[14][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[13][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][4]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][4] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][3]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][3] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][2]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][2] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][1]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][1] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Synth 8-5966] Removing register instance (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][0]__0 ) from module (top_level) as it has self-loop and (\cpu_instance/_InstrDecode/rf/r_RegFile_reg[12][0] ) is actual driver [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:32]
+INFO: [Common 17-14] Message 'Synth 8-5966' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 129 ; free virtual = 11254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 123 ; free virtual = 11265
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name        | RTL Name                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|blk_mem_gen_v8_4_6 | inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 4     | NO           | NO                 | YES               | 4      | 0       | 
++-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |RAM           |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |RAM      |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    32|
+|4     |LUT1     |     2|
+|5     |LUT2     |    73|
+|6     |LUT3     |    16|
+|7     |LUT4     |    60|
+|8     |LUT5     |     6|
+|9     |LUT6     |   166|
+|10    |MUXF7    |    40|
+|11    |MUXF8    |    10|
+|12    |RAMB36E1 |     4|
+|16    |SRL16E   |     4|
+|17    |FDRE     |   641|
+|18    |FDSE     |     4|
+|19    |IBUF     |     2|
+|20    |OBUFT    |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2690 critical warnings and 246 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3098.988 ; gain = 646.410 ; free physical = 125 ; free virtual = 11258
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3098.988 ; gain = 710.441 ; free physical = 125 ; free virtual = 11258
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3098.988 ; gain = 0.000 ; free physical = 404 ; free virtual = 11537
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3098.988 ; gain = 0.000 ; free physical = 403 ; free virtual = 11537
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d1a62b45
 INFO: [Common 17-83] Releasing license: Synthesis
-44 Infos, 14 Warnings, 0 Critical Warnings and 8 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 27 00:45:17 2024...
+166 Infos, 121 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 3098.988 ; gain = 1026.746 ; free physical = 407 ; free virtual = 11541
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2749.889; main = 2436.073; forked = 387.446
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4041.824; main = 3098.992; forked = 974.848
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 27 14:43:23 2024...

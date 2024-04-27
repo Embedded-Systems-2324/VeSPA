@@ -1,14 +1,48 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /media/alfredo/5b31c87c-a2a0-4727-9d33-45f0f629570d1/Xilinx_prog/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'o_RData' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:58]
-ERROR: [VRFC 10-3180] cannot find port 'i_RAddr' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:57]
-ERROR: [VRFC 10-3180] cannot find port 'i_REnable' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:56]
-ERROR: [VRFC 10-3180] cannot find port 'i_WData' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:55]
-ERROR: [VRFC 10-3180] cannot find port 'i_WAddr' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:54]
-ERROR: [VRFC 10-3180] cannot find port 'i_WEnable' on this module [/home/alfredo/Desktop/codigo_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:53]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'o_RAddr' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:70]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_Stall' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:100]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:104]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'i_ForwardOp1' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:248]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'i_ForwardOp2' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:249]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'o_RfDataInSel' [/home/bruno/gitreps/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:347]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.memory_wrapper
+Compiling module xil_defaultlib.ControlUnit
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.CodeMemory
+Compiling module xil_defaultlib.InstructionFetch
+Compiling module xil_defaultlib.FetchDecodeReg
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.InstructionDecode
+Compiling module xil_defaultlib.DecodeExecuteReg
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.InstructionExecute
+Compiling module xil_defaultlib.ExecuteMemoryReg
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.MemoryWriteBackReg
+Compiling module xil_defaultlib.InstructionWriteBack
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.top_level
+Compiling module xil_defaultlib.Pipeline_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Pipeline_tb_behav

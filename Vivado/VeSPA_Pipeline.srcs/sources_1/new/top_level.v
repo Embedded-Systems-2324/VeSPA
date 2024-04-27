@@ -23,13 +23,24 @@
 module top_level(
     // Sinais de clock e reset
     input i_Clk,
-    input i_Rst
+    input i_Rst,
+    output o_RData
 );
 
 // Conexões diretas entre os módulos
 wire Wenable, Renable;
 wire [31:0] wdata, rdata, waddr, raddr;
 wire data_mem_busy;
+wire o_Err_cpu;
+
+//cpu to bus
+ wire cpu_Clk;
+ wire cpu_Rst;
+ wire [`BUS_MSB:0] o_WAddr;
+ wire [`BUS_MSB:0] o_WData;
+ wire o_REnable;
+ wire  [`BUS_MSB:0] o_RAddr;
+ wire [`BUS_MSB:0] i_RData;        //vai diretamente ao write back, skip MEM/EXE reg
 
 
 // Instanciando o memory_wrapper
@@ -50,12 +61,14 @@ memory_wrapper memory_instance(
 CPU cpu_instance(
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
-    .i_WEnable(Wenable),
-    .i_WAddr(waddr),
-    .i_WData(wdata),
-    .i_REnable(Renable),
-    .i_RAddr(raddr),
-    .o_RData(rdata),
+    .o_Clk(cpu_Clk),
+    .o_Rst(cpu_Rst),
+    .o_WEnable(Wenable),
+    .o_WAddr(waddr),
+    .o_WData(wdata),
+    .o_REnable(Renable),
+    .o_RAddr(rdaddr),
+    .i_RData(rdata),
     .i_DataMemRdy(data_mem_busy)
 );
 
