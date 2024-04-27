@@ -104,7 +104,7 @@ assign o_WrEnRf = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP
                 i_OpCode == `OP_LDI || i_OpCode == `OP_LDX || i_OpCode == `OP_LD  ||
                 (i_OpCode == `OP_JMP && i_ImmOp == 1'b1)) ? 1'b1 : 1'b0;
 
-assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX || i_OpCode == `OP_ADD) ? 1'b1 : 1'b0;
+assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? 1'b1 : 1'b0;
 
 assign o_RdEnMem = (i_OpCode == `OP_LD || i_OpCode == `OP_LDX) ? 1'b1 : 1'b0;
 

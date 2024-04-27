@@ -35,7 +35,7 @@ wire [`BUS_MSB:0] w_CodeMemOut;
 
 assign o_Rdy = w_CodeMemBusy;
 //assign o_InstructionRegister = w_CodeMemOut;
-assign o_InstructionRegister = (i_Enable == 1'b1) ? w_CodeMemOut : 32'd0;
+assign o_InstructionRegister = (i_Enable == 1'b1) ? w_CodeMemOut : 32'd0;       //possibilidade de criar enable para pc e para ir devido ao facto da primeira instrução acontecer em 2 ciclos
 
 CodeMemory _CodeMem
 (
@@ -74,9 +74,10 @@ always @(posedge i_Clk) begin
                     `PC_SEL_INT: begin
                         o_ProgramCounter <= i_PcInt;
                     end
-
+                    
                     default: o_ProgramCounter <= o_ProgramCounter + `PC_INC;
                 endcase
+                
             end
         end
         else begin

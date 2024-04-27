@@ -67,7 +67,7 @@ CPU cpu_instance(
     .o_WAddr(waddr),
     .o_WData(wdata),
     .o_REnable(Renable),
-    .o_RAddr(rdaddr),
+    .o_RAddr(raddr),
     .i_RData(rdata),
     .i_DataMemRdy(data_mem_busy)
 );

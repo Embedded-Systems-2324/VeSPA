@@ -30,7 +30,6 @@ always @(posedge i_Clk) begin
     if (i_Rst) begin
         for (i = 0; i < 32; i = i + 1) begin
             r_RegFile[i] <= 0;
-            r_RegFile[0] <= 1; // LINHA SÓ PARA TESTES ANTES DE TERMOS WRITE BACK, TEM DE SER APAGADA
         end
         
         r_ShadowReg <= 0;
@@ -70,15 +69,6 @@ always @(negedge i_Clk) begin
         //Do nothing
     end
     else begin
-        if(i_WrEnable) begin 
-        r_RegFile[i_WrAddr] <= i_DataIn;
-        end
-        else begin
-            //do nothing
-        end
-    end    
-/*
-    else begin
         if (r_WritePending) begin                     // -> é necessário corrigir o uso do registo interm
             r_RegFile[r_ShadowAddr] <= r_ShadowReg;
             r_WritePending <= 0;
@@ -87,8 +77,6 @@ always @(negedge i_Clk) begin
             //Do nothing
         end
     end
-*/    
-    
 end
 
 endmodule
