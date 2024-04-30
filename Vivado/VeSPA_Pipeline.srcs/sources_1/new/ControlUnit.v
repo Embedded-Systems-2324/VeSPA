@@ -35,11 +35,21 @@ module ControlUnit
     
     output o_JmpBit,
     output o_BranchBit,
-    output o_Enable            
+    output o_Enable,
     //input i_IntReq,
     //output o_AckComplete,
     //output o_AckAttended
+    
+    
+    //branch signals
+    input [3:0] i_BranchCond,
+    input i_BranchBitExe,
+    input [3:0] i_AluConditionCodes, 
+    output o_BranchVerification
+    
 );
+reg [8:0] counter;
+integer i;
 
 parameter ST_INIT   = 2'b00;
 parameter ST_RUN    = 2'b01;
@@ -47,9 +57,19 @@ parameter ST_HALT   = 2'b10;
 parameter ST_INT    = 2'b11;
 
 wire w_PeripheralsRdy;
-assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;
+assign w_PeripheralsRdy = (counter == 'd50) ? 1'b1 : 1'b0;
+
+always @(posedge i_Clk) begin
+
+    for (i = 0; i < 32; i = i + 1) begin
+        counter <= counter + 1;
+    end
+end
+
+
 
 reg [2:0] r_CurrentState;
+
 
 always @(posedge i_Clk) begin
     if (i_Rst) begin
@@ -127,8 +147,17 @@ assign o_JmpBit = (i_OpCode == `OP_JMP) ? 1'b1 : 1'b0;
 
 assign o_BranchBit = (i_OpCode == `OP_BXX) ? 1'b1 : 1'b0;
 
-assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT); 
+assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT) ? 1'b1 : 1'b0;
 
 assign o_UpdateCondCodes = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 1'b1 : 1'b0;
+
+check_branchcond branch_module
+(
+    .i_BranchCond(i_BranchCond),
+    .i_BranchBitExe(i_BranchBitExe),
+    .i_AluConditionCodes(i_AluConditionCodes),    // {w_Carry, w_Zero, w_Negative, w_Overflow}
+    
+    .o_BranchVerification(o_BranchVerification)
+);
 
 endmodule

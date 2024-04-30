@@ -45,9 +45,6 @@ module DecodeExecuteReg
     input i_BranchBit,
 
 //------------------------------------------------------------------------------------------------------------------------//  
-        
-    output reg o_JmpBit,
-    output reg o_BranchBit,
 
     output reg [`BUS_MSB:0] o_ProgramCounter,
 
@@ -76,13 +73,16 @@ module DecodeExecuteReg
     output reg o_RdEnMem,    //RD MEM
     output reg o_WrEnRf,     //WE RF
     
+    output reg o_JmpBit,
+    output reg o_BranchBit,
+    
     output reg [`PC_SEL_MSB:0] o_PcSel,
     output reg o_MemAddrSel,
     output reg [1:0] o_RfDataInSel     //Register File Write Address
 );
 
 
-always @(posedge i_Clk) begin
+always @(posedge i_Clk or posedge i_Flush) begin
     if(i_Rst || i_Flush) begin
         o_ProgramCounter     <= 0;
         o_IrRst              <= 0;
@@ -99,7 +99,7 @@ always @(posedge i_Clk) begin
         o_WrEnMem            <= 0;
         o_RdEnMem            <= 0;
         o_WrEnRf             <= 0;
-        o_PcSel              <= 0;
+        o_PcSel              <= `PC_SEL_ADD4;
         o_MemAddrSel         <= 0;
         o_RfDataInSel        <= 0;
         o_JmpBit             <= 0;

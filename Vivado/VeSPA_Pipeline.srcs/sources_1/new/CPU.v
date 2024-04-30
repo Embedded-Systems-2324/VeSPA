@@ -22,13 +22,14 @@ module CPU
 
 
 wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_WrEnMemWb, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
-wire w_StallFe, w_StallDec, w_FlushDec, w_StallExe, w_StallMem, w_StallWb, w_FlushExe, w_FlushMem, w_FlushWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
+wire w_StallFe, w_StallDec, w_FlushFetch, w_FlushDec, w_StallExe, w_StallMem, w_StallWb, w_FlushExe, w_FlushMem, w_FlushWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
+wire w_BranchVerification;
 
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
 wire [`BUS_MSB:0] w_AluOutExe, w_AluOutMem, w_AluOutWb;
 wire [`BUS_MSB:0] w_AluOp2Exe, w_AluOp2Mem;
-wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe;
+wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe, w_PcSelExe2Fetch;
 wire [`RF_SEL_MSB:0] w_RfRdAddrBSelDec;
 wire [`RF_IN_SEL_MSB:0] w_RfDataInSelDec, w_RfDataInSelExe, w_RfDataInSelMem, w_RfDataInSelWb;
 wire [`BUS_MSB:0] w_PcJmpExe, w_PcBxxExe, w_PcRetDec, w_PcIntExe;
@@ -51,10 +52,12 @@ wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
 wire [`BUS_MSB:0] w_ImmOpXExe, w_ImmOpXMem;
 
 
-
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
 wire w_UpdateCondCodes, w_UpdateCondCodesExe;
 wire [3:0] w_AluConditionCodes;
+
+wire [1:0] w_ForwardOp1;
+wire [1:0] w_ForwardOp2;
 
 //assigns for data stage
 assign o_WEnable = w_WrEnMemMem;
@@ -75,7 +78,14 @@ ControlUnit _ControlUnit
     .i_FetchRdy(w_FetchRdy),
     .i_DataMemRdy(i_DataMemRdy), 
     
+    //branch signals
+    .i_BranchCond(w_BranchCondExe),
+    .i_BranchBitExe(w_BranchBit_Exe),
+    .i_AluConditionCodes(w_AluConditionCodes),   //{w_Carry, w_Zero, w_Negative, w_Overflow}
+    
     //outputs
+    .o_BranchVerification(w_BranchVerification),
+    
     .o_AluCtrl(w_AluCtrlDec),
     .o_AluEn(w_AluEnDec),
     .o_AluOp2Sel(w_AluOp2SelDec),
@@ -92,13 +102,43 @@ ControlUnit _ControlUnit
     .o_UpdateCondCodes(w_UpdateCondCodes)     
 );
 
+HazardUnit _HazardUnit(
+    .i_Clk(i_Clk),
+    .i_Rst(i_Rst),
+    .i_IrRead1Addr(),
+    .i_IrRead2Addr(),
+    .i_RfReadDstExec(),
+    .i_BranchVerification(w_BranchVerification),
+    .i_BranchBit(w_BranchBit_Exe),
+    .i_JmpBit(),
+    .i_RdMem(),
+    .i_InterruptSignal(),    
+    .o_FlushFetch(w_FlushFetch),
+    .o_FlushDecode(w_FlushDec),
+    .o_FlushExecute(w_FlushExe),
+    .o_FlushMemory(),
+    .o_StallSignal(),
+    .o_BubbleSelector(),
+
+    .i_IrRead1AddrDecodeExec(w_IrRs1Exe),
+    .i_IrRead2AddrDecodeExec(w_IrRs2Exe),
+    .i_RfWeMemory(w_WrEnRfMem),
+    .i_RfWeWriteBack(w_RfWeWb),
+    .i_RfReadDstMemory(w_RfWrAddrMem),
+    .i_RfReadDstWriteBack(w_RfWrAddrWb),
+    .i_RfDataInSelMem(w_RfDataInSelMem),
+    .o_ForwardOp1(w_ForwardOp1),
+    .o_ForwardOp2(w_ForwardOp2)
+    );
+
 InstructionFetch _InstrFetch
 (
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
     .i_Enable(w_Enable),
     .i_Stall(0), //w_StallFe
-    .i_PcSel(w_PcSelExe),       //aqui é pc_sel_execute
+    .i_Flush(w_FlushFetch),
+    .i_PcSel(w_PcSelExe2Fetch),       //aqui é pc_sel_execute
     .i_PcJmp(w_PcJmpExe),
     .i_PcBxx(w_PcBxxExe),
     .i_PcRet(w_PcRetExe),
@@ -194,8 +234,6 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_BranchBit(w_BranchBit),
     
     //outputs
-    .o_JmpBit(w_JmpBit_Exe),
-    .o_BranchBit(w_BranchBit_Exe),
     
     .o_ProgramCounter(w_ProgramCounterExe),
     
@@ -219,6 +257,9 @@ DecodeExecuteReg _DecodeExecuteReg
     .o_AluEn(w_AluEnExe),
     .o_AluOp2Sel(w_AluOp2SelExe),
     .o_UpdateCondCodesExe(w_UpdateCondCodesExe),
+    
+    .o_JmpBit(w_JmpBit_Exe),
+    .o_BranchBit(w_BranchBit_Exe),
     
     .o_WrEnMem(w_WrEnMemExe),
     .o_RdEnMem(w_RdEnMemExe),
@@ -245,11 +286,12 @@ InstructionExecute _InstrExecute
     .i_UpdateCondCodes(w_UpdateCondCodesExe),
 
     //hazard multiplexers
-    .i_ForwardOp1(0),
-    .i_ForwardOp2(0),
+    .i_ForwardOp1(w_ForwardOp1),
+    .i_ForwardOp2(w_ForwardOp2),
 
-    .i_MemOutValue(w_AluOutMem),   //register value from MEM stage
-    .i_RfOutValue(0),    //register value from EXE stage
+    .i_MemOutValue(w_AluOutMem),            //register value from MEM stage
+    .i_RfOutValue(w_RfDataInWb),            //register value from EXE stage
+    .i_Immed22Mem(w_Imm22Mem),              //value from MEM stage to forwarding
 
     .i_R1Out(w_R1OutDec),         //RF_Read1 //alterados para não passarem pelo buffer
     .i_R2Out(w_R2OutDec),         //RF_Read2
@@ -257,8 +299,14 @@ InstructionExecute _InstrExecute
     .i_Imm17(w_Imm17Exe),
     .i_Imm22(w_Imm22Exe),
     .i_Imm23(w_Imm23Exe),
+    
+    .i_BranchVerification(w_BranchVerification),
+    .i_PcSel(w_PcSelExe),
+    .i_BranchBit(w_BranchBit_Exe),
 
     //outputs
+    .o_PcSelExe2Fetch(w_PcSelExe2Fetch),
+    
     .o_PcJmp(w_PcJmpExe),
     .o_PcBranch(w_PcBxxExe),
     
@@ -314,7 +362,7 @@ ExecuteMemoryReg _ExecuteMemoryReg
 
 InstructionMemory _InstrMemory
 (
-    .i_Clk(i_Clk),                         
+    .i_Clk(i_Clk),                                           
     .i_Rst(i_Rst),   
     .i_Imm22(w_Imm22Mem),
     .i_ImmOpX(w_ImmOpXMem),
@@ -360,5 +408,6 @@ InstructionWriteBack _InstructionWriteBack(
 
     .o_RfData(w_RfDataInWb)
     );
+
 
 endmodule
