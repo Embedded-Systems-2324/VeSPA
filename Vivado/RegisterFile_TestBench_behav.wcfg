@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Pipeline_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Pipeline_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="96.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="220.667 ns"></ZoomEndTime>
+      <Cursor1Time time="151.366 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="67"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="37" />
+   <wvobject type="logic" fp_name="/Pipeline_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/o_ProgramCounter">
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/o_InstructionRegister">
+      <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_InstructionRegister[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/i_Stall">
+      <obj_property name="ElementShortName">i_Stall</obj_property>
+      <obj_property name="ObjectShortName">i_Stall</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/o_InstructionRegister">
+      <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_InstructionRegister[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/o_ProgramCounter">
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/i_Bubble">
+      <obj_property name="ElementShortName">i_Bubble</obj_property>
+      <obj_property name="ObjectShortName">i_Bubble</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/i_IrRst">
+      <obj_property name="ElementShortName">i_IrRst[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_IrRst[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_IrRst">
+      <obj_property name="ElementShortName">o_IrRst[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRst[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/i_WrEnRf">
+      <obj_property name="ElementShortName">i_WrEnRf</obj_property>
+      <obj_property name="ObjectShortName">i_WrEnRf</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_WrEnRf">
+      <obj_property name="ElementShortName">o_WrEnRf</obj_property>
+      <obj_property name="ObjectShortName">o_WrEnRf</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/i_LeftOp">
+      <obj_property name="ElementShortName">i_LeftOp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_LeftOp[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/i_RigthOp">
+      <obj_property name="ElementShortName">i_RigthOp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_RigthOp[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/o_Output">
+      <obj_property name="ElementShortName">o_Output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Output[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/i_Enable">
+      <obj_property name="ElementShortName">i_Enable</obj_property>
+      <obj_property name="ObjectShortName">i_Enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/i_ForwardOp1">
+      <obj_property name="ElementShortName">i_ForwardOp1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ForwardOp1[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/i_ForwardOp2">
+      <obj_property name="ElementShortName">i_ForwardOp2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ForwardOp2[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_MemoryWriteBackReg/o_WrEnRf">
+      <obj_property name="ElementShortName">o_WrEnRf</obj_property>
+      <obj_property name="ObjectShortName">o_WrEnRf</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_MemoryWriteBackReg/o_IrRst">
+      <obj_property name="ElementShortName">o_IrRst[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRst[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_IrRs1">
+      <obj_property name="ElementShortName">o_IrRs1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRs1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_IrRs2">
+      <obj_property name="ElementShortName">o_IrRs2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_IrRs2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstructionWriteBack/o_RfData">
+      <obj_property name="ElementShortName">o_RfData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RfData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstructionWriteBack/i_DataMem">
+      <obj_property name="ElementShortName">i_DataMem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_DataMem[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/memory_instance/i_WEnable">
+      <obj_property name="ElementShortName">i_WEnable</obj_property>
+      <obj_property name="ObjectShortName">i_WEnable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/memory_instance/i_WAddr">
+      <obj_property name="ElementShortName">i_WAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/memory_instance/i_WData">
+      <obj_property name="ElementShortName">i_WData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[0]">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_ExecuteMemoryReg/o_AluOp2">
+      <obj_property name="ElementShortName">o_AluOp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_AluOp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/o_R1Out">
+      <obj_property name="ElementShortName">o_R1Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_R1Out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/o_R2Out">
+      <obj_property name="ElementShortName">o_R2Out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_R2Out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_AluOut">
+      <obj_property name="ElementShortName">o_AluOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_AluOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_AluOp2">
+      <obj_property name="ElementShortName">o_AluOp2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_AluOp2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/w_AluOp1">
+      <obj_property name="ElementShortName">w_AluOp1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_AluOp1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_WrEnRf">
+      <obj_property name="ElementShortName">o_WrEnRf</obj_property>
+      <obj_property name="ObjectShortName">o_WrEnRf</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/_CodeMem/addra">
+      <obj_property name="ElementShortName">addra[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/_CodeMem/douta">
+      <obj_property name="ElementShortName">douta[31:0]</obj_property>
+      <obj_property name="ObjectShortName">douta[31:0]</obj_property>
+   </wvobject>
+</wave_config>
