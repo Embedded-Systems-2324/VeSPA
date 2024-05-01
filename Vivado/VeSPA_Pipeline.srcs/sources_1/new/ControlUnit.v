@@ -57,7 +57,11 @@ parameter ST_HALT   = 2'b10;
 parameter ST_INT    = 2'b11;
 
 wire w_PeripheralsRdy;
-assign w_PeripheralsRdy = (counter == 'd50) ? 1'b1 : 1'b0;
+//usado em simulação behavioral e implemetação
+//assign w_PeripheralsRdy = (counter == 'd50) ? 1'b1 : 1'b0;
+
+//usado em simulação timing post-synthesis
+assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;
 
 always @(posedge i_Clk) begin
 

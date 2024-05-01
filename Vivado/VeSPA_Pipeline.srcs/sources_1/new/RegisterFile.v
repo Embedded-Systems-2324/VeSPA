@@ -68,6 +68,19 @@ always @(i_Clk) begin
             //Do nothing
         end
         else begin
+            if (i_WrEnable) begin                     // -> é necessário corrigir o uso do registo interm
+                r_RegFile[i_WrAddr] <= i_DataIn;
+                r_WritePending <= 0;
+            end
+            else begin
+                //Do nothing
+            end
+        end
+    /*
+        if (i_Rst) begin
+            //Do nothing
+        end
+        else begin
             if (r_WritePending) begin                     // -> é necessário corrigir o uso do registo interm
                 r_RegFile[r_ShadowAddr] <= r_ShadowReg;
                 r_WritePending <= 0;
@@ -75,7 +88,8 @@ always @(i_Clk) begin
             else begin
                 //Do nothing
             end
-        end      
+        end
+    */          
     end
 end
 

@@ -105,19 +105,21 @@ ControlUnit _ControlUnit
 HazardUnit _HazardUnit(
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
-    .i_IrRead1Addr(),
-    .i_IrRead2Addr(),
-    .i_RfReadDstExec(),
+    .i_IrRead1AddrDec(w_IrRs1Dec),
+    .i_IrRead2AddrDec(w_IrRs2Dec),
+    .i_RfReadDstExec(w_RfWrAddrExe),
+    
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
     .i_JmpBit(),
-    .i_RdMem(),
+    .i_RdMemExe(w_RdEnMemExe),
+    .i_AluEnDec(w_AluEnDec),
     .i_InterruptSignal(),    
     .o_FlushFetch(w_FlushFetch),
     .o_FlushDecode(w_FlushDec),
     .o_FlushExecute(w_FlushExe),
     .o_FlushMemory(),
-    .o_StallSignal(),
+    .o_StallSignal(w_StallFe),
     .o_BubbleSelector(),
 
     .i_IrRead1AddrDecodeExec(w_IrRs1Exe),
@@ -136,7 +138,7 @@ InstructionFetch _InstrFetch
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
     .i_Enable(w_Enable),
-    .i_Stall(0), //w_StallFe
+    .i_Stall(w_StallFe), //w_StallFe
     .i_Flush(w_FlushFetch),
     .i_PcSel(w_PcSelExe2Fetch),       //aqui é pc_sel_execute
     .i_PcJmp(w_PcJmpExe),
@@ -155,7 +157,7 @@ FetchDecodeReg _FetchDecodeReg
     .i_Rst(i_Rst),
     .i_InstructionRegister(w_InstructionRegisterFe),
     .i_ProgramCounter(w_ProgramCounterFe),
-    .i_Stall(w_StallDec),
+    .i_Stall(w_StallFe),
     .i_Flush(w_FlushDec),
 
     //outputs
@@ -197,9 +199,8 @@ DecodeExecuteReg _DecodeExecuteReg
     //inputs
     .i_Clk(i_Clk),
     .i_Rst(i_Rst),
-    .i_Stall(w_StallExe),
     .i_Flush(w_FlushExe),
-    
+    .i_Bubble(w_StallFe),                    //////////////////////////
     .i_ProgramCounter(w_ProgramCounterDec),
     
     .i_IrRst(w_RfWrAddrDec),                // IR_RDST

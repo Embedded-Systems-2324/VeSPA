@@ -33,7 +33,7 @@ initial begin
     clk <= 0;
     rst <= 1;
     
-    #50;
+    #10 
     rst <= 0;
     
     
@@ -41,7 +41,7 @@ initial begin
 
 end
     
-always #20 clk=~clk;    
+always #4 clk=~clk;    
 
 
 

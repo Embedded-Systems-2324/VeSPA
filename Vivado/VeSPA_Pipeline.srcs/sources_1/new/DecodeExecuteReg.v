@@ -6,7 +6,7 @@ module DecodeExecuteReg
 (
     input i_Clk,
     input i_Rst,
-    input i_Stall,
+    input i_Bubble,
     input i_Flush,
     
     input [`BUS_MSB:0] i_ProgramCounter,
@@ -83,7 +83,7 @@ module DecodeExecuteReg
 
 
 always @(posedge i_Clk or posedge i_Flush) begin
-    if(i_Rst || i_Flush) begin
+    if(i_Rst || i_Flush || i_Bubble) begin
         o_ProgramCounter     <= 0;
         o_IrRst              <= 0;
         o_R1Out              <= 0;
@@ -109,32 +109,32 @@ always @(posedge i_Clk or posedge i_Flush) begin
         o_IrRs1              <= 0;
     end
     else begin
-        if(i_Stall) begin                
-                o_ProgramCounter     <= o_ProgramCounter;
-                o_IrRst              <= o_IrRst;
-                o_R1Out              <= o_R1Out;
-                o_R2Out              <= o_R2Out;
-                o_Branch_Cond        <= o_Branch_Cond;
-                o_Imm16              <= o_Imm16;
-                o_Imm17              <= o_Imm17;
-                o_Imm22              <= o_Imm22;
-                o_Imm23              <= o_Imm23;
-                o_AluCtrl            <= o_AluCtrl;    
-                o_AluEn              <= o_AluEn; 
-                o_AluOp2Sel          <= o_AluOp2Sel;  
-                o_WrEnMem            <= o_WrEnMem;
-                o_RdEnMem            <= o_RdEnMem;
-                o_WrEnRf             <= o_WrEnRf;
-                o_PcSel              <= o_PcSel;
-                o_MemAddrSel         <= o_MemAddrSel;
-                o_RfDataInSel        <= o_RfDataInSel;
-                o_JmpBit             <= o_JmpBit;
-                o_BranchBit          <= o_BranchBit;
-                o_UpdateCondCodesExe <= o_UpdateCondCodesExe;
-                o_IrRs2              <= o_IrRs2;
-                o_IrRs1              <= o_IrRs1;
-            end
-            else begin
+//        if(i_Bubble) begin                
+//                o_ProgramCounter     <= o_ProgramCounter;
+//                o_IrRst              <= o_IrRst;
+//                o_R1Out              <= o_R1Out;
+//                o_R2Out              <= o_R2Out;
+//                o_Branch_Cond        <= o_Branch_Cond;
+//                o_Imm16              <= o_Imm16;
+//                o_Imm17              <= o_Imm17;
+//                o_Imm22              <= o_Imm22;
+//                o_Imm23              <= o_Imm23;
+//                o_AluCtrl            <= o_AluCtrl;    
+//                o_AluEn              <= o_AluEn; 
+//                o_AluOp2Sel          <= o_AluOp2Sel;  
+//                o_WrEnMem            <= o_WrEnMem;
+//                o_RdEnMem            <= o_RdEnMem;
+//                o_WrEnRf             <= o_WrEnRf;
+//                o_PcSel              <= o_PcSel;
+//                o_MemAddrSel         <= o_MemAddrSel;
+//                o_RfDataInSel        <= o_RfDataInSel;
+//                o_JmpBit             <= o_JmpBit;
+//                o_BranchBit          <= o_BranchBit;
+//                o_UpdateCondCodesExe <= o_UpdateCondCodesExe;
+//                o_IrRs2              <= o_IrRs2;
+//                o_IrRs1              <= o_IrRs1;
+//            end
+//            else begin
                 o_ProgramCounter      <= i_ProgramCounter;
                 o_IrRst               <= i_IrRst;
                 o_R1Out               <= i_R1Out;
@@ -159,7 +159,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
                 o_IrRs1               <= i_IrRs1;
                 o_IrRs2               <= i_IrRs2;
             end
-    end
+    //end
 end
 
 

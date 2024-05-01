@@ -31,7 +31,7 @@ module InstructionFetch
     output reg [`BUS_MSB:0] o_ProgramCounter
 );
 
-
+/*
 ila_0 _ila (
 	.clk(i_Clk), // input wire clk
 
@@ -41,16 +41,19 @@ ila_0 _ila (
 	.probe2(i_Enable), // input wire [0:0]  probe2 
 	.probe3(r_PcReady) // input wire [0:0]  probe3
 );
-
+*/
 
 
 wire w_CodeMemBusy;
 wire [`BUS_MSB:0] w_CodeMemOut;
 reg r_PcReady;
+wire [`BUS_MSB:0] w_ProgramCounter;
 
 assign o_Rdy = w_CodeMemBusy;
 //assign o_InstructionRegister = w_CodeMemOut;
 assign o_InstructionRegister = i_Flush ? 0 : ((i_Enable == 1'b1 && r_PcReady == 1'b1) ? w_CodeMemOut : 32'd0);       //possibilidade de criar enable para pc e para ir devido ao facto da primeira instrução acontecer em 2 ciclos
+
+assign w_ProgramCounter = (i_Stall) ? o_ProgramCounter - 4 : o_ProgramCounter;   // addr da memória fica durante 2 ciclos o PC e depois PC - 4 para manter o valor de modo a não se perder a instrução
 
 CodeMemory _CodeMem
 (
@@ -58,7 +61,7 @@ CodeMemory _CodeMem
     .rsta(i_Rst),
     .ena(!i_Rst),            
     .wea(0),              
-    .addra(o_ProgramCounter),         
+    .addra(w_ProgramCounter),         
     .dina(0),           
     .douta(w_CodeMemOut),         
     .rsta_busy(w_CodeMemBusy)
