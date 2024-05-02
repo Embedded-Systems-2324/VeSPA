@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "SlaveInterfaceTestbench_behav" "xil_defaultlib.SlaveInterfaceTestbench" "xil_defaultlib.glbl" -log "elaborate.log" 

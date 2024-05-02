@@ -1,3 +1,4 @@
-# VeSPA Peripheral
+# VeSPA Uart Peripheral
 
-This README is a template for a VeSPA SoC peripheral. Please edit acordingly to your peripheral.
+#Uart Peripheral
+- You can find documentation on drawios and on VeSPA SOC report
