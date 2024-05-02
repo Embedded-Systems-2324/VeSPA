@@ -1,0 +1,91 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Apr 23 22:10:45 2024
+# Process ID: 10900
+# Current directory: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc
+# Command line: vivado vespa_soc.xpr
+# Log file: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.log
+# Journal file: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.jou
+# Running On: brunoPC, OS: Linux, CPU Frequency: 2800.000 MHz, CPU Physical cores: 4, Host memory: 8090 MB
+#-----------------------------------------------------------
+start_gui
+open_project vespa_soc.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vespa_soc.srcs/sources_1/bd/vespa_soc/vespa_soc.bd}
+update_ip_catalog -rebuild
+delete_bd_objs [get_bd_nets CustomInterconnect_0_o_WEnable_5] [get_bd_nets PS2_Slave_0_o_RData] [get_bd_nets PS2C_0_1] [get_bd_nets PS2D_0_1] [get_bd_nets CustomInterconnect_0_o_WAddr_5] [get_bd_nets CustomInterconnect_0_o_WData_5] [get_bd_nets CustomInterconnect_0_o_REnable_5] [get_bd_nets CustomInterconnect_0_o_RAddr_5] [get_bd_cells PS2_Slave_0]
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:PS2:1.0 PS2_0
+endgroup
+set_property location {4 1568 1569} [get_bd_cells PS2_0]
+update_ip_catalog -rebuild
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:timerSlave:1.0 timerSlave_0
+endgroup
+set_property location {4 1563 1919} [get_bd_cells timerSlave_0]
+delete_bd_objs [get_bd_ports PS2C]
+delete_bd_objs [get_bd_ports PS2D]
+startgroup
+make_bd_pins_external  [get_bd_pins PS2_0/i_Ps2Clk]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins PS2_0/i_Ps2Sda]
+endgroup
+set_property name i_Ps2Clk [get_bd_ports i_Ps2Clk_0]
+set_property name i_Ps2Sda [get_bd_ports i_Ps2Sda_0]
+startgroup
+make_bd_pins_external  [get_bd_pins PS2_0/o_Data]
+endgroup
+connect_bd_net [get_bd_pins PS2_0/i_WEnable] [get_bd_pins CustomInterconnect_0/o_WEnable_5]
+connect_bd_net [get_bd_pins PS2_0/i_WAddr] [get_bd_pins CustomInterconnect_0/o_WAddr_5]
+connect_bd_net [get_bd_pins PS2_0/i_WData] [get_bd_pins CustomInterconnect_0/o_WData_5]
+connect_bd_net [get_bd_pins PS2_0/i_REnable] [get_bd_pins CustomInterconnect_0/o_REnable_5]
+connect_bd_net [get_bd_pins PS2_0/i_RAddr] [get_bd_pins CustomInterconnect_0/o_RAddr_5]
+connect_bd_net [get_bd_pins PS2_0/o_RData] [get_bd_pins CustomInterconnect_0/i_RData_4]
+delete_bd_objs [get_bd_nets PS2_0_o_RData]
+connect_bd_net [get_bd_pins PS2_0/o_Err] [get_bd_pins CustomInterconnect_0/i_RData_5]
+connect_bd_net [get_bd_pins timerSlave_0/i_WEnable] [get_bd_pins CustomInterconnect_0/o_WEnable_7]
+connect_bd_net [get_bd_pins timerSlave_0/i_WAddr] [get_bd_pins CustomInterconnect_0/o_WAddr_7]
+connect_bd_net [get_bd_pins timerSlave_0/i_WData] [get_bd_pins CustomInterconnect_0/o_WData_7]
+connect_bd_net [get_bd_pins timerSlave_0/i_REnable] [get_bd_pins CustomInterconnect_0/o_REnable_7]
+connect_bd_net [get_bd_pins timerSlave_0/i_RAddr] [get_bd_pins CustomInterconnect_0/o_RAddr_7]
+connect_bd_net [get_bd_pins timerSlave_0/o_Err] [get_bd_pins CustomInterconnect_0/i_RData_7]
+delete_bd_objs [get_bd_nets timerSlave_0_o_Err]
+connect_bd_net [get_bd_pins timerSlave_0/o_Err] [get_bd_pins CustomInterconnect_0/i_RData_7]
+delete_bd_objs [get_bd_nets timerSlave_0_o_Err]
+connect_bd_net [get_bd_pins timerSlave_0/o_RData] [get_bd_pins CustomInterconnect_0/i_RData_7]
+delete_bd_objs [get_bd_nets PS2_0_o_Err]
+connect_bd_net [get_bd_pins PS2_0/o_RData] [get_bd_pins CustomInterconnect_0/i_RData_5]
+connect_bd_net [get_bd_pins PS2_0/i_Clk] [get_bd_pins vespa_cpu_0/o_Clk]
+connect_bd_net [get_bd_pins PS2_0/i_Rst] [get_bd_pins vespa_cpu_0/o_Rst]
+connect_bd_net [get_bd_pins timerSlave_0/i_Clk] [get_bd_pins vespa_cpu_0/o_Clk]
+connect_bd_net [get_bd_pins timerSlave_0/i_Rst] [get_bd_pins vespa_cpu_0/o_Rst]
+startgroup
+make_bd_pins_external  [get_bd_pins timerSlave_0/o_PWMChannel1]
+endgroup
+set_property name PWMChannel1 [get_bd_ports o_PWMChannel1_0]
+set_property name PS2_OutData [get_bd_ports o_Data_0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets timerSlave_0_o_PWMChannel1] [get_bd_ports PWMChannel1]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vespa_soc.runs/impl_1/vespa_soc_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {/home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vespa_soc.runs/impl_1/vespa_soc_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+open_bd_design {/home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vespa_soc.srcs/sources_1/bd/vespa_soc/vespa_soc.bd}

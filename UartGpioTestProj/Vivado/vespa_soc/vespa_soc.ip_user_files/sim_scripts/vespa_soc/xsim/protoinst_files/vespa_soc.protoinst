@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"vespa_soc": {
+			"proto_instances": {
+			}
+		}
+	}
+}

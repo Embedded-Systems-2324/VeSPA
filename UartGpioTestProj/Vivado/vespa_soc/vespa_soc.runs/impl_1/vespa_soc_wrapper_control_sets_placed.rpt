@@ -1,0 +1,179 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Apr 23 22:35:33 2024
+| Host         : brunoPC running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_control_sets -verbose -file vespa_soc_wrapper_control_sets_placed.rpt
+| Design       : vespa_soc_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   101 |
+|    Minimum number of control sets                        |   101 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   548 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   101 |
+| >= 0 to < 4        |    73 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              37 |           14 |
+| No           | No                    | Yes                    |              12 |            6 |
+| No           | Yes                   | No                     |             126 |           82 |
+| Yes          | No                    | No                     |              60 |           23 |
+| Yes          | No                    | Yes                    |              41 |           35 |
+| Yes          | Yes                   | No                     |             264 |           74 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                              Clock Signal                              |                          Enable Signal                          |                                          Set/Reset Signal                                          | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[23]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[15]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[12]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[13]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[27]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[25]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[0]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[28]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[24]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[18]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[22]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[21]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[20]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[1]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[19]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[9]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[8]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[7]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/state_reg[2]_1               |                                                                 | RST_IBUF                                                                                           |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[11]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[11]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[18]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[18]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/C1_out                       |                                                                 | RST_IBUF                                                                                           |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/PS2_0/inst/r_LastPulse12_out                        |                                                                                                    |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                         |                                                                 | vespa_soc_i/PS2_0/inst/_Ps2Fifo/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/wr_rst_reg2 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                         |                                                                 | vespa_soc_i/PS2_0/inst/_Ps2Fifo/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/g7ser_birst.rstbt/rd_rst_i    |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[15]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[15]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[12]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[12]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[16]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[13]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[13]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[16]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[16]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[27]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[27]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/vespa_cpu_0/inst/DATAPATH/IR_reg[24]_0                    |                                                                 |                                                                                                    |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[25]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[25]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[0]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[0]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    | vespa_soc_i/UartSlave_0/inst/_UartTx/tx_bit_i_1_n_2             | RST_IBUF                                                                                           |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[11]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[3]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[3]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[1]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[1]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[19]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[19]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[9]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[9]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[8]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[8]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[7]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[7]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[6]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[6]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[6]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[4]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[4]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[5]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[5]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[31]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[31]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[30]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[30]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[2]_LDC_i_1_n_2  |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[2]_LDC_i_2_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[29]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[29]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[17]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[17]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[26]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[26]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[14]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[14]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[10]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[10]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[21]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[21]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[5]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[4]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[3]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[31]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[30]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[2]_LDC_i_1_n_2                               |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[29]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[17]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[26]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[14]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/n_0_15_BUFG                                  | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter[31]_P_i_1_n_2 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[10]_LDC_i_1_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[28]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[28]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[20]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[20]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[23]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[23]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[24]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[24]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[22]_LDC_i_1_n_2 |                                                                 | vespa_soc_i/timerSlave_0/inst/inst/r_EventCounter_reg[22]_LDC_i_2_n_2                              |                1 |              1 |         1.00 |
+|  vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/state_reg[0]_0               |                                                                 | RST_IBUF                                                                                           |                1 |              2 |         2.00 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    |                                                                 |                                                                                                    |                2 |              3 |         1.50 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/PS2_0/inst/FSM_onehot_r_CurrentState[3]_i_1_n_2     | RST_IBUF                                                                                           |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_ChannelEnable                   | RST_IBUF                                                                                           |                1 |              4 |         4.00 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    | vespa_soc_i/UartSlave_0/inst/_UartRx/counter[3]_P_i_1_n_2       |                                                                                                    |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/PS2_0/inst/o_RData[7]_i_2_n_2                       | vespa_soc_i/PS2_0/inst/o_RData[7]_i_1_n_2                                                          |                1 |              6 |         6.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_Divisor                         | RST_IBUF                                                                                           |                1 |              6 |         6.00 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    | vespa_soc_i/UartSlave_0/inst/_UartTx/buffer[6]_P_i_1_n_2        |                                                                                                    |                2 |              7 |         3.50 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    | vespa_soc_i/UartSlave_0/inst/_UartRx/data_out[7]_i_1_n_2        | RST_IBUF                                                                                           |                2 |              8 |         4.00 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    |                                                                 | RST_IBUF                                                                                           |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/UartSlave_0/inst/r_DataIn_0                         | RST_IBUF                                                                                           |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/GPIO_Slave_0/inst/o_RData[7]_i_1_n_2                |                                                                                                    |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/GPIO_Slave_0/inst/direction                         | RST_IBUF                                                                                           |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/GPIO_Slave_0/inst/data_in                           | RST_IBUF                                                                                           |                3 |              8 |         2.67 |
+|  vespa_soc_i/UartSlave_0/w_UartTick                                    | vespa_soc_i/UartSlave_0/inst/_UartRx/buffer[7]_i_2_n_2          | vespa_soc_i/UartSlave_0/inst/_UartRx/buffer[7]_i_1_n_2                                             |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/UartSlave_0/inst/o_RData[31]_i_2_n_2                |                                                                                                    |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/sp_load                | RST_IBUF                                                                                           |                3 |             12 |         4.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_OnePulseLength_0                | RST_IBUF                                                                                           |                3 |             16 |         5.33 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_PulseChannel1                   | RST_IBUF                                                                                           |                2 |             16 |         8.00 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_PulseChannel3                   | RST_IBUF                                                                                           |                3 |             16 |         5.33 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/UartSlave_0/inst/o_RData[31]_i_2_n_2                | vespa_soc_i/UartSlave_0/inst/o_RData[31]_i_1_n_2                                                   |                8 |             24 |         3.00 |
+|  CLK_IBUF_BUFG                                                         |                                                                 | RST_IBUF                                                                                           |               15 |             27 |         1.80 |
+|  vespa_soc_i/vespa_cpu_0/n_1_36_BUFG                                   |                                                                 | RST_IBUF                                                                                           |               22 |             32 |         1.45 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/E[0]                   | RST_IBUF                                                                                           |               11 |             32 |         2.91 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/vespa_cpu_0/inst/CONTROLUNIT/state_reg[1]_2[0]      | RST_IBUF                                                                                           |               12 |             32 |         2.67 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/o_RData[31]_i_1_n_2               |                                                                                                    |               14 |             32 |         2.29 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/timerSlave_0/inst/r_Period_1                        | RST_IBUF                                                                                           |                7 |             32 |         4.57 |
+|  CLK_IBUF_BUFG                                                         | vespa_soc_i/UartSlave_0/inst/r_BaudRate                         | RST_IBUF                                                                                           |               12 |             32 |         2.67 |
+|  vespa_soc_i/UartSlave_0/_UartBaudRate/clk2                            |                                                                 | RST_IBUF                                                                                           |               11 |             33 |         3.00 |
+|  CLK_IBUF_BUFG                                                         |                                                                 |                                                                                                    |               11 |             38 |         3.45 |
++------------------------------------------------------------------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

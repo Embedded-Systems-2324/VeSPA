@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="soc_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="soc_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="7.040001 us"></ZoomEndTime>
+      <Cursor1Time time="1.089280 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject type="logic" fp_name="/soc_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/CONTROLUNIT/state">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/DATAPATH/PC">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/vespa_cpu_0/inst/DATAPATH/IR">
+      <obj_property name="ElementShortName">IR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/CustomInterconnect_0/i_WEnable">
+      <obj_property name="ElementShortName">i_WEnable</obj_property>
+      <obj_property name="ObjectShortName">i_WEnable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_WAddr">
+      <obj_property name="ElementShortName">i_WAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WAddr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_WData">
+      <obj_property name="ElementShortName">i_WData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/CustomInterconnect_0/i_REnable">
+      <obj_property name="ElementShortName">i_REnable</obj_property>
+      <obj_property name="ObjectShortName">i_REnable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/i_RAddr">
+      <obj_property name="ElementShortName">i_RAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_RAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_RData">
+      <obj_property name="ElementShortName">o_RData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_WAddr_3">
+      <obj_property name="ElementShortName">o_WAddr_3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_WAddr_3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/CustomInterconnect_0/o_WData_3">
+      <obj_property name="ElementShortName">o_WData_3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_WData_3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/i_WAddr">
+      <obj_property name="ElementShortName">i_WAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/i_WData">
+      <obj_property name="ElementShortName">i_WData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_WData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartBaudRate/baudrate_counter">
+      <obj_property name="ElementShortName">baudrate_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">baudrate_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tx_bit">
+      <obj_property name="ElementShortName">tx_bit</obj_property>
+      <obj_property name="ObjectShortName">tx_bit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tx_start">
+      <obj_property name="ElementShortName">tx_start</obj_property>
+      <obj_property name="ObjectShortName">tx_start</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/data_in">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tick">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/soc_tb/charData">
+      <obj_property name="ElementShortName">charData[8:0]</obj_property>
+      <obj_property name="ObjectShortName">charData[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/sendChar">
+      <obj_property name="ElementShortName">sendChar</obj_property>
+      <obj_property name="ObjectShortName">sendChar</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uart_tx">
+      <obj_property name="ElementShortName">uart_tx</obj_property>
+      <obj_property name="ObjectShortName">uart_tx</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/uart_rx">
+      <obj_property name="ElementShortName">uart_rx</obj_property>
+      <obj_property name="ObjectShortName">uart_rx</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartRx/rx_bit">
+      <obj_property name="ElementShortName">rx_bit</obj_property>
+      <obj_property name="ObjectShortName">rx_bit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/soc_tb/test/UartSlave_0/inst/_UartTx/tx_bit">
+      <obj_property name="ElementShortName">tx_bit</obj_property>
+      <obj_property name="ObjectShortName">tx_bit</obj_property>
+   </wvobject>
+</wave_config>
