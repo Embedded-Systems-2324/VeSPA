@@ -1,4 +1,3 @@
-# VeSPA w/ Pipeline
+# VeSPA Peripheral
 
-This branch contains just the VeSPA CPU with pipeline. It is still in a very early development stage.
-
+This README is a template for a VeSPA SoC peripheral. Please edit acordingly to your peripheral.
