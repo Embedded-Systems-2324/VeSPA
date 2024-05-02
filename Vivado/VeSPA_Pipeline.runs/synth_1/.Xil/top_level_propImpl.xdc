@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:/home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc rfile:../../../VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN K17 [get_ports i_Clk]
-set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN K18 [get_ports i_Rst]
-set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN M14 [get_ports o_RData]

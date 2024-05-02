@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.sim/sim_1/impl/timing/xsim/Pipeline_tb_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top_level
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sim_1/new/Pipeline_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Pipeline_tb
