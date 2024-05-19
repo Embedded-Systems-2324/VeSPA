@@ -26,6 +26,8 @@ module InstructionFetch
     input [`BUS_MSB:0] i_PcBxx,
     input [`BUS_MSB:0] i_PcRet,
     input [`BUS_MSB:0] i_PcInt,
+    input [`BUS_MSB:0] i_PcReti,
+    
     output o_Rdy,
     output [`BUS_MSB:0] o_InstructionRegister,
     output reg [`BUS_MSB:0] o_ProgramCounter
@@ -88,8 +90,12 @@ always @(posedge i_Clk) begin
                         o_ProgramCounter <= i_PcJmp;
                     end
 
-                    `PC_SEL_RET, `PC_SEL_RETI: begin
+                    `PC_SEL_RET: begin
                         o_ProgramCounter <= i_PcRet;
+                    end 
+
+                    `PC_SEL_RETI: begin
+                        o_ProgramCounter <= i_PcReti;
                     end 
 
                     `PC_SEL_INT: begin

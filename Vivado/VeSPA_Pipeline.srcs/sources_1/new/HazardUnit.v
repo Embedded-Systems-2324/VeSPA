@@ -37,6 +37,7 @@ module HazardUnit
     input i_BranchBit,
     input i_JmpBit,
     input i_RdMemExe,
+    input i_WeMemEnable,
     input i_AluEnDec,
     input i_InterruptSignal,
     
@@ -46,7 +47,6 @@ module HazardUnit
     output o_FlushExecute,
     output o_FlushMemory,
     output o_StallSignal,
-    output o_BubbleSelector,
 
     //forward unit inputs
     input [`REG_FILE_MSB:0] i_IrRead1AddrDecodeExec,
@@ -74,13 +74,13 @@ module HazardUnit
     .i_JmpBit(i_JmpBit),
     .i_AluEnDec(i_AluEnDec),
     .i_RdMemExe(i_RdMemExe),
+    .i_WeMemEnable(i_WeMemEnable),
     .i_InterruptSignal(i_InterruptSignal),
     .o_FlushFetch(o_FlushFetch),
     .o_FlushDecode(o_FlushDecode),
     .o_FlushExecute(o_FlushExecute),
     .o_FlushMemory(o_FlushMemory),
-    .o_StallSignal(o_StallSignal),
-    .o_BubbleSelector(o_BubbleSelector)
+    .o_StallSignal(o_StallSignal)
     );
     
     

@@ -12,7 +12,8 @@ module control_hazards
     input i_BranchVerification,
     input i_BranchBit,
     input i_JmpBit,
-    input i_RdMemExe,
+    input i_RdMemExe,   //devia estar RdEnMemExe
+    input i_WeMemEnable,
     input i_AluEnDec,
     input i_InterruptSignal,
     
@@ -20,9 +21,8 @@ module control_hazards
     output reg o_FlushFetch,
     output reg o_FlushDecode,
     output reg o_FlushExecute,
-    output o_FlushMemory,
-    output o_StallSignal,
-    output o_BubbleSelector
+    output reg o_FlushMemory,
+    output o_StallSignal
 );
 
 always @(i_Clk) begin
@@ -31,17 +31,25 @@ always @(i_Clk) begin
             o_FlushDecode <= 0;
             o_FlushExecute <= 0;
             o_FlushFetch <= 0;
+            o_FlushMemory <= 0;
         end
         else begin  
-            if(i_BranchVerification == 1'b1 && i_BranchBit == 1'b1) begin
+            if((i_BranchVerification == 1'b1 && i_BranchBit == 1'b1) || i_JmpBit == 1'b1) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
+            end
+            else if(i_InterruptSignal == 1'b1) begin
+                o_FlushDecode <= 1;
+                o_FlushExecute <= 1;
+                o_FlushFetch <= 1;
+                o_FlushMemory <= 1;
             end
             else begin
                 o_FlushDecode <= 0;
                 o_FlushExecute <= 0;
                 o_FlushFetch <= 0;
+                o_FlushMemory <= 0;
             end
         end  
     end 
@@ -52,16 +60,15 @@ always @(i_Clk) begin
         else begin
             o_FlushDecode <= 0;
             o_FlushExecute <= 0;
+            o_FlushMemory <= 0;
         end 
     end  
 end
 
 //Stall signal = 1 -> LD in Decode to same Rdst of EX stage 
 assign o_StallSignal = ((i_RdMemExe && i_AluEnDec) && (i_RfReadDstExec == i_IrRead1AddrDec)) ? 1'b1 : 
-                       ((i_RdMemExe && i_AluEnDec) && (i_RfReadDstExec == i_IrRead2AddrDec)) ? 1'b1 : 1'b0;
+                       ((i_RdMemExe && i_AluEnDec) && (i_RfReadDstExec == i_IrRead2AddrDec)) ? 1'b1 : 
+                       ((i_RdMemExe && i_WeMemEnable) && (i_RfReadDstExec == i_IrRead2AddrDec)) ? 1'b1 : 1'b0;
 
-
-//Nop insertion(Bubble Mux) for stall
-assign o_BubbleSelector = o_StallSignal;
-    
+                        
 endmodule

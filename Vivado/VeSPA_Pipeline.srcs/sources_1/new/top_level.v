@@ -24,6 +24,9 @@ module top_level(
     // Sinais de clock e reset
     input i_Clk,
     input i_Rst,
+    
+    input [3:0] i_IntSources,
+    
     output o_RData
 );
 
@@ -41,6 +44,9 @@ wire o_Err_cpu;
  wire o_REnable;
  wire  [`BUS_MSB:0] o_RAddr;
  wire [`BUS_MSB:0] i_RData;        //vai diretamente ao write back, skip MEM/EXE reg
+ 
+ wire intAckComplete, intAckAttended, intReq;
+ wire [1:0] intNumber;
 
 
 // Instanciando o memory_wrapper
@@ -69,7 +75,27 @@ CPU cpu_instance(
     .o_REnable(Renable),
     .o_RAddr(raddr),
     .i_RData(rdata),
-    .i_DataMemRdy(data_mem_busy)
+    .i_DataMemRdy(data_mem_busy),
+    
+    .i_IntRequest(intReq),
+    .i_IntNumber(intNumber),
+    .o_IntAckComplete(intAckComplete),
+    .o_IntAckAttended(intAckAttended)
+);
+
+
+interruptController interrupt_instance(
+    .rst(i_Rst),
+    .clk(i_Clk),
+    .int_sources(i_IntSources),
+    .int_ack_complete(intAckComplete),
+    .int_ack_attended(intAckAttended),
+    .int_req(intReq),
+    .int_number(intNumber),
+    .ea(1'b1),
+    .en1(1'b1),
+    .en2(1'b1),
+    .en3(1'b1)
 );
 
 endmodule

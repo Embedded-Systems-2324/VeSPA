@@ -8,16 +8,21 @@ module CPU
     input i_Rst,
     
     //bus signals
-     output o_Clk,
-     output o_Rst,
-     output o_WEnable,
-     output [`BUS_MSB:0] o_WAddr,
-     output [`BUS_MSB:0] o_WData,
-     output o_REnable,
-     output [`BUS_MSB:0] o_RAddr,
-     input [`BUS_MSB:0] i_RData,        //vai diretamente ao write back, skip MEM/EXE reg
+    output o_Clk,
+    output o_Rst,
+    output o_WEnable,
+    output [`BUS_MSB:0] o_WAddr,
+    output [`BUS_MSB:0] o_WData,
+    output o_REnable,
+    output [`BUS_MSB:0] o_RAddr,
+    input [`BUS_MSB:0] i_RData,        //vai diretamente ao write back, skip MEM/EXE reg
 
-    input i_DataMemRdy
+    input i_DataMemRdy,
+    
+    input i_IntRequest,
+    input [1:0] i_IntNumber,
+    output o_IntAckComplete,
+    output o_IntAckAttended
 );
 
 
@@ -51,6 +56,7 @@ wire [`BUS_MSB:0] w_Imm22Dec, w_Imm22Exe, w_Imm22Mem, w_Imm22Wb;
 wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
 wire [`BUS_MSB:0] w_ImmOpXExe, w_ImmOpXMem;
 
+wire [`BUS_MSB:0]w_PcBackup;
 
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
 wire w_UpdateCondCodes, w_UpdateCondCodesExe;
@@ -99,7 +105,14 @@ ControlUnit _ControlUnit
     .o_JmpBit(w_JmpBit),
     .o_BranchBit(w_BranchBit),
     .o_Enable(w_Enable), 
-    .o_UpdateCondCodes(w_UpdateCondCodes)     
+    .o_UpdateCondCodes(w_UpdateCondCodes),
+    
+    
+    .i_IntRequest(i_IntRequest),
+    .i_IntNumber(i_IntNumber),
+    .o_IntAckComplete(o_IntAckComplete),
+    .o_IntAckAttended(o_IntAckAttended), 
+    .o_IntAddress(w_PcIntExe)
 );
 
 HazardUnit _HazardUnit(
@@ -111,16 +124,16 @@ HazardUnit _HazardUnit(
     
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
-    .i_JmpBit(),
+    .i_JmpBit(w_JmpBit_Exe),
     .i_RdMemExe(w_RdEnMemExe),
+    .i_WeMemEnable(w_WrEnMemDec),               //verificar se é um Store
     .i_AluEnDec(w_AluEnDec),
-    .i_InterruptSignal(),    
+    .i_InterruptSignal(o_IntAckAttended),    
     .o_FlushFetch(w_FlushFetch),
     .o_FlushDecode(w_FlushDec),
     .o_FlushExecute(w_FlushExe),
-    .o_FlushMemory(),
+    .o_FlushMemory(w_FlushMem),
     .o_StallSignal(w_StallFe),
-    .o_BubbleSelector(),
 
     .i_IrRead1AddrDecodeExec(w_IrRs1Exe),
     .i_IrRead2AddrDecodeExec(w_IrRs2Exe),
@@ -128,7 +141,7 @@ HazardUnit _HazardUnit(
     .i_RfWeWriteBack(w_RfWeWb),
     .i_RfReadDstMemory(w_RfWrAddrMem),
     .i_RfReadDstWriteBack(w_RfWrAddrWb),
-    .i_RfDataInSelMem(w_RfDataInSelMem),
+    .i_RfDataInSelMem(w_RfDataInSelMem),        //Rf_write_sel in design
     .o_ForwardOp1(w_ForwardOp1),
     .o_ForwardOp2(w_ForwardOp2)
     );
@@ -145,6 +158,8 @@ InstructionFetch _InstrFetch
     .i_PcBxx(w_PcBxxExe),
     .i_PcRet(w_PcRetExe),
     .i_PcInt(w_PcIntExe),
+    
+    .i_PcReti(w_PcBackup),
     //outputs
     .o_Rdy(w_FetchRdy),
     .o_InstructionRegister(w_InstructionRegisterFe),
@@ -234,15 +249,17 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_JmpBit(w_JmpBit),
     .i_BranchBit(w_BranchBit),
     
+    .i_InterruptSignal(o_IntAckAttended),
+    
     //outputs
     
     .o_ProgramCounter(w_ProgramCounterExe),
     
     //used for hazards to
-    .o_IrRst(w_RfWrAddrExe),                             // IR_RDST output
+    .o_IrRst(w_RfWrAddrExe),                // IR_RDST output
     
-    .o_R1Out(w_R1OutExe),                                // RF_Read1 output
-    .o_R2Out(w_R2OutExe),                                // RF_Read2 output
+    .o_R1Out(w_R1OutExe),                   // RF_Read1 output
+    .o_R2Out(w_R2OutExe),                   // RF_Read2 output
     
     .o_IrRs2(w_IrRs2Exe),                   // R1_Addr
     .o_IrRs1(w_IrRs1Exe),                   // R2_Addr
@@ -290,7 +307,7 @@ InstructionExecute _InstrExecute
     .i_ForwardOp1(w_ForwardOp1),
     .i_ForwardOp2(w_ForwardOp2),
 
-    .i_MemOutValue(w_AluOutMem),            //register value from MEM stage
+    .i_AluOutMem(w_AluOutMem),              //register value from MEM stage
     .i_RfOutValue(w_RfDataInWb),            //register value from EXE stage
     .i_Immed22Mem(w_Imm22Mem),              //value from MEM stage to forwarding
 
@@ -318,7 +335,7 @@ InstructionExecute _InstrExecute
     .o_ImmOpX(w_ImmOpXExe),
 
     //flags
-    .o_AluConditionCodes(w_AluConditionCodes)     //ConditionCodes <= {Carry, Zero, Negative, Overflow}; -> branch module
+    .o_AluConditionCodes(w_AluConditionCodes)   //ConditionCodes <= {Carry, Zero, Negative, Overflow}; -> branch module
 );
 
 
@@ -331,34 +348,34 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .i_Flush(w_FlushMem),                      
 
     .i_ProgramCounter(w_ProgramCounterExe),    
-    .i_IrRst(w_RfWrAddrExe),                   // IR_RDST  
+    .i_IrRst(w_RfWrAddrExe),                    // IR_RDST  
 
-    .i_WrEnMem(w_WrEnMemExe),                  // WE MEM
-    .i_RdEnMem(w_RdEnMemExe),                  // RD MEM
-    .i_WrEnRf(w_WrEnRfExe),                    // WE RF
+    .i_WrEnMem(w_WrEnMemExe),                   // WE MEM
+    .i_RdEnMem(w_RdEnMemExe),                   // RD MEM
+    .i_WrEnRf(w_WrEnRfExe),                     // WE RF
         
-    .i_MemAddrSel(w_MemAddrSelExe),            // Memory address select
-    .i_RfDataInSel(w_RfDataInSelExe),          // Register File Write Address
+    .i_MemAddrSel(w_MemAddrSelExe),             // Memory address select
+    .i_RfDataInSel(w_RfDataInSelExe),           // Register File Write Address
 
     .i_AluOut(w_AluOutExe),                 
     .i_AluOp2(w_AluOp2Exe),                 
-    .i_Imm22(w_Imm22Exe),                      // Immediate 22-bit
+    .i_Imm22(w_Imm22Exe),                       // Immediate 22-bit
     .i_ImmOpX(w_ImmOpXExe),
 
 
     .o_ProgramCounter(w_ProgramCounterMem),          
-    .o_IrRst(w_RfWrAddrMem),                   // IR_RDST  
+    .o_IrRst(w_RfWrAddrMem),                    // IR_RDST  
     .o_AluOut(w_AluOutMem),                     //ALU_OutM               
     .o_AluOp2(w_AluOp2Mem),               
     .o_Imm22(w_Imm22Mem),                   
     .o_ImmOpX(w_ImmOpXMem),                            
 
-    .o_WrEnMem(w_WrEnMemMem),                  // WE MEM
-    .o_RdEnMem(w_RdEnMemMem),                  // RD MEM
-    .o_WrEnRf(w_WrEnRfMem),                    // WE RF
+    .o_WrEnMem(w_WrEnMemMem),                   // WE MEM
+    .o_RdEnMem(w_RdEnMemMem),                   // RD MEM
+    .o_WrEnRf(w_WrEnRfMem),                     // WE RF
         
-    .o_MemAddrSel(w_MemAddrSelMem),            // Memory address select
-    .o_RfDataInSel(w_RfDataInSelMem)           // Register File Write Address
+    .o_MemAddrSel(w_MemAddrSelMem),             // Memory address select
+    .o_RfDataInSel(w_RfDataInSelMem)            // Register File Write Address
 );
 
 InstructionMemory _InstrMemory
@@ -376,20 +393,20 @@ MemoryWriteBackReg _MemoryWriteBackReg
     .i_Clk(i_Clk),                         
     .i_Rst(i_Rst),                         
     .i_Stall(w_StallWb),                   
-    .i_Flush(w_FlushWb),                      
+    //.i_Flush(1'b0),                      
 
     .i_ProgramCounter(w_ProgramCounterMem),    
-    .i_IrRst(w_RfWrAddrMem),                   // IR_RDST  
+    .i_IrRst(w_RfWrAddrMem),                    // IR_RDST  
 
-    .i_WrEnRf(w_WrEnRfMem),                    // WE RF
+    .i_WrEnRf(w_WrEnRfMem),                     // WE RF
         
-    .i_RfDataInSel(w_RfDataInSelMem),          // Register File Write Address
+    .i_RfDataInSel(w_RfDataInSelMem),           // Register File Write Address
 
     .i_AluOut(w_AluOutMem),                 
-    .i_Imm22(w_Imm22Mem),                      // Immediate 22-bit
+    .i_Imm22(w_Imm22Mem),                       // Immediate 22-bit
 
     .o_ProgramCounter(w_ProgramCounterWb),
-    .o_AluOut(w_AluOutWb),                     //ALU_OutM
+    .o_AluOut(w_AluOutWb),                      //ALU_OutM
     .o_Imm22(w_Imm22Wb),
     .o_IrRst (w_RfWrAddrWb),                    //IR_RDST  
     .o_WrEnRf(w_RfWeWb),
@@ -406,8 +423,11 @@ InstructionWriteBack _InstructionWriteBack(
     .i_ProgramCounter(w_ProgramCounterWb),      //PC VALUE TO JMP
 
     .i_RfDataInSel(w_RfDataInSelWb),            //MUX
+    
+    .i_InterruptSignal(o_IntAckAttended),
 
-    .o_RfData(w_RfDataInWb)
+    .o_RfData(w_RfDataInWb),
+    .o_PcBackup(w_PcBackup)
     );
 
 

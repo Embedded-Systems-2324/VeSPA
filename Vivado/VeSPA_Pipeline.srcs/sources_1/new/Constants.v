@@ -13,9 +13,9 @@
 `define PC_SEL_BXX      0
 `define PC_SEL_JMP      1
 `define PC_SEL_RET      2
-`define PC_SEL_RETI     2
-`define PC_SEL_INT      3
-`define PC_SEL_ADD4     4
+`define PC_SEL_RETI     3
+`define PC_SEL_INT      4
+`define PC_SEL_ADD4     5
 
 `define REG_FILE_SIZE   31
 `define REG_FILE_WIDTH  5
@@ -74,5 +74,11 @@
 `define CCODE_ZERO      2   
 `define CCODE_NEG       1   
 `define CCODE_OVF       0   
+
+`define ISR1_ADDRESS    4
+`define ISR2_ADDRESS    8
+`define ISR3_ADDRESS    12
+`define ISR4_ADDRESS    16
+
 
 `endif

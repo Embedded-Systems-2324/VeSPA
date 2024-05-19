@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.tcl"
+  variable script "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,53 +77,47 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.cache/wt [current_project]
-set_property parent.project_path /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property webtalk.parent_dir /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/wt [current_project]
+set_property parent.project_path /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
-set_property ip_output_repo /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.cache/ip [current_project]
+set_property ip_output_repo /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 set_property generic BUS_MSB=31 [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/code.coe
-read_verilog /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v
-set_property file_type "Verilog Header" [get_files /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v]
-set_property is_global_include true [get_files /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v]
+add_files /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/code.coe
+read_verilog /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v
+set_property file_type "Verilog Header" [get_files /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v]
+set_property is_global_include true [get_files /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v]
 read_verilog -library xil_defaultlib {
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/HazardUnit.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/check_branchcond.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/forwarding_unit.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v
-  /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ALU.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ExecuteMemoryReg.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/FetchDecodeReg.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/HazardUnit.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionDecode.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionMemory.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/MemoryWriteBackReg.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/check_branchcond.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/forwarding_unit.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v
 }
-read_ip -quiet /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/CodeMemory/CodeMemory.xci
-set_property used_in_implementation false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc]
+read_ip -quiet /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/CodeMemory/CodeMemory.xci
+set_property used_in_implementation false [get_files -all /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc]
 
-read_ip -quiet /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/ila_0/ila_0.xci
-set_property used_in_synthesis false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/ila_0/ila_0_ooc.xdc]
-
-read_ip -quiet /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/RAM/RAM.xci
-set_property used_in_implementation false [get_files -all /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/RAM_ooc.xdc]
+read_ip -quiet /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/RAM/RAM.xci
+set_property used_in_implementation false [get_files -all /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/RAM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -134,14 +128,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc
-set_property used_in_implementation false [get_files /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc]
+read_xdc /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc
+set_property used_in_implementation false [get_files /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
+read_checkpoint -auto_incremental -incremental /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

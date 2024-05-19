@@ -36,9 +36,12 @@ module ControlUnit
     output o_JmpBit,
     output o_BranchBit,
     output o_Enable,
-    //input i_IntReq,
-    //output o_AckComplete,
-    //output o_AckAttended
+
+    input i_IntRequest,
+    input [1:0] i_IntNumber,
+    output o_IntAckComplete,
+    output o_IntAckAttended, 
+    output [`BUS_MSB:0] o_IntAddress,
     
     
     //branch signals
@@ -61,7 +64,7 @@ wire w_PeripheralsRdy;
 //assign w_PeripheralsRdy = (counter == 'd50) ? 1'b1 : 1'b0;
 
 //usado em simulação timing post-synthesis
-assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;
+assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;   
 
 always @(posedge i_Clk) begin
 
@@ -73,7 +76,6 @@ end
 
 
 reg [2:0] r_CurrentState;
-
 
 always @(posedge i_Clk) begin
     if (i_Rst) begin
@@ -91,19 +93,25 @@ always @(posedge i_Clk) begin
             end
 
             ST_RUN: begin
-                r_CurrentState <= ST_RUN;
+                if(i_IntRequest) begin
+                    r_CurrentState <= ST_INT;
+                end
+                else begin
+                    r_CurrentState <= ST_RUN;           
+                end
             end
             
             ST_INT: begin
                 //TODO: Missing handling INT ack
-                r_CurrentState <= ST_INT;
+                r_CurrentState <= ST_RUN;
             end
             
             ST_HALT: begin
-                    r_CurrentState <= ST_HALT;
+               r_CurrentState <= ST_HALT;
             end
 
-            default: r_CurrentState <= ST_HALT;
+            default: 
+                r_CurrentState <= ST_HALT;
         endcase
     end
 end
@@ -111,9 +119,9 @@ end
 assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
                                                (i_OpCode == `OP_JMP) ? `PC_SEL_JMP :
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
-                                               (i_OpCode == `OP_RETI) ? `PC_SEL_RETI : `PC_SEL_ADD4) :
+                                               (i_OpCode == `OP_RETI)? `PC_SEL_RETI : `PC_SEL_ADD4) :
                                                (r_CurrentState == ST_INT) ? `PC_SEL_INT : 
-                                               (r_CurrentState == ST_INIT) ? `PC_SEL_ADD4 : 0;
+                                               (r_CurrentState == ST_INIT)? `PC_SEL_ADD4 : 0;
 
 assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 
                         (i_OpCode == `OP_RET) ? `RF_SEL_RET :
@@ -124,9 +132,9 @@ assign o_RfDataInSel = (i_OpCode == `OP_JMP && i_ImmOp == 1'b1) ? `RF_IN_PC :
                        (i_OpCode == `OP_LDI) ? `RF_IN_IMM : `RF_IN_ALU;
 
 assign o_WrEnRf = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_OR  ||
-                i_OpCode == `OP_AND || i_OpCode == `OP_NOT || i_OpCode == `OP_XOR ||
-                i_OpCode == `OP_LDI || i_OpCode == `OP_LDX || i_OpCode == `OP_LD  ||
-                (i_OpCode == `OP_JMP && i_ImmOp == 1'b1)) ? 1'b1 : 1'b0;
+                   i_OpCode == `OP_AND || i_OpCode == `OP_NOT || i_OpCode == `OP_XOR ||
+                   i_OpCode == `OP_LDI || i_OpCode == `OP_LDX || i_OpCode == `OP_LD  ||
+                  (i_OpCode == `OP_JMP && i_ImmOp == 1'b1)) ? 1'b1 : 1'b0;
 
 assign o_WrEnMem = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? 1'b1 : 1'b0;
 
@@ -154,6 +162,14 @@ assign o_BranchBit = (i_OpCode == `OP_BXX) ? 1'b1 : 1'b0;
 assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT) ? 1'b1 : 1'b0;
 
 assign o_UpdateCondCodes = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_CMP) ? 1'b1 : 1'b0;
+
+assign o_IntAckAttended = (r_CurrentState == ST_INT) ? 1'b1 : 1'b0;
+
+assign o_IntAckComplete = (i_OpCode == `OP_RETI) ? 1'b1 : 1'b0;
+
+assign o_IntAddress = (i_IntNumber == 2'd0) ? `ISR1_ADDRESS :
+                      (i_IntNumber == 2'd1) ? `ISR2_ADDRESS :
+                      (i_IntNumber == 2'd2) ? `ISR3_ADDRESS : `ISR4_ADDRESS;
 
 check_branchcond branch_module
 (

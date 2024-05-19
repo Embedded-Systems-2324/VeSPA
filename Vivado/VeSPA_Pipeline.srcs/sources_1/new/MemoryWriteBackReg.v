@@ -7,7 +7,7 @@ module MemoryWriteBackReg
     input i_Clk,
     input i_Rst,
     input i_Stall,
-    input i_Flush,
+    //input i_Flush,
 
     input [`BUS_MSB:0] i_ProgramCounter,
     input [4:0] i_IrRst,                      //IR_RDST 
@@ -30,7 +30,7 @@ module MemoryWriteBackReg
 );
     
 always @(posedge i_Clk) begin
-    if (i_Rst || i_Flush) begin
+    if (i_Rst) begin
         o_ProgramCounter <= 0;
         o_IrRst          <= 0;
         o_AluOut         <= 0;

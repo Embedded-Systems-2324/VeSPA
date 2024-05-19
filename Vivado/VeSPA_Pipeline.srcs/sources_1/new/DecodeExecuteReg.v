@@ -43,6 +43,8 @@ module DecodeExecuteReg
         
     input i_JmpBit,
     input i_BranchBit,
+    
+    input i_InterruptSignal,
 
 //------------------------------------------------------------------------------------------------------------------------//  
 
@@ -82,6 +84,9 @@ module DecodeExecuteReg
 );
 
 
+reg r_InterruptSignal;
+
+
 always @(posedge i_Clk or posedge i_Flush) begin
     if(i_Rst || i_Flush || i_Bubble) begin
         o_ProgramCounter     <= 0;
@@ -98,8 +103,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
         o_AluOp2Sel          <= 0;  
         o_WrEnMem            <= 0;
         o_RdEnMem            <= 0;
-        o_WrEnRf             <= 0;
-        o_PcSel              <= `PC_SEL_ADD4;
+        o_WrEnRf             <= 0;  
         o_MemAddrSel         <= 0;
         o_RfDataInSel        <= 0;
         o_JmpBit             <= 0;
@@ -107,6 +111,14 @@ always @(posedge i_Clk or posedge i_Flush) begin
         o_UpdateCondCodesExe <= 0;
         o_IrRs2              <= 0;   
         o_IrRs1              <= 0;
+        
+        
+        if(r_InterruptSignal == 1'b1) begin
+            o_PcSel <= o_PcSel;
+        end
+        else begin
+            o_PcSel <= `PC_SEL_ADD4;
+        end
     end
     else begin
 //        if(i_Bubble) begin                
@@ -158,6 +170,8 @@ always @(posedge i_Clk or posedge i_Flush) begin
                 o_UpdateCondCodesExe  <= i_UpdateCondCodes;
                 o_IrRs1               <= i_IrRs1;
                 o_IrRs2               <= i_IrRs2;
+                
+                r_InterruptSignal     <= i_InterruptSignal;
             end
     //end
 end

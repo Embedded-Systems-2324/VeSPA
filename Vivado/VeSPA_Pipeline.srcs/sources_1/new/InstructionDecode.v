@@ -48,8 +48,8 @@ module InstructionDecode
     output [`BUS_MSB:0] o_Imm23,
 
     output [3:0] o_BranchCond
-    
 );
+
 
 wire [4:0] w_IrRs1;     //IR_RS1 [21:17]
 wire [4:0] w_IrRs2;     //IR_RS2 [15:11]
@@ -82,7 +82,6 @@ assign o_ImmOp = i_InstructionRegister[16];
 assign o_Opcode = i_InstructionRegister[31:27];
 
 
-
 //Sign-Extends
 assign o_Imm16 = {16'b0, w_Imm16};
 assign o_Imm17 = {15'b0, w_Imm17};
@@ -92,8 +91,7 @@ assign o_Imm23 = {9'b0, w_Imm23};
 
     
 assign w_IrRs2_in = (i_Read2AddrSel == 2'b00) ? w_IrRs2 :               //w_IrRs2_in is the read adress B to register file after the mux i_Read2AddrSel
-                   (i_Read2AddrSel == 2'b01) ? w_IrRst :
-                   (i_Read2AddrSel == 2'b00) ? `RET_REG : `RETI_REG;
+                    (i_Read2AddrSel == 2'b01) ? w_IrRst : `RET_REG;
 
 
 RegisterFile rf
@@ -110,5 +108,4 @@ RegisterFile rf
 );
 
                                    
-
 endmodule
