@@ -34,8 +34,8 @@ module InstructionWriteBack(
     
     input i_InterruptSignal,
 
-    output [`BUS_MSB:0] o_RfData, 
-    output reg [`BUS_MSB:0]o_PcBackup
+    output [`BUS_MSB:0] o_RfData
+    //output reg [`BUS_MSB:0]o_PcWb
 
     );
 
@@ -44,13 +44,13 @@ module InstructionWriteBack(
                        (i_RfDataInSel == 2'b10) ? i_AluOut : i_Imm22;
                        
     
-    always @ (posedge i_Clk) begin
+    /*always @ (posedge i_Clk) begin
         if(i_InterruptSignal == 1'b1) begin
             o_PcBackup = i_ProgramCounter;
         end
         else begin
             o_PcBackup = o_PcBackup;
         end
-    end
+    end*/
                       
 endmodule

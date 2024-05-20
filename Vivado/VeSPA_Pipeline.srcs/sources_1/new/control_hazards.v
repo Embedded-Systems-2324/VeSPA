@@ -12,6 +12,7 @@ module control_hazards
     input i_BranchVerification,
     input i_BranchBit,
     input i_JmpBit,
+    input i_RetiBit,
     input i_RdMemExe,   //devia estar RdEnMemExe
     input i_WeMemEnable,
     input i_AluEnDec,
@@ -34,16 +35,20 @@ always @(i_Clk) begin
             o_FlushMemory <= 0;
         end
         else begin  
-            if((i_BranchVerification == 1'b1 && i_BranchBit == 1'b1) || i_JmpBit == 1'b1) begin
-                o_FlushDecode <= 1;
-                o_FlushExecute <= 1;
-                o_FlushFetch <= 1;
-            end
-            else if(i_InterruptSignal == 1'b1) begin
+            if(i_InterruptSignal == 1'b1) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
                 o_FlushMemory <= 1;
+            end
+            //necessário esta ordem pois quando houver uma interrupçao e estiver a ser executado um JMP,
+            //o JMP não vai ser executado e e em vez disso, o endereço de salto vai passar a ser o 
+            //endereço de retorno da interrupção.
+            //Assim, quando acontecer o RETI, está a executar o JMP que não foi executado previamente
+            else if((i_BranchVerification == 1'b1 && i_BranchBit == 1'b1) || i_JmpBit == 1'b1 || i_RetiBit == 1'b1) begin
+                o_FlushDecode <= 1;
+                o_FlushExecute <= 1;
+                o_FlushFetch <= 1;
             end
             else begin
                 o_FlushDecode <= 0;

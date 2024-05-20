@@ -35,6 +35,7 @@ module ControlUnit
     
     output o_JmpBit,
     output o_BranchBit,
+    output o_RetiBit,
     output o_Enable,
 
     input i_IntRequest,
@@ -158,6 +159,8 @@ assign o_AluEn = (i_OpCode == `OP_ADD || i_OpCode == `OP_SUB || i_OpCode == `OP_
 assign o_JmpBit = (i_OpCode == `OP_JMP) ? 1'b1 : 1'b0;
 
 assign o_BranchBit = (i_OpCode == `OP_BXX) ? 1'b1 : 1'b0;
+
+assign o_RetiBit = (i_OpCode == `OP_RETI) ? 1'b1 : 1'b0;
 
 assign o_Enable = (r_CurrentState == ST_RUN) || (r_CurrentState == ST_INT) ? 1'b1 : 1'b0;
 

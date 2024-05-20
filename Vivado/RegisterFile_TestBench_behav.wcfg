@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="68.364 ns"></ZoomStartTime>
-      <ZoomEndTime time="234.976 ns"></ZoomEndTime>
-      <Cursor1Time time="108.000 ns"></Cursor1Time>
+      <ZoomStartTime time="51.800 ns"></ZoomStartTime>
+      <ZoomEndTime time="311.801 ns"></ZoomEndTime>
+      <Cursor1Time time="172.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <NameColumnWidth column_width="203"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="24" />
    <wvobject type="logic" fp_name="/Pipeline_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -47,22 +47,6 @@
    <wvobject type="array" fp_name="/Pipeline_tb/test/interrupt_instance/int_number">
       <obj_property name="ElementShortName">int_number[1:0]</obj_property>
       <obj_property name="ObjectShortName">int_number[1:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/interrupt_instance/int_sources_2">
-      <obj_property name="ElementShortName">int_sources_2[3:0]</obj_property>
-      <obj_property name="ObjectShortName">int_sources_2[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/interrupt_instance/nextIrq">
-      <obj_property name="ElementShortName">nextIrq[2:0]</obj_property>
-      <obj_property name="ObjectShortName">nextIrq[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/interrupt_instance/pending">
-      <obj_property name="ElementShortName">pending[3:0]</obj_property>
-      <obj_property name="ObjectShortName">pending[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/interrupt_instance/int_sources_prev">
-      <obj_property name="ElementShortName">int_sources_prev[3:0]</obj_property>
-      <obj_property name="ObjectShortName">int_sources_prev[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/o_InstructionRegister">
       <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
@@ -97,19 +81,9 @@
       <obj_property name="ElementShortName">i_Flush</obj_property>
       <obj_property name="ObjectShortName">i_Flush</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstructionWriteBack/o_PcBackup">
-      <obj_property name="ElementShortName">o_PcBackup[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_PcBackup[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/i_PcSel">
       <obj_property name="ElementShortName">i_PcSel[2:0]</obj_property>
       <obj_property name="ObjectShortName">i_PcSel[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/w_ProgramCounter">
-      <obj_property name="ElementShortName">w_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w_ProgramCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_PcSelExe2Fetch">
       <obj_property name="ElementShortName">o_PcSelExe2Fetch[2:0]</obj_property>
@@ -140,8 +114,13 @@
       <obj_property name="ElementShortName">r_InterruptSignal</obj_property>
       <obj_property name="ObjectShortName">r_InterruptSignal</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/CTRL_HZRD/o_StallSignal">
-      <obj_property name="ElementShortName">o_StallSignal</obj_property>
-      <obj_property name="ObjectShortName">o_StallSignal</obj_property>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/r_PcBackup">
+      <obj_property name="ElementShortName">r_PcBackup[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_PcBackup[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_ControlUnit/o_RetiBit">
+      <obj_property name="ElementShortName">o_RetiBit</obj_property>
+      <obj_property name="ObjectShortName">o_RetiBit</obj_property>
    </wvobject>
 </wave_config>

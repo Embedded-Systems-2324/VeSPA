@@ -28,7 +28,7 @@ module CPU
 
 wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_WrEnMemWb, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
 wire w_StallFe, w_StallDec, w_FlushFetch, w_FlushDec, w_StallExe, w_StallMem, w_StallWb, w_FlushExe, w_FlushMem, w_FlushWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
-wire w_BranchVerification;
+wire w_BranchVerification, w_RetiBit;
 
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
@@ -56,7 +56,7 @@ wire [`BUS_MSB:0] w_Imm22Dec, w_Imm22Exe, w_Imm22Mem, w_Imm22Wb;
 wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
 wire [`BUS_MSB:0] w_ImmOpXExe, w_ImmOpXMem;
 
-wire [`BUS_MSB:0]w_PcBackup;
+//wire [`BUS_MSB:0]w_PcBackup;
 
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
 wire w_UpdateCondCodes, w_UpdateCondCodesExe;
@@ -73,6 +73,32 @@ assign o_REnable = w_RdEnMemMem;
 assign o_WAddr = o_DataMemAddress;
 assign o_RAddr = o_DataMemAddress;
 
+
+reg [`BUS_MSB:0]r_PcBackup;
+
+
+
+always @ (posedge i_Clk) begin
+    if(i_Rst) begin
+        r_PcBackup <= 0;
+    end
+    else begin
+        if(o_IntAckAttended == 1'b1) begin
+            if(w_BranchVerification == 1'b1 && w_BranchBit == 1'b1)  begin
+                r_PcBackup <= w_PcBxxExe;
+            end
+            else if(w_JmpBit == 1'b1) begin
+                r_PcBackup <= w_PcJmpExe;
+            end
+            else begin
+                r_PcBackup <= w_ProgramCounterWb;
+            end
+        end    
+        else begin
+            r_PcBackup <= r_PcBackup;
+        end
+    end
+end 
 
 
 ControlUnit _ControlUnit
@@ -103,6 +129,7 @@ ControlUnit _ControlUnit
     .o_RfRdAddrBSel(w_RfRdAddrBSelDec),    
     .o_RfDataInSel(w_RfDataInSelDec),
     .o_JmpBit(w_JmpBit),
+    .o_RetiBit(w_RetiBit),
     .o_BranchBit(w_BranchBit),
     .o_Enable(w_Enable), 
     .o_UpdateCondCodes(w_UpdateCondCodes),
@@ -125,6 +152,7 @@ HazardUnit _HazardUnit(
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
     .i_JmpBit(w_JmpBit_Exe),
+    .i_RetiBit(w_RetiBit),
     .i_RdMemExe(w_RdEnMemExe),
     .i_WeMemEnable(w_WrEnMemDec),               //verificar se é um Store
     .i_AluEnDec(w_AluEnDec),
@@ -158,8 +186,7 @@ InstructionFetch _InstrFetch
     .i_PcBxx(w_PcBxxExe),
     .i_PcRet(w_PcRetExe),
     .i_PcInt(w_PcIntExe),
-    
-    .i_PcReti(w_PcBackup),
+    .i_PcReti(r_PcBackup),
     //outputs
     .o_Rdy(w_FetchRdy),
     .o_InstructionRegister(w_InstructionRegisterFe),
@@ -426,8 +453,8 @@ InstructionWriteBack _InstructionWriteBack(
     
     .i_InterruptSignal(o_IntAckAttended),
 
-    .o_RfData(w_RfDataInWb),
-    .o_PcBackup(w_PcBackup)
+    .o_RfData(w_RfDataInWb)
+    //.o_PcBackup(w_PcBackup)
     );
 
 
