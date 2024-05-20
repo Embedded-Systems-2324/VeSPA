@@ -38,7 +38,7 @@ module ExecuteMemoryReg
 );
 
 
-always @(posedge i_Clk) begin
+always @(posedge i_Clk or posedge i_Flush) begin
     if (i_Rst || i_Flush) begin
         o_ProgramCounter <= 0;
         o_IrRst          <= 0;

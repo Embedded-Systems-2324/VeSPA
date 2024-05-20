@@ -84,10 +84,10 @@ always @ (posedge i_Clk) begin
     end
     else begin
         if(o_IntAckAttended == 1'b1) begin
-            if(w_BranchVerification == 1'b1 && w_BranchBit == 1'b1)  begin
+            if(w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1)  begin
                 r_PcBackup <= w_PcBxxExe;
             end
-            else if(w_JmpBit == 1'b1) begin
+            else if(w_JmpBit_Exe == 1'b1) begin
                 r_PcBackup <= w_PcJmpExe;
             end
             else begin

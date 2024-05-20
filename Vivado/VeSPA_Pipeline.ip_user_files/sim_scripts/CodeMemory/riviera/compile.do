@@ -4,7 +4,7 @@ onerror {quit -force}
 transcript on
 
 vlib work
-vmap -link {/home/mariolima/Desktop/vespa_copy/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/compile_simlib/riviera}
+vmap -link {/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/compile_simlib/riviera}
 vlib riviera/xpm
 vlib riviera/blk_mem_gen_v8_4_6
 vlib riviera/xil_defaultlib

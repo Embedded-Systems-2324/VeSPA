@@ -39,10 +39,10 @@ initial begin
     rst <= 0;
     
     #80
-    intSources <= 4'b0100;
+   // intSources <= 4'b0100;
     
     #10
-    intSources <= 4'b0110;
+   // intSources <= 4'b0110;
     
     #4
     intSources <= 0;
