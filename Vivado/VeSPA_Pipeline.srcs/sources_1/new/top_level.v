@@ -45,7 +45,7 @@ wire o_Err_cpu;
  wire  [`BUS_MSB:0] o_RAddr;
  wire [`BUS_MSB:0] i_RData;        //vai diretamente ao write back, skip MEM/EXE reg
  
- wire intAckComplete, intAckAttended, intReq;
+ wire intAckComplete, intAckAttended, intReq, intPending;
  wire [1:0] intNumber;
 
 
@@ -79,6 +79,7 @@ CPU cpu_instance(
     
     .i_IntRequest(intReq),
     .i_IntNumber(intNumber),
+    .i_IntPending(intPending),
     .o_IntAckComplete(intAckComplete),
     .o_IntAckAttended(intAckAttended)
 );
@@ -88,6 +89,7 @@ interruptController interrupt_instance(
     .rst(i_Rst),
     .clk(i_Clk),
     .int_sources(i_IntSources),
+    .int_pending(intPending),
     .int_ack_complete(intAckComplete),
     .int_ack_attended(intAckAttended),
     .int_req(intReq),

@@ -21,6 +21,7 @@ module CPU
     
     input i_IntRequest,
     input [1:0] i_IntNumber,
+    input i_IntPending,
     output o_IntAckComplete,
     output o_IntAckAttended
 );
@@ -28,7 +29,7 @@ module CPU
 
 wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_WrEnMemWb, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
 wire w_StallFe, w_StallDec, w_FlushFetch, w_FlushDec, w_StallExe, w_StallMem, w_StallWb, w_FlushExe, w_FlushMem, w_FlushWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
-wire w_BranchVerification, w_RetiBit;
+wire w_BranchVerification, w_RetiBit, w_RetiBit_Exe;
 
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
@@ -83,7 +84,7 @@ always @ (posedge i_Clk) begin
         r_PcBackup <= 0;
     end
     else begin
-        if(o_IntAckAttended == 1'b1) begin
+        if(o_IntAckAttended == 1'b1 && !i_IntPending) begin
             if(w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1)  begin
                 r_PcBackup <= w_PcBxxExe;
             end
@@ -98,7 +99,35 @@ always @ (posedge i_Clk) begin
             r_PcBackup <= r_PcBackup;
         end
     end
+
+/*
+
+always @ (posedge i_Clk) begin
+    if(i_Rst) begin
+        r_PcBackup <= 0;
+    end
+    else begin
+        if(o_IntAckAttended == 1'b1 && !i_IntPending) begin
+            if(w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1)  begin
+                r_PcBackup <= w_PcBxxExe + 4;
+            end
+            else if(w_JmpBit_Exe == 1'b1) begin
+                r_PcBackup <= w_PcJmpExe + 4;
+            end
+            else begin
+                r_PcBackup <= w_ProgramCounterWb + 4;
+            end
+        end   
+        else if(o_IntAckAttended == 1'b1 && i_IntPending) begin
+            r_PcBackup <= r_PcBackup + 4;
+        end
+        else begin
+            r_PcBackup <= r_PcBackup;
+        end
+    end
 end 
+
+*/
 
 
 ControlUnit _ControlUnit
@@ -152,7 +181,7 @@ HazardUnit _HazardUnit(
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
     .i_JmpBit(w_JmpBit_Exe),
-    .i_RetiBit(w_RetiBit),
+    .i_RetiBit(w_RetiBit_Exe),
     .i_RdMemExe(w_RdEnMemExe),
     .i_WeMemEnable(w_WrEnMemDec),               //verificar se é um Store
     .i_AluEnDec(w_AluEnDec),
@@ -275,6 +304,7 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .i_JmpBit(w_JmpBit),
     .i_BranchBit(w_BranchBit),
+    .i_RetiBit(w_RetiBit),
     
     .i_InterruptSignal(o_IntAckAttended),
     
@@ -305,6 +335,7 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .o_JmpBit(w_JmpBit_Exe),
     .o_BranchBit(w_BranchBit_Exe),
+    .o_RetiBit(w_RetiBit_Exe),
     
     .o_WrEnMem(w_WrEnMemExe),
     .o_RdEnMem(w_RdEnMemExe),

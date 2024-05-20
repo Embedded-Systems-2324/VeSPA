@@ -27,6 +27,7 @@ module interruptController(
     input int_ack_attended,
     output reg int_req,
     output reg [1:0]int_number,
+    output reg int_pending,
     input ea,
     input en1,
     input en2,
@@ -83,14 +84,17 @@ always @(posedge clk) begin
         int_req <= 1'b0;
         int_number <= 2'b0;
         currIrq <= 3'b100;
+        int_pending <= 1'b0;
     end
     else begin
         if(int_ack_complete) begin          //when receive an ack, update completed variable         
             if(!nextIrq[2]) begin
+                int_pending <= 1'b1;
                 int_req <= 1'b1;
                 int_number <= nextIrq[1:0];
             end
             else begin
+                int_pending <= 1'b0;
                 currIrq <= 3'b100;
             end
         end

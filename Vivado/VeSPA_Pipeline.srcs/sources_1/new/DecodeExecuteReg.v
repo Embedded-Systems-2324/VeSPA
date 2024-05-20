@@ -43,6 +43,7 @@ module DecodeExecuteReg
         
     input i_JmpBit,
     input i_BranchBit,
+    input i_RetiBit,
     
     input i_InterruptSignal,
 
@@ -77,6 +78,7 @@ module DecodeExecuteReg
     
     output reg o_JmpBit,
     output reg o_BranchBit,
+    output reg o_RetiBit,
     
     output reg [`PC_SEL_MSB:0] o_PcSel,
     output reg o_MemAddrSel,
@@ -85,6 +87,7 @@ module DecodeExecuteReg
 
 
 reg r_InterruptSignal;
+reg r_RetiBit;
 
 
 always @(posedge i_Clk or posedge i_Flush) begin
@@ -113,7 +116,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
         o_IrRs1              <= 0;
         
         
-        if(r_InterruptSignal == 1'b1) begin
+        if(r_InterruptSignal == 1'b1 || o_RetiBit == 1'b1) begin
             o_PcSel <= o_PcSel;
         end
         else begin
@@ -170,6 +173,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
                 o_UpdateCondCodesExe  <= i_UpdateCondCodes;
                 o_IrRs1               <= i_IrRs1;
                 o_IrRs2               <= i_IrRs2;
+                o_RetiBit             <= i_RetiBit;
                 
                 r_InterruptSignal     <= i_InterruptSignal;
             end

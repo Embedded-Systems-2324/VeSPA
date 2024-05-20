@@ -26,6 +26,10 @@ module control_hazards
     output o_StallSignal
 );
 
+
+
+
+
 always @(i_Clk) begin
     if (i_Clk) begin
         if(i_Rst == 1'b1) begin
@@ -49,6 +53,7 @@ always @(i_Clk) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
+                o_FlushMemory <= 1;
             end
             else begin
                 o_FlushDecode <= 0;
