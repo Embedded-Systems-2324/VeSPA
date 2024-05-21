@@ -23,7 +23,10 @@ module CPU
     input [1:0] i_IntNumber,
     input i_IntPending,
     output o_IntAckComplete,
-    output o_IntAckAttended
+    output o_IntAckAttended, 
+    
+    
+    output reg led_teste
 );
 
 
@@ -57,8 +60,6 @@ wire [`BUS_MSB:0] w_Imm22Dec, w_Imm22Exe, w_Imm22Mem, w_Imm22Wb;
 wire [`BUS_MSB:0] w_Imm23Dec, w_Imm23Exe;
 wire [`BUS_MSB:0] w_ImmOpXExe, w_ImmOpXMem;
 
-//wire [`BUS_MSB:0]w_PcBackup;
-
 wire [3:0] w_BranchCondDec, w_BranchCondExe; 
 wire w_UpdateCondCodes, w_UpdateCondCodesExe;
 wire [3:0] w_AluConditionCodes;
@@ -75,21 +76,8 @@ assign o_WAddr = o_DataMemAddress;
 assign o_RAddr = o_DataMemAddress;
 
 
+
 reg [`BUS_MSB:0]r_PcBackup;
-
-reg r_IntPending;
-
-
-always @ (posedge i_Clk) begin
-    if(i_Rst) begin
-        r_IntPending <= 0;
-    end
-    else begin
-        r_IntPending <= i_IntPending;
-    end
-end
-
-
 
 always @ (posedge i_Clk) begin
     if(i_Rst) begin
@@ -113,35 +101,6 @@ always @ (posedge i_Clk) begin
     end
 end    
 
-
-
-/*
-always @ (posedge i_Clk) begin
-    if(i_Rst) begin
-        r_PcBackup <= 0;
-    end
-    else begin
-        if(o_IntAckAttended == 1'b1 && !i_IntPending) begin
-            if(w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1)  begin
-                r_PcBackup <= w_PcBxxExe + 4;
-            end
-            else if(w_JmpBit_Exe == 1'b1) begin
-                r_PcBackup <= w_PcJmpExe + 4;
-            end
-            else begin
-                r_PcBackup <= w_ProgramCounterWb + 4;
-            end
-        end   
-        else if(o_IntAckAttended == 1'b1 && i_IntPending) begin
-            r_PcBackup <= r_PcBackup + 4;
-        end
-        else begin
-            r_PcBackup <= r_PcBackup;
-        end
-    end
-end 
-
-*/
 
 ControlUnit _ControlUnit
 (
@@ -185,7 +144,6 @@ ControlUnit _ControlUnit
     .o_IntAddress(w_PcIntExe)
 );
 
-//(!i_IntPending) ? w_RetiBit_Exe : w_RetiBit
 
 
 HazardUnit _HazardUnit(
@@ -502,8 +460,21 @@ InstructionWriteBack _InstructionWriteBack(
     .i_InterruptSignal(o_IntAckAttended),
 
     .o_RfData(w_RfDataInWb)
-    //.o_PcBackup(w_PcBackup)
     );
 
+
+
+//To test with HALT in leds
+always @(posedge i_Clk) begin
+    if(i_Rst) begin
+        led_teste <= 0;
+    end
+    else if(w_OpCodeDec == 5'b11111) begin
+        led_teste <= 1;
+    end
+    else begin
+        led_teste <= led_teste;
+    end
+end 
 
 endmodule

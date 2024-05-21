@@ -27,7 +27,9 @@ module top_level(
     
     input [3:0] i_IntSources,
     
-    output o_RData
+    output o_RData, 
+    
+    output led
 );
 
 // Conexões diretas entre os módulos
@@ -47,6 +49,20 @@ wire o_Err_cpu;
  
  wire intAckComplete, intAckAttended, intReq, intPending;
  wire [1:0] intNumber;
+
+wire clk;
+
+/*
+  clk_wiz_0 inst
+  (
+  // Clock out ports  
+  .clk_out1(clk),
+  // Status and control signals               
+  .reset(i_Rst), 
+ // Clock in ports
+  .clk_in1(i_Clk)
+  );
+  */
 
 
 // Instanciando o memory_wrapper
@@ -77,14 +93,16 @@ CPU cpu_instance(
     .i_RData(rdata),
     .i_DataMemRdy(data_mem_busy),
     
-    .i_IntRequest(intReq),
+    /*.i_IntRequest(intReq),
     .i_IntNumber(intNumber),
     .i_IntPending(intPending),
     .o_IntAckComplete(intAckComplete),
-    .o_IntAckAttended(intAckAttended)
+    .o_IntAckAttended(intAckAttended),*/ 
+    
+    .led_teste(led)
 );
 
-
+/*
 interruptController interrupt_instance(
     .rst(i_Rst),
     .clk(i_Clk),
@@ -99,6 +117,7 @@ interruptController interrupt_instance(
     .en2(1'b1),
     .en3(1'b1)
 );
+*/
 
 endmodule
 

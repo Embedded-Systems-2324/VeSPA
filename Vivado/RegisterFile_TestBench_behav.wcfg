@@ -11,33 +11,38 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="419.388 ns"></ZoomEndTime>
-      <Cursor1Time time="400.000 ns"></Cursor1Time>
+      <ZoomStartTime time="561.881 ns"></ZoomStartTime>
+      <ZoomEndTime time="729.411 ns"></ZoomEndTime>
+      <Cursor1Time time="674.080 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="226"></NameColumnWidth>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
-   <wvobject type="logic" fp_name="/Pipeline_tb/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/i_Clk">
+      <obj_property name="ElementShortName">i_Clk</obj_property>
+      <obj_property name="ObjectShortName">i_Clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/i_Rst">
+      <obj_property name="ElementShortName">i_Rst</obj_property>
+      <obj_property name="ObjectShortName">i_Rst</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/i_IntSources">
-      <obj_property name="ElementShortName">i_IntSources[3:0]</obj_property>
-      <obj_property name="ObjectShortName">i_IntSources[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_ControlUnit/w_PeripheralsRdy">
+      <obj_property name="ElementShortName">w_PeripheralsRdy</obj_property>
+      <obj_property name="ObjectShortName">w_PeripheralsRdy</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/test/interrupt_instance/intAckComplete">
-      <obj_property name="ElementShortName">intAckComplete</obj_property>
-      <obj_property name="ObjectShortName">intAckComplete</obj_property>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/w_InstructionRegisterFe">
+      <obj_property name="ElementShortName">w_InstructionRegisterFe[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w_InstructionRegisterFe[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_ControlUnit/intReq">
-      <obj_property name="ElementShortName">intReq</obj_property>
-      <obj_property name="ObjectShortName">intReq</obj_property>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/\o_ProgramCounter_reg[31]_0 ">
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/memory_instance/_Bram/rsta_busy">
+      <obj_property name="ElementShortName">rsta_busy</obj_property>
+      <obj_property name="ObjectShortName">rsta_busy</obj_property>
    </wvobject>
 </wave_config>

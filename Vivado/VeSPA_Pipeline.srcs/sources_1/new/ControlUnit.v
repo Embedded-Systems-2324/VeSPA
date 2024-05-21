@@ -53,7 +53,7 @@ module ControlUnit
     output o_BranchVerification
     
 );
-reg [8:0] counter;
+
 integer i;
 
 parameter ST_INIT   = 2'b00;
@@ -61,17 +61,21 @@ parameter ST_RUN    = 2'b01;
 parameter ST_HALT   = 2'b10;
 parameter ST_INT    = 2'b11;
 
-wire w_PeripheralsRdy;
-//usado em simulação behavioral e implemetação
-//assign w_PeripheralsRdy = (counter == 'd50) ? 1'b1 : 1'b0;
+(* keep *) wire w_PeripheralsRdy;
+reg [8:0] counter;
 
 //usado em simulação timing post-synthesis
-assign w_PeripheralsRdy = i_DataMemRdy || i_FetchRdy;   
+assign w_PeripheralsRdy = (counter == 'd20);   
 
 always @(posedge i_Clk) begin
-
-    for (i = 0; i < 32; i = i + 1) begin
+    if(i_Rst) begin
+        counter <= 0;
+    end
+    else if(counter != 20) begin
         counter <= counter + 1;
+    end 
+    else begin
+        counter <= counter;
     end
 end
 
@@ -86,7 +90,7 @@ always @(posedge i_Clk) begin
     else begin
         case (r_CurrentState)
             ST_INIT: begin
-                if (w_PeripheralsRdy == 1'b0) begin
+                if (w_PeripheralsRdy == 1'b1) begin
                     r_CurrentState <= ST_RUN;    
                 end
                 else begin
@@ -122,8 +126,9 @@ assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_IntRequest == 1'b1)? `PC_SEL_I
                                                (i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
                                                (i_OpCode == `OP_JMP) ? `PC_SEL_JMP :
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
-                                               (i_OpCode == `OP_RETI && !i_IntPending)? `PC_SEL_RETI: 
-                                               (i_OpCode == `OP_RETI &&  i_IntPending)? `PC_SEL_INT :`PC_SEL_ADD4) : 
+                                               //(i_OpCode == `OP_RETI && !i_IntPending) ? `PC_SEL_RETI: 
+                                               //(i_OpCode == `OP_RETI &&  i_IntPending) ? `PC_SEL_INT 
+                                               (i_OpCode == `OP_RETI)? `PC_SEL_RETI :`PC_SEL_ADD4) : 
                                                (r_CurrentState == ST_INIT)? `PC_SEL_ADD4 : 0;
 
 assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 

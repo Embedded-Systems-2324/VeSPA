@@ -53,7 +53,7 @@ always @(i_Clk) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
-                //o_FlushMemory <= 1;
+                o_FlushMemory <= 1;
             end
             else begin
                 o_FlushDecode <= 0;

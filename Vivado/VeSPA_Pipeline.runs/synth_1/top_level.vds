@@ -3,13 +3,13 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue May 21 01:47:48 2024
-# Process ID: 45862
+# Start of session at: Tue May 21 16:01:18 2024
+# Process ID: 59211
 # Current directory: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1
 # Command line: vivado -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.vds
 # Journal file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
-# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 1847.941 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 1725.053 MHz, CPU Physical cores: 14, Host memory: 16471 MB
 #-----------------------------------------------------------
 source top_level.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
@@ -24,16 +24,16 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 45881
-INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:233]
-INFO: [Synth 8-11241] undeclared symbol 'o_Err_CPU', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:62]
+INFO: [Synth 8-7075] Helper process launched with PID 59256
+INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:191]
+INFO: [Synth 8-11241] undeclared symbol 'o_Err_CPU', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:78]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2031.836 ; gain = 378.770 ; free physical = 205 ; free virtual = 4963
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2031.383 ; gain = 377.770 ; free physical = 798 ; free virtual = 7381
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
 INFO: [Synth 8-6157] synthesizing module 'memory_wrapper' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-45862-mariolima-CREF-XX/realtime/RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-45862-mariolima-CREF-XX/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-59211-mariolima-CREF-XX/realtime/RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-59211-mariolima-CREF-XX/realtime/RAM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'memory_wrapper' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:23]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
 INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:5]
@@ -160,12 +160,15 @@ INFO: [Synth 8-6155] done synthesizing module 'MemoryWriteBackReg' (0#1) [/home/
 INFO: [Synth 8-6157] synthesizing module 'InstructionWriteBack' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'InstructionWriteBack' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionWriteBack.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:5]
-INFO: [Synth 8-6157] synthesizing module 'interruptController' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/interruptController.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'interruptController' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/interruptController.v:22]
+WARNING: [Synth 8-7071] port 'i_IntRequest' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
+WARNING: [Synth 8-7071] port 'i_IntNumber' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
+WARNING: [Synth 8-7071] port 'i_IntPending' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
+WARNING: [Synth 8-7071] port 'o_IntAckComplete' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
+WARNING: [Synth 8-7071] port 'o_IntAckAttended' of module 'CPU' is unconnected for instance 'cpu_instance' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
+WARNING: [Synth 8-7023] instance 'cpu_instance' of module 'CPU' has 17 connections declared, but only 12 given [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:83]
 INFO: [Synth 8-6155] done synthesizing module 'top_level' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:23]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
 WARNING: [Synth 8-3848] Net o_Err in module/entity memory_wrapper does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v:33]
-WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/ControlUnit.v:74]
 CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register o_ProgramCounter_reg in module DecodeExecuteReg. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:95]
 CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register o_IrRst_reg in module DecodeExecuteReg. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:96]
 CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register o_R1Out_reg in module DecodeExecuteReg. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:97]
@@ -195,12 +198,11 @@ WARNING: [Synth 8-7137] Register o_PcSel_reg in module DecodeExecuteReg has both
 WARNING: [Synth 8-7137] Register o_RetiBit_reg in module DecodeExecuteReg has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:119]
 WARNING: [Synth 8-7137] Register r_InterruptSignal_reg in module DecodeExecuteReg has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/DecodeExecuteReg.v:119]
 WARNING: [Synth 8-3848] Net o_Imm22 in module/entity InstructionExecute does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionExecute.v:47]
-WARNING: [Synth 8-6014] Unused sequential element r_IntPending_reg was removed.  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:85]
 WARNING: [Synth 8-3848] Net o_Clk in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:11]
 WARNING: [Synth 8-3848] Net o_Rst in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:12]
-WARNING: [Synth 8-3848] Net w_StallMem in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:31]
-WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:233]
-WARNING: [Synth 8-3848] Net w_StallWb in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:31]
+WARNING: [Synth 8-3848] Net w_StallMem in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:34]
+WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:191]
+WARNING: [Synth 8-3848] Net w_StallWb in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:34]
 WARNING: [Synth 8-3848] Net o_RData in module/entity top_level does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v:30]
 WARNING: [Synth 8-7129] Port i_Clk in module InstructionWriteBack is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_Rst in module InstructionWriteBack is either unconnected or has no load
@@ -304,18 +306,18 @@ WARNING: [Synth 8-7129] Port DOUTB_I[3] in module blk_mem_output_block is either
 WARNING: [Synth 8-7129] Port DOUTB_I[2] in module blk_mem_output_block is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2308.281 ; gain = 655.215 ; free physical = 228 ; free virtual = 4695
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.828 ; gain = 655.215 ; free physical = 496 ; free virtual = 7089
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2308.281 ; gain = 655.215 ; free physical = 228 ; free virtual = 4695
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.828 ; gain = 655.215 ; free physical = 496 ; free virtual = 7089
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2308.281 ; gain = 655.215 ; free physical = 228 ; free virtual = 4695
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.828 ; gain = 655.215 ; free physical = 496 ; free virtual = 7089
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2308.281 ; gain = 0.000 ; free physical = 227 ; free virtual = 4694
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2308.828 ; gain = 0.000 ; free physical = 496 ; free virtual = 7089
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -332,22 +334,22 @@ Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.
 Finished Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.312 ; gain = 0.000 ; free physical = 220 ; free virtual = 4687
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.859 ; gain = 0.000 ; free physical = 499 ; free virtual = 7094
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.312 ; gain = 0.000 ; free physical = 220 ; free virtual = 4687
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2372.859 ; gain = 0.000 ; free physical = 499 ; free virtual = 7094
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 213 ; free virtual = 4678
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 505 ; free virtual = 7091
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 213 ; free virtual = 4678
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 505 ; free virtual = 7091
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -355,17 +357,8 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for cpu_instance/_InstrFetch/_CodeMem. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for memory_instance/_Bram. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 213 ; free virtual = 4678
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 505 ; free virtual = 7091
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'r_CurrentState_reg' in module 'ControlUnit'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 ST_INIT |                              001 |                              000
-                  ST_RUN |                              010 |                              001
-                  ST_INT |                              100 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'r_CurrentState_reg' using encoding 'one-hot' in module 'ControlUnit'
 WARNING: [Synth 8-327] inferring latch for variable 'o_FlushFetch_reg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v:38]
 WARNING: [Synth 8-327] inferring latch for variable 'o_FlushDecode_reg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v:36]
 WARNING: [Synth 8-327] inferring latch for variable 'o_FlushMemory_reg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v:39]
@@ -403,10 +396,8 @@ WARNING: [Synth 8-327] inferring latch for variable 'r_RegFile_reg[3]' [/home/ma
 WARNING: [Synth 8-327] inferring latch for variable 'r_RegFile_reg[2]' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:33]
 WARNING: [Synth 8-327] inferring latch for variable 'r_RegFile_reg[1]' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:33]
 WARNING: [Synth 8-327] inferring latch for variable 'r_RegFile_reg[0]' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/RegisterFile.v:33]
-WARNING: [Synth 8-327] inferring latch for variable 'pending_reg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/interruptController.v:52]
-WARNING: [Synth 8-327] inferring latch for variable 'int_sources_prev_reg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/interruptController.v:62]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 211 ; free virtual = 4677
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 481 ; free virtual = 7087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -416,29 +407,31 @@ Detailed RTL Component Info :
 	   2 Input   33 Bit       Adders := 1     
 	   3 Input   33 Bit       Adders := 1     
 	   2 Input   32 Bit       Adders := 5     
+	   2 Input    9 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     33 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 6     
 +---Registers : 
 	               32 Bit    Registers := 19    
+	                9 Bit    Registers := 1     
 	                5 Bit    Registers := 9     
 	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 45    
+	                1 Bit    Registers := 44    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 22    
+	   2 Input   32 Bit        Muxes := 23    
 	   4 Input   32 Bit        Muxes := 3     
+	   3 Input    9 Bit        Muxes := 1     
 	   3 Input    6 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 3     
-	   2 Input    4 Bit        Muxes := 1     
-	   7 Input    3 Bit        Muxes := 2     
-	   3 Input    3 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 4     
+	   7 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 5     
-	   5 Input    3 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 4     
-	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 87    
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 82    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -456,26 +449,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 181 ; free virtual = 4658
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 444 ; free virtual = 7059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 247 ; free virtual = 4642
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 467 ; free virtual = 7063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 247 ; free virtual = 4643
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 467 ; free virtual = 7063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (cpu_instance/_HazardUnit/CTRL_HZRD/o_FlushMemory_reg) is unused and will be removed from module top_level.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 253 ; free virtual = 4645
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 467 ; free virtual = 7062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -493,37 +485,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 251 ; free virtual = 4643
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 457 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 251 ; free virtual = 4643
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 457 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 249 ; free virtual = 4641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 457 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 249 ; free virtual = 4641
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 457 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 249 ; free virtual = 4640
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 445 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 252 ; free virtual = 4644
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 445 ; free virtual = 7060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -533,7 +525,7 @@ Static Shift Register Report:
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name        | RTL Name                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|blk_mem_gen_v8_4_6 | inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|blk_mem_gen_v8_4_6 | inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -556,51 +548,51 @@ Report Cell Usage:
 +------+---------+------+
 |1     |RAM      |     1|
 |2     |BUFG     |     8|
-|3     |CARRY4   |    54|
-|4     |LUT1     |     2|
-|5     |LUT2     |   160|
-|6     |LUT3     |    60|
-|7     |LUT4     |   190|
-|8     |LUT5     |    76|
-|9     |LUT6     |   979|
+|3     |CARRY4   |    53|
+|4     |LUT1     |     3|
+|5     |LUT2     |   359|
+|6     |LUT3     |    42|
+|7     |LUT4     |   179|
+|8     |LUT5     |    78|
+|9     |LUT6     |   931|
 |10    |MUXF7    |   273|
 |11    |RAMB36E1 |     4|
-|15    |SRL16E   |     4|
-|16    |FDCE     |   337|
+|15    |SRL16E   |     1|
+|16    |FDCE     |   271|
 |17    |FDPE     |     2|
-|18    |FDRE     |   226|
-|19    |FDSE     |     5|
-|20    |LD       |  1090|
-|21    |LDC      |     8|
-|22    |IBUF     |     6|
+|18    |FDRE     |   180|
+|19    |LD       |  1090|
+|20    |LDC      |     1|
+|21    |IBUF     |     2|
+|22    |OBUF     |     1|
 |23    |OBUFT    |     1|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 252 ; free virtual = 4644
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 445 ; free virtual = 7060
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 357 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2372.312 ; gain = 655.215 ; free physical = 251 ; free virtual = 4643
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2372.312 ; gain = 719.246 ; free physical = 251 ; free virtual = 4643
+Synthesis finished with 0 errors, 0 critical warnings and 361 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2372.859 ; gain = 655.215 ; free physical = 445 ; free virtual = 7059
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2372.859 ; gain = 719.246 ; free physical = 445 ; free virtual = 7059
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2372.312 ; gain = 0.000 ; free physical = 533 ; free virtual = 4925
-INFO: [Netlist 29-17] Analyzing 1429 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2372.859 ; gain = 0.000 ; free physical = 725 ; free virtual = 7340
+INFO: [Netlist 29-17] Analyzing 1421 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2388.320 ; gain = 0.000 ; free physical = 529 ; free virtual = 4921
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2396.875 ; gain = 0.000 ; free physical = 725 ; free virtual = 7339
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1098 instances were transformed.
+  A total of 1091 instances were transformed.
   LD => LDCE: 1090 instances
-  LDC => LDCE: 8 instances
+  LDC => LDCE: 1 instance 
 
-Synth Design complete | Checksum: 446d5f21
+Synth Design complete | Checksum: df708c04
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 168 Warnings, 25 Critical Warnings and 0 Errors encountered.
+69 Infos, 169 Warnings, 25 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 2388.320 ; gain = 1045.652 ; free physical = 532 ; free virtual = 4924
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1993.975; main = 1665.590; forked = 377.345
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3337.340; main = 2388.324; forked = 981.031
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2396.875 ; gain = 1062.504 ; free physical = 725 ; free virtual = 7339
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1962.050; main = 1667.917; forked = 373.852
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3318.961; main = 2396.879; forked = 978.113
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 21 01:48:18 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue May 21 16:01:45 2024...

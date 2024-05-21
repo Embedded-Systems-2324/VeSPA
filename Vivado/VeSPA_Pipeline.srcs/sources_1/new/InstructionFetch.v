@@ -29,8 +29,8 @@ module InstructionFetch
     input [`BUS_MSB:0] i_PcReti,
     
     output o_Rdy,
-    output [`BUS_MSB:0] o_InstructionRegister,
-    output reg [`BUS_MSB:0] o_ProgramCounter
+    (* keep *) output [`BUS_MSB:0] o_InstructionRegister,
+    (* keep *) output reg [`BUS_MSB:0] o_ProgramCounter
 );
 
 /*
