@@ -40,6 +40,7 @@ module ControlUnit
 
     input i_IntRequest,
     input [1:0] i_IntNumber,
+    input i_IntPending,
     output o_IntAckComplete,
     output o_IntAckAttended, 
     output [`BUS_MSB:0] o_IntAddress,
@@ -117,11 +118,12 @@ always @(posedge i_Clk) begin
     end
 end
 
-assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
+assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_IntRequest == 1'b1)? `PC_SEL_INT :
+                                               (i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
                                                (i_OpCode == `OP_JMP) ? `PC_SEL_JMP :
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
-                                               (i_OpCode == `OP_RETI)? `PC_SEL_RETI : `PC_SEL_ADD4) :
-                                               (r_CurrentState == ST_INT) ? `PC_SEL_INT : 
+                                               (i_OpCode == `OP_RETI && !i_IntPending)? `PC_SEL_RETI: 
+                                               (i_OpCode == `OP_RETI &&  i_IntPending)? `PC_SEL_INT :`PC_SEL_ADD4) : 
                                                (r_CurrentState == ST_INIT)? `PC_SEL_ADD4 : 0;
 
 assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 

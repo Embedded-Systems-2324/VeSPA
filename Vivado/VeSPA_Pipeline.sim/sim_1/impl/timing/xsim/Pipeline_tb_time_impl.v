@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Tue Apr 30 14:31:53 2024
-// Host        : alfredo-HP-Pavilion-Laptop-15-cs3xxx running 64-bit Ubuntu 22.04.4 LTS
+// Date        : Tue May 21 01:53:50 2024
+// Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
-//               /home/alfredo/Desktop/VeSPA-Pipeline/Vivado/VeSPA_Pipeline.sim/sim_1/impl/timing/xsim/Pipeline_tb_time_impl.v
+//               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/impl/timing/xsim/Pipeline_tb_time_impl.v
 // Design      : top_level
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.
@@ -14,16 +14,18 @@
 `timescale 1 ps / 1 ps
 `define XIL_TIMING
 
-(* ECO_CHECKSUM = "b00d6c10" *) 
+(* ECO_CHECKSUM = "b4b1886c" *) 
 (* NotValidForBitStream *)
 (* \DesignAttr:ENABLE_NOC_NETLIST_VIEW  *) 
 (* \DesignAttr:ENABLE_AIE_NETLIST_VIEW  *) 
 module top_level
    (i_Clk,
     i_Rst,
+    i_IntSources,
     o_RData);
   input i_Clk;
   input i_Rst;
+  input [3:0]i_IntSources;
   output o_RData;
 
   wire o_RData;

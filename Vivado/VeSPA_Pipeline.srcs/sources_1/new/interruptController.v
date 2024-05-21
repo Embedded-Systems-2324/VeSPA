@@ -89,18 +89,19 @@ always @(posedge clk) begin
     else begin
         if(int_ack_complete) begin          //when receive an ack, update completed variable         
             if(!nextIrq[2]) begin
-                int_pending <= 1'b1;
+                //int_pending <= 1'b1;
                 int_req <= 1'b1;
                 int_number <= nextIrq[1:0];
             end
             else begin
-                int_pending <= 1'b0;
+                //int_pending <= 1'b0;
                 currIrq <= 3'b100;
             end
         end
         else if(int_ack_attended) begin
             int_req <= 1'b0;
             currIrq <= nextIrq;
+            int_pending <= ((pending & ~(4'b0001 << nextIrq)) != 0);
         end
         else if(currIrq[2] && !nextIrq[2]) begin
             int_req <= 1'b1;
@@ -111,6 +112,10 @@ always @(posedge clk) begin
         end
     end
 end
+
+
+//assign int_pending = !nextIrq[2];
+
 
 
 endmodule

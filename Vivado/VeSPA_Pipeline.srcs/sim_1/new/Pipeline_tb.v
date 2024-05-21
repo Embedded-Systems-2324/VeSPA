@@ -42,7 +42,7 @@ initial begin
    //intSources <= 4'b0100;
     
     //#10
-    intSources <= 4'b0110;
+    intSources <= 4'b0111;
     
     #4
     intSources <= 0;

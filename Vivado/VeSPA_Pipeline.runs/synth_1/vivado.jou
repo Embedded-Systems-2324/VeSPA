@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri May  3 14:13:17 2024
-# Process ID: 42362
+# Start of session at: Tue May 21 01:47:48 2024
+# Process ID: 45862
 # Current directory: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1
 # Command line: vivado -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.vds
 # Journal file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
-# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 3273.671 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 1847.941 MHz, CPU Physical cores: 14, Host memory: 16471 MB
 #-----------------------------------------------------------
 source top_level.tcl -notrace

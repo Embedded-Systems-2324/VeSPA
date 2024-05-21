@@ -124,32 +124,13 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
   set_param runs.launchOptions { -jobs 18  }
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7z010clg400-1
-  set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/impl_1/top_level.dcp
   set_property webtalk.parent_dir /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/wt [current_project]
   set_property parent.project_path /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.xpr [current_project]
   set_property ip_output_repo /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.dcp
-  read_ip -quiet /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/CodeMemory/CodeMemory.xci
-  read_ip -quiet /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/RAM/RAM.xci
-OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  link_design -top top_level -part xc7z010clg400-1 
-OPTRACE "link_design" END { }
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

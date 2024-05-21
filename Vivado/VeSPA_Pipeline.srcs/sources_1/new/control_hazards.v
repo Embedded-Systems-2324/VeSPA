@@ -43,7 +43,7 @@ always @(i_Clk) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
-                o_FlushMemory <= 1;
+                //o_FlushMemory <= 1;
             end
             //necessário esta ordem pois quando houver uma interrupçao e estiver a ser executado um JMP,
             //o JMP não vai ser executado e e em vez disso, o endereço de salto vai passar a ser o 
@@ -53,7 +53,7 @@ always @(i_Clk) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
-                o_FlushMemory <= 1;
+                //o_FlushMemory <= 1;
             end
             else begin
                 o_FlushDecode <= 0;

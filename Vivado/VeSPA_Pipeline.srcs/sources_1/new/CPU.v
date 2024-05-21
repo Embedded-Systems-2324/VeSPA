@@ -77,6 +77,18 @@ assign o_RAddr = o_DataMemAddress;
 
 reg [`BUS_MSB:0]r_PcBackup;
 
+reg r_IntPending;
+
+
+always @ (posedge i_Clk) begin
+    if(i_Rst) begin
+        r_IntPending <= 0;
+    end
+    else begin
+        r_IntPending <= i_IntPending;
+    end
+end
+
 
 
 always @ (posedge i_Clk) begin
@@ -99,9 +111,11 @@ always @ (posedge i_Clk) begin
             r_PcBackup <= r_PcBackup;
         end
     end
+end    
+
+
 
 /*
-
 always @ (posedge i_Clk) begin
     if(i_Rst) begin
         r_PcBackup <= 0;
@@ -128,7 +142,6 @@ always @ (posedge i_Clk) begin
 end 
 
 */
-
 
 ControlUnit _ControlUnit
 (
@@ -166,10 +179,14 @@ ControlUnit _ControlUnit
     
     .i_IntRequest(i_IntRequest),
     .i_IntNumber(i_IntNumber),
+    .i_IntPending(i_IntPending),
     .o_IntAckComplete(o_IntAckComplete),
     .o_IntAckAttended(o_IntAckAttended), 
     .o_IntAddress(w_PcIntExe)
 );
+
+//(!i_IntPending) ? w_RetiBit_Exe : w_RetiBit
+
 
 HazardUnit _HazardUnit(
     .i_Clk(i_Clk),
@@ -181,7 +198,7 @@ HazardUnit _HazardUnit(
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
     .i_JmpBit(w_JmpBit_Exe),
-    .i_RetiBit(w_RetiBit_Exe),
+    .i_RetiBit((!i_IntPending) ? w_RetiBit_Exe : w_RetiBit),
     .i_RdMemExe(w_RdEnMemExe),
     .i_WeMemEnable(w_WrEnMemDec),               //verificar se é um Store
     .i_AluEnDec(w_AluEnDec),
