@@ -1,4 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/synth/timing/xsim/Pipeline_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LDCP_UNIQ_BASE_
 INFO: [VRFC 10-311] analyzing module ALU
 INFO: [VRFC 10-311] analyzing module CPU
 INFO: [VRFC 10-311] analyzing module CodeMemory
