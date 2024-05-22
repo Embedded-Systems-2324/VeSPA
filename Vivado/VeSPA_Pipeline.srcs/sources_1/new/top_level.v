@@ -93,16 +93,16 @@ CPU cpu_instance(
     .i_RData(rdata),
     .i_DataMemRdy(data_mem_busy),
     
-    /*.i_IntRequest(intReq),
+    .i_IntRequest(intReq),
     .i_IntNumber(intNumber),
     .i_IntPending(intPending),
     .o_IntAckComplete(intAckComplete),
-    .o_IntAckAttended(intAckAttended),*/ 
+    .o_IntAckAttended(intAckAttended),
     
     .led_teste(led)
 );
 
-/*
+
 interruptController interrupt_instance(
     .rst(i_Rst),
     .clk(i_Clk),
@@ -117,7 +117,6 @@ interruptController interrupt_instance(
     .en2(1'b1),
     .en3(1'b1)
 );
-*/
 
 endmodule
 

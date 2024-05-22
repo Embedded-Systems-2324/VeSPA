@@ -38,11 +38,12 @@ initial begin
     #140
     rst <= 0;
     
-    #800
-   //intSources <= 4'b0100;
+    //810
+    #760
+    intSources <= 4'b0110;
     
     //#10
-    //intSources <= 4'b1110;
+    //intSources <= 4'b0010;
     
     #4
     intSources <= 0;

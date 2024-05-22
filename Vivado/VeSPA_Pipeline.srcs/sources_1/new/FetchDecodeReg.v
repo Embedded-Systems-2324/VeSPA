@@ -21,7 +21,7 @@ module FetchDecodeReg
     output reg [`BUS_MSB:0] o_ProgramCounter
 );
 
-    always @(posedge i_Clk or posedge i_Flush) begin 
+    always @(posedge i_Clk) begin 
         if(i_Rst || i_Flush) begin
             o_InstructionRegister   <= 0;
             o_ProgramCounter        <= 0;

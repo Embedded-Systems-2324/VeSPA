@@ -21,6 +21,8 @@ module ExecuteMemoryReg
     input [`BUS_MSB:0] i_AluOp2,
     input [`BUS_MSB:0] i_Imm22,
     input [`BUS_MSB:0] i_ImmOpX,
+    
+    input i_JmpBit,
 
     output reg [`BUS_MSB:0] o_ProgramCounter,  
     output reg  [4:0] o_IrRst,      
@@ -34,11 +36,13 @@ module ExecuteMemoryReg
     output reg o_WrEnRf,     //WE RF
         
     output reg o_MemAddrSel,
-    output reg [1:0] o_RfDataInSel     //Register File Write Address
+    output reg [1:0] o_RfDataInSel,     //Register File Write Address
+    
+    output reg o_JmpBit
 );
 
 
-always @(posedge i_Clk or posedge i_Flush) begin
+always @(posedge i_Clk) begin
     if (i_Rst || i_Flush) begin
         o_ProgramCounter <= 0;
         o_IrRst          <= 0;
@@ -51,6 +55,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
         o_AluOp2         <= 0;
         o_Imm22          <= 0;
         o_ImmOpX         <= 0;
+        o_JmpBit         <= 0;
     end
     else begin
         if (i_Stall) begin                
@@ -65,6 +70,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
             o_AluOp2         <= o_AluOp2;
             o_Imm22          <= o_Imm22;
             o_ImmOpX         <= o_ImmOpX;
+            o_JmpBit         <= o_JmpBit;
         end
         else begin
             o_ProgramCounter <= i_ProgramCounter;
@@ -78,6 +84,7 @@ always @(posedge i_Clk or posedge i_Flush) begin
             o_AluOp2         <= i_AluOp2;
             o_Imm22          <= i_Imm22;
             o_ImmOpX         <= i_ImmOpX;
+            o_JmpBit         <= i_JmpBit;
         end
     end
 end

@@ -1,7 +1,4 @@
-Running: xsim.dir/Pipeline_tb_behav/xsimk -simmode gui -wdb Pipeline_tb_behav.wdb -simrunnum 0 -socket 37159
+Running: xsim.dir/Pipeline_tb_behav/xsimk -simmode gui -wdb Pipeline_tb_behav.wdb -simrunnum 0 -socket 44305
 Design successfully loaded
-Design Loading Memory Usage: 24228 KB (Peak: 24312 KB)
-Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 114464 KB (Peak: 163496 KB)
-Simulation CPU Usage: 90 ms
+Design Loading Memory Usage: 24236 KB (Peak: 24316 KB)
+Design Loading CPU Usage: 50 ms

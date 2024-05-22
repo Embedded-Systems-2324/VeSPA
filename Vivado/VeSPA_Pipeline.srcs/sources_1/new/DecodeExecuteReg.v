@@ -90,7 +90,7 @@ reg r_InterruptSignal;
 reg r_RetiBit;
 
 
-always @(posedge i_Clk or posedge i_Flush) begin
+always @(posedge i_Clk) begin
     if(i_Rst || i_Flush || i_Bubble) begin
         o_ProgramCounter     <= 0;
         o_IrRst              <= 0;

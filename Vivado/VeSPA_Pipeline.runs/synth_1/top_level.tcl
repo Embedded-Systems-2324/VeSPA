@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -110,6 +112,7 @@ read_verilog -library xil_defaultlib {
   /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/check_branchcond.v
   /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/control_hazards.v
   /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/forwarding_unit.v
+  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/interruptController.v
   /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/memory_wrapper.v
   /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/top_level.v
 }

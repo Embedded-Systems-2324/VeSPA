@@ -10,7 +10,7 @@ module RegisterFile
 (
     input i_Clk,
     input i_Rst,
-    input i_WrEnable,
+    (* keep *)input i_WrEnable,
     input [`BUS_MSB:0] i_DataIn,
     input [`REG_FILE_MSB:0] i_WrAddr,
     input [`REG_FILE_MSB:0] i_RdAddrA,
@@ -22,7 +22,7 @@ module RegisterFile
 reg r_WritePending;
 reg [`BUS_MSB:0] r_ShadowAddr;
 reg [`REG_FILE_MSB:0] r_ShadowReg;
-reg [(32 - 1):0] r_RegFile [`REG_FILE_SIZE:0] ;
+(* keep *) reg [(32 - 1):0] r_RegFile [`REG_FILE_SIZE:0] ;
 
 integer i;
 

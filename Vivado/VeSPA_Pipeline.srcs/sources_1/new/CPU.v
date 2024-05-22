@@ -32,7 +32,7 @@ module CPU
 
 wire w_ImmOpDec, w_CodeMemRdy, w_AluEnDec, w_AluEnExe, w_AluOp2SelDec, w_AluOp2SelExe, w_WrEnMemDec, w_WrEnMemExe, w_WrEnMemMem, w_WrEnMemWb, w_RdEnMemDec, w_RdEnMemExe, w_RdEnMemMem, w_WrEnRfDec, w_WrEnRfExe, w_WrEnRfMem, w_WrEnRfWb;
 wire w_StallFe, w_StallDec, w_FlushFetch, w_FlushDec, w_StallExe, w_StallMem, w_StallWb, w_FlushExe, w_FlushMem, w_FlushWb, w_MemAddrSelDec, w_MemAddrSelExe, w_MemAddrSelMem, w_MemAddrSelWb, w_JmpBit, w_BranchBit, w_FetchRdy, w_Enable, w_JmpBit_Exe, w_BranchBit_Exe;
-wire w_BranchVerification, w_RetiBit, w_RetiBit_Exe;
+wire w_BranchVerification, w_RetiBit, w_RetiBit_Exe, w_JmpBit_Mem;
 
 wire [`OPCODE_MSB:0] w_OpCodeDec;
 wire [`ALU_SEL_MSB:0] w_AluCtrlDec, w_AluCtrlExe;
@@ -144,7 +144,16 @@ ControlUnit _ControlUnit
     .o_IntAddress(w_PcIntExe)
 );
 
+reg reti_stone;
 
+always @(posedge i_Clk) begin
+    if(i_Rst) begin
+        reti_stone <= 0;
+    end 
+    else begin
+        reti_stone <= w_RetiBit_Exe;
+    end
+end 
 
 HazardUnit _HazardUnit(
     .i_Clk(i_Clk),
@@ -153,10 +162,13 @@ HazardUnit _HazardUnit(
     .i_IrRead2AddrDec(w_IrRs2Dec),
     .i_RfReadDstExec(w_RfWrAddrExe),
     
+    //w_JmpBit ||  || stoneJmp || w_JmpBit_Exe || w_JmpBit_Mem
+    //(!i_IntPending) ? w_RetiBit_Exe : w_RetiBit
+    
     .i_BranchVerification(w_BranchVerification),
     .i_BranchBit(w_BranchBit_Exe),
-    .i_JmpBit(w_JmpBit_Exe),
-    .i_RetiBit((!i_IntPending) ? w_RetiBit_Exe : w_RetiBit),
+    .i_JmpBit(w_JmpBit || w_JmpBit_Exe),
+    .i_RetiBit(w_RetiBit_Exe),
     .i_RdMemExe(w_RdEnMemExe),
     .i_WeMemEnable(w_WrEnMemDec),               //verificar se é um Store
     .i_AluEnDec(w_AluEnDec),
@@ -394,7 +406,8 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .i_AluOp2(w_AluOp2Exe),                 
     .i_Imm22(w_Imm22Exe),                       // Immediate 22-bit
     .i_ImmOpX(w_ImmOpXExe),
-
+    
+    .i_JmpBit(w_JmpBit_Exe),
 
     .o_ProgramCounter(w_ProgramCounterMem),          
     .o_IrRst(w_RfWrAddrMem),                    // IR_RDST  
@@ -408,7 +421,9 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .o_WrEnRf(w_WrEnRfMem),                     // WE RF
         
     .o_MemAddrSel(w_MemAddrSelMem),             // Memory address select
-    .o_RfDataInSel(w_RfDataInSelMem)            // Register File Write Address
+    .o_RfDataInSel(w_RfDataInSelMem),            // Register File Write Address
+    
+    .o_JmpBit(w_JmpBit_Mem)
 );
 
 InstructionMemory _InstrMemory

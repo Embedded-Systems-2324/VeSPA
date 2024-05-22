@@ -30,8 +30,8 @@ module control_hazards
 
 
 
-always @(i_Clk) begin
-    if (i_Clk) begin
+always @(posedge i_Clk) begin
+//    if (i_Clk) begin
         if(i_Rst == 1'b1) begin
             o_FlushDecode <= 0;
             o_FlushExecute <= 0;
@@ -49,7 +49,7 @@ always @(i_Clk) begin
             //o JMP não vai ser executado e e em vez disso, o endereço de salto vai passar a ser o 
             //endereço de retorno da interrupção.
             //Assim, quando acontecer o RETI, está a executar o JMP que não foi executado previamente
-            else if((i_BranchVerification == 1'b1 && i_BranchBit == 1'b1) || i_RetiBit == 1'b1) begin
+            else if((i_BranchVerification == 1'b1 && i_BranchBit == 1'b1)) begin
                 o_FlushDecode <= 1;
                 o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
@@ -57,8 +57,15 @@ always @(i_Clk) begin
             end
             else if(i_JmpBit == 1'b1) begin
                 o_FlushDecode <= 1;
-                //o_FlushExecute <= 1;
+                o_FlushExecute <= 1;
                 o_FlushFetch <= 1;
+                //o_FlushMemory <= 1;
+            end 
+            else if(i_RetiBit == 1'b1) begin
+                o_FlushDecode <= 1;
+                o_FlushExecute <= 1;
+                o_FlushFetch <= 1;
+                o_FlushMemory <= 1;
             end 
             else begin
                 o_FlushDecode <= 0;
@@ -68,7 +75,7 @@ always @(i_Clk) begin
             end
         end  
     end 
-    else begin
+/*    else begin
         if (i_Rst) begin
             //Do nothing
         end
@@ -78,7 +85,7 @@ always @(i_Clk) begin
             o_FlushMemory <= 0;
         end 
     end 
-end
+end*/
 
 //Stall signal = 1 -> LD in Decode to same Rdst of EX stage 
 assign o_StallSignal = ((i_RdMemExe && i_AluEnDec) && (i_RfReadDstExec == i_IrRead1AddrDec)) ? 1'b1 : 
