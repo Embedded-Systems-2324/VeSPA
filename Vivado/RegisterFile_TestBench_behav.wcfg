@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="924.264 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,190.465 ns"></ZoomEndTime>
-      <Cursor1Time time="1,113.464 ns"></Cursor1Time>
+      <ZoomStartTime time="817.440 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,174.085 ns"></ZoomEndTime>
+      <Cursor1Time time="1,002.988 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="27" />
    <wvobject type="logic" fp_name="/Pipeline_tb/test/i_Clk">
       <obj_property name="ElementShortName">i_Clk</obj_property>
       <obj_property name="ObjectShortName">i_Clk</obj_property>
@@ -131,6 +131,17 @@
    <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile">
       <obj_property name="ElementShortName">r_RegFile[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">r_RegFile[31:0][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/w_JmpBit">
+      <obj_property name="ElementShortName">w_JmpBit</obj_property>
+      <obj_property name="ObjectShortName">w_JmpBit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/w_JmpBit_Exe">
+      <obj_property name="ElementShortName">w_JmpBit_Exe</obj_property>
+      <obj_property name="ObjectShortName">w_JmpBit_Exe</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/w_JmpBit_Mem">
+      <obj_property name="ElementShortName">w_JmpBit_Mem</obj_property>
+      <obj_property name="ObjectShortName">w_JmpBit_Mem</obj_property>
    </wvobject>
 </wave_config>
