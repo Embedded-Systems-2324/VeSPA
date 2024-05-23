@@ -39,7 +39,7 @@ initial begin
     rst <= 0;
     
     //#810
-    #760
+    #900
     //intSources <= 4'b0110;
     
     //#10
@@ -53,7 +53,7 @@ initial begin
 
 end
     
-always #4 clk=~clk;    
+always #10 clk=~clk;    
 
 
 

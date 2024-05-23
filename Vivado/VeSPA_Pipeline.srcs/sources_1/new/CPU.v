@@ -78,10 +78,14 @@ assign o_RAddr = o_DataMemAddress;
 
 
 reg [`BUS_MSB:0]r_PcBackup;
+reg [2:0] counter;
+reg flag_counting;
+
 
 always @ (posedge i_Clk) begin
     if(i_Rst) begin
         r_PcBackup <= 0;
+        counter <= 0;
     end
     else begin
         if(o_IntAckAttended == 1'b1 && !i_IntPending) begin
@@ -94,7 +98,22 @@ always @ (posedge i_Clk) begin
             else begin
                 r_PcBackup <= w_ProgramCounterWb;
             end
-        end    
+        end   
+        else if(w_JmpBit_Exe) begin
+            flag_counting <= 1;
+            counter <= 0;
+            r_PcBackup <= w_PcJmpExe;
+        end  
+        else if(flag_counting) begin
+            if(counter < 5) begin
+                counter <= counter + 1;
+                r_PcBackup <= r_PcBackup;
+            end 
+            else begin
+                flag_counting <= 0;
+                counter <= 0;
+            end
+        end 
         else begin
             r_PcBackup <= r_PcBackup;
         end

@@ -19,7 +19,7 @@ module MemoryWriteBackReg
     
 
 
-    output reg [`BUS_MSB:0] o_ProgramCounter,
+    (* keep *)output reg [`BUS_MSB:0] o_ProgramCounter,
     output reg [4:0] o_IrRst,                  //IR_RDST 
     output reg [`BUS_MSB:0] o_AluOut,
     output reg [`BUS_MSB:0] o_Imm22,
