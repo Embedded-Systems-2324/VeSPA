@@ -122,14 +122,13 @@ always @(posedge i_Clk) begin
     end
 end
 
-assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_IntRequest == 1'b1)? `PC_SEL_INT :
+assign o_PcSel = (r_CurrentState == ST_RUN) ? ((i_IntRequest) ? `PC_SEL_INT :
                                                (i_OpCode == `OP_BXX) ? `PC_SEL_BXX :
                                                (i_OpCode == `OP_JMP) ? `PC_SEL_JMP :
                                                (i_OpCode == `OP_RET) ? `PC_SEL_RET :
                                                (i_OpCode == `OP_RETI && !i_IntPending) ? `PC_SEL_RETI: 
-                                               (i_OpCode == `OP_RETI &&  i_IntPending) ? `PC_SEL_INT : `PC_SEL_ADD4) : 
-                                               (r_CurrentState == ST_INIT)? `PC_SEL_ADD4 : 0;
-
+                                               (i_OpCode == `OP_RETI &&  i_IntPending) ? `PC_SEL_INT : `PC_SEL_ADD4) : `PC_SEL_ADD4;
+                                           
 assign o_RfRdAddrBSel = (i_OpCode == `OP_ST || i_OpCode == `OP_STX) ? `RF_SEL_RST : 
                         (i_OpCode == `OP_RET) ? `RF_SEL_RET :
                         (i_OpCode == `OP_RETI) ? `RF_SEL_RETI : `RF_SEL_RS2;

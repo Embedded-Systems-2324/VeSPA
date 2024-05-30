@@ -22,6 +22,7 @@ module CPU
     input i_IntRequest,
     input [1:0] i_IntNumber,
     input i_IntPending,
+    input i_IntAttending,
     output o_IntAckComplete,
     output o_IntAckAttended, 
     
@@ -42,13 +43,16 @@ wire [`PC_SEL_MSB:0] w_PcSelFe, w_PcSelDec, w_PcSelExe, w_PcSelExe2Fetch;
 wire [`RF_SEL_MSB:0] w_RfRdAddrBSelDec;
 wire [`RF_IN_SEL_MSB:0] w_RfDataInSelDec, w_RfDataInSelExe, w_RfDataInSelMem, w_RfDataInSelWb;
 wire [`BUS_MSB:0] w_PcJmpExe, w_PcBxxExe, w_PcRetDec, w_PcIntExe;
-wire [`BUS_MSB:0] w_InstructionRegisterFe,  w_InstructionRegisterDec, w_InstructionRegisterWb;
+wire [`BUS_MSB:0] w_InstructionRegisterFe,  w_InstructionRegisterDec, w_InstructionRegisterWb, w_InstructionRegisterExe, w_InstructionRegisterMem;
 wire [`BUS_MSB:0] w_ProgramCounterFe, w_ProgramCounterDec, w_ProgramCounterExe, w_ProgramCounterMem, w_ProgramCounterWb;
 wire [`BUS_MSB:0] o_DataMemAddress;
 
 wire w_RfWeDec, w_RfWeExe, w_RfWeMem, w_RfWeWb;
 wire [4:0] w_RfWrAddrDec, w_RfWrAddrExe, w_RfWrAddrMem, w_RfWrAddrWb;
 wire [`BUS_MSB:0] w_RfDataInFe, w_RfDataInDec, w_RfDataInExe, w_RfDataInMem, w_RfDataInWb; 
+
+wire w_JmpBxxSignal_Fe, w_JmpBxxSignal_Dec, w_JmpBxxSignal_Exe, w_JmpBxxSignal_Mem, w_JmpBxxSignal_Wb;
+wire w_IrqSignal_Fe, w_IrqSignal_Dec, w_IrqSignal_Exe;
 
 wire [4:0] w_IrRs1Dec, w_IrRs2Dec, w_IrRs1Exe, w_IrRs2Exe;  
 
@@ -76,47 +80,82 @@ assign o_WAddr = o_DataMemAddress;
 assign o_RAddr = o_DataMemAddress;
 
 
+wire w_JmpExecuted;
 
-reg [`BUS_MSB:0]r_PcBackup;
-reg [2:0] counter;
-reg flag_counting;
+assign w_PcBackupDelay = w_JmpBxxSignal_Fe | w_JmpBxxSignal_Dec | w_JmpBxxSignal_Exe | w_JmpBxxSignal_Mem | w_JmpBxxSignal_Wb;
+assign w_StartingIrq = w_IrqSignal_Fe | w_IrqSignal_Dec | w_IrqSignal_Exe;
 
+(* keep *)reg [`BUS_MSB:0]r_PcBackup;
+//(* keep *)reg [2:0] r_PcBackupDelay;
+
+/*
+always @ (posedge i_Clk) begin
+    if(i_Rst) begin
+        r_PcBackupDelay <= 0;
+    end
+    else if(!i_IntAttending && (w_JmpBit_Exe == 1'b1 || (w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1))) begin
+        r_PcBackupDelay <= 2;
+    end
+    else if(w_RetiBit == 1'b1 && !i_IntPending) begin
+        r_PcBackupDelay <= 1;
+    end
+    else if(r_PcBackupDelay != 0 && r_PcBackupDelay < 6)
+        r_PcBackupDelay <= r_PcBackupDelay + 1;
+    else begin
+        r_PcBackupDelay <= 0;    
+    end
+end
+*/
 
 always @ (posedge i_Clk) begin
     if(i_Rst) begin
         r_PcBackup <= 0;
-        counter <= 0;
     end
     else begin
-        if(o_IntAckAttended == 1'b1 && !i_IntPending) begin
-            if(w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1)  begin
+        if(w_PcBackupDelay) begin
+            r_PcBackup <= r_PcBackup;
+        end
+        else if(w_JmpBit_Exe && w_StartingIrq) begin
+            r_PcBackup <= w_PcJmpExe;
+        end
+        else if(!i_IntAttending) begin
+            if(w_BranchVerification && w_BranchBit_Exe) begin  //ver isto pq não vai ser branch verification ... vai se ter de propagar
                 r_PcBackup <= w_PcBxxExe;
             end
-            else if(w_JmpBit_Exe == 1'b1) begin
+            else if(w_JmpBit_Exe) begin
                 r_PcBackup <= w_PcJmpExe;
+            end
+            else if(w_IrqSignal_Exe) begin
+                r_PcBackup <= w_ProgramCounterWb;
             end
             else begin
                 r_PcBackup <= w_ProgramCounterWb;
-            end
-        end   
-        else if(w_JmpBit_Exe) begin
-            flag_counting <= 1;
-            counter <= 0;
-            r_PcBackup <= w_PcJmpExe;
-        end  
-        else if(flag_counting) begin
-            if(counter < 5) begin
-                counter <= counter + 1;
-                r_PcBackup <= r_PcBackup;
             end 
-            else begin
-                flag_counting <= 0;
-                counter <= 0;
-            end
-        end 
+        end
+        else if(w_StartingIrq) begin
+            r_PcBackup <= w_ProgramCounterWb;
+        end
         else begin
             r_PcBackup <= r_PcBackup;
         end
+        
+        
+        
+  /*      if(!i_IntAttending && w_IrqSignal_Exe && (w_BranchVerification && w_BranchBit_Exe))  begin  //ver isto pq não vai ser branch verification ... vai se ter de propagar
+            r_PcBackup <= w_PcBxxExe;
+        end
+        else if(!i_IntAttending && w_IrqSignal_Exe && w_JmpBit_Exe) begin
+            r_PcBackup <= w_PcJmpExe;
+        end
+        else if(w_IrqSignal_Exe) begin
+            r_PcBackup <= w_ProgramCounterWb;
+        end
+        else if(!i_IntAttending && !w_PcBackupDelay) begin
+            r_PcBackup <= w_ProgramCounterWb;
+        end
+        else begin 
+            r_PcBackup <= r_PcBackup;
+        end*/
     end
 end    
 
@@ -222,10 +261,14 @@ InstructionFetch _InstrFetch
     .i_PcRet(w_PcRetExe),
     .i_PcInt(w_PcIntExe),
     .i_PcReti(r_PcBackup),
+    .i_IntAttending(i_IntAttending),
+    .i_JmpBxxBit(w_JmpBit_Exe),
     //outputs
     .o_Rdy(w_FetchRdy),
     .o_InstructionRegister(w_InstructionRegisterFe),
-    .o_ProgramCounter(w_ProgramCounterFe)
+    .o_ProgramCounter(w_ProgramCounterFe), 
+    .o_JmpBxxSignal(w_JmpBxxSignal_Fe),
+    .o_IrqSignal(w_IrqSignal_Fe)
 );
 
 FetchDecodeReg _FetchDecodeReg
@@ -236,10 +279,15 @@ FetchDecodeReg _FetchDecodeReg
     .i_ProgramCounter(w_ProgramCounterFe),
     .i_Stall(w_StallFe),
     .i_Flush(w_FlushDec),
+    
+    .i_JmpBxxSignal(w_JmpBit_Exe || w_JmpBxxSignal_Fe), 
+    .i_IrqSignal(w_IrqSignal_Fe),
 
     //outputs
     .o_InstructionRegister(w_InstructionRegisterDec),
-    .o_ProgramCounter(w_ProgramCounterDec)
+    .o_ProgramCounter(w_ProgramCounterDec), 
+    .o_JmpBxxSignal(w_JmpBxxSignal_Dec),
+    .o_IrqSignal(w_IrqSignal_Dec)
 );
 
 InstructionDecode _InstrDecode
@@ -268,7 +316,6 @@ InstructionDecode _InstrDecode
     .o_Imm23(w_Imm23Dec),
 
     .o_BranchCond(w_BranchCondDec)
-    
 );
 
 DecodeExecuteReg _DecodeExecuteReg
@@ -279,6 +326,7 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_Flush(w_FlushExe),
     .i_Bubble(w_StallFe),                    //////////////////////////
     .i_ProgramCounter(w_ProgramCounterDec),
+    .i_InstructionRegister(w_InstructionRegisterDec),
     
     .i_IrRst(w_RfWrAddrDec),                // IR_RDST
     
@@ -313,10 +361,15 @@ DecodeExecuteReg _DecodeExecuteReg
     .i_RetiBit(w_RetiBit),
     
     .i_InterruptSignal(o_IntAckAttended),
+    .i_IntRequest(i_IntRequest),
+    
+    .i_JmpBxxSignal(w_JmpBxxSignal_Dec),
+    .i_IrqSignal(w_IrqSignal_Dec),
     
     //outputs
     
     .o_ProgramCounter(w_ProgramCounterExe),
+    .o_InstructionRegister(w_InstructionRegisterExe),
     
     //used for hazards to
     .o_IrRst(w_RfWrAddrExe),                // IR_RDST output
@@ -349,7 +402,9 @@ DecodeExecuteReg _DecodeExecuteReg
     
     .o_PcSel(w_PcSelExe),
     .o_MemAddrSel(w_MemAddrSelExe),
-    .o_RfDataInSel(w_RfDataInSelExe)
+    .o_RfDataInSel(w_RfDataInSelExe), 
+    .o_JmpBxxSignal(w_JmpBxxSignal_Exe),
+    .o_IrqSignal(w_IrqSignal_Exe)
 );
 
 
@@ -412,6 +467,7 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .i_Flush(w_FlushMem),                      
 
     .i_ProgramCounter(w_ProgramCounterExe),    
+    .i_InstructionRegister(w_InstructionRegisterExe),
     .i_IrRst(w_RfWrAddrExe),                    // IR_RDST  
 
     .i_WrEnMem(w_WrEnMemExe),                   // WE MEM
@@ -427,8 +483,10 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .i_ImmOpX(w_ImmOpXExe),
     
     .i_JmpBit(w_JmpBit_Exe),
+    .i_JmpBxxSignal(w_JmpBxxSignal_Exe),
 
-    .o_ProgramCounter(w_ProgramCounterMem),          
+    .o_ProgramCounter(w_ProgramCounterMem),      
+    .o_InstructionRegister(w_InstructionRegisterMem),    
     .o_IrRst(w_RfWrAddrMem),                    // IR_RDST  
     .o_AluOut(w_AluOutMem),                     //ALU_OutM               
     .o_AluOp2(w_AluOp2Mem),               
@@ -442,7 +500,8 @@ ExecuteMemoryReg _ExecuteMemoryReg
     .o_MemAddrSel(w_MemAddrSelMem),             // Memory address select
     .o_RfDataInSel(w_RfDataInSelMem),            // Register File Write Address
     
-    .o_JmpBit(w_JmpBit_Mem)
+    .o_JmpBit(w_JmpBit_Mem), 
+    .o_JmpBxxSignal(w_JmpBxxSignal_Mem)
 );
 
 InstructionMemory _InstrMemory
@@ -463,6 +522,7 @@ MemoryWriteBackReg _MemoryWriteBackReg
     //.i_Flush(1'b0),                      
 
     .i_ProgramCounter(w_ProgramCounterMem),    
+    .i_InstructionRegister(w_InstructionRegisterMem),
     .i_IrRst(w_RfWrAddrMem),                    // IR_RDST  
 
     .i_WrEnRf(w_WrEnRfMem),                     // WE RF
@@ -471,13 +531,16 @@ MemoryWriteBackReg _MemoryWriteBackReg
 
     .i_AluOut(w_AluOutMem),                 
     .i_Imm22(w_Imm22Mem),                       // Immediate 22-bit
+    .i_JmpBxxSignal(w_JmpBxxSignal_Mem),
 
     .o_ProgramCounter(w_ProgramCounterWb),
+    .o_InstructionRegister(w_InstructionRegisterWb),
     .o_AluOut(w_AluOutWb),                      //ALU_OutM
     .o_Imm22(w_Imm22Wb),
     .o_IrRst (w_RfWrAddrWb),                    //IR_RDST  
     .o_WrEnRf(w_RfWeWb),
-    .o_RfDataInSel(w_RfDataInSelWb)
+    .o_RfDataInSel(w_RfDataInSelWb), 
+    .o_JmpBxxSignal(w_JmpBxxSignal_Wb)
 );
 
 InstructionWriteBack _InstructionWriteBack(

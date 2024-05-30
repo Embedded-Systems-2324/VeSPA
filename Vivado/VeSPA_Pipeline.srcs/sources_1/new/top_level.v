@@ -39,16 +39,16 @@ wire data_mem_busy;
 wire o_Err_cpu;
 
 //cpu to bus
- wire cpu_Clk;
- wire cpu_Rst;
- wire [`BUS_MSB:0] o_WAddr;
- wire [`BUS_MSB:0] o_WData;
- wire o_REnable;
- wire  [`BUS_MSB:0] o_RAddr;
- wire [`BUS_MSB:0] i_RData;        //vai diretamente ao write back, skip MEM/EXE reg
- 
- wire intAckComplete, intAckAttended, intReq, intPending;
- wire [1:0] intNumber;
+wire cpu_Clk;
+wire cpu_Rst;
+wire [`BUS_MSB:0] o_WAddr;
+wire [`BUS_MSB:0] o_WData;
+wire o_REnable;
+wire  [`BUS_MSB:0] o_RAddr;
+wire [`BUS_MSB:0] i_RData;        //vai diretamente ao write back, skip MEM/EXE reg
+
+wire intAckComplete, intAckAttended, intReq, intPending, intAttending;
+wire [1:0] intNumber;
 
 wire clk;
 
@@ -96,6 +96,7 @@ CPU cpu_instance(
     .i_IntRequest(intReq),
     .i_IntNumber(intNumber),
     .i_IntPending(intPending),
+    .i_IntAttending(intAttending),
     .o_IntAckComplete(intAckComplete),
     .o_IntAckAttended(intAckAttended),
     
@@ -108,6 +109,7 @@ interruptController interrupt_instance(
     .clk(i_Clk),
     .int_sources(i_IntSources),
     .int_pending(intPending),
+    .int_attending(intAttending),
     .int_ack_complete(intAckComplete),
     .int_ack_attended(intAckAttended),
     .int_req(intReq),

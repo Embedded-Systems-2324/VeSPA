@@ -15,15 +15,15 @@ module InstructionExecute
     input i_UpdateCondCodes,
 
     //hazard multiplexers
-    input [1:0] i_ForwardOp1,
-    input [1:0] i_ForwardOp2,
+    (* keep *)input [1:0] i_ForwardOp1,
+    (* keep *)input [1:0] i_ForwardOp2,
 
     input [`BUS_MSB:0] i_AluOutMem,     //register value from MEM stage
     input [`BUS_MSB:0] i_RfOutValue,    //register value from EXE stage
     input [`BUS_MSB:0] i_Immed22Mem,    //value from MEM stage to LDI
 
-    input [`BUS_MSB:0] i_R1Out,         //RF_Read1
-    input [`BUS_MSB:0] i_R2Out,         //RF_Read2
+    (* keep *)input [`BUS_MSB:0] i_R1Out,         //RF_Read1
+    (* keep *)input [`BUS_MSB:0] i_R2Out,         //RF_Read2
     input [`BUS_MSB:0] i_Imm16,
     input [`BUS_MSB:0] i_Imm17,
     input [`BUS_MSB:0] i_Imm22,

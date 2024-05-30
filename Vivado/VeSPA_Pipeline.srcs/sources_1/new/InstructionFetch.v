@@ -27,10 +27,14 @@ module InstructionFetch
     input [`BUS_MSB:0] i_PcRet,
     input [`BUS_MSB:0] i_PcInt,
     input [`BUS_MSB:0] i_PcReti,
+    input i_IntAttending,
+    input i_JmpBxxBit,
     
     output o_Rdy,
     output [`BUS_MSB:0] o_InstructionRegister,
-    output reg [`BUS_MSB:0] o_ProgramCounter
+    output reg [`BUS_MSB:0] o_ProgramCounter, 
+    output reg o_JmpBxxSignal, 
+    output reg o_IrqSignal
 );
 
 /*
@@ -71,40 +75,57 @@ CodeMemory _CodeMem
     
 always @(posedge i_Clk) begin
     if (i_Rst) begin
-        o_ProgramCounter <= 0;
-        r_PcReady <= 0;
+        o_ProgramCounter<= 0;
+        r_PcReady       <= 0;
+        o_JmpBxxSignal  <= 0;
+        o_IrqSignal     <= 0;
     end
     else begin
         if (i_Enable) begin
         r_PcReady <= 1;
             if (i_Stall) begin
                 o_ProgramCounter <= o_ProgramCounter;
+                o_JmpBxxSignal   <= o_JmpBxxSignal;
+                o_IrqSignal      <= o_IrqSignal;
             end
             else begin
-                    case (i_PcSel)
+                case (i_PcSel)
                     `PC_SEL_BXX: begin
-                        o_ProgramCounter <= i_PcBxx;
+                        o_ProgramCounter<= i_PcBxx;
+                        o_JmpBxxSignal  <= 1;
+                        o_IrqSignal     <= 0;
                     end
 
                     `PC_SEL_JMP: begin
-                        o_ProgramCounter <= i_PcJmp;
+                        o_ProgramCounter<= i_PcJmp;
+                        o_JmpBxxSignal  <= 1;
+                        o_IrqSignal     <= 0;
                     end
 
                     `PC_SEL_RET: begin
-                        o_ProgramCounter <= i_PcRet;
+                        o_ProgramCounter<= i_PcRet;
+                        o_JmpBxxSignal  <= 0;
+                        o_IrqSignal     <= 0;
                     end 
 
                     `PC_SEL_RETI: begin
-                        o_ProgramCounter <= i_PcReti;
+                        o_ProgramCounter<= i_PcReti;
+                        o_JmpBxxSignal  <= 1;
+                        o_IrqSignal     <= 0;
                     end 
 
                     `PC_SEL_INT: begin
-                        o_ProgramCounter <= i_PcInt;
+                        o_ProgramCounter<= i_PcInt;
+                        o_JmpBxxSignal  <= 0;
+                        o_IrqSignal     <= !(i_JmpBxxBit | i_IntAttending);
                     end
                     
-                    default: o_ProgramCounter <= o_ProgramCounter + `PC_INC;
+                    default: begin
+                        o_ProgramCounter <= o_ProgramCounter + `PC_INC;
+                        o_JmpBxxSignal  <= 0;
+                        o_IrqSignal     <= 0;
+                    end
                 endcase
-                
             end
         end
         else begin

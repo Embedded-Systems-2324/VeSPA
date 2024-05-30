@@ -9,8 +9,8 @@ module ALU
     input i_Enable,
     input i_UpdateCondCodes,
     input [`ALU_SEL_MSB:0] i_OpCtrl,
-    input [`BUS_MSB:0] i_LeftOp,
-    input [`BUS_MSB:0] i_RigthOp,
+    (* mark_debug = "true" *)input [`BUS_MSB:0] i_LeftOp,
+    (* mark_debug = "true" *)input [`BUS_MSB:0] i_RigthOp,
     output [`BUS_MSB:0] o_Output,
     output reg [`CCODES_MSB:0] o_ConditionCodes
 );

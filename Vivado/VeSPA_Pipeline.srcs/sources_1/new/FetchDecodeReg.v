@@ -14,29 +14,43 @@ module FetchDecodeReg
     input i_Rst,
     input [`BUS_MSB:0] i_InstructionRegister,
     input [`BUS_MSB:0] i_ProgramCounter,
+    input i_JmpBxxSignal,                //signalize that an JMP was executed
+    input i_IrqSignal,                //signalize that an JMP was executed
     input i_Stall,
     input i_Flush,
-
+    
     output reg [`BUS_MSB:0] o_InstructionRegister,
-    output reg [`BUS_MSB:0] o_ProgramCounter
+    output reg [`BUS_MSB:0] o_ProgramCounter, 
+    output reg o_JmpBxxSignal,
+    output reg o_IrqSignal
 );
 
     always @(posedge i_Clk) begin 
-        if(i_Rst || i_Flush) begin
+        if(i_Rst) begin
             o_InstructionRegister   <= 0;
             o_ProgramCounter        <= 0;
+            o_JmpBxxSignal          <= 0;
+            o_IrqSignal             <= 0;
         end
         else begin
-            if(i_Stall) begin
+            if(i_Flush) begin
+                o_InstructionRegister   <= 0;
+                o_ProgramCounter        <= o_ProgramCounter;
+                o_JmpBxxSignal          <= i_JmpBxxSignal;
+                o_IrqSignal             <= i_IrqSignal;
+            end
+            else if(i_Stall) begin
                 o_InstructionRegister   <= o_InstructionRegister; 
                 o_ProgramCounter        <= o_ProgramCounter;
+                o_JmpBxxSignal          <= o_JmpBxxSignal;
+                o_IrqSignal             <= o_IrqSignal;
             end
             else begin
                 o_InstructionRegister   <= i_InstructionRegister;
                 o_ProgramCounter        <= i_ProgramCounter;
+                o_JmpBxxSignal          <= i_JmpBxxSignal;
+                o_IrqSignal             <= i_IrqSignal;
             end
         end
-
     end
-
 endmodule
