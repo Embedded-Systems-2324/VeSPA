@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Tue May 21 11:42:26 2024
+-- Date        : Sun Jun  2 20:33:21 2024
 -- Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
@@ -17,6 +17,7 @@ entity clk_wiz_0 is
   Port ( 
     clk_out1 : out STD_LOGIC;
     reset : in STD_LOGIC;
+    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
 
@@ -26,6 +27,6 @@ architecture stub of clk_wiz_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk_out1,reset,clk_in1";
+attribute black_box_pad_pin of stub : architecture is "clk_out1,reset,locked,clk_in1";
 begin
 end;

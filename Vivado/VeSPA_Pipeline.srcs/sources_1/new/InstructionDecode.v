@@ -47,7 +47,9 @@ module InstructionDecode
     output [`BUS_MSB:0] o_Imm22,
     output [`BUS_MSB:0] o_Imm23,
 
-    output [3:0] o_BranchCond
+    output [3:0] o_BranchCond, 
+    
+    output [2:0]led_test
 );
 
 
@@ -104,7 +106,9 @@ RegisterFile rf
     .i_RdAddrA(w_IrRs1),
     .i_RdAddrB(w_IrRs2_in),
     .o_DataOutA(o_R1Out),
-    .o_DataOutB(o_R2Out)
+    .o_DataOutB(o_R2Out),
+    
+    .led_test(led_test)
 );
 
                                    

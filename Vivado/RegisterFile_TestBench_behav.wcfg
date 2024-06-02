@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Pipeline_tb_time_synth.wdb" id="1">
+      <db_ref path="Pipeline_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="Pipeline_tb" />
             <top_module name="glbl" />
@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="451.898 ns"></ZoomStartTime>
-      <ZoomEndTime time="936.399 ns"></ZoomEndTime>
-      <Cursor1Time time="625.398 ns"></Cursor1Time>
+      <ZoomStartTime time="557.001 ns"></ZoomStartTime>
+      <ZoomEndTime time="846.575 ns"></ZoomEndTime>
+      <Cursor1Time time="664.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="75"></ValueColumnWidth>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="28" />
    <wvobject type="logic" fp_name="/Pipeline_tb/test/i_Clk">
       <obj_property name="ElementShortName">i_Clk</obj_property>
       <obj_property name="ObjectShortName">i_Clk</obj_property>
@@ -28,65 +28,68 @@
       <obj_property name="ElementShortName">i_Rst</obj_property>
       <obj_property name="ObjectShortName">i_Rst</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/w_InstructionRegisterDec">
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrFetch/o_ProgramCounter">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">w_InstructionRegisterDec[31:27]</obj_property>
-      <obj_property name="ObjectShortName">w_InstructionRegisterDec[31:27]</obj_property>
-      <obj_property name="label">OPCODE</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/\o_ProgramCounter_reg[31]_2 ">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_2 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_2 [31:0]</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
       <obj_property name="label">PC_FETCH</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_FetchDecodeReg/\o_ProgramCounter_reg[31]_0 ">
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/o_ProgramCounter">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
-      <obj_property name="label">PC_DECODE</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_EXE</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/\o_ProgramCounter_reg[31]_0 ">
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_DecodeExecuteReg/i_ProgramCounter">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
-      <obj_property name="label">PC_EXECUTE</obj_property>
+      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_DEC</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_MemoryWriteBackReg/\o_ProgramCounter_reg[31]_0 ">
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_MemoryWriteBackReg/i_ProgramCounter">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_MEM</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_MemoryWriteBackReg/o_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
       <obj_property name="label">PC_WB</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/\r_RegFile[30]_inferred_i_1 ">
-      <obj_property name="ElementShortName">\r_RegFile[30]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[30]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/CTRL_HZRD/i_JmpBit">
+      <obj_property name="ElementShortName">i_JmpBit</obj_property>
+      <obj_property name="ObjectShortName">i_JmpBit</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/\r_RegFile[29]_inferred_i_1 ">
-      <obj_property name="ElementShortName">\r_RegFile[29]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[29]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/i_BranchBit">
+      <obj_property name="ElementShortName">i_BranchBit</obj_property>
+      <obj_property name="ObjectShortName">i_BranchBit</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/\r_RegFile[26]_inferred_i_1 ">
-      <obj_property name="ElementShortName">\r_RegFile[26]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[26]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/i_BranchVerification">
+      <obj_property name="ElementShortName">i_BranchVerification</obj_property>
+      <obj_property name="ObjectShortName">i_BranchVerification</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/\r_RegFile[25]_inferred_i_1 ">
-      <obj_property name="ElementShortName">\r_RegFile[25]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[25]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/o_FlushFetch">
+      <obj_property name="ElementShortName">o_FlushFetch</obj_property>
+      <obj_property name="ObjectShortName">o_FlushFetch</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/\r_RegFile[24]_inferred_i_1 ">
-      <obj_property name="ElementShortName">\r_RegFile[24]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[24]_inferred_i_1 [31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/o_FlushDecode">
+      <obj_property name="ElementShortName">o_FlushDecode</obj_property>
+      <obj_property name="ObjectShortName">o_FlushDecode</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/o_FlushExecute">
+      <obj_property name="ElementShortName">o_FlushExecute</obj_property>
+      <obj_property name="ObjectShortName">o_FlushExecute</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_HazardUnit/o_FlushMemory">
+      <obj_property name="ElementShortName">o_FlushMemory</obj_property>
+      <obj_property name="ObjectShortName">o_FlushMemory</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/i_LeftOp">
       <obj_property name="ElementShortName">i_LeftOp[31:0]</obj_property>
@@ -98,8 +101,60 @@
       <obj_property name="ObjectShortName">i_RigthOp[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/i_Enable">
-      <obj_property name="ElementShortName">i_Enable</obj_property>
-      <obj_property name="ObjectShortName">i_Enable</obj_property>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/o_Output">
+      <obj_property name="ElementShortName">o_Output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Output[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/alu/w_Zero">
+      <obj_property name="ElementShortName">w_Zero</obj_property>
+      <obj_property name="ObjectShortName">w_Zero</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/i_PcSel">
+      <obj_property name="ElementShortName">i_PcSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">i_PcSel[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_PcSelExe2Fetch">
+      <obj_property name="ElementShortName">o_PcSelExe2Fetch[2:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PcSelExe2Fetch[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_PcJmp">
+      <obj_property name="ElementShortName">o_PcJmp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PcJmp[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrExecute/o_PcBranch">
+      <obj_property name="ElementShortName">o_PcBranch[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_PcBranch[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Pipeline_tb/test/led">
+      <obj_property name="ElementShortName">led</obj_property>
+      <obj_property name="ObjectShortName">led</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[4]">
+      <obj_property name="ElementShortName">[4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[3]">
+      <obj_property name="ElementShortName">[3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[2]">
+      <obj_property name="ElementShortName">[2][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[1]">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Pipeline_tb/test/cpu_instance/_InstrDecode/rf/r_RegFile[0]">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

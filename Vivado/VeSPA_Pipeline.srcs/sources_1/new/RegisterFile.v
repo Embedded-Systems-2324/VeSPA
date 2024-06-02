@@ -16,81 +16,48 @@ module RegisterFile
     input [`REG_FILE_MSB:0] i_RdAddrA,
     input [`REG_FILE_MSB:0] i_RdAddrB,
     output reg [`BUS_MSB:0] o_DataOutA,
-    output reg [`BUS_MSB:0] o_DataOutB
+    output reg [`BUS_MSB:0] o_DataOutB, 
+    
+    output [2:0]led_test
 );
 
-reg r_WritePending;
-reg [`BUS_MSB:0] r_ShadowAddr;
-reg [`REG_FILE_MSB:0] r_ShadowReg;
-(* keep *) reg [(32 - 1):0] r_RegFile [`REG_FILE_SIZE:0] ;
+reg [(32 - 1):0] r_RegFile [`REG_FILE_SIZE:0] ;
 
 integer i;
 
-always @(i_Clk) begin
-    if(i_Clk) begin   
-        if (i_Rst) begin
-            for (i = 0; i < 32; i = i + 1) begin
-                r_RegFile[i] <= 0;
-            end
-            
-            r_ShadowReg <= 0;
-            r_ShadowAddr <= 0;
-            r_WritePending <= 0;
+always @(posedge i_Clk) begin  
+    if (i_Rst) begin
+        for (i = 0; i < 32; i = i + 1) begin
+            r_RegFile[i] <= 0;
         end
-        else begin
-            if (i_WrEnable) begin
-                r_WritePending <= 1;
-                r_ShadowAddr <= i_WrAddr;
-                r_ShadowReg <= i_DataIn;
-    
-                if (i_RdAddrA == i_WrAddr) begin
-                    o_DataOutA <= i_DataIn;
-                end
-                else begin
-                    o_DataOutA <= r_RegFile[i_RdAddrA];
-                end
-    
-                if (i_RdAddrB == i_WrAddr) begin
-                    o_DataOutB <= i_DataIn;
-                end
-                else begin
-                    o_DataOutB <= r_RegFile[i_RdAddrB];
-                end
+    end
+    else begin
+        if (i_WrEnable) begin
+            r_RegFile[i_WrAddr] <= i_DataIn;
+        
+            if (i_RdAddrA == i_WrAddr) begin
+                o_DataOutA <= i_DataIn;
             end
             else begin
                 o_DataOutA <= r_RegFile[i_RdAddrA];
+            end
+
+            if (i_RdAddrB == i_WrAddr) begin
+                o_DataOutB <= i_DataIn;
+            end
+            else begin
                 o_DataOutB <= r_RegFile[i_RdAddrB];
-            end        
-        end 
-    end
-    else begin
-        if (i_Rst) begin
-            //Do nothing
+            end
         end
         else begin
-            if (i_WrEnable) begin                     // -> é necessário corrigir o uso do registo interm
-                r_RegFile[i_WrAddr] <= i_DataIn;
-                r_WritePending <= 0;
-            end
-            else begin
-                //Do nothing
-            end
-        end
-    /*
-        if (i_Rst) begin
-            //Do nothing
-        end
-        else begin
-            if (r_WritePending) begin                     // -> é necessário corrigir o uso do registo interm
-                r_RegFile[r_ShadowAddr] <= r_ShadowReg;
-                r_WritePending <= 0;
-            end
-            else begin
-                //Do nothing
-            end
-        end
-    */          
-    end
+            o_DataOutA <= r_RegFile[i_RdAddrA];
+            o_DataOutB <= r_RegFile[i_RdAddrB];
+        end        
+    end 
 end
+
+assign led_test[0] = (r_RegFile[30] == 'd10) ? 1 : 0;
+assign led_test[1] = (r_RegFile[31] == 'd15) ? 1 : 0;
+assign led_test[2] = (r_RegFile[29] == 'd10) ? 1 : 0;
 
 endmodule

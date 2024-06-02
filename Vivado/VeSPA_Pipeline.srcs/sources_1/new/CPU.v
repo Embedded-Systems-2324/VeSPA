@@ -27,7 +27,8 @@ module CPU
     output o_IntAckAttended, 
     
     
-    output reg led_teste
+    output reg led_teste, 
+    output [2:0]reg_leds
 );
 
 
@@ -86,26 +87,7 @@ assign w_PcBackupDelay = w_JmpBxxSignal_Fe | w_JmpBxxSignal_Dec | w_JmpBxxSignal
 assign w_StartingIrq = w_IrqSignal_Fe | w_IrqSignal_Dec | w_IrqSignal_Exe;
 
 (* keep *)reg [`BUS_MSB:0]r_PcBackup;
-//(* keep *)reg [2:0] r_PcBackupDelay;
 
-/*
-always @ (posedge i_Clk) begin
-    if(i_Rst) begin
-        r_PcBackupDelay <= 0;
-    end
-    else if(!i_IntAttending && (w_JmpBit_Exe == 1'b1 || (w_BranchVerification == 1'b1 && w_BranchBit_Exe == 1'b1))) begin
-        r_PcBackupDelay <= 2;
-    end
-    else if(w_RetiBit == 1'b1 && !i_IntPending) begin
-        r_PcBackupDelay <= 1;
-    end
-    else if(r_PcBackupDelay != 0 && r_PcBackupDelay < 6)
-        r_PcBackupDelay <= r_PcBackupDelay + 1;
-    else begin
-        r_PcBackupDelay <= 0;    
-    end
-end
-*/
 
 always @ (posedge i_Clk) begin
     if(i_Rst) begin
@@ -138,24 +120,6 @@ always @ (posedge i_Clk) begin
         else begin
             r_PcBackup <= r_PcBackup;
         end
-        
-        
-        
-  /*      if(!i_IntAttending && w_IrqSignal_Exe && (w_BranchVerification && w_BranchBit_Exe))  begin  //ver isto pq não vai ser branch verification ... vai se ter de propagar
-            r_PcBackup <= w_PcBxxExe;
-        end
-        else if(!i_IntAttending && w_IrqSignal_Exe && w_JmpBit_Exe) begin
-            r_PcBackup <= w_PcJmpExe;
-        end
-        else if(w_IrqSignal_Exe) begin
-            r_PcBackup <= w_ProgramCounterWb;
-        end
-        else if(!i_IntAttending && !w_PcBackupDelay) begin
-            r_PcBackup <= w_ProgramCounterWb;
-        end
-        else begin 
-            r_PcBackup <= r_PcBackup;
-        end*/
     end
 end    
 
@@ -202,16 +166,6 @@ ControlUnit _ControlUnit
     .o_IntAddress(w_PcIntExe)
 );
 
-reg reti_stone;
-
-always @(posedge i_Clk) begin
-    if(i_Rst) begin
-        reti_stone <= 0;
-    end 
-    else begin
-        reti_stone <= w_RetiBit_Exe;
-    end
-end 
 
 HazardUnit _HazardUnit(
     .i_Clk(i_Clk),
@@ -315,7 +269,9 @@ InstructionDecode _InstrDecode
     .o_Imm22(w_Imm22Dec),
     .o_Imm23(w_Imm23Dec),
 
-    .o_BranchCond(w_BranchCondDec)
+    .o_BranchCond(w_BranchCondDec), 
+    
+    .led_test(reg_leds)
 );
 
 DecodeExecuteReg _DecodeExecuteReg
