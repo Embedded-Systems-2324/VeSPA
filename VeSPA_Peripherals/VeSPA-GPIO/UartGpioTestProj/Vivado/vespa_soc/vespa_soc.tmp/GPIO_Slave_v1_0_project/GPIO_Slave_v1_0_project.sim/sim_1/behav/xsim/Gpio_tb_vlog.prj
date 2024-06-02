@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog   \
+"../../../../../../../ip_repo/GPIO_Slave_IP/src/Gpio_tb.v" \
+"../../../../../../../ip_repo/GPIO_Slave_IP/src/Gpio_Slave.v" \
+"../../../../../../../ip_repo/GPIO_Slave_IP/src/gpio.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

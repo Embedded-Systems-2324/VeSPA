@@ -1,0 +1,6 @@
+xpm_memory.sv,systemverilog,xpm,../../../../../../../../media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,
+timer.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/src/timer.v,
+timerSlave.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/src/timerSlave.v,
+timerSlave_0.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/sim/timerSlave_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

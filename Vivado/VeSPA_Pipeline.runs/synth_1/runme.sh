@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2023.1/bin
+  PATH=/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin
 else
-  PATH=/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2023.1/bin:$PATH
+  PATH=/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64:/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1'
+HD_PWD='/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top_level.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
+EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl

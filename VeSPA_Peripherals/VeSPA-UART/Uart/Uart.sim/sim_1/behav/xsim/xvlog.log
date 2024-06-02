@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Uart/Uart.srcs/sources_1/new/Uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Uart/Uart.srcs/sources_1/new/UartBaudRate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UartBaudRate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Uart/Uart.srcs/sources_1/new/UartRx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UartRx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bruno/gitreps/VeSPA/Uart/Uart.srcs/sources_1/new/UartTx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UartTx

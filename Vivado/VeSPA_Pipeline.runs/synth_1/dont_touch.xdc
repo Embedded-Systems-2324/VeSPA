@@ -6,4 +6,41 @@
 # IP: ip/CodeMemory/CodeMemory.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CodeMemory || ORIG_REF_NAME==CodeMemory} -quiet] -quiet
 
-# XDC: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc
+# Block Designs: bd/design_1/design_1.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_CustomInterconnect_0_0 || ORIG_REF_NAME==design_1_CustomInterconnect_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_GPIO_Slave_0_0 || ORIG_REF_NAME==design_1_GPIO_Slave_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_UartSlave_0_0 || ORIG_REF_NAME==design_1_UartSlave_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_timerSlave_0_0 || ORIG_REF_NAME==design_1_timerSlave_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_interruptController_0_0/design_1_interruptController_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_interruptController_0_0 || ORIG_REF_NAME==design_1_interruptController_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_PS2_Slave_0_0 || ORIG_REF_NAME==design_1_PS2_Slave_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_memory_wrapper_0_0 || ORIG_REF_NAME==design_1_memory_wrapper_0_0} -quiet] -quiet
+
+# IP: ip/RAM/RAM.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==RAM || ORIG_REF_NAME==RAM} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_CPU_0_0 || ORIG_REF_NAME==design_1_CPU_0_0} -quiet] -quiet
+
+# IP: ip/CodeMemory/CodeMemory.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CodeMemory || ORIG_REF_NAME==CodeMemory} -quiet] -quiet
+
+# XDC: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc
+
+# XDC: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/ip/CodeMemory/CodeMemory_ooc.xdc
+
+# XDC: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/design_1_ooc.xdc

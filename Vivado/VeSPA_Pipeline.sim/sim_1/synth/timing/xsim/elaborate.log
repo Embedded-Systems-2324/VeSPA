@@ -1,7 +1,7 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 --maxdelay -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L simprims_ver -L secureip --snapshot Pipeline_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 --maxdelay -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L simprims_ver -L secureip --snapshot Pipeline_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -22,15 +22,15 @@ Compiling module simprims_ver.LUT5
 Compiling module simprims_ver.LUT6
 Compiling module simprims_ver.FDRE_default
 Compiling module xil_defaultlib.ControlUnit
+Compiling module simprims_ver.MUXF7
 Compiling module simprims_ver.CARRY4
-Compiling module simprims_ver.FDSE_default
 Compiling module xil_defaultlib.DecodeExecuteReg
 Compiling module xil_defaultlib.ExecuteMemoryReg
 Compiling module xil_defaultlib.FetchDecodeReg
 Compiling module xil_defaultlib.control_hazards
-Compiling module xil_defaultlib.forwarding_unit
 Compiling module xil_defaultlib.HazardUnit
-Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.latchsre_ldce
+Compiling module simprims_ver.LDCE
 Compiling module simprims_ver.MUXF8
 Compiling module xil_defaultlib.RegisterFile
 Compiling module xil_defaultlib.InstructionDecode
@@ -38,28 +38,27 @@ Compiling module xil_defaultlib.ALU
 Compiling module xil_defaultlib.InstructionExecute
 Compiling module simprims_ver.GND
 Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0100011111...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0100000000...
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
 Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0100000001...
-Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0110000001...
-Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111110011...
 Compiling module simprims_ver.SRL16E_default
 Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111110000...
+Compiling module simprims_ver.RAMB36E1(INIT_00=256'b0111110001...
 Compiling module xil_defaultlib.CodeMemory
 Compiling module xil_defaultlib.InstructionFetch
 Compiling module xil_defaultlib.MemoryWriteBackReg
 Compiling module xil_defaultlib.CPU
 Compiling module simprims_ver.BUFG
 Compiling module simprims_ver.IBUF
-Compiling module simprims_ver.latchsre_ldce
-Compiling module simprims_ver.LDCE
 Compiling module xil_defaultlib.interruptController
 Compiling module simprims_ver.OBUF
 Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
 Compiling module simprims_ver.RAMB36E1(RDADDR_COLLISION_HWCONF...
 Compiling module xil_defaultlib.RAM
 Compiling module xil_defaultlib.memory_wrapper
+Compiling module simprims_ver.OBUFT
 Compiling module xil_defaultlib.top_level
 Compiling module xil_defaultlib.Pipeline_tb
 Compiling module xil_defaultlib.glbl

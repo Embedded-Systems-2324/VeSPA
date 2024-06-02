@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Jun  2 22:26:58 2024
-# Process ID: 358378
-# Current directory: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1
-# Command line: vivado -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
-# Log file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/top_level.vds
-# Journal file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
-# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 2664.322 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+# Start of session at: Sun Jun  2 20:53:22 2024
+# Process ID: 26961
+# Current directory: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/vivado.jou
+# Running On: joseleite-ThinkPad-L15-Gen-1, OS: Linux, CPU Frequency: 3401.697 MHz, CPU Physical cores: 4, Host memory: 16402 MB
 #-----------------------------------------------------------
-source top_level.tcl -notrace
+source design_1_wrapper.tcl -notrace

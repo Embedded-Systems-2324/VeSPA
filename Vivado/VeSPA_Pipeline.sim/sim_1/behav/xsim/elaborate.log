@@ -1,23 +1,16 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Pipeline_tb_behav xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SoC_tb_behav xil_defaultlib.SoC_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/CPU.v:213]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sources_1/new/InstructionFetch.v:69]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/e61c/src/CPU.v:215]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/e61c/src/InstructionFetch.v:69]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
-Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
-Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
-Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
-Compiling module xil_defaultlib.RAM
-Compiling module xil_defaultlib.memory_wrapper
 Compiling module xil_defaultlib.check_branchcond
 Compiling module xil_defaultlib.ControlUnit
 Compiling module xil_defaultlib.control_hazards
@@ -41,8 +34,35 @@ Compiling module xil_defaultlib.InstructionMemory
 Compiling module xil_defaultlib.MemoryWriteBackReg
 Compiling module xil_defaultlib.InstructionWriteBack
 Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.design_1_CPU_0_0
+Compiling module xil_defaultlib.CustomInterconnect
+Compiling module xil_defaultlib.design_1_CustomInterconnect_0_0
+Compiling module xil_defaultlib.GPIO_PORT
+Compiling module xil_defaultlib.GPIO_Slave
+Compiling module xil_defaultlib.design_1_GPIO_Slave_0_0
+Compiling module xil_defaultlib.ps2_new
+Compiling module xil_defaultlib.custom_ps2_interface
+Compiling module xil_defaultlib.design_1_PS2_Slave_0_0
+Compiling module xil_defaultlib.UartBaudRate
+Compiling module xil_defaultlib.UartTx
+Compiling module xil_defaultlib.UartRx
+Compiling module xil_defaultlib.Uart
+Compiling module xil_defaultlib.design_1_UartSlave_0_0
 Compiling module xil_defaultlib.interruptController
-Compiling module xil_defaultlib.top_level
-Compiling module xil_defaultlib.Pipeline_tb
+Compiling module xil_defaultlib.design_1_interruptController_0_0
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.memory_wrapper
+Compiling module xil_defaultlib.design_1_memory_wrapper_0_0
+Compiling module xil_defaultlib.Timer
+Compiling module xil_defaultlib.timerSlave
+Compiling module xil_defaultlib.design_1_timerSlave_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.SoC_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Pipeline_tb_behav
+Built simulation snapshot SoC_tb_behav

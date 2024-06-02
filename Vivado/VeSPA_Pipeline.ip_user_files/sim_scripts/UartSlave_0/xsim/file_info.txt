@@ -1,0 +1,6 @@
+UartBaudRate.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartBaudRate.v,
+UartRx.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartRx.v,
+UartTx.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartTx.v,
+Uart.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/Uart.v,
+UartSlave_0.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/sim/UartSlave_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

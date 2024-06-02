@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed May  1 16:13:01 2024
+# Process ID: 39394
+# Current directory: /home/bruno/VivadoProjects/UartEchoTest/Vivado/vespa_soc/vespa_soc.runs/impl_1
+# Command line: vivado -log vespa_soc_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vespa_soc_wrapper.tcl -notrace
+# Log file: /home/bruno/VivadoProjects/UartEchoTest/Vivado/vespa_soc/vespa_soc.runs/impl_1/vespa_soc_wrapper.vdi
+# Journal file: /home/bruno/VivadoProjects/UartEchoTest/Vivado/vespa_soc/vespa_soc.runs/impl_1/vivado.jou
+# Running On: brunoPC, OS: Linux, CPU Frequency: 2800.000 MHz, CPU Physical cores: 4, Host memory: 8090 MB
+#-----------------------------------------------------------
+source vespa_soc_wrapper.tcl -notrace

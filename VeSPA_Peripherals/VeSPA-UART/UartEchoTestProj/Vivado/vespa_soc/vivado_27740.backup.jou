@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Apr 23 16:49:37 2024
+# Process ID: 27740
+# Current directory: /home/bruno/gitreps/VeSPA_PeripheralsTest/Vivado/vespa_soc
+# Command line: vivado vespa_soc.xpr
+# Log file: /home/bruno/gitreps/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.log
+# Journal file: /home/bruno/gitreps/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.jou
+# Running On: brunoPC, OS: Linux, CPU Frequency: 2800.000 MHz, CPU Physical cores: 4, Host memory: 8090 MB
+#-----------------------------------------------------------
+start_gui
+open_project vespa_soc.xpr
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name PS2_Slave_v1_0_project -directory /home/bruno/gitreps/VeSPA_PeripheralsTest/Vivado/vespa_soc/vespa_soc.tmp/PS2_Slave_v1_0_project /home/bruno/gitreps/VeSPA_PeripheralsTest/Vivado/ip_repo/ps2/component.xml
+update_compile_order -fileset sources_1
+close_project

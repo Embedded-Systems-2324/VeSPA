@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri May 24 18:17:30 2024
+# Process ID: 11693
+# Current directory: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1
+# Command line: vivado -log design_1_GPIO_Slave_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_GPIO_Slave_0_0.tcl
+# Log file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/design_1_GPIO_Slave_0_0.vds
+# Journal file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/vivado.jou
+# Running On: joseleite-ThinkPad-L15-Gen-1, OS: Linux, CPU Frequency: 3399.998 MHz, CPU Physical cores: 4, Host memory: 16402 MB
+#-----------------------------------------------------------
+source design_1_GPIO_Slave_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2095.840 ; gain = 150.023 ; free physical = 199 ; free virtual = 5120
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/joseleite/VeSPA_Peripherals'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:UartSlave:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/Uart_IP' will take precedence over the same IP in locations: 
+   /home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/uart
+   /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/uart
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:PS2:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/ps2' will take precedence over the same IP in locations: 
+   /home/joseleite/VeSPA_Peripherals/VeSPA-PS2/PS2/ps2_ip_fifo/ps2
+   /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/ps2
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:interruptControllerSlave:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/interruptController' will take precedence over the same IP in location /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/interruptController
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:DataMemory:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/dataMemory' will take precedence over the same IP in location /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/dataMemory
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:teste:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/teste' will take precedence over the same IP in location /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/teste
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:GPIO_Slave:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/GPIO_Slave_IP' will take precedence over the same IP in locations: 
+   /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/GPIO_Slave_IP
+   /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/GPIO_Slave_IP
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:CustomInterconnect:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/interconnect' will take precedence over the same IP in location /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/interconnect
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:vespa_cpu:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/cpu' will take precedence over the same IP in location /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/cpu
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:timerSlave:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-Timer/timer' will take precedence over the same IP in locations: 
+   /home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/timer
+   /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/timer
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_GPIO_Slave_0_0
+Command: synth_design -top design_1_GPIO_Slave_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11785

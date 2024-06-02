@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed May  1 15:07:29 2024
+# Process ID: 23682
+# Current directory: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc
+# Command line: vivado vespa_soc.xpr
+# Log file: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.log
+# Journal file: /home/bruno/VivadoProjects/VeSPA_PeripheralsTest/Vivado/vespa_soc/vivado.jou
+# Running On: brunoPC, OS: Linux, CPU Frequency: 1982.710 MHz, CPU Physical cores: 4, Host memory: 8090 MB
+#-----------------------------------------------------------
+start_gui
+open_project vespa_soc.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag

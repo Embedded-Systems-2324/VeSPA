@@ -30,6 +30,7 @@ reg [3:0]intSources;
 
 top_level test(.i_Clk(clk), .i_Rst(rst), .i_IntSources(intSources));
 
+
 initial begin
     clk <= 0;
     rst <= 1;
@@ -39,7 +40,10 @@ initial begin
     rst <= 0;
     
     //#810
-    #608
+    #760
+    //intSources <= 4'b0110;
+    
+    //#10
     intSources <= 4'b0110;
     
     #4
@@ -50,8 +54,8 @@ initial begin
 
 end
     
-always #8 clk=~clk;    
-
-
+always #10 clk=~clk;   
 
 endmodule
+
+

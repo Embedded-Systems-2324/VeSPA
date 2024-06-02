@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  3 00:27:42 2024" VIVADOVERSION="2023.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="IO" LEFT="7" NAME="pin_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GPIO_Slave_0" PORT="pin"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_Tx_0" SIGIS="undef" SIGNAME="UartSlave_0_o_Tx">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UartSlave_0" PORT="o_Tx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="o_Data_0" RIGHT="0" SIGIS="undef" SIGNAME="PS2_Slave_0_o_Data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PS2_Slave_0" PORT="o_Data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Rx_0" SIGIS="undef" SIGNAME="External_Ports_i_Rx_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rx"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="PS2C_0" SIGIS="undef" SIGNAME="External_Ports_PS2C_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PS2_Slave_0" PORT="PS2C"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="PS2D_0" SIGIS="undef" SIGNAME="External_Ports_PS2D_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PS2_Slave_0" PORT="PS2D"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_Err_0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="o_TimerOverflow_0" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_TimerOverflow"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel1_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel2_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel3_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_PWMChannel4_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_PWMChannel4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="o_OnePulse_0" SIGIS="undef" SIGNAME="timerSlave_0_o_OnePulse">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timerSlave_0" PORT="o_OnePulse"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk_0" SIGIS="clk" SIGNAME="External_Ports_i_Clk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CPU_0" PORT="i_Clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="i_Rst_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_i_Rst_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="CPU_0" PORT="i_Rst"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="3" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="External_Ports_i_Clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_i_Rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="interruptController_0" PORT="clk"/>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="interruptController_0" PORT="rst"/>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_WAddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_WData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable" SIGIS="undef" SIGNAME="CPU_0_o_REnable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_RAddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_DataMemRdy" SIGIS="undef" SIGNAME="memory_wrapper_0_o_MemBusy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="o_MemBusy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_IntRequest" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="i_IntNumber" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_IntPending" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_IntAttending" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_IntAckComplete" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_IntAckAttended" SIGIS="undef"/>
+        <PORT DIR="O" NAME="led_teste" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="reg_leds" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/CustomInterconnect_0" HWVERSION="1.0" INSTANCE="CustomInterconnect_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CustomInterconnect" VLNV="user.org:user:CustomInterconnect:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_CustomInterconnect_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_WAddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_WData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CPU_0_o_REnable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CPU_0_o_RAddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable_0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_0" RIGHT="0" SIGIS="undef" SIGNAME="memory_wrapper_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_wrapper_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable_1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_REnable_1" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_WEnable_2" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_2" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_2" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_2" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_2" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_2" RIGHT="0" SIGIS="undef" SIGNAME="GPIO_Slave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable_3" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_3" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_3" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_3" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_3" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_3" RIGHT="0" SIGIS="undef" SIGNAME="UartSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable_4" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_4" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_4" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_4" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_4" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_4" RIGHT="0" SIGIS="undef" SIGNAME="PS2_Slave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PS2_Slave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_WEnable_5" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_5" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_5" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_REnable_5" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_5" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_5" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_WEnable_6" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_6" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_6" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_REnable_6" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_6" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_6" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_WEnable_7" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_7" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_7" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_7" RIGHT="0" SIGIS="undef" SIGNAME="timerSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="25" FULLNAME="/GPIO_Slave_0" HWVERSION="1.0" INSTANCE="GPIO_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Slave" VLNV="user.org:user:GPIO_Slave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_GPIO_Slave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="GPIO_Slave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="7" NAME="pin" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pin_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/PS2_Slave_0" HWVERSION="1.0" INSTANCE="PS2_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PS2_Slave" VLNV="user.org:user:PS2_Slave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_PS2_Slave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="PS2_Slave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="o_Data" RIGHT="0" SIGIS="undef" SIGNAME="PS2_Slave_0_o_Data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Data_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PS2C" SIGIS="undef" SIGNAME="External_Ports_PS2C_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PS2C_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PS2D" SIGIS="undef" SIGNAME="External_Ports_PS2D_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PS2D_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/UartSlave_0" HWVERSION="1.0" INSTANCE="UartSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UartSlave" VLNV="user.org:user:UartSlave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_UartSlave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="UartSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_Rx" SIGIS="undef" SIGNAME="External_Ports_i_Rx_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Rx_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Tx" SIGIS="undef" SIGNAME="UartSlave_0_o_Tx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_Tx_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/interruptController_0" HWVERSION="1.0" INSTANCE="interruptController_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interruptController" VLNV="xilinx.com:module_ref:interruptController:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_interruptController_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="int_sources" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="int_ack_complete" SIGIS="undef"/>
+        <PORT DIR="I" NAME="int_ack_attended" SIGIS="undef"/>
+        <PORT DIR="O" NAME="int_req" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="int_number" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="int_pending" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ea" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en1" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en2" SIGIS="undef"/>
+        <PORT DIR="I" NAME="en3" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/memory_wrapper_0" HWVERSION="1.0" INSTANCE="memory_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="memory_wrapper" VLNV="xilinx.com:module_ref:memory_wrapper:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_memory_wrapper_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="memory_wrapper_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_MemBusy" SIGIS="undef" SIGNAME="memory_wrapper_0_o_MemBusy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_DataMemRdy"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="5" FULLNAME="/timerSlave_0" HWVERSION="1.0" INSTANCE="timerSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="timerSlave" VLNV="user.org:user:timerSlave:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_timerSlave_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="timerSlave_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_TimerOverflow" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_TimerOverflow_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel1" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel1_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel2" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel3" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel3_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_PWMChannel4" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_PWMChannel4_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_OnePulse" SIGIS="undef" SIGNAME="timerSlave_0_o_OnePulse">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_OnePulse_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

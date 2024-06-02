@@ -8,7 +8,6 @@ module ExecuteMemoryReg
     input i_Flush,
 
     input [`BUS_MSB:0] i_ProgramCounter,  
-    input [`BUS_MSB:0] i_InstructionRegister,  
     input [4:0] i_IrRst,                 //IR_RDST  
 
     input i_WrEnMem,    //WE MEM
@@ -24,10 +23,8 @@ module ExecuteMemoryReg
     input [`BUS_MSB:0] i_ImmOpX,
     
     input i_JmpBit,
-    input i_JmpBxxSignal,
 
     output reg [`BUS_MSB:0] o_ProgramCounter,  
-    output reg [`BUS_MSB:0] o_InstructionRegister,
     output reg  [4:0] o_IrRst,      
     output reg [`BUS_MSB:0] o_AluOut,
     output reg [`BUS_MSB:0] o_AluOp2,
@@ -41,16 +38,13 @@ module ExecuteMemoryReg
     output reg o_MemAddrSel,
     output reg [1:0] o_RfDataInSel,     //Register File Write Address
     
-    output reg o_JmpBit,
-    
-    output reg o_JmpBxxSignal
+    output reg o_JmpBit
 );
 
 
 always @(posedge i_Clk) begin
-    if (i_Rst) begin
+    if (i_Rst || i_Flush) begin
         o_ProgramCounter <= 0;
-        o_InstructionRegister <= 0;
         o_IrRst          <= 0;
         o_WrEnMem        <= 0;
         o_RdEnMem        <= 0;
@@ -62,28 +56,10 @@ always @(posedge i_Clk) begin
         o_Imm22          <= 0;
         o_ImmOpX         <= 0;
         o_JmpBit         <= 0;
-        o_JmpBxxSignal   <= 0;
     end
     else begin
-        if (i_Flush) begin
+        if (i_Stall) begin                
             o_ProgramCounter <= o_ProgramCounter;
-            o_InstructionRegister <= 0;
-            o_IrRst          <= 0;
-            o_WrEnMem        <= 0;
-            o_RdEnMem        <= 0;
-            o_WrEnRf         <= 0;
-            o_MemAddrSel     <= 0;
-            o_RfDataInSel    <= 0;
-            o_AluOut         <= 0;
-            o_AluOp2         <= 0;
-            o_Imm22          <= 0;
-            o_ImmOpX         <= 0;
-            o_JmpBit         <= 0;
-            o_JmpBxxSignal   <= i_JmpBxxSignal;
-        end 
-        else if (i_Stall) begin                
-            o_ProgramCounter <= o_ProgramCounter;
-            o_InstructionRegister <= o_InstructionRegister;
             o_IrRst          <= o_IrRst;
             o_WrEnMem        <= o_WrEnMem;
             o_RdEnMem        <= o_RdEnMem;
@@ -95,11 +71,9 @@ always @(posedge i_Clk) begin
             o_Imm22          <= o_Imm22;
             o_ImmOpX         <= o_ImmOpX;
             o_JmpBit         <= o_JmpBit;
-            o_JmpBxxSignal   <= o_JmpBxxSignal;
         end
         else begin
             o_ProgramCounter <= i_ProgramCounter;
-            o_InstructionRegister <= i_InstructionRegister;
             o_IrRst          <= i_IrRst;
             o_WrEnMem        <= i_WrEnMem;
             o_RdEnMem        <= i_RdEnMem;
@@ -111,7 +85,6 @@ always @(posedge i_Clk) begin
             o_Imm22          <= i_Imm22;
             o_ImmOpX         <= i_ImmOpX;
             o_JmpBit         <= i_JmpBit;
-            o_JmpBxxSignal   <= i_JmpBxxSignal;
         end
     end
 end

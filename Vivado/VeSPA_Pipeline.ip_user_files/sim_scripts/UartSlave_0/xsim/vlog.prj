@@ -1,0 +1,11 @@
+verilog xil_defaultlib  \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartBaudRate.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartRx.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/UartTx.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/src/Uart.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/UartSlave_0/sim/UartSlave_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

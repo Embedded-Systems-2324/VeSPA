@@ -1,0 +1,9 @@
+verilog xil_defaultlib  \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/GPIO_Slave_0/src/gpio.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/GPIO_Slave_0/src/Gpio_Slave.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/GPIO_Slave_0/sim/GPIO_Slave_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

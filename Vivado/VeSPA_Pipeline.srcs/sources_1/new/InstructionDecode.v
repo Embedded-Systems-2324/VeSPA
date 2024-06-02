@@ -47,9 +47,7 @@ module InstructionDecode
     output [`BUS_MSB:0] o_Imm22,
     output [`BUS_MSB:0] o_Imm23,
 
-    output [3:0] o_BranchCond, 
-    
-    output [2:0]led_test
+    output [3:0] o_BranchCond
 );
 
 
@@ -85,10 +83,10 @@ assign o_Opcode = i_InstructionRegister[31:27];
 
 
 //Sign-Extends
-assign o_Imm16 = {{16{w_Imm16[15]}}, w_Imm16};
-assign o_Imm17 = {{15{w_Imm17[16]}}, w_Imm17};
-assign o_Imm22 = {{10{w_Imm22[21]}}, w_Imm22};
-assign o_Imm23 = {{9{w_Imm23[22]}}, w_Imm23};
+assign o_Imm16 = {16'b0, w_Imm16};
+assign o_Imm17 = {15'b0, w_Imm17};
+assign o_Imm22 = {10'b0, w_Imm22};
+assign o_Imm23 = {9'b0, w_Imm23};
 
 
     
@@ -106,9 +104,7 @@ RegisterFile rf
     .i_RdAddrA(w_IrRs1),
     .i_RdAddrB(w_IrRs2_in),
     .o_DataOutA(o_R1Out),
-    .o_DataOutB(o_R2Out),
-    
-    .led_test(led_test)
+    .o_DataOutB(o_R2Out)
 );
 
                                    

@@ -1,0 +1,32 @@
+NOP
+LDI 0 0
+LDI 1 13021  //Set baudrate 9600
+ST 1 1033  
+NOP
+LDI 1 3
+ST 1 1032   //Enable uart and uart reception
+NOP
+LDI 5 15    //GPIO direction register - set last bits as output and MSBs as input(0000 1111)
+ST 5 1029
+NOP
+LDI 1 9     //Write 9 to GPIO
+ST 1 1028
+NOP
+NOP
+LD 3 1028   //Read GPIO
+NOP
+NOP
+ST 3 1034   //Store GPIO value in transmition buffer
+NOP
+NOP
+LDI 4 5    //Start Uart transmition
+ST 4 1032  
+NOP
+NOP
+LD 2 1032   //check if transmition has completed
+ANDI 2 2 8  
+BEQ 8
+JMP 0 96    //Wait until it completes
+NOP
+NOP
+HALT
