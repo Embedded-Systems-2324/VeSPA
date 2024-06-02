@@ -13,8 +13,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {reg_leds[2]}]
 set_property PACKAGE_PIN M14 [get_ports {reg_leds[2]}]
 
 
-set_property PACKAGE_PIN D18 [get_ports led]
-set_property IOSTANDARD LVCMOS33 [get_ports led]
+set_property PACKAGE_PIN D18 [get_ports halt_led]
+set_property IOSTANDARD LVCMOS33 [get_ports halt_led]
 set_property PACKAGE_PIN T16 [get_ports {i_IntSources[3]}]
 set_property PACKAGE_PIN W13 [get_ports {i_IntSources[2]}]
 set_property PACKAGE_PIN P15 [get_ports {i_IntSources[1]}]

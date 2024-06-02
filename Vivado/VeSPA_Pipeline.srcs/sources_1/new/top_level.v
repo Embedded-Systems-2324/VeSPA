@@ -27,7 +27,7 @@ module top_level(
     
     input [3:0] i_IntSources,
     
-    output led,
+    output halt_led,
     output [2:0]reg_leds
 );
 
@@ -99,7 +99,7 @@ CPU cpu_instance(
     .o_IntAckComplete(intAckComplete),
     .o_IntAckAttended(intAckAttended),
     
-    .led_teste(led), 
+    .halt_led(halt_led), 
     .reg_leds(reg_leds)
 );
 

@@ -85,10 +85,10 @@ assign o_Opcode = i_InstructionRegister[31:27];
 
 
 //Sign-Extends
-assign o_Imm16 = {16'b0, w_Imm16};
-assign o_Imm17 = {15'b0, w_Imm17};
-assign o_Imm22 = {10'b0, w_Imm22};
-assign o_Imm23 = {9'b0, w_Imm23};
+assign o_Imm16 = {{16{w_Imm16[15]}}, w_Imm16};
+assign o_Imm17 = {{15{w_Imm17[16]}}, w_Imm17};
+assign o_Imm22 = {{10{w_Imm22[21]}}, w_Imm22};
+assign o_Imm23 = {{9{w_Imm23[22]}}, w_Imm23};
 
 
     

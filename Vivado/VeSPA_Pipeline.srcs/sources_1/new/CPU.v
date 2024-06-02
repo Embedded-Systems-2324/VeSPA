@@ -27,7 +27,7 @@ module CPU
     output o_IntAckAttended, 
     
     
-    output reg led_teste, 
+    output reg halt_led, 
     output [2:0]reg_leds
 );
 
@@ -81,8 +81,6 @@ assign o_WAddr = o_DataMemAddress;
 assign o_RAddr = o_DataMemAddress;
 
 
-wire w_JmpExecuted;
-
 assign w_PcBackupDelay = w_JmpBxxSignal_Fe | w_JmpBxxSignal_Dec | w_JmpBxxSignal_Exe | w_JmpBxxSignal_Mem | w_JmpBxxSignal_Wb;
 assign w_StartingIrq = w_IrqSignal_Fe | w_IrqSignal_Dec | w_IrqSignal_Exe;
 
@@ -101,7 +99,7 @@ always @ (posedge i_Clk) begin
             r_PcBackup <= w_PcJmpExe;
         end
         else if(!i_IntAttending) begin
-            if(w_BranchVerification && w_BranchBit_Exe) begin  //ver isto pq não vai ser branch verification ... vai se ter de propagar
+            if(w_BranchVerification && w_BranchBit_Exe) begin
                 r_PcBackup <= w_PcBxxExe;
             end
             else if(w_JmpBit_Exe) begin
@@ -517,16 +515,16 @@ InstructionWriteBack _InstructionWriteBack(
 
 
 
-//To test with HALT in leds
+//To test HALT in leds
 always @(posedge i_Clk) begin
     if(i_Rst) begin
-        led_teste <= 0;
+        halt_led <= 0;
     end
     else if(w_OpCodeDec == 5'b11111) begin
-        led_teste <= 1;
+        halt_led <= 1;
     end
     else begin
-        led_teste <= led_teste;
+        halt_led <= halt_led;
     end
 end 
 
