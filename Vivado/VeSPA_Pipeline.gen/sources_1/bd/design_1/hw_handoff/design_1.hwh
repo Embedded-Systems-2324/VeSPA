@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  3 21:46:23 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  4 00:46:32 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -32,12 +32,6 @@
     <PORT DIR="I" NAME="PS2D_0" SIGIS="undef" SIGNAME="External_Ports_PS2D_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="PS2_Slave_0" PORT="PS2D"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="o_Err_0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="o_TimerOverflow_0" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="timerSlave_0" PORT="o_TimerOverflow"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="o_PWMChannel1_0" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">
@@ -75,12 +69,18 @@
         <CONNECTION INSTANCE="CPU_0" PORT="i_Rst"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="o_Err_0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="source2" SIGIS="undef" SIGNAME="External_Ports_source2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="interruptControllerS_0" PORT="int_source2"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="26" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
+    <MODULE COREREVISION="27" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
@@ -103,8 +103,8 @@
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Clk"/>
-            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
@@ -113,8 +113,8 @@
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Rst"/>
-            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
@@ -152,13 +152,37 @@
             <CONNECTION INSTANCE="DataMemory_0" PORT="o_MemBusy"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_IntRequest" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="1" NAME="i_IntNumber" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="i_IntPending" SIGIS="undef"/>
-        <PORT DIR="I" NAME="i_IntAttending" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_IntAckComplete" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_IntAckAttended" SIGIS="undef"/>
-        <PORT DIR="O" NAME="led_teste" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_IntRequest" SIGIS="undef" SIGNAME="interruptControllerS_0_irq_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="irq_req"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="i_IntNumber" RIGHT="0" SIGIS="undef" SIGNAME="interruptControllerS_0_int_pending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="int_pending"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_IntPending" SIGIS="undef" SIGNAME="interruptControllerS_0_int_pending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="int_pending"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_IntAttending" SIGIS="undef" SIGNAME="interruptControllerS_0_int_attending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="int_attending"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_IntAckComplete" SIGIS="undef" SIGNAME="CPU_0_o_IntAckComplete">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="ack_complete"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_IntAckAttended" SIGIS="undef" SIGNAME="CPU_0_o_IntAckAttended">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="ack_attended"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="halt_led" SIGIS="undef"/>
         <PORT DIR="O" LEFT="2" NAME="reg_leds" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
@@ -230,12 +254,36 @@
             <CONNECTION INSTANCE="DataMemory_0" PORT="o_Err"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="o_WEnable_1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_WAddr_1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_WData_1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_REnable_1" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_RAddr_1" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="i_RData_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_WEnable_1" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_WEnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WAddr_1" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_WAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_WData_1" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_WData"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_REnable_1" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_REnable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RAddr_1" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_RAddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RData_1" RIGHT="0" SIGIS="undef" SIGNAME="interruptControllerS_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="o_WEnable_2" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_WEnable"/>
@@ -610,7 +658,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/interruptControllerS_0" HWVERSION="1.0" INSTANCE="interruptControllerS_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interruptControllerSlave" VLNV="user.org:user:interruptControllerSlave:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/interruptControllerS_0" HWVERSION="1.0" INSTANCE="interruptControllerS_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interruptControllerSlave" VLNV="user.org:user:interruptControllerSlave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_interruptControllerS_0_0"/>
@@ -627,18 +675,76 @@
             <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="i_REnable" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="interruptControllerS_0_o_RData">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_1"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="int_sources" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="ack_complete" SIGIS="undef"/>
-        <PORT DIR="I" NAME="ack_attended" SIGIS="undef"/>
-        <PORT DIR="O" NAME="irq_req" SIGIS="undef"/>
+        <PORT DIR="I" NAME="int_source0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="int_source1" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="o_TimerOverflow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="int_source2" SIGIS="undef" SIGNAME="External_Ports_source2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="source2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="int_source3" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ack_complete" SIGIS="undef" SIGNAME="CPU_0_o_IntAckComplete">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_IntAckComplete"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ack_attended" SIGIS="undef" SIGNAME="CPU_0_o_IntAckAttended">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_IntAckAttended"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="irq_req" SIGIS="undef" SIGNAME="interruptControllerS_0_irq_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_IntRequest"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="1" NAME="irq_number" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="int_pending" SIGIS="undef" SIGNAME="interruptControllerS_0_int_pending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_IntNumber"/>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_IntPending"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="int_attending" SIGIS="undef" SIGNAME="interruptControllerS_0_int_attending">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_IntAttending"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -692,7 +798,7 @@
         <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
         <PORT DIR="O" NAME="o_TimerOverflow" SIGIS="undef" SIGNAME="timerSlave_0_o_TimerOverflow">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_TimerOverflow_0"/>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="int_source1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_PWMChannel1" SIGIS="undef" SIGNAME="timerSlave_0_o_PWMChannel1">

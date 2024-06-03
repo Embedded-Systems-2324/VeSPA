@@ -2,463 +2,589 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Thu Mar 28 10:49:00 2024
+// Date        : Mon Jun  3 23:34:28 2024
 // Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_interruptControllerS_0_0 -prefix
-//               design_1_interruptControllerS_0_0_ vespa_soc_interruptControllerS_0_0_sim_netlist.v
-// Design      : vespa_soc_interruptControllerS_0_0
+// Command     : write_verilog -force -mode funcsim
+//               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0_sim_netlist.v
+// Design      : design_1_interruptControllerS_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-module design_1_interruptControllerS_0_0_interruptController
-   (irq_req,
-    \currentIrq_reg[1]_0 ,
-    \currentIrq_reg[0]_0 ,
+(* CHECK_LICENSE_TYPE = "design_1_interruptControllerS_0_0,interruptController_wrapper,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "interruptController_wrapper,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_interruptControllerS_0_0
+   (i_Clk,
     i_Rst,
-    i_Clk,
+    i_WEnable,
+    i_WAddr,
+    i_WData,
+    i_REnable,
+    i_RAddr,
+    o_RData,
+    o_Err,
+    int_source0,
+    int_source1,
+    int_source2,
+    int_source3,
     ack_complete,
     ack_attended,
-    D,
-    int_sources);
-  output irq_req;
-  output \currentIrq_reg[1]_0 ;
-  output \currentIrq_reg[0]_0 ;
-  input i_Rst;
-  input i_Clk;
+    irq_req,
+    irq_number,
+    int_pending,
+    int_attending);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *) input i_Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input i_Rst;
+  input i_WEnable;
+  input [31:0]i_WAddr;
+  input [31:0]i_WData;
+  input i_REnable;
+  input [31:0]i_RAddr;
+  output [31:0]o_RData;
+  output o_Err;
+  input int_source0;
+  input int_source1;
+  input int_source2;
+  input int_source3;
   input ack_complete;
   input ack_attended;
-  input [3:0]D;
-  input [3:0]int_sources;
+  output irq_req;
+  output [1:0]irq_number;
+  output int_pending;
+  output int_attending;
 
-  wire [3:0]D;
+  wire \<const0> ;
   wire ack_attended;
   wire ack_complete;
-  wire \completed[0]_i_1_n_0 ;
-  wire \completed[1]_i_1_n_0 ;
-  wire \completed[2]_i_1_n_0 ;
-  wire \completed[3]_i_1_n_0 ;
-  wire \completed[3]_i_2_n_0 ;
-  wire \completed_reg_n_0_[0] ;
-  wire \completed_reg_n_0_[1] ;
-  wire \completed_reg_n_0_[2] ;
-  wire \completed_reg_n_0_[3] ;
-  wire [2:2]currentIrq;
-  wire \currentIrq[0]_i_1_n_0 ;
-  wire \currentIrq[1]_i_1_n_0 ;
-  wire \currentIrq[2]_i_1_n_0 ;
-  wire \currentIrq_reg[0]_0 ;
-  wire \currentIrq_reg[1]_0 ;
+  wire i_Clk;
+  wire [31:0]i_RAddr;
+  wire i_REnable;
+  wire i_Rst;
+  wire [31:0]i_WAddr;
+  wire [31:0]i_WData;
+  wire i_WEnable;
+  wire int_attending;
+  wire int_pending;
+  wire int_source0;
+  wire int_source1;
+  wire int_source2;
+  wire int_source3;
+  wire [1:0]irq_number;
+  wire irq_req;
+  wire o_Err;
+  wire [3:0]\^o_RData ;
+
+  assign o_RData[31] = \<const0> ;
+  assign o_RData[30] = \<const0> ;
+  assign o_RData[29] = \<const0> ;
+  assign o_RData[28] = \<const0> ;
+  assign o_RData[27] = \<const0> ;
+  assign o_RData[26] = \<const0> ;
+  assign o_RData[25] = \<const0> ;
+  assign o_RData[24] = \<const0> ;
+  assign o_RData[23] = \<const0> ;
+  assign o_RData[22] = \<const0> ;
+  assign o_RData[21] = \<const0> ;
+  assign o_RData[20] = \<const0> ;
+  assign o_RData[19] = \<const0> ;
+  assign o_RData[18] = \<const0> ;
+  assign o_RData[17] = \<const0> ;
+  assign o_RData[16] = \<const0> ;
+  assign o_RData[15] = \<const0> ;
+  assign o_RData[14] = \<const0> ;
+  assign o_RData[13] = \<const0> ;
+  assign o_RData[12] = \<const0> ;
+  assign o_RData[11] = \<const0> ;
+  assign o_RData[10] = \<const0> ;
+  assign o_RData[9] = \<const0> ;
+  assign o_RData[8] = \<const0> ;
+  assign o_RData[7] = \<const0> ;
+  assign o_RData[6] = \<const0> ;
+  assign o_RData[5] = \<const0> ;
+  assign o_RData[4] = \<const0> ;
+  assign o_RData[3:0] = \^o_RData [3:0];
+  GND GND
+       (.G(\<const0> ));
+  design_1_interruptControllerS_0_0_interruptController_wrapper inst
+       (.ack_attended(ack_attended),
+        .ack_complete(ack_complete),
+        .i_Clk(i_Clk),
+        .i_RAddr(i_RAddr),
+        .i_REnable(i_REnable),
+        .i_Rst(i_Rst),
+        .i_WAddr(i_WAddr),
+        .i_WData(i_WData[3:0]),
+        .i_WEnable(i_WEnable),
+        .int_attending(int_attending),
+        .int_pending(int_pending),
+        .int_source0(int_source0),
+        .int_source1(int_source1),
+        .int_source2(int_source2),
+        .int_source3(int_source3),
+        .irq_number(irq_number),
+        .irq_req(irq_req),
+        .o_Err(o_Err),
+        .o_RData(\^o_RData ));
+endmodule
+
+(* ORIG_REF_NAME = "interruptController" *) 
+module design_1_interruptControllerS_0_0_interruptController
+   (irq_req,
+    int_pending,
+    int_attending,
+    irq_number,
+    i_Clk,
+    i_Rst,
+    ack_attended,
+    ack_complete,
+    int_source3,
+    \int_sources_prev_reg[0]_0 ,
+    D,
+    int_source0,
+    int_source1,
+    int_source2);
+  output irq_req;
+  output int_pending;
+  output int_attending;
+  output [1:0]irq_number;
+  input i_Clk;
+  input i_Rst;
+  input ack_attended;
+  input ack_complete;
+  input int_source3;
+  input \int_sources_prev_reg[0]_0 ;
+  input [2:0]D;
+  input int_source0;
+  input int_source1;
+  input int_source2;
+
+  wire [2:0]D;
+  wire ack_attended;
+  wire ack_complete;
+  wire \currIrq[0]_i_1_n_0 ;
+  wire \currIrq[1]_i_1_n_0 ;
+  wire \currIrq[2]_i_1_n_0 ;
+  wire \currIrq_reg_n_0_[0] ;
+  wire \currIrq_reg_n_0_[1] ;
   wire i_Clk;
   wire i_Rst;
+  wire int_attending;
+  wire int_attending_i_1_n_0;
+  wire \int_number[0]_i_1_n_0 ;
+  wire \int_number[0]_i_2_n_0 ;
+  wire \int_number[1]_i_1_n_0 ;
+  wire \int_number[1]_i_2_n_0 ;
+  wire int_pending;
+  wire int_pending_i_1_n_0;
+  wire int_pending_i_2_n_0;
   wire int_req_i_1_n_0;
-  wire int_req_i_2_n_0;
-  wire int_req_i_3_n_0;
-  wire int_req_i_4_n_0;
-  wire int_req_i_5_n_0;
-  wire int_req_i_6_n_0;
-  wire [3:0]int_sources;
+  wire int_source0;
+  wire int_source1;
+  wire int_source2;
+  wire int_source3;
   wire [3:0]int_sources_2;
   wire [3:0]int_sources_prev;
-  wire \int_sources_prev[3]_i_1_n_0 ;
-  wire \int_sources_prev[3]_i_3_n_0 ;
+  wire \int_sources_prev_reg[0]_0 ;
+  wire \int_sources_prev_reg[3]_i_2_n_0 ;
+  wire \int_sources_prev_reg[3]_i_3_n_0 ;
+  wire [1:0]irq_number;
   wire irq_req;
-  wire [2:0]nextIrq;
-  wire p_1_in9_in;
-  wire p_2_in11_in;
-  wire \pending[0]_i_1_n_0 ;
-  wire \pending[1]_i_1_n_0 ;
-  wire \pending[2]_i_1_n_0 ;
-  wire \pending[3]_i_1_n_0 ;
-  wire \pending[3]_i_2_n_0 ;
+  wire p_0_in;
+  wire p_1_in11_in;
+  wire p_1_in4_in;
+  wire p_2_in13_in;
+  wire \pending_reg[0]_i_1_n_0 ;
+  wire \pending_reg[1]_i_1_n_0 ;
+  wire \pending_reg[2]_i_1_n_0 ;
+  wire \pending_reg[3]_i_1_n_0 ;
+  wire \pending_reg[3]_i_2_n_0 ;
   wire \pending_reg_n_0_[0] ;
   wire \pending_reg_n_0_[3] ;
 
-  LUT5 #(
-    .INIT(32'hFFFE0002)) 
-    \completed[0]_i_1 
-       (.I0(ack_complete),
-        .I1(\currentIrq_reg[0]_0 ),
-        .I2(currentIrq),
-        .I3(\currentIrq_reg[1]_0 ),
-        .I4(\completed_reg_n_0_[0] ),
-        .O(\completed[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFB0008)) 
-    \completed[1]_i_1 
-       (.I0(ack_complete),
-        .I1(\currentIrq_reg[0]_0 ),
-        .I2(currentIrq),
-        .I3(\currentIrq_reg[1]_0 ),
-        .I4(\completed_reg_n_0_[1] ),
-        .O(\completed[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFEF0020)) 
-    \completed[2]_i_1 
-       (.I0(ack_complete),
-        .I1(\currentIrq_reg[0]_0 ),
-        .I2(\currentIrq_reg[1]_0 ),
-        .I3(currentIrq),
-        .I4(\completed_reg_n_0_[2] ),
-        .O(\completed[2]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \completed[3]_i_1 
-       (.I0(ack_complete),
-        .I1(int_req_i_3_n_0),
-        .I2(ack_attended),
-        .O(\completed[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFBF0080)) 
-    \completed[3]_i_2 
-       (.I0(ack_complete),
-        .I1(\currentIrq_reg[0]_0 ),
-        .I2(\currentIrq_reg[1]_0 ),
-        .I3(currentIrq),
-        .I4(\completed_reg_n_0_[3] ),
-        .O(\completed[3]_i_2_n_0 ));
-  FDSE \completed_reg[0] 
-       (.C(i_Rst),
-        .CE(\completed[3]_i_1_n_0 ),
-        .D(\completed[0]_i_1_n_0 ),
-        .Q(\completed_reg_n_0_[0] ),
-        .S(i_Clk));
-  FDSE \completed_reg[1] 
-       (.C(i_Rst),
-        .CE(\completed[3]_i_1_n_0 ),
-        .D(\completed[1]_i_1_n_0 ),
-        .Q(\completed_reg_n_0_[1] ),
-        .S(i_Clk));
-  FDSE \completed_reg[2] 
-       (.C(i_Rst),
-        .CE(\completed[3]_i_1_n_0 ),
-        .D(\completed[2]_i_1_n_0 ),
-        .Q(\completed_reg_n_0_[2] ),
-        .S(i_Clk));
-  FDSE \completed_reg[3] 
-       (.C(i_Rst),
-        .CE(\completed[3]_i_1_n_0 ),
-        .D(\completed[3]_i_2_n_0 ),
-        .Q(\completed_reg_n_0_[3] ),
-        .S(i_Clk));
-  LUT5 #(
-    .INIT(32'h0000FE02)) 
-    \currentIrq[0]_i_1 
-       (.I0(\currentIrq_reg[0]_0 ),
-        .I1(int_req_i_3_n_0),
-        .I2(ack_complete),
-        .I3(nextIrq[0]),
-        .I4(i_Clk),
-        .O(\currentIrq[0]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h00F4)) 
-    \currentIrq[0]_i_2 
-       (.I0(p_2_in11_in),
-        .I1(\pending_reg_n_0_[3] ),
-        .I2(p_1_in9_in),
-        .I3(\pending_reg_n_0_[0] ),
-        .O(nextIrq[0]));
-  LUT5 #(
-    .INIT(32'h0000FE02)) 
-    \currentIrq[1]_i_1 
-       (.I0(\currentIrq_reg[1]_0 ),
-        .I1(int_req_i_3_n_0),
-        .I2(ack_complete),
-        .I3(nextIrq[1]),
-        .I4(i_Clk),
-        .O(\currentIrq[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h1110)) 
-    \currentIrq[1]_i_2 
-       (.I0(\pending_reg_n_0_[0] ),
-        .I1(p_1_in9_in),
-        .I2(\pending_reg_n_0_[3] ),
-        .I3(p_2_in11_in),
-        .O(nextIrq[1]));
-  LUT5 #(
-    .INIT(32'hFFFFFE02)) 
-    \currentIrq[2]_i_1 
-       (.I0(currentIrq),
-        .I1(int_req_i_3_n_0),
-        .I2(ack_complete),
-        .I3(nextIrq[2]),
-        .I4(i_Clk),
-        .O(\currentIrq[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \currentIrq[2]_i_2 
-       (.I0(\pending_reg_n_0_[0] ),
-        .I1(p_1_in9_in),
-        .I2(\pending_reg_n_0_[3] ),
-        .I3(p_2_in11_in),
-        .O(nextIrq[2]));
-  FDRE \currentIrq_reg[0] 
-       (.C(i_Rst),
-        .CE(1'b1),
-        .D(\currentIrq[0]_i_1_n_0 ),
-        .Q(\currentIrq_reg[0]_0 ),
-        .R(1'b0));
-  FDRE \currentIrq_reg[1] 
-       (.C(i_Rst),
-        .CE(1'b1),
-        .D(\currentIrq[1]_i_1_n_0 ),
-        .Q(\currentIrq_reg[1]_0 ),
-        .R(1'b0));
-  FDRE \currentIrq_reg[2] 
-       (.C(i_Rst),
-        .CE(1'b1),
-        .D(\currentIrq[2]_i_1_n_0 ),
-        .Q(currentIrq),
-        .R(1'b0));
   LUT6 #(
-    .INIT(64'h5555445515150404)) 
-    int_req_i_1
-       (.I0(i_Clk),
+    .INIT(64'h000000E200AA00E2)) 
+    \currIrq[0]_i_1 
+       (.I0(\currIrq_reg_n_0_[0] ),
+        .I1(ack_attended),
+        .I2(\int_number[0]_i_2_n_0 ),
+        .I3(i_Clk),
+        .I4(ack_complete),
+        .I5(p_0_in),
+        .O(\currIrq[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000002E00AA002E)) 
+    \currIrq[1]_i_1 
+       (.I0(\currIrq_reg_n_0_[1] ),
+        .I1(ack_attended),
+        .I2(\int_number[1]_i_2_n_0 ),
+        .I3(i_Clk),
+        .I4(ack_complete),
+        .I5(p_0_in),
+        .O(\currIrq[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFEFAF2)) 
+    \currIrq[2]_i_1 
+       (.I0(p_1_in4_in),
+        .I1(ack_attended),
+        .I2(i_Clk),
+        .I3(ack_complete),
+        .I4(p_0_in),
+        .O(\currIrq[2]_i_1_n_0 ));
+  FDRE \currIrq_reg[0] 
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(\currIrq[0]_i_1_n_0 ),
+        .Q(\currIrq_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE \currIrq_reg[1] 
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(\currIrq[1]_i_1_n_0 ),
+        .Q(\currIrq_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE \currIrq_reg[2] 
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(\currIrq[2]_i_1_n_0 ),
+        .Q(p_1_in4_in),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hFD0C)) 
+    int_attending_i_1
+       (.I0(ack_complete),
+        .I1(ack_attended),
+        .I2(int_pending),
+        .I3(int_attending),
+        .O(int_attending_i_1_n_0));
+  FDRE int_attending_reg
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(int_attending_i_1_n_0),
+        .Q(int_attending),
+        .R(i_Clk));
+  LUT6 #(
+    .INIT(64'hFFFFAEAF0000A2A0)) 
+    \int_number[0]_i_1 
+       (.I0(\int_number[0]_i_2_n_0 ),
+        .I1(ack_attended),
+        .I2(ack_complete),
+        .I3(p_1_in4_in),
+        .I4(p_0_in),
+        .I5(irq_number[0]),
+        .O(\int_number[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0F02)) 
+    \int_number[0]_i_2 
+       (.I0(\pending_reg_n_0_[3] ),
+        .I1(p_2_in13_in),
+        .I2(\pending_reg_n_0_[0] ),
+        .I3(p_1_in11_in),
+        .O(\int_number[0]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF5D5F00005150)) 
+    \int_number[1]_i_1 
+       (.I0(\int_number[1]_i_2_n_0 ),
+        .I1(ack_attended),
+        .I2(ack_complete),
+        .I3(p_1_in4_in),
+        .I4(p_0_in),
+        .I5(irq_number[1]),
+        .O(\int_number[1]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFCD)) 
+    \int_number[1]_i_2 
+       (.I0(\pending_reg_n_0_[3] ),
+        .I1(\pending_reg_n_0_[0] ),
+        .I2(p_2_in13_in),
+        .I3(p_1_in11_in),
+        .O(\int_number[1]_i_2_n_0 ));
+  FDRE \int_number_reg[0] 
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(\int_number[0]_i_1_n_0 ),
+        .Q(irq_number[0]),
+        .R(i_Clk));
+  FDRE \int_number_reg[1] 
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(\int_number[1]_i_1_n_0 ),
+        .Q(irq_number[1]),
+        .R(i_Clk));
+  LUT6 #(
+    .INIT(64'hFEE8FFFFFEE80000)) 
+    int_pending_i_1
+       (.I0(\pending_reg_n_0_[3] ),
+        .I1(p_2_in13_in),
+        .I2(\pending_reg_n_0_[0] ),
+        .I3(p_1_in11_in),
+        .I4(int_pending_i_2_n_0),
+        .I5(int_pending),
+        .O(int_pending_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    int_pending_i_2
+       (.I0(ack_attended),
         .I1(ack_complete),
-        .I2(int_req_i_2_n_0),
-        .I3(ack_attended),
-        .I4(int_req_i_3_n_0),
-        .I5(irq_req),
-        .O(int_req_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hDDDDDDDFFFFFFFFF)) 
-    int_req_i_2
-       (.I0(int_req_i_4_n_0),
-        .I1(nextIrq[2]),
-        .I2(int_req_i_5_n_0),
-        .I3(int_sources_2[1]),
-        .I4(int_sources_2[0]),
-        .I5(int_req_i_6_n_0),
-        .O(int_req_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h22B2B2BB22B222B2)) 
-    int_req_i_3
-       (.I0(currentIrq),
-        .I1(nextIrq[2]),
-        .I2(\currentIrq_reg[1]_0 ),
-        .I3(nextIrq[1]),
-        .I4(nextIrq[0]),
-        .I5(\currentIrq_reg[0]_0 ),
-        .O(int_req_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAFCFF)) 
-    int_req_i_4
-       (.I0(\completed_reg_n_0_[1] ),
-        .I1(\completed_reg_n_0_[3] ),
-        .I2(p_2_in11_in),
-        .I3(\pending_reg_n_0_[3] ),
-        .I4(p_1_in9_in),
-        .I5(\pending_reg_n_0_[0] ),
-        .O(int_req_i_4_n_0));
+        .O(int_pending_i_2_n_0));
+  FDRE int_pending_reg
+       (.C(i_Rst),
+        .CE(1'b1),
+        .D(int_pending_i_1_n_0),
+        .Q(int_pending),
+        .R(i_Clk));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hF0808080)) 
-    int_req_i_5
-       (.I0(D[3]),
-        .I1(int_sources[3]),
-        .I2(D[0]),
-        .I3(int_sources[2]),
-        .I4(D[2]),
-        .O(int_req_i_5_n_0));
-  LUT6 #(
-    .INIT(64'hCCCCCCCCFFFFAFAC)) 
-    int_req_i_6
-       (.I0(\completed_reg_n_0_[2] ),
-        .I1(\completed_reg_n_0_[0] ),
-        .I2(p_2_in11_in),
+    .INIT(32'hFF330F02)) 
+    int_req_i_1
+       (.I0(p_1_in4_in),
+        .I1(ack_attended),
+        .I2(p_0_in),
+        .I3(ack_complete),
+        .I4(irq_req),
+        .O(int_req_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    int_req_i_2
+       (.I0(p_1_in11_in),
+        .I1(p_2_in13_in),
+        .I2(\pending_reg_n_0_[0] ),
         .I3(\pending_reg_n_0_[3] ),
-        .I4(p_1_in9_in),
-        .I5(\pending_reg_n_0_[0] ),
-        .O(int_req_i_6_n_0));
+        .O(p_0_in));
   FDRE int_req_reg
        (.C(i_Rst),
         .CE(1'b1),
         .D(int_req_i_1_n_0),
         .Q(irq_req),
-        .R(1'b0));
+        .R(i_Clk));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \int_sources_prev_reg[0] 
+       (.CLR(i_Clk),
+        .D(int_sources_2[0]),
+        .G(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(int_sources_prev[0]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \int_sources_prev[0]_i_1 
-       (.I0(D[0]),
-        .I1(int_sources[0]),
+    \int_sources_prev_reg[0]_i_1 
+       (.I0(int_source3),
+        .I1(\int_sources_prev_reg[0]_0 ),
         .O(int_sources_2[0]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \int_sources_prev_reg[1] 
+       (.CLR(i_Clk),
+        .D(int_sources_2[1]),
+        .G(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(int_sources_prev[1]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h80)) 
-    \int_sources_prev[1]_i_1 
-       (.I0(int_sources[1]),
-        .I1(D[1]),
+    \int_sources_prev_reg[1]_i_1 
+       (.I0(\int_sources_prev_reg[0]_0 ),
+        .I1(int_source2),
         .I2(D[0]),
         .O(int_sources_2[1]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \int_sources_prev_reg[2] 
+       (.CLR(i_Clk),
+        .D(int_sources_2[2]),
+        .G(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(int_sources_prev[2]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h80)) 
-    \int_sources_prev[2]_i_1 
-       (.I0(D[2]),
-        .I1(int_sources[2]),
-        .I2(D[0]),
+    \int_sources_prev_reg[2]_i_1 
+       (.I0(\int_sources_prev_reg[0]_0 ),
+        .I1(D[1]),
+        .I2(int_source1),
         .O(int_sources_2[2]));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \int_sources_prev_reg[3] 
+       (.CLR(i_Clk),
+        .D(int_sources_2[3]),
+        .G(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(int_sources_prev[3]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \int_sources_prev_reg[3]_i_1 
+       (.I0(\int_sources_prev_reg[0]_0 ),
+        .I1(D[2]),
+        .I2(int_source0),
+        .O(int_sources_2[3]));
   LUT5 #(
     .INIT(32'hFFFF6FF6)) 
-    \int_sources_prev[3]_i_1 
-       (.I0(int_sources[0]),
+    \int_sources_prev_reg[3]_i_2 
+       (.I0(int_sources_prev[1]),
+        .I1(int_sources_2[1]),
+        .I2(int_sources_prev[2]),
+        .I3(int_sources_2[2]),
+        .I4(\int_sources_prev_reg[3]_i_3_n_0 ),
+        .O(\int_sources_prev_reg[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h6FFFFFFFFC6C6C6C)) 
+    \int_sources_prev_reg[3]_i_3 
+       (.I0(int_source3),
         .I1(int_sources_prev[0]),
-        .I2(int_sources[1]),
-        .I3(int_sources_prev[1]),
-        .I4(\int_sources_prev[3]_i_3_n_0 ),
-        .O(\int_sources_prev[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \int_sources_prev[3]_i_2 
-       (.I0(int_sources[3]),
-        .I1(D[3]),
-        .I2(D[0]),
-        .O(int_sources_2[3]));
-  LUT4 #(
-    .INIT(16'h6FF6)) 
-    \int_sources_prev[3]_i_3 
-       (.I0(int_sources_prev[2]),
-        .I1(int_sources[2]),
-        .I2(int_sources_prev[3]),
-        .I3(int_sources[3]),
-        .O(\int_sources_prev[3]_i_3_n_0 ));
-  FDRE \int_sources_prev_reg[0] 
-       (.C(i_Rst),
-        .CE(\int_sources_prev[3]_i_1_n_0 ),
-        .D(int_sources_2[0]),
-        .Q(int_sources_prev[0]),
-        .R(i_Clk));
-  FDRE \int_sources_prev_reg[1] 
-       (.C(i_Rst),
-        .CE(\int_sources_prev[3]_i_1_n_0 ),
-        .D(int_sources_2[1]),
-        .Q(int_sources_prev[1]),
-        .R(i_Clk));
-  FDRE \int_sources_prev_reg[2] 
-       (.C(i_Rst),
-        .CE(\int_sources_prev[3]_i_1_n_0 ),
-        .D(int_sources_2[2]),
-        .Q(int_sources_prev[2]),
-        .R(i_Clk));
-  FDRE \int_sources_prev_reg[3] 
-       (.C(i_Rst),
-        .CE(\int_sources_prev[3]_i_1_n_0 ),
-        .D(int_sources_2[3]),
-        .Q(int_sources_prev[3]),
-        .R(i_Clk));
+        .I2(\int_sources_prev_reg[0]_0 ),
+        .I3(D[2]),
+        .I4(int_source0),
+        .I5(int_sources_prev[3]),
+        .O(\int_sources_prev_reg[3]_i_3_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \pending_reg[0] 
+       (.CLR(i_Clk),
+        .D(\pending_reg[0]_i_1_n_0 ),
+        .G(\pending_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(\pending_reg_n_0_[0] ));
   LUT6 #(
-    .INIT(64'hFFFFFF00FE00FE00)) 
-    \pending[0]_i_1 
-       (.I0(\currentIrq_reg[0]_0 ),
-        .I1(currentIrq),
-        .I2(\currentIrq_reg[1]_0 ),
-        .I3(\pending_reg_n_0_[0] ),
-        .I4(int_sources_2[0]),
-        .I5(\int_sources_prev[3]_i_1_n_0 ),
-        .O(\pending[0]_i_1_n_0 ));
+    .INIT(64'hFFFFFF00FEFE0000)) 
+    \pending_reg[0]_i_1 
+       (.I0(\currIrq_reg_n_0_[0] ),
+        .I1(\currIrq_reg_n_0_[1] ),
+        .I2(p_1_in4_in),
+        .I3(int_sources_2[0]),
+        .I4(\pending_reg_n_0_[0] ),
+        .I5(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .O(\pending_reg[0]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \pending_reg[1] 
+       (.CLR(i_Clk),
+        .D(\pending_reg[1]_i_1_n_0 ),
+        .G(\pending_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(p_1_in11_in));
   LUT6 #(
-    .INIT(64'hFFFFFF00FD00FD00)) 
-    \pending[1]_i_1 
-       (.I0(\currentIrq_reg[0]_0 ),
-        .I1(currentIrq),
-        .I2(\currentIrq_reg[1]_0 ),
-        .I3(p_1_in9_in),
-        .I4(int_sources_2[1]),
-        .I5(\int_sources_prev[3]_i_1_n_0 ),
-        .O(\pending[1]_i_1_n_0 ));
+    .INIT(64'hFFFFFF00FDFD0000)) 
+    \pending_reg[1]_i_1 
+       (.I0(\currIrq_reg_n_0_[0] ),
+        .I1(\currIrq_reg_n_0_[1] ),
+        .I2(p_1_in4_in),
+        .I3(int_sources_2[1]),
+        .I4(p_1_in11_in),
+        .I5(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .O(\pending_reg[1]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \pending_reg[2] 
+       (.CLR(i_Clk),
+        .D(\pending_reg[2]_i_1_n_0 ),
+        .G(\pending_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(p_2_in13_in));
   LUT6 #(
-    .INIT(64'hFFFFFF00FB00FB00)) 
-    \pending[2]_i_1 
-       (.I0(\currentIrq_reg[0]_0 ),
-        .I1(\currentIrq_reg[1]_0 ),
-        .I2(currentIrq),
-        .I3(p_2_in11_in),
-        .I4(int_sources_2[2]),
-        .I5(\int_sources_prev[3]_i_1_n_0 ),
-        .O(\pending[2]_i_1_n_0 ));
+    .INIT(64'hFFFFFF00FBFB0000)) 
+    \pending_reg[2]_i_1 
+       (.I0(\currIrq_reg_n_0_[0] ),
+        .I1(\currIrq_reg_n_0_[1] ),
+        .I2(p_1_in4_in),
+        .I3(int_sources_2[2]),
+        .I4(p_2_in13_in),
+        .I5(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .O(\pending_reg[2]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LDC" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:GE" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \pending_reg[3] 
+       (.CLR(i_Clk),
+        .D(\pending_reg[3]_i_1_n_0 ),
+        .G(\pending_reg[3]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(\pending_reg_n_0_[3] ));
+  LUT6 #(
+    .INIT(64'hFFFFFF00F7F70000)) 
+    \pending_reg[3]_i_1 
+       (.I0(\currIrq_reg_n_0_[0] ),
+        .I1(\currIrq_reg_n_0_[1] ),
+        .I2(p_1_in4_in),
+        .I3(int_sources_2[3]),
+        .I4(\pending_reg_n_0_[3] ),
+        .I5(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .O(\pending_reg[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \pending[3]_i_1 
-       (.I0(ack_complete),
-        .I1(\int_sources_prev[3]_i_1_n_0 ),
-        .O(\pending[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF00F700F700)) 
-    \pending[3]_i_2 
-       (.I0(\currentIrq_reg[0]_0 ),
-        .I1(\currentIrq_reg[1]_0 ),
-        .I2(currentIrq),
-        .I3(\pending_reg_n_0_[3] ),
-        .I4(int_sources_2[3]),
-        .I5(\int_sources_prev[3]_i_1_n_0 ),
-        .O(\pending[3]_i_2_n_0 ));
-  FDRE \pending_reg[0] 
-       (.C(i_Rst),
-        .CE(\pending[3]_i_1_n_0 ),
-        .D(\pending[0]_i_1_n_0 ),
-        .Q(\pending_reg_n_0_[0] ),
-        .R(i_Clk));
-  FDRE \pending_reg[1] 
-       (.C(i_Rst),
-        .CE(\pending[3]_i_1_n_0 ),
-        .D(\pending[1]_i_1_n_0 ),
-        .Q(p_1_in9_in),
-        .R(i_Clk));
-  FDRE \pending_reg[2] 
-       (.C(i_Rst),
-        .CE(\pending[3]_i_1_n_0 ),
-        .D(\pending[2]_i_1_n_0 ),
-        .Q(p_2_in11_in),
-        .R(i_Clk));
-  FDRE \pending_reg[3] 
-       (.C(i_Rst),
-        .CE(\pending[3]_i_1_n_0 ),
-        .D(\pending[3]_i_2_n_0 ),
-        .Q(\pending_reg_n_0_[3] ),
-        .R(i_Clk));
+    \pending_reg[3]_i_2 
+       (.I0(\int_sources_prev_reg[3]_i_2_n_0 ),
+        .I1(ack_complete),
+        .O(\pending_reg[3]_i_2_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "interruptController_wrapper" *) 
 module design_1_interruptControllerS_0_0_interruptController_wrapper
-   (\currentIrq_reg[1] ,
-    \currentIrq_reg[0] ,
+   (irq_number,
     o_RData,
     irq_req,
+    int_pending,
+    int_attending,
     o_Err,
     i_RAddr,
     i_WEnable,
     i_Clk,
-    i_Rst,
-    ack_complete,
-    i_WData,
-    int_sources,
     ack_attended,
+    ack_complete,
+    i_Rst,
+    i_WData,
+    int_source3,
+    int_source0,
+    int_source1,
+    int_source2,
     i_REnable,
     i_WAddr);
-  output \currentIrq_reg[1] ;
-  output \currentIrq_reg[0] ;
+  output [1:0]irq_number;
   output [3:0]o_RData;
   output irq_req;
+  output int_pending;
+  output int_attending;
   output o_Err;
   input [31:0]i_RAddr;
   input i_WEnable;
   input i_Clk;
-  input i_Rst;
-  input ack_complete;
-  input [3:0]i_WData;
-  input [3:0]int_sources;
   input ack_attended;
+  input ack_complete;
+  input i_Rst;
+  input [3:0]i_WData;
+  input int_source3;
+  input int_source0;
+  input int_source1;
+  input int_source2;
   input i_REnable;
   input [31:0]i_WAddr;
 
   wire ack_attended;
   wire ack_complete;
-  wire \currentIrq_reg[0] ;
-  wire \currentIrq_reg[1] ;
   wire i_Clk;
   wire [31:0]i_RAddr;
   wire i_REnable;
@@ -466,7 +592,13 @@ module design_1_interruptControllerS_0_0_interruptController_wrapper
   wire [31:0]i_WAddr;
   wire [3:0]i_WData;
   wire i_WEnable;
-  wire [3:0]int_sources;
+  wire int_attending;
+  wire int_pending;
+  wire int_source0;
+  wire int_source1;
+  wire int_source2;
+  wire int_source3;
+  wire [1:0]irq_number;
   wire irq_req;
   wire o_Err;
   wire o_Err0;
@@ -499,14 +631,19 @@ module design_1_interruptControllerS_0_0_interruptController_wrapper
   wire r_en3;
 
   design_1_interruptControllerS_0_0_interruptController inst1
-       (.D({r_en3,r_en2,r_en1,r_ea_reg_n_0}),
+       (.D({r_en3,r_en2,r_en1}),
         .ack_attended(ack_attended),
         .ack_complete(ack_complete),
-        .\currentIrq_reg[0]_0 (\currentIrq_reg[0] ),
-        .\currentIrq_reg[1]_0 (\currentIrq_reg[1] ),
         .i_Clk(i_Clk),
         .i_Rst(i_Rst),
-        .int_sources(int_sources),
+        .int_attending(int_attending),
+        .int_pending(int_pending),
+        .int_source0(int_source0),
+        .int_source1(int_source1),
+        .int_source2(int_source2),
+        .int_source3(int_source3),
+        .\int_sources_prev_reg[0]_0 (r_ea_reg_n_0),
+        .irq_number(irq_number),
         .irq_req(irq_req));
   LUT6 #(
     .INIT(64'h00000000AFAEA0A2)) 
@@ -781,104 +918,6 @@ module design_1_interruptControllerS_0_0_interruptController_wrapper
         .D(i_WData[3]),
         .Q(r_en3),
         .R(i_Rst));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "vespa_soc_interruptControllerS_0_0,interruptController_wrapper,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "interruptController_wrapper,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_interruptControllerS_0_0
-   (i_Clk,
-    i_Rst,
-    i_WEnable,
-    i_WAddr,
-    i_WData,
-    i_REnable,
-    i_RAddr,
-    o_RData,
-    o_Err,
-    int_sources,
-    ack_complete,
-    ack_attended,
-    irq_req,
-    irq_number);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vespa_soc_vespa_cpu_0_0_o_Clk, INSERT_VIP 0" *) input i_Clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input i_Rst;
-  input i_WEnable;
-  input [31:0]i_WAddr;
-  input [31:0]i_WData;
-  input i_REnable;
-  input [31:0]i_RAddr;
-  output [31:0]o_RData;
-  output o_Err;
-  input [3:0]int_sources;
-  input ack_complete;
-  input ack_attended;
-  output irq_req;
-  output [1:0]irq_number;
-
-  wire \<const0> ;
-  wire ack_attended;
-  wire ack_complete;
-  wire i_Clk;
-  wire [31:0]i_RAddr;
-  wire i_REnable;
-  wire i_Rst;
-  wire [31:0]i_WAddr;
-  wire [31:0]i_WData;
-  wire i_WEnable;
-  wire [3:0]int_sources;
-  wire [1:0]irq_number;
-  wire irq_req;
-  wire o_Err;
-  wire [3:0]\^o_RData ;
-
-  assign o_RData[31] = \<const0> ;
-  assign o_RData[30] = \<const0> ;
-  assign o_RData[29] = \<const0> ;
-  assign o_RData[28] = \<const0> ;
-  assign o_RData[27] = \<const0> ;
-  assign o_RData[26] = \<const0> ;
-  assign o_RData[25] = \<const0> ;
-  assign o_RData[24] = \<const0> ;
-  assign o_RData[23] = \<const0> ;
-  assign o_RData[22] = \<const0> ;
-  assign o_RData[21] = \<const0> ;
-  assign o_RData[20] = \<const0> ;
-  assign o_RData[19] = \<const0> ;
-  assign o_RData[18] = \<const0> ;
-  assign o_RData[17] = \<const0> ;
-  assign o_RData[16] = \<const0> ;
-  assign o_RData[15] = \<const0> ;
-  assign o_RData[14] = \<const0> ;
-  assign o_RData[13] = \<const0> ;
-  assign o_RData[12] = \<const0> ;
-  assign o_RData[11] = \<const0> ;
-  assign o_RData[10] = \<const0> ;
-  assign o_RData[9] = \<const0> ;
-  assign o_RData[8] = \<const0> ;
-  assign o_RData[7] = \<const0> ;
-  assign o_RData[6] = \<const0> ;
-  assign o_RData[5] = \<const0> ;
-  assign o_RData[4] = \<const0> ;
-  assign o_RData[3:0] = \^o_RData [3:0];
-  GND GND
-       (.G(\<const0> ));
-  design_1_interruptControllerS_0_0_interruptController_wrapper inst
-       (.ack_attended(ack_attended),
-        .ack_complete(ack_complete),
-        .\currentIrq_reg[0] (irq_number[0]),
-        .\currentIrq_reg[1] (irq_number[1]),
-        .i_Clk(i_Clk),
-        .i_RAddr(i_RAddr),
-        .i_REnable(i_REnable),
-        .i_Rst(i_Rst),
-        .i_WAddr(i_WAddr),
-        .i_WData(i_WData[3:0]),
-        .i_WEnable(i_WEnable),
-        .int_sources(int_sources),
-        .irq_req(irq_req),
-        .o_Err(o_Err),
-        .o_RData(\^o_RData ));
 endmodule
 `ifndef GLBL
 `define GLBL

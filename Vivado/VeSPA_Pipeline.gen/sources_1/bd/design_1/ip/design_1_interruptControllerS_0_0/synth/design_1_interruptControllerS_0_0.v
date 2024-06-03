@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:interruptControllerSlave:1.0
-// IP Revision: 1
+// IP Revision: 5
 
 (* X_CORE_INFO = "interruptController_wrapper,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_interruptControllerS_0_0,interruptController_wrapper,{}" *)
@@ -64,11 +64,16 @@ module design_1_interruptControllerS_0_0 (
   i_RAddr,
   o_RData,
   o_Err,
-  int_sources,
+  int_source0,
+  int_source1,
+  int_source2,
+  int_source3,
   ack_complete,
   ack_attended,
   irq_req,
-  irq_number
+  irq_number,
+  int_pending,
+  int_attending
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *)
@@ -84,11 +89,16 @@ input wire i_REnable;
 input wire [31 : 0] i_RAddr;
 output wire [31 : 0] o_RData;
 output wire o_Err;
-input wire [3 : 0] int_sources;
+input wire int_source0;
+input wire int_source1;
+input wire int_source2;
+input wire int_source3;
 input wire ack_complete;
 input wire ack_attended;
 output wire irq_req;
 output wire [1 : 0] irq_number;
+output wire int_pending;
+output wire int_attending;
 
   interruptController_wrapper inst (
     .i_Clk(i_Clk),
@@ -100,10 +110,15 @@ output wire [1 : 0] irq_number;
     .i_RAddr(i_RAddr),
     .o_RData(o_RData),
     .o_Err(o_Err),
-    .int_sources(int_sources),
+    .int_source0(int_source0),
+    .int_source1(int_source1),
+    .int_source2(int_source2),
+    .int_source3(int_source3),
     .ack_complete(ack_complete),
     .ack_attended(ack_attended),
     .irq_req(irq_req),
-    .irq_number(irq_number)
+    .irq_number(irq_number),
+    .int_pending(int_pending),
+    .int_attending(int_attending)
   );
 endmodule

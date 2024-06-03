@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:CPU:1.0
-// IP Revision: 26
+// IP Revision: 27
 
 `timescale 1ns/1ps
 
@@ -72,7 +72,7 @@ module design_1_CPU_0_0 (
   i_IntAttending,
   o_IntAckComplete,
   o_IntAckAttended,
-  led_teste,
+  halt_led,
   reg_leds
 );
 
@@ -101,7 +101,7 @@ input wire i_IntPending;
 input wire i_IntAttending;
 output wire o_IntAckComplete;
 output wire o_IntAckAttended;
-output wire led_teste;
+output wire halt_led;
 output wire [2 : 0] reg_leds;
 
   CPU inst (
@@ -122,7 +122,7 @@ output wire [2 : 0] reg_leds;
     .i_IntAttending(i_IntAttending),
     .o_IntAckComplete(o_IntAckComplete),
     .o_IntAckAttended(o_IntAckAttended),
-    .led_teste(led_teste),
+    .halt_led(halt_led),
     .reg_leds(reg_leds)
   );
 endmodule

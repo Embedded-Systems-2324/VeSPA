@@ -99,7 +99,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2e760fba</spirit:value>
+            <spirit:value>98c483e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -118,7 +118,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c196b05e</spirit:value>
+            <spirit:value>71ff6dcc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -395,7 +395,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>led_teste</spirit:name>
+        <spirit:name>halt_led</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -443,7 +443,7 @@
         <spirit:name>src/CodeMemory/CodeMemory.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME__InstrFetch/_CodeMem/CodeMemory</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME__InstrFetch/_CodeMem</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/Constants.v</spirit:name>
@@ -534,7 +534,7 @@
       <spirit:file>
         <spirit:name>src/CPU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_6b655cb8</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c8774f84</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -559,7 +559,7 @@
         <spirit:name>src/CodeMemory/CodeMemory.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME__InstrFetch/_CodeMem/CodeMemory</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME__InstrFetch/_CodeMem</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/Constants.v</spirit:name>
@@ -670,6 +670,7 @@
         <spirit:fileType>unknown</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -702,14 +703,14 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>26</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-06-03T20:45:51Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>27</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-06-03T23:46:19Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3e9d19c4"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c6cca5e7"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="3ea58a40"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2aaa7f55"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="97981517"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="605c4360"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

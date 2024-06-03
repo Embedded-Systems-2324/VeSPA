@@ -4,7 +4,7 @@
     "xci_name": "design_1_CPU_0_0",
     "cell_name": "CPU_0",
     "component_reference": "user.org:user:CPU:1.0",
-    "ip_revision": "26",
+    "ip_revision": "27",
     "gen_directory": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "26" } ],
+        "IPREVISION": [ { "value": "27" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -53,7 +53,7 @@
         "i_IntAttending": [ { "direction": "in" } ],
         "o_IntAckComplete": [ { "direction": "out" } ],
         "o_IntAckAttended": [ { "direction": "out" } ],
-        "led_teste": [ { "direction": "out" } ],
+        "halt_led": [ { "direction": "out" } ],
         "reg_leds": [ { "direction": "out", "size_left": "2", "size_right": "0" } ]
       },
       "interfaces": {
