@@ -11,7 +11,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2096.305 ; gain = 150.992 ; free physical = 3515 ; free virtual = 10761
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2096.273 ; gain = 150.992 ; free physical = 5674 ; free virtual = 11990
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/joseleite/VeSPA_Peripherals'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/data/ip'.
@@ -32,7 +32,6 @@ WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:vespa_cpu:1.0'.
 WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:timerSlave:1.0'. The one found in IP location '/home/joseleite/VeSPA_Peripherals/VeSPA-Timer/timer' will take precedence over the same IP in locations: 
    /home/joseleite/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/timer
    /home/joseleite/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/timer
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2263.121 ; gain = 143.004 ; free physical = 3487 ; free virtual = 10744
 Command: read_checkpoint -auto_incremental -incremental /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/utils_1/imports/synth_1/CPU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -45,81 +44,83 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27045
+INFO: [Synth 8-7075] Helper process launched with PID 8147
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2856.078 ; gain = 369.797 ; free physical = 2515 ; free virtual = 9760
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2832.004 ; gain = 377.770 ; free physical = 4694 ; free virtual = 11009
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_CPU_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CPU_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_CPU_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CPU_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_CPU_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CPU_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_CPU_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CPU_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'o_IntAckComplete' of module 'design_1_CPU_0_0' is unconnected for instance 'CPU_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
 WARNING: [Synth 8-7071] port 'o_IntAckAttended' of module 'design_1_CPU_0_0' is unconnected for instance 'CPU_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
 WARNING: [Synth 8-7071] port 'led_teste' of module 'design_1_CPU_0_0' is unconnected for instance 'CPU_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
-WARNING: [Synth 8-7023] instance 'CPU_0' of module 'design_1_CPU_0_0' has 17 connections declared, but only 14 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
-INFO: [Synth 8-6157] synthesizing module 'design_1_CustomInterconnect_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CustomInterconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_CustomInterconnect_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CustomInterconnect_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_WEnable_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WAddr_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WData_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_REnable_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_RAddr_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WEnable_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WAddr_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WData_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_REnable_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_RAddr_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WEnable_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WAddr_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_WData_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_REnable_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7071] port 'o_RAddr_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-WARNING: [Synth 8-7023] instance 'CustomInterconnect_0' of module 'design_1_CustomInterconnect_0_0' has 54 connections declared, but only 39 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:128]
-INFO: [Synth 8-6157] synthesizing module 'design_1_GPIO_Slave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_GPIO_Slave_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_GPIO_Slave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_GPIO_Slave_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_GPIO_Slave_0_0' is unconnected for instance 'GPIO_Slave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:168]
-WARNING: [Synth 8-7023] instance 'GPIO_Slave_0' of module 'design_1_GPIO_Slave_0_0' has 10 connections declared, but only 9 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:168]
-INFO: [Synth 8-6157] synthesizing module 'design_1_PS2_Slave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_PS2_Slave_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_PS2_Slave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_PS2_Slave_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_PS2_Slave_0_0' is unconnected for instance 'PS2_Slave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:178]
-WARNING: [Synth 8-7023] instance 'PS2_Slave_0' of module 'design_1_PS2_Slave_0_0' has 12 connections declared, but only 11 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:178]
-INFO: [Synth 8-6157] synthesizing module 'design_1_UartSlave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_UartSlave_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_UartSlave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_UartSlave_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_UartSlave_0_0' is unconnected for instance 'UartSlave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:190]
-WARNING: [Synth 8-7023] instance 'UartSlave_0' of module 'design_1_UartSlave_0_0' has 11 connections declared, but only 10 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:190]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
-INFO: [Synth 8-6157] synthesizing module 'design_1_interruptController_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_interruptController_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_interruptController_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_interruptController_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'int_req' of module 'design_1_interruptController_0_0' is unconnected for instance 'interruptController_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
-WARNING: [Synth 8-7071] port 'int_number' of module 'design_1_interruptController_0_0' is unconnected for instance 'interruptController_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
-WARNING: [Synth 8-7071] port 'int_pending' of module 'design_1_interruptController_0_0' is unconnected for instance 'interruptController_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
-WARNING: [Synth 8-7023] instance 'interruptController_0' of module 'design_1_interruptController_0_0' has 12 connections declared, but only 9 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
-INFO: [Synth 8-6157] synthesizing module 'design_1_memory_wrapper_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_memory_wrapper_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_memory_wrapper_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_memory_wrapper_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_memory_wrapper_0_0' is unconnected for instance 'memory_wrapper_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:211]
-WARNING: [Synth 8-7023] instance 'memory_wrapper_0' of module 'design_1_memory_wrapper_0_0' has 10 connections declared, but only 9 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:211]
-INFO: [Synth 8-6157] synthesizing module 'design_1_timerSlave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_timerSlave_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_timerSlave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-26961-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_timerSlave_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_timerSlave_0_0' is unconnected for instance 'timerSlave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:221]
-WARNING: [Synth 8-7023] instance 'timerSlave_0' of module 'design_1_timerSlave_0_0' has 15 connections declared, but only 14 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:221]
+WARNING: [Synth 8-7071] port 'reg_leds' of module 'design_1_CPU_0_0' is unconnected for instance 'CPU_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
+WARNING: [Synth 8-7023] instance 'CPU_0' of module 'design_1_CPU_0_0' has 19 connections declared, but only 15 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:113]
+INFO: [Synth 8-6157] synthesizing module 'design_1_CustomInterconnect_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CustomInterconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_CustomInterconnect_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_CustomInterconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_WEnable_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WAddr_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WData_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_REnable_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_RAddr_1' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WEnable_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WAddr_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WData_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_REnable_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_RAddr_5' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WEnable_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WAddr_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_WData_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_REnable_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7071] port 'o_RAddr_6' of module 'design_1_CustomInterconnect_0_0' is unconnected for instance 'CustomInterconnect_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+WARNING: [Synth 8-7023] instance 'CustomInterconnect_0' of module 'design_1_CustomInterconnect_0_0' has 54 connections declared, but only 39 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:129]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DataMemory_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_DataMemory_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DataMemory_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_DataMemory_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_RData' of module 'design_1_DataMemory_0_0' is unconnected for instance 'DataMemory_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:169]
+WARNING: [Synth 8-7023] instance 'DataMemory_0' of module 'design_1_DataMemory_0_0' has 10 connections declared, but only 9 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:169]
+INFO: [Synth 8-6157] synthesizing module 'design_1_GPIO_Slave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_GPIO_Slave_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_GPIO_Slave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_GPIO_Slave_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_GPIO_Slave_0_0' is unconnected for instance 'GPIO_Slave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:179]
+WARNING: [Synth 8-7023] instance 'GPIO_Slave_0' of module 'design_1_GPIO_Slave_0_0' has 10 connections declared, but only 9 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:179]
+INFO: [Synth 8-6157] synthesizing module 'design_1_PS2_Slave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_PS2_Slave_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_PS2_Slave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_PS2_Slave_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_PS2_Slave_0_0' is unconnected for instance 'PS2_Slave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:189]
+WARNING: [Synth 8-7023] instance 'PS2_Slave_0' of module 'design_1_PS2_Slave_0_0' has 12 connections declared, but only 11 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:189]
+INFO: [Synth 8-6157] synthesizing module 'design_1_UartSlave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_UartSlave_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_UartSlave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_UartSlave_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_UartSlave_0_0' is unconnected for instance 'UartSlave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
+WARNING: [Synth 8-7023] instance 'UartSlave_0' of module 'design_1_UartSlave_0_0' has 11 connections declared, but only 10 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:201]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+INFO: [Synth 8-6157] synthesizing module 'design_1_interruptControllerS_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_interruptControllerS_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_interruptControllerS_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_interruptControllerS_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_RData' of module 'design_1_interruptControllerS_0_0' is unconnected for instance 'interruptControllerS_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_interruptControllerS_0_0' is unconnected for instance 'interruptControllerS_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+WARNING: [Synth 8-7071] port 'irq_req' of module 'design_1_interruptControllerS_0_0' is unconnected for instance 'interruptControllerS_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+WARNING: [Synth 8-7071] port 'irq_number' of module 'design_1_interruptControllerS_0_0' is unconnected for instance 'interruptControllerS_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+WARNING: [Synth 8-7023] instance 'interruptControllerS_0' of module 'design_1_interruptControllerS_0_0' has 14 connections declared, but only 10 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:212]
+INFO: [Synth 8-6157] synthesizing module 'design_1_timerSlave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_timerSlave_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_timerSlave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/.Xil/Vivado-8118-joseleite-ThinkPad-L15-Gen-1/realtime/design_1_timerSlave_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'o_Err' of module 'design_1_timerSlave_0_0' is unconnected for instance 'timerSlave_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:223]
+WARNING: [Synth 8-7023] instance 'timerSlave_0' of module 'design_1_timerSlave_0_0' has 15 connections declared, but only 14 given [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:223]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
 WARNING: [Synth 8-3848] Net o_Err_0 in module/entity design_1 does not have driver. [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/synth/design_1.v:36]
 WARNING: [Synth 8-7129] Port o_Err_0 in module design_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2925.016 ; gain = 438.734 ; free physical = 2427 ; free virtual = 9672
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2901.941 ; gain = 447.707 ; free physical = 4603 ; free virtual = 10920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2939.859 ; gain = 453.578 ; free physical = 2425 ; free virtual = 9670
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2916.785 ; gain = 462.551 ; free physical = 4601 ; free virtual = 10918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2939.859 ; gain = 453.578 ; free physical = 2425 ; free virtual = 9670
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2916.785 ; gain = 462.551 ; free physical = 4601 ; free virtual = 10918
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2939.859 ; gain = 0.000 ; free physical = 2425 ; free virtual = 9670
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2916.785 ; gain = 0.000 ; free physical = 4601 ; free virtual = 10918
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -130,14 +131,14 @@ Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sour
 Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0_in_context.xdc] for cell 'design_1_i/GPIO_Slave_0'
 Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0/vespa_soc_UartSlave_0_0_in_context.xdc] for cell 'design_1_i/UartSlave_0'
 Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0/vespa_soc_UartSlave_0_0_in_context.xdc] for cell 'design_1_i/UartSlave_0'
-Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0/design_1_timerSlave_0_0_in_context.xdc] for cell 'design_1_i/timerSlave_0'
-Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0/design_1_timerSlave_0_0_in_context.xdc] for cell 'design_1_i/timerSlave_0'
-Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptController_0_0/design_1_interruptController_0_0/design_1_interruptController_0_0_in_context.xdc] for cell 'design_1_i/interruptController_0'
-Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptController_0_0/design_1_interruptController_0_0/design_1_interruptController_0_0_in_context.xdc] for cell 'design_1_i/interruptController_0'
 Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0_in_context.xdc] for cell 'design_1_i/PS2_Slave_0'
 Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0_in_context.xdc] for cell 'design_1_i/PS2_Slave_0'
-Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0_in_context.xdc] for cell 'design_1_i/memory_wrapper_0'
-Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0_in_context.xdc] for cell 'design_1_i/memory_wrapper_0'
+Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_DataMemory_0_0/design_1_DataMemory_0_0/vespa_soc_DataMemory_0_0_in_context.xdc] for cell 'design_1_i/DataMemory_0'
+Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_DataMemory_0_0/design_1_DataMemory_0_0/vespa_soc_DataMemory_0_0_in_context.xdc] for cell 'design_1_i/DataMemory_0'
+Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0/vespa_soc_interruptControllerS_0_0_in_context.xdc] for cell 'design_1_i/interruptControllerS_0'
+Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0/vespa_soc_interruptControllerS_0_0_in_context.xdc] for cell 'design_1_i/interruptControllerS_0'
+Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0/design_1_timerSlave_0_0_in_context.xdc] for cell 'design_1_i/timerSlave_0'
+Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0/design_1_timerSlave_0_0_in_context.xdc] for cell 'design_1_i/timerSlave_0'
 Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0/design_1_CPU_0_0_in_context.xdc] for cell 'design_1_i/CPU_0'
 Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0/design_1_CPU_0_0_in_context.xdc] for cell 'design_1_i/CPU_0'
 Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/constrs_1/new/Constraints.xdc]
@@ -148,22 +149,22 @@ Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/syn
 Finished Parsing XDC File [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2988.785 ; gain = 0.000 ; free physical = 2414 ; free virtual = 9659
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2989.723 ; gain = 0.000 ; free physical = 4590 ; free virtual = 10906
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2988.785 ; gain = 0.000 ; free physical = 2414 ; free virtual = 9659
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2989.723 ; gain = 0.000 ; free physical = 4590 ; free virtual = 10906
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2410 ; free virtual = 9656
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4582 ; free virtual = 10898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2410 ; free virtual = 9656
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4582 ; free virtual = 10898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -172,16 +173,16 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  aut
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/CustomInterconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/GPIO_Slave_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/UartSlave_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/timerSlave_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/interruptController_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/PS2_Slave_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/memory_wrapper_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/DataMemory_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/interruptControllerS_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/timerSlave_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/CPU_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2410 ; free virtual = 9656
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4582 ; free virtual = 10898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2410 ; free virtual = 9657
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4581 ; free virtual = 10898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -205,25 +206,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port o_Err_0 in module design_1 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2407 ; free virtual = 9656
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4575 ; free virtual = 10898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2403 ; free virtual = 9655
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4563 ; free virtual = 10888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2403 ; free virtual = 9655
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4563 ; free virtual = 10888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2400 ; free virtual = 9651
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4563 ; free virtual = 10888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -241,93 +242,93 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+---------------------------------+----------+
-|      |BlackBox name                    |Instances |
-+------+---------------------------------+----------+
-|1     |design_1_CPU_0_0                 |         1|
-|2     |design_1_CustomInterconnect_0_0  |         1|
-|3     |design_1_GPIO_Slave_0_0          |         1|
-|4     |design_1_PS2_Slave_0_0           |         1|
-|5     |design_1_UartSlave_0_0           |         1|
-|6     |design_1_interruptController_0_0 |         1|
-|7     |design_1_memory_wrapper_0_0      |         1|
-|8     |design_1_timerSlave_0_0          |         1|
-+------+---------------------------------+----------+
++------+----------------------------------+----------+
+|      |BlackBox name                     |Instances |
++------+----------------------------------+----------+
+|1     |design_1_CPU_0_0                  |         1|
+|2     |design_1_CustomInterconnect_0_0   |         1|
+|3     |design_1_DataMemory_0_0           |         1|
+|4     |design_1_GPIO_Slave_0_0           |         1|
+|5     |design_1_PS2_Slave_0_0            |         1|
+|6     |design_1_UartSlave_0_0            |         1|
+|7     |design_1_interruptControllerS_0_0 |         1|
+|8     |design_1_timerSlave_0_0           |         1|
++------+----------------------------------+----------+
 
 Report Cell Usage: 
-+------+-------------------------------+------+
-|      |Cell                           |Count |
-+------+-------------------------------+------+
-|1     |design_1_CPU_0                 |     1|
-|2     |design_1_CustomInterconnect_0  |     1|
-|3     |design_1_GPIO_Slave_0          |     1|
-|4     |design_1_PS2_Slave_0           |     1|
-|5     |design_1_UartSlave_0           |     1|
-|6     |design_1_interruptController_0 |     1|
-|7     |design_1_memory_wrapper_0      |     1|
-|8     |design_1_timerSlave_0          |     1|
-|9     |IBUF                           |     5|
-|10    |OBUF                           |    11|
-|11    |OBUFT                          |     1|
-+------+-------------------------------+------+
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |design_1_CPU_0                  |     1|
+|2     |design_1_CustomInterconnect_0   |     1|
+|3     |design_1_DataMemory_0           |     1|
+|4     |design_1_GPIO_Slave_0           |     1|
+|5     |design_1_PS2_Slave_0            |     1|
+|6     |design_1_UartSlave_0            |     1|
+|7     |design_1_interruptControllerS_0 |     1|
+|8     |design_1_timerSlave_0           |     1|
+|9     |IBUF                            |     5|
+|10    |OBUF                            |    11|
+|11    |OBUFT                           |     1|
++------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2395 ; free virtual = 9648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2988.785 ; gain = 453.578 ; free physical = 2396 ; free virtual = 9648
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2988.785 ; gain = 502.504 ; free physical = 2396 ; free virtual = 9648
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2989.723 ; gain = 462.551 ; free physical = 4557 ; free virtual = 10878
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2989.723 ; gain = 535.488 ; free physical = 4557 ; free virtual = 10878
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2988.785 ; gain = 0.000 ; free physical = 2468 ; free virtual = 9721
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2989.723 ; gain = 0.000 ; free physical = 4631 ; free virtual = 10951
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2988.785 ; gain = 0.000 ; free physical = 2670 ; free virtual = 9922
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2989.723 ; gain = 0.000 ; free physical = 4841 ; free virtual = 11162
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: e38c3a0a
+Synth Design complete | Checksum: bbe21957
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+42 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 2988.785 ; gain = 725.664 ; free physical = 2668 ; free virtual = 9922
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2590.264; main = 2265.297; forked = 374.907
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3934.906; main = 2956.773; forked = 978.133
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2989.723 ; gain = 856.762 ; free physical = 4841 ; free virtual = 11162
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2583.178; main = 2259.888; forked = 374.936
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3935.848; main = 2957.711; forked = 978.137
 INFO: [Common 17-1381] The checkpoint '/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun  2 20:54:10 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  3 21:48:45 2024...

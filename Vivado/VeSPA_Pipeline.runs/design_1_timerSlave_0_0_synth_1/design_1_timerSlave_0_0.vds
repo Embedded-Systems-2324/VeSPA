@@ -3,16 +3,16 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue May 28 16:09:30 2024
-# Process ID: 57447
+# Start of session at: Mon Jun  3 21:43:07 2024
+# Process ID: 6187
 # Current directory: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_timerSlave_0_0_synth_1
 # Command line: vivado -log design_1_timerSlave_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_timerSlave_0_0.tcl
 # Log file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_timerSlave_0_0_synth_1/design_1_timerSlave_0_0.vds
 # Journal file: /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_timerSlave_0_0_synth_1/vivado.jou
-# Running On: joseleite-ThinkPad-L15-Gen-1, OS: Linux, CPU Frequency: 3399.519 MHz, CPU Physical cores: 4, Host memory: 16402 MB
+# Running On: joseleite-ThinkPad-L15-Gen-1, OS: Linux, CPU Frequency: 3400.008 MHz, CPU Physical cores: 4, Host memory: 16402 MB
 #-----------------------------------------------------------
 source design_1_timerSlave_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2096.133 ; gain = 148.992 ; free physical = 219 ; free virtual = 6556
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2096.473 ; gain = 148.992 ; free physical = 6291 ; free virtual = 12320
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/joseleite/VeSPA_Peripherals'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/data/ip'.
@@ -41,101 +41,85 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 57558
+INFO: [Synth 8-7075] Helper process launched with PID 6257
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2828.895 ; gain = 376.801 ; free physical = 150 ; free virtual = 2627
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2831.234 ; gain = 379.770 ; free physical = 5275 ; free virtual = 11332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_timerSlave_0_0' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/synth/design_1_timerSlave_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'timerSlave' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timerSlave.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Timer' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:33]
-INFO: [Synth 8-226] default block is never used [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:108]
-INFO: [Synth 8-226] default block is never used [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:192]
-INFO: [Synth 8-6155] done synthesizing module 'Timer' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'timerSlave' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timerSlave.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timerSlave' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timerSlave.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Timer' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:33]
+INFO: [Synth 8-226] default block is never used [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:108]
+INFO: [Synth 8-226] default block is never used [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:192]
+INFO: [Synth 8-6155] done synthesizing module 'Timer' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'timerSlave' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timerSlave.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_timerSlave_0_0' (0#1) [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_timerSlave_0_0/synth/design_1_timerSlave_0_0.v:53]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
-WARNING: [Synth 8-7129] Port i_OnePulseLength[15] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[14] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[13] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[12] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[11] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[10] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[9] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[8] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[7] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[6] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[5] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[4] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[3] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[2] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[1] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_OnePulseLength[0] in module Timer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_AutoReload in module Timer is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 2901.832 ; gain = 449.738 ; free physical = 227 ; free virtual = 2358
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2901.172 ; gain = 449.707 ; free physical = 5222 ; free virtual = 11279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 2919.645 ; gain = 467.551 ; free physical = 229 ; free virtual = 2330
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2918.984 ; gain = 467.520 ; free physical = 5219 ; free virtual = 11275
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 2919.645 ; gain = 467.551 ; free physical = 229 ; free virtual = 2330
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2918.984 ; gain = 467.520 ; free physical = 5219 ; free virtual = 11275
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2919.645 ; gain = 0.000 ; free physical = 202 ; free virtual = 2318
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2918.984 ; gain = 0.000 ; free physical = 5219 ; free virtual = 11275
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3063.426 ; gain = 0.000 ; free physical = 226 ; free virtual = 2124
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3064.766 ; gain = 0.000 ; free physical = 5183 ; free virtual = 11266
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:01 . Memory (MB): peak = 3063.426 ; gain = 0.000 ; free physical = 212 ; free virtual = 2121
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3064.766 ; gain = 0.000 ; free physical = 5182 ; free virtual = 11266
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 181 ; free virtual = 1491
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5066 ; free virtual = 11234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 177 ; free virtual = 1490
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5065 ; free virtual = 11234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 176 ; free virtual = 1489
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5065 ; free virtual = 11234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 216 ; free virtual = 1486
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5064 ; free virtual = 11233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 3     
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 5     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 11    
 +---Muxes : 
-	   4 Input   32 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 10    
-	   2 Input    8 Bit        Muxes := 11    
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 17    
-	   2 Input    1 Bit        Muxes := 51    
+	   4 Input    1 Bit        Muxes := 14    
+	   5 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 19    
 	   8 Input    1 Bit        Muxes := 9     
 	   9 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -154,99 +138,35 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk8_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:84]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:84]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:84]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk4_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:83]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:83]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:83]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk2_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:82]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:82]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/5436/src/timer.v:82]
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[31]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[30]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[29]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[28]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[27]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[26]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[25]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[24]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[23]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[22]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[21]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[20]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[19]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[18]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[17]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[16]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[15]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[14]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[13]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[12]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[11]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[10]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[9]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[8]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[7]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[6]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[5]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[4]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[3]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[2]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[1]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_Counter_reg[0]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[31]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[30]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[29]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[28]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[27]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[26]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[25]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[24]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[23]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[22]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[21]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[20]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[19]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[18]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[17]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[16]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[15]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[14]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[13]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[12]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[11]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[10]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[9]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[8]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[7]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[6]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[5]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[4]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[3]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[2]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[1]_C) is unused and will be removed from module design_1_timerSlave_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/inst/r_EventCounter_reg[0]_C) is unused and will be removed from module design_1_timerSlave_0_0.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk8_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:84]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk4_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:83]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:83]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inst/r_DivisorClk2_reg/Q' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:82]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:82]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/4038/src/timer.v:82]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 191 ; free virtual = 1398
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5034 ; free virtual = 11211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 149 ; free virtual = 1182
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:47 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 149 ; free virtual = 1182
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 211 ; free virtual = 1186
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -264,37 +184,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -310,45 +230,41 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    26|
-|2     |LUT2   |    84|
-|3     |LUT3   |    62|
-|4     |LUT4   |    57|
-|5     |LUT5   |   103|
-|6     |LUT6   |   139|
+|1     |CARRY4 |    29|
+|2     |LUT2   |    44|
+|3     |LUT3   |    14|
+|4     |LUT4   |    36|
+|5     |LUT5   |    87|
+|6     |LUT6   |    77|
 |7     |MUXF7  |     4|
-|8     |FDCE   |    14|
-|9     |FDPE   |    78|
-|10    |FDRE   |   124|
-|11    |LDC    |    78|
+|8     |FDRE   |   203|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11191
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 9 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 3063.426 ; gain = 467.551 ; free physical = 236 ; free virtual = 1187
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 3063.426 ; gain = 611.332 ; free physical = 236 ; free virtual = 1187
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 3064.766 ; gain = 467.520 ; free physical = 5018 ; free virtual = 11191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 3064.766 ; gain = 613.301 ; free physical = 5018 ; free virtual = 11191
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3063.426 ; gain = 0.000 ; free physical = 226 ; free virtual = 1184
-INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3064.766 ; gain = 0.000 ; free physical = 5018 ; free virtual = 11192
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3063.426 ; gain = 0.000 ; free physical = 200 ; free virtual = 1175
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3064.766 ; gain = 0.000 ; free physical = 5312 ; free virtual = 11488
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 78 instances were transformed.
-  LDC => LDCE: 78 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 24fb9ecb
+Synth Design complete | Checksum: 84f67c51
 INFO: [Common 17-83] Releasing license: Synthesis
-91 Infos, 28 Warnings, 9 Critical Warnings and 0 Errors encountered.
+27 Infos, 11 Warnings, 9 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:01:07 . Memory (MB): peak = 3063.426 ; gain = 930.605 ; free physical = 199 ; free virtual = 1175
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2335.936; main = 2054.060; forked = 281.876
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4028.875; main = 3063.430; forked = 965.461
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 3064.766 ; gain = 930.605 ; free physical = 5312 ; free virtual = 11488
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2606.141; main = 2282.111; forked = 376.309
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4010.887; main = 3064.770; forked = 978.133
 INFO: [Common 17-1381] The checkpoint '/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_timerSlave_0_0_synth_1/design_1_timerSlave_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.runs/design_1_timerSlave_0_0_synth_1/design_1_timerSlave_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_timerSlave_0_0_utilization_synth.rpt -pb design_1_timerSlave_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 28 16:10:58 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  3 21:43:59 2024...

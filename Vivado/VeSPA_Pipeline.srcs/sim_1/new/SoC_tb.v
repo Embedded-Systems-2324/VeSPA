@@ -58,6 +58,8 @@ module SoC_tb(
     .o_Tx_0(o_Tx_0),
     .pin_0(pin_0)
   );
+  
+  assign pin_0[1] = (o_TimerOverflow_0) ? 1'b0 : 1'b1;
 
   // Geração do clock
   initial begin

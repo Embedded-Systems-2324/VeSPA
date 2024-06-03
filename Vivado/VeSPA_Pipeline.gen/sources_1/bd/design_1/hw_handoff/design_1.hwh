@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  3 14:22:52 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  3 21:46:23 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -80,7 +80,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="7" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
+    <MODULE COREREVISION="26" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
@@ -99,22 +99,22 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
-            <CONNECTION INSTANCE="interruptController_0" PORT="clk"/>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
-            <CONNECTION INSTANCE="interruptController_0" PORT="rst"/>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
@@ -147,9 +147,9 @@
             <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RData"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_DataMemRdy" SIGIS="undef" SIGNAME="memory_wrapper_0_o_MemBusy">
+        <PORT DIR="I" NAME="i_DataMemRdy" SIGIS="undef" SIGNAME="DataMemory_0_o_MemBusy">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="o_MemBusy"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="o_MemBusy"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="i_IntRequest" SIGIS="undef"/>
@@ -202,32 +202,32 @@
         </PORT>
         <PORT DIR="O" NAME="o_WEnable_0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WEnable"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_WEnable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="o_WAddr_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WAddr"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_WAddr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="o_WData_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_WData"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_WData"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_REnable_0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_REnable"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_REnable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="o_RAddr_0" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="i_RAddr"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="i_RAddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="i_RData_0" RIGHT="0" SIGIS="undef" SIGNAME="memory_wrapper_0_o_RData">
+        <PORT DIR="I" LEFT="31" NAME="i_RData_0" RIGHT="0" SIGIS="undef" SIGNAME="DataMemory_0_o_Err">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="memory_wrapper_0" PORT="o_RData"/>
+            <CONNECTION INSTANCE="DataMemory_0" PORT="o_Err"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable_1" SIGIS="undef"/>
@@ -366,6 +366,62 @@
         <PORT DIR="I" LEFT="31" NAME="i_RData_7" RIGHT="0" SIGIS="undef" SIGNAME="timerSlave_0_o_RData">
           <CONNECTIONS>
             <CONNECTION INSTANCE="timerSlave_0" PORT="o_RData"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DataMemory_0" HWVERSION="1.0" INSTANCE="DataMemory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DataMemory" VLNV="user.org:user:DataMemory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_DataMemory_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="o_Err" SIGIS="undef" SIGNAME="DataMemory_0_o_Err">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_MemBusy" SIGIS="undef" SIGNAME="DataMemory_0_o_MemBusy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CPU_0" PORT="i_DataMemRdy"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -554,40 +610,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/interruptController_0" HWVERSION="1.0" INSTANCE="interruptController_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interruptController" VLNV="xilinx.com:module_ref:interruptController:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/interruptControllerS_0" HWVERSION="1.0" INSTANCE="interruptControllerS_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="interruptControllerSlave" VLNV="user.org:user:interruptControllerSlave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_interruptController_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CPU_0" PORT="o_Clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="int_sources" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="int_ack_complete" SIGIS="undef"/>
-        <PORT DIR="I" NAME="int_ack_attended" SIGIS="undef"/>
-        <PORT DIR="O" NAME="int_req" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="1" NAME="int_number" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="int_pending" SIGIS="undef"/>
-        <PORT DIR="I" NAME="ea" SIGIS="undef"/>
-        <PORT DIR="I" NAME="en1" SIGIS="undef"/>
-        <PORT DIR="I" NAME="en2" SIGIS="undef"/>
-        <PORT DIR="I" NAME="en3" SIGIS="undef"/>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/memory_wrapper_0" HWVERSION="1.0" INSTANCE="memory_wrapper_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="memory_wrapper" VLNV="xilinx.com:module_ref:memory_wrapper:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_memory_wrapper_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_interruptControllerS_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -601,46 +627,22 @@
             <CONNECTION INSTANCE="CPU_0" PORT="o_Rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WEnable_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WEnable_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WAddr_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WAddr_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_WData_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_WData_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="i_REnable" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_REnable_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_REnable_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef" SIGNAME="CustomInterconnect_0_o_RAddr_0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="o_RAddr_0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef" SIGNAME="memory_wrapper_0_o_RData">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_RData_0"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" NAME="i_WEnable" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_WAddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_WData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="i_REnable" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="i_RAddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="o_RData" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
-        <PORT DIR="O" NAME="o_MemBusy" SIGIS="undef" SIGNAME="memory_wrapper_0_o_MemBusy">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="CPU_0" PORT="i_DataMemRdy"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="int_sources" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ack_complete" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ack_attended" SIGIS="undef"/>
+        <PORT DIR="O" NAME="irq_req" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="irq_number" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/timerSlave_0" HWVERSION="1.0" INSTANCE="timerSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="timerSlave" VLNV="user.org:user:timerSlave:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/timerSlave_0" HWVERSION="1.0" INSTANCE="timerSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="timerSlave" VLNV="user.org:user:timerSlave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_timerSlave_0_0"/>

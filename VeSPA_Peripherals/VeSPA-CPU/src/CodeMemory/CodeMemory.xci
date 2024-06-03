@@ -2,10 +2,10 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CodeMemory",
-    "cell_name": "_InstrFetch/_CodeMem",
+    "cell_name": "_InstrFetch/_CodeMem/CodeMemory",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "6",
-    "gen_directory": "../../../../Vivado/VeSPA_Pipeline.tmp/CPU_v1_0_project/CPU_v1_0_project.gen/sources_1/ip/CodeMemory",
+    "gen_directory": "../../../../Vivado_Projects/Vivado/VeSPA_Pipeline.tmp/CPU_v1_0_project/CPU_v1_0_project.gen/sources_1/ip/CodeMemory",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "CodeMemory", "resolve_type": "user", "usage": "all" } ],
@@ -175,7 +175,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "6" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../Vivado/VeSPA_Pipeline.tmp/CPU_v1_0_project/CPU_v1_0_project.gen/sources_1/ip/CodeMemory" } ],
+        "OUTPUTDIR": [ { "value": "../../../../Vivado_Projects/Vivado/VeSPA_Pipeline.tmp/CPU_v1_0_project/CPU_v1_0_project.gen/sources_1/ip/CodeMemory" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2023.1" } ],

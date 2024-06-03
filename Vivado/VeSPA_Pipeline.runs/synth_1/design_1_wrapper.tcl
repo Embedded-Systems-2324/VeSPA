@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -98,12 +96,10 @@ set_property file_type "Verilog Header" [get_files /home/joseleite/Vivado_Projec
 set_property is_global_include true [get_files /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/sources_1/new/Constants.v]
 read_verilog -library xil_defaultlib /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 add_files /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_memory_wrapper_0_0/design_1_memory_wrapper_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_DataMemory_0_0/src/VeSPA_RAM/VeSPA_RAM_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/CodeMemory_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc]
 set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/design_1_ooc.xdc]
-
-read_ip -quiet /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/sources_1/ip/RAM/RAM.xci
-set_property used_in_implementation false [get_files -all /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/ip/RAM/RAM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

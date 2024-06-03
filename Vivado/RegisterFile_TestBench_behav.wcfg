@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="SoC_tb_behav.wdb" id="1">
+      <db_ref path="SoC_tb_time_synth.wdb" id="1">
          <top_modules>
             <top_module name="SoC_tb" />
             <top_module name="glbl" />
@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2,312.760 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,814.761 ns"></ZoomEndTime>
-      <Cursor1Time time="2,410.000 ns"></Cursor1Time>
+      <ZoomStartTime time="441.250 ns"></ZoomStartTime>
+      <ZoomEndTime time="922.247 ns"></ZoomEndTime>
+      <Cursor1Time time="5,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="182"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="26" />
+   <WVObjectSize size="8" />
    <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/i_Clk">
       <obj_property name="ElementShortName">i_Clk</obj_property>
       <obj_property name="ObjectShortName">i_Clk</obj_property>
@@ -28,102 +28,26 @@
       <obj_property name="ElementShortName">i_Rst</obj_property>
       <obj_property name="ObjectShortName">i_Rst</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/i_InstructionRegister">
-      <obj_property name="ElementShortName">i_InstructionRegister[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_InstructionRegister[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrFetch/o_ProgramCounter">
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/o_ProgramCounter">
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/o_ProgramCounter">
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ExecuteMemoryReg/o_ProgramCounter">
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/i_PcSel">
-      <obj_property name="ElementShortName">i_PcSel[2:0]</obj_property>
-      <obj_property name="ObjectShortName">i_PcSel[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/o_PcSelExe2Fetch">
-      <obj_property name="ElementShortName">o_PcSelExe2Fetch[2:0]</obj_property>
-      <obj_property name="ObjectShortName">o_PcSelExe2Fetch[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/o_FlushFetch">
-      <obj_property name="ElementShortName">o_FlushFetch</obj_property>
-      <obj_property name="ObjectShortName">o_FlushFetch</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/o_FlushDecode">
-      <obj_property name="ElementShortName">o_FlushDecode</obj_property>
-      <obj_property name="ObjectShortName">o_FlushDecode</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/o_FlushExecute">
-      <obj_property name="ElementShortName">o_FlushExecute</obj_property>
-      <obj_property name="ObjectShortName">o_FlushExecute</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/o_FlushMemory">
-      <obj_property name="ElementShortName">o_FlushMemory</obj_property>
-      <obj_property name="ObjectShortName">o_FlushMemory</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/i_JmpBit">
-      <obj_property name="ElementShortName">i_JmpBit</obj_property>
-      <obj_property name="ObjectShortName">i_JmpBit</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/i_BranchBit">
-      <obj_property name="ElementShortName">i_BranchBit</obj_property>
-      <obj_property name="ObjectShortName">i_BranchBit</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/i_BranchVerification">
-      <obj_property name="ElementShortName">i_BranchVerification</obj_property>
-      <obj_property name="ObjectShortName">i_BranchVerification</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/i_RetiBit">
-      <obj_property name="ElementShortName">i_RetiBit</obj_property>
-      <obj_property name="ObjectShortName">i_RetiBit</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/i_WrEnable">
-      <obj_property name="ElementShortName">i_WrEnable</obj_property>
-      <obj_property name="ObjectShortName">i_WrEnable</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_Enable">
-      <obj_property name="ElementShortName">r_Enable</obj_property>
-      <obj_property name="ObjectShortName">r_Enable</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_AutoReload">
-      <obj_property name="ElementShortName">r_AutoReload</obj_property>
-      <obj_property name="ObjectShortName">r_AutoReload</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_Mode">
-      <obj_property name="ElementShortName">r_Mode[1:0]</obj_property>
-      <obj_property name="ObjectShortName">r_Mode[1:0]</obj_property>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ControlUnit/w_PeripheralsRdy">
+      <obj_property name="ElementShortName">w_PeripheralsRdy</obj_property>
+      <obj_property name="ObjectShortName">w_PeripheralsRdy</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_Period">
       <obj_property name="ElementShortName">r_Period[31:0]</obj_property>
       <obj_property name="ObjectShortName">r_Period[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_ChannelEnable">
-      <obj_property name="ElementShortName">r_ChannelEnable[3:0]</obj_property>
-      <obj_property name="ObjectShortName">r_ChannelEnable[3:0]</obj_property>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_ChannelEnable">
+      <obj_property name="ElementShortName">r_ChannelEnable</obj_property>
+      <obj_property name="ObjectShortName">r_ChannelEnable</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_PulseChannel1">
-      <obj_property name="ElementShortName">r_PulseChannel1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">r_PulseChannel1[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/\r_ChannelEnable_reg_n_0_[0] ">
+      <obj_property name="ElementShortName">\r_ChannelEnable_reg_n_0_[0] </obj_property>
+      <obj_property name="ObjectShortName">\r_ChannelEnable_reg_n_0_[0] </obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/inst/r_PWMCounter">
-      <obj_property name="ElementShortName">r_PWMCounter[7:0]</obj_property>
-      <obj_property name="ObjectShortName">r_PWMCounter[7:0]</obj_property>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/r_PulseChannel1">
+      <obj_property name="ElementShortName">r_PulseChannel1</obj_property>
+      <obj_property name="ObjectShortName">r_PulseChannel1</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/timerSlave_0/inst/o_PWMChannel1">
       <obj_property name="ElementShortName">o_PWMChannel1</obj_property>

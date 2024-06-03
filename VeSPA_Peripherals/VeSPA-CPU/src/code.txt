@@ -12,7 +12,8 @@ ADDI 6 5 1	// Increment number R6 = R5 + 1
 ST 6 1052	// Set Pulse Width to R6
 ADDI 5 6 0	// Store the Pulse Width current value 	 
 SUB 10 5 1 	// Verifies if Pulse Width = Period
-BEQ 8
+BEQ 12
+NOP
 NOP
 JMP 31 36	
 LDI 5 0		// R5 = 0

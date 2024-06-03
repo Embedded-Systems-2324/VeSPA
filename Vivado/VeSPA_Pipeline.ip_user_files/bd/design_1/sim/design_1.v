@@ -2,15 +2,15 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Mon Jun  3 14:22:51 2024
-//Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+//Date        : Mon Jun  3 21:46:22 2024
+//Host        : joseleite-ThinkPad-L15-Gen-1 running 64-bit Ubuntu 22.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=6,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=12,da_clkrst_cnt=8,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=8,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=12,da_clkrst_cnt=8,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (PS2C_0,
     PS2D_0,
@@ -76,6 +76,8 @@ module design_1
   wire CustomInterconnect_0_o_WEnable_3;
   wire CustomInterconnect_0_o_WEnable_4;
   wire CustomInterconnect_0_o_WEnable_7;
+  wire DataMemory_0_o_Err;
+  wire DataMemory_0_o_MemBusy;
   wire [31:0]GPIO_Slave_0_o_RData;
   wire [7:0]Net;
   wire PS2C_0_1;
@@ -87,8 +89,6 @@ module design_1
   wire i_Clk_0_1;
   wire i_Rst_0_1;
   wire i_Rx_0_1;
-  wire memory_wrapper_0_o_MemBusy;
-  wire [31:0]memory_wrapper_0_o_RData;
   wire timerSlave_0_o_OnePulse;
   wire timerSlave_0_o_PWMChannel1;
   wire timerSlave_0_o_PWMChannel2;
@@ -112,7 +112,7 @@ module design_1
   assign o_Tx_0 = UartSlave_0_o_Tx;
   design_1_CPU_0_0 CPU_0
        (.i_Clk(i_Clk_0_1),
-        .i_DataMemRdy(memory_wrapper_0_o_MemBusy),
+        .i_DataMemRdy(DataMemory_0_o_MemBusy),
         .i_IntAttending(1'b0),
         .i_IntNumber({1'b0,1'b0}),
         .i_IntPending(1'b0),
@@ -128,7 +128,7 @@ module design_1
         .o_WEnable(CPU_0_o_WEnable));
   design_1_CustomInterconnect_0_0 CustomInterconnect_0
        (.i_RAddr(CPU_0_o_RAddr),
-        .i_RData_0(memory_wrapper_0_o_RData),
+        .i_RData_0({DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err,DataMemory_0_o_Err}),
         .i_RData_1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .i_RData_2(GPIO_Slave_0_o_RData),
         .i_RData_3(UartSlave_0_o_RData),
@@ -166,6 +166,16 @@ module design_1
         .o_WEnable_3(CustomInterconnect_0_o_WEnable_3),
         .o_WEnable_4(CustomInterconnect_0_o_WEnable_4),
         .o_WEnable_7(CustomInterconnect_0_o_WEnable_7));
+  design_1_DataMemory_0_0 DataMemory_0
+       (.i_Clk(CPU_1_o_Clk),
+        .i_RAddr(CustomInterconnect_0_o_RAddr_0),
+        .i_REnable(CustomInterconnect_0_o_REnable_0),
+        .i_Rst(CPU_1_o_Rst),
+        .i_WAddr(CustomInterconnect_0_o_WAddr_0),
+        .i_WData(CustomInterconnect_0_o_WData_0),
+        .i_WEnable(CustomInterconnect_0_o_WEnable_0),
+        .o_Err(DataMemory_0_o_Err),
+        .o_MemBusy(DataMemory_0_o_MemBusy));
   design_1_GPIO_Slave_0_0 GPIO_Slave_0
        (.i_Clk(CPU_1_o_Clk),
         .i_RAddr(CustomInterconnect_0_o_RAddr_2),
@@ -199,26 +209,17 @@ module design_1
         .i_WEnable(CustomInterconnect_0_o_WEnable_3),
         .o_RData(UartSlave_0_o_RData),
         .o_Tx(UartSlave_0_o_Tx));
-  design_1_interruptController_0_0 interruptController_0
-       (.clk(CPU_1_o_Clk),
-        .ea(1'b0),
-        .en1(1'b0),
-        .en2(1'b0),
-        .en3(1'b0),
-        .int_ack_attended(1'b0),
-        .int_ack_complete(1'b0),
-        .int_sources({1'b0,1'b0,1'b0,1'b0}),
-        .rst(CPU_1_o_Rst));
-  design_1_memory_wrapper_0_0 memory_wrapper_0
-       (.i_Clk(CPU_1_o_Clk),
-        .i_RAddr(CustomInterconnect_0_o_RAddr_0),
-        .i_REnable(CustomInterconnect_0_o_REnable_0),
+  design_1_interruptControllerS_0_0 interruptControllerS_0
+       (.ack_attended(1'b0),
+        .ack_complete(1'b0),
+        .i_Clk(CPU_1_o_Clk),
+        .i_RAddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .i_REnable(1'b0),
         .i_Rst(CPU_1_o_Rst),
-        .i_WAddr(CustomInterconnect_0_o_WAddr_0),
-        .i_WData(CustomInterconnect_0_o_WData_0),
-        .i_WEnable(CustomInterconnect_0_o_WEnable_0),
-        .o_MemBusy(memory_wrapper_0_o_MemBusy),
-        .o_RData(memory_wrapper_0_o_RData));
+        .i_WAddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .i_WData({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .i_WEnable(1'b0),
+        .int_sources({1'b0,1'b0,1'b0,1'b0}));
   design_1_timerSlave_0_0 timerSlave_0
        (.i_Clk(CPU_1_o_Clk),
         .i_RAddr(CustomInterconnect_0_o_RAddr_7),

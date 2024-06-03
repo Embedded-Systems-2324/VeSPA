@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7d5fa092</spirit:value>
+            <spirit:value>5430c81f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7d5fa092</spirit:value>
+            <spirit:value>5430c81f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -318,7 +318,7 @@
       <spirit:file>
         <spirit:name>src/timerSlave.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_546ad0b6</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f760b846</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -377,13 +377,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>timerSlave_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-05-01T15:11:34Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-06-03T20:42:18Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a87bed3b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3c59d7ad"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0fe4ca93"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="1f67058e"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="23280467"/>
     </xilinx:packagingInfo>
