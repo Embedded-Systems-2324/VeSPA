@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CodeMemory",
-    "cell_name": "_InstrFetch/_CodeMem/CodeMemory",
+    "cell_name": "_InstrFetch/_CodeMem",
     "component_reference": "xilinx.com:ip:blk_mem_gen:8.4",
     "ip_revision": "6",
     "gen_directory": ".",

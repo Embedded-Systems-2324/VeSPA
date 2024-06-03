@@ -1,9 +1,0 @@
-verilog xil_defaultlib  \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/src/timer.v" \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/src/timerSlave.v" \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/timerSlave_0/sim/timerSlave_0.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-# Do not sort compile order
-nosort

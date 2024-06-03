@@ -1,14 +1,21 @@
+NOP		
+LDI 1 10 	// Set counter period to 10 clock cycles	
+ST 1 1049		
+LDI 0 1		// Enable PWM Channel 1	
+ST 0 1051
+LDI 0 0		// Set Pulse Width to 0	
+ST 0 1052
+LDI 0 11	//	
+ST 0 1048
+NOP		//
+ADDI 6 5 1	// Increment number R6 = R5 + 1
+ST 6 1052	// Set Pulse Width to R6
+ADDI 5 6 0	// Store the Pulse Width current value 	 
+SUB 10 5 1 	// Verifies if Pulse Width = Period
+BEQ 8
 NOP
-LDI 0 2
-LDI 1 2
-SUB 3 1 0
-BEQ 20
-NOP
-LDI 4 4
-LDI 5 5
-LDI 6 6
-LDI 7 7
-LDI 4 8
-LDI 5 9
-LDI 6 10
-LDI 7 11
+JMP 31 36	
+LDI 5 0		// R5 = 0
+ST 5 1052	// Set Pulse Width 0 
+JMP 31 36
+HALT

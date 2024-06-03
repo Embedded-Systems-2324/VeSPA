@@ -244,12 +244,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_GPIO_Slave_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_interruptController_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_CustomInterconnect_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_timerSlave_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_PS2_Slave_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_memory_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_CPU_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_CustomInterconnect_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_interruptController_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_GPIO_Slave_0_0"/>
 </GenRun>

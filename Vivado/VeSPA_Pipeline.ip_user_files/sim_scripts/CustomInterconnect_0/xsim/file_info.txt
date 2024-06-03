@@ -1,3 +1,0 @@
-CustomInterconnect.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/CustomInterconnect_0/src/CustomInterconnect.v,
-CustomInterconnect_0.v,verilog,xil_defaultlib,../../../../VeSPA_Pipeline.gen/sources_1/ip/CustomInterconnect_0/sim/CustomInterconnect_0.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

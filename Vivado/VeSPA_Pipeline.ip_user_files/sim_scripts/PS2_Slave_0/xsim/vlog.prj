@@ -1,9 +1,0 @@
-verilog xil_defaultlib  \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/PS2_Slave_0/src/ps2_new.v" \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/PS2_Slave_0/src/custom_ps2_interface.v" \
-"../../../../VeSPA_Pipeline.gen/sources_1/ip/PS2_Slave_0/sim/PS2_Slave_0.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-# Do not sort compile order
-nosort
