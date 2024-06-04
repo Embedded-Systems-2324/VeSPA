@@ -59,7 +59,9 @@ module SoC_tb(
     .pin_0(pin_0)
   );
   
-  assign pin_0[1] = (o_TimerOverflow_0) ? 1'b0 : 1'b1;
+  reg pin_IN;
+  
+  assign pin_0 [0] = pin_IN;
 
   // Geração do clock
   initial begin
@@ -76,8 +78,60 @@ module SoC_tb(
     #140
     rst <= 0;
     
-    // Continue com outros estímulos conforme necessário
-
+    #1000
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
+    #4960
+    pin_IN = 1'b1;
+    
+    #500
+    pin_IN = 1'b0;
+    
   end
 
 

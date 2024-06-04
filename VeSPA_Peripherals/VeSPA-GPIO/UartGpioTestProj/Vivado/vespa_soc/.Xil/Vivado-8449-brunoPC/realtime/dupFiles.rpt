@@ -1,3 +1,0 @@
-Duplicated file found; will not be sent for synthesis: /home/bruno/gitreps/VeSPA_UartTest/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_vespa_cpu_0_0/src/code_memory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
-Duplicated file found; will not be sent for synthesis: /home/bruno/gitreps/VeSPA_UartTest/Vivado/vespa_soc/vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_DataMemory_0_0/src/VeSPA_RAM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
-CRC performance measure: elapsed=00:00:00.1s;;memory_peak=10043.883MB;;memory_gain=0.000MB

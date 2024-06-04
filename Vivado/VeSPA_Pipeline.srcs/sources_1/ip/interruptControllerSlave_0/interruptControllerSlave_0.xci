@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "interruptControllerSlave_0",
     "component_reference": "user.org:user:interruptControllerSlave:1.0",
-    "ip_revision": "1",
+    "ip_revision": "3",
     "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0",
     "parameters": {
       "component_parameters": {
@@ -24,7 +24,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "1" } ],
+        "IPREVISION": [ { "value": "3" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -44,9 +44,14 @@
         "i_RAddr": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "o_RData": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "o_Err": [ { "direction": "out" } ],
-        "int_sources": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "int_source0": [ { "direction": "in" } ],
+        "int_source1": [ { "direction": "in" } ],
+        "int_source2": [ { "direction": "in" } ],
+        "int_source3": [ { "direction": "in" } ],
         "ack_complete": [ { "direction": "in" } ],
         "ack_attended": [ { "direction": "in" } ],
+        "int_pending": [ { "direction": "out" } ],
+        "int_attending": [ { "direction": "out" } ],
         "irq_req": [ { "direction": "out" } ],
         "irq_number": [ { "direction": "out", "size_left": "1", "size_right": "0" } ]
       },

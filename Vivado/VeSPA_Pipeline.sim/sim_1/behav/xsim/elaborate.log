@@ -1,12 +1,15 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SoC_tb_behav xil_defaultlib.SoC_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SoC_tb_behav xil_defaultlib.SoC_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/4697/src/CPU.v:219]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/4697/src/InstructionFetch.v:69]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'i_PcRet' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/ccbd/src/CPU.v:219]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'wea' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/ccbd/src/InstructionFetch.v:69]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 1 for port 'wea' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/bf0f/src/SlaveInterface.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'addra' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/bf0f/src/SlaveInterface.v:44]
+WARNING: [VRFC 10-5021] port 'int_source0_0' is not connected on this instance [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/SoC_tb.v:45]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

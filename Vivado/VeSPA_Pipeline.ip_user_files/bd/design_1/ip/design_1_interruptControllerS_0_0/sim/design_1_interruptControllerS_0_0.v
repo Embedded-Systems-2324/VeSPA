@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:interruptControllerSlave:1.0
-// IP Revision: 5
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
@@ -70,10 +70,10 @@ module design_1_interruptControllerS_0_0 (
   int_source3,
   ack_complete,
   ack_attended,
-  irq_req,
-  irq_number,
   int_pending,
-  int_attending
+  int_attending,
+  irq_req,
+  irq_number
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *)
@@ -95,10 +95,10 @@ input wire int_source2;
 input wire int_source3;
 input wire ack_complete;
 input wire ack_attended;
-output wire irq_req;
-output wire [1 : 0] irq_number;
 output wire int_pending;
 output wire int_attending;
+output wire irq_req;
+output wire [1 : 0] irq_number;
 
   interruptController_wrapper inst (
     .i_Clk(i_Clk),
@@ -116,9 +116,9 @@ output wire int_attending;
     .int_source3(int_source3),
     .ack_complete(ack_complete),
     .ack_attended(ack_attended),
-    .irq_req(irq_req),
-    .irq_number(irq_number),
     .int_pending(int_pending),
-    .int_attending(int_attending)
+    .int_attending(int_attending),
+    .irq_req(irq_req),
+    .irq_number(irq_number)
   );
 endmodule

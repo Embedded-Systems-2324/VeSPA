@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1F92356EF1C6A09E",
+      "boundary_crc": "0x56C187D2BD5E5213",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -15,10 +15,10 @@
       "GPIO_Slave_0": "",
       "UartSlave_0": "",
       "PS2_Slave_0": "",
-      "DataMemory_0": "",
       "timerSlave_0": "",
-      "interruptControllerS_0": "",
-      "CPU_0": ""
+      "CPU_0": "",
+      "DataMemory_0": "",
+      "interruptControllerS_0": ""
     },
     "ports": {
       "pin_0": {
@@ -42,6 +42,9 @@
       },
       "PS2D_0": {
         "direction": "I"
+      },
+      "o_TimerOverflow_0": {
+        "direction": "O"
       },
       "o_PWMChannel1_0": {
         "direction": "O"
@@ -102,11 +105,20 @@
           }
         }
       },
-      "o_Err_0": {
-        "direction": "O"
-      },
-      "source2": {
+      "int_source3_0": {
         "direction": "I"
+      },
+      "int_source2_0": {
+        "direction": "I"
+      },
+      "int_source1_0": {
+        "direction": "I"
+      },
+      "int_source0_0": {
+        "direction": "I"
+      },
+      "led_teste_0": {
+        "direction": "O"
       }
     },
     "components": {
@@ -134,32 +146,38 @@
         "xci_path": "ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0.xci",
         "inst_hier_path": "PS2_Slave_0"
       },
-      "DataMemory_0": {
-        "vlnv": "user.org:user:DataMemory:1.0",
-        "xci_name": "design_1_DataMemory_0_0",
-        "xci_path": "ip/design_1_DataMemory_0_0/design_1_DataMemory_0_0.xci",
-        "inst_hier_path": "DataMemory_0"
-      },
       "timerSlave_0": {
         "vlnv": "user.org:user:timerSlave:1.0",
         "xci_name": "design_1_timerSlave_0_0",
         "xci_path": "ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0.xci",
         "inst_hier_path": "timerSlave_0"
       },
-      "interruptControllerS_0": {
-        "vlnv": "user.org:user:interruptControllerSlave:1.0",
-        "xci_name": "design_1_interruptControllerS_0_0",
-        "xci_path": "ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0.xci",
-        "inst_hier_path": "interruptControllerS_0"
-      },
       "CPU_0": {
         "vlnv": "user.org:user:CPU:1.0",
         "xci_name": "design_1_CPU_0_0",
         "xci_path": "ip/design_1_CPU_0_0/design_1_CPU_0_0.xci",
         "inst_hier_path": "CPU_0"
+      },
+      "DataMemory_0": {
+        "vlnv": "user.org:user:DataMemory:1.0",
+        "xci_name": "design_1_DataMemory_0_0",
+        "xci_path": "ip/design_1_DataMemory_0_0/design_1_DataMemory_0_0.xci",
+        "inst_hier_path": "DataMemory_0"
+      },
+      "interruptControllerS_0": {
+        "vlnv": "user.org:user:interruptControllerSlave:1.0",
+        "xci_name": "design_1_interruptControllerS_0_0",
+        "xci_path": "ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0.xci",
+        "inst_hier_path": "interruptControllerS_0"
       }
     },
     "nets": {
+      "CPU_0_led_teste": {
+        "ports": [
+          "CPU_0/led_teste",
+          "led_teste_0"
+        ]
+      },
       "CPU_0_o_IntAckAttended": {
         "ports": [
           "CPU_0/o_IntAckAttended",
@@ -208,8 +226,8 @@
           "PS2_Slave_0/i_Clk",
           "UartSlave_0/i_Clk",
           "GPIO_Slave_0/i_Clk",
-          "DataMemory_0/i_Clk",
           "timerSlave_0/i_Clk",
+          "DataMemory_0/i_Clk",
           "interruptControllerS_0/i_Clk"
         ]
       },
@@ -219,8 +237,8 @@
           "PS2_Slave_0/i_Rst",
           "UartSlave_0/i_Rst",
           "GPIO_Slave_0/i_Rst",
-          "DataMemory_0/i_Rst",
           "timerSlave_0/i_Rst",
+          "DataMemory_0/i_Rst",
           "interruptControllerS_0/i_Rst"
         ]
       },
@@ -410,16 +428,16 @@
           "timerSlave_0/i_WEnable"
         ]
       },
-      "DataMemory_0_o_Err": {
-        "ports": [
-          "DataMemory_0/o_Err",
-          "CustomInterconnect_0/i_RData_0"
-        ]
-      },
       "DataMemory_0_o_MemBusy": {
         "ports": [
           "DataMemory_0/o_MemBusy",
           "CPU_0/i_DataMemRdy"
+        ]
+      },
+      "DataMemory_0_o_RData": {
+        "ports": [
+          "DataMemory_0/o_RData",
+          "CustomInterconnect_0/i_RData_0"
         ]
       },
       "GPIO_Slave_0_o_RData": {
@@ -488,6 +506,30 @@
           "UartSlave_0/i_Rx"
         ]
       },
+      "int_source0_0_1": {
+        "ports": [
+          "int_source0_0",
+          "interruptControllerS_0/int_source0"
+        ]
+      },
+      "int_source1_0_1": {
+        "ports": [
+          "int_source1_0",
+          "interruptControllerS_0/int_source1"
+        ]
+      },
+      "int_source2_0_1": {
+        "ports": [
+          "int_source2_0",
+          "interruptControllerS_0/int_source2"
+        ]
+      },
+      "int_source3_0_1": {
+        "ports": [
+          "int_source3_0",
+          "interruptControllerS_0/int_source3"
+        ]
+      },
       "interruptControllerS_0_int_attending": {
         "ports": [
           "interruptControllerS_0/int_attending",
@@ -497,8 +539,13 @@
       "interruptControllerS_0_int_pending": {
         "ports": [
           "interruptControllerS_0/int_pending",
-          "CPU_0/i_IntNumber",
           "CPU_0/i_IntPending"
+        ]
+      },
+      "interruptControllerS_0_irq_number": {
+        "ports": [
+          "interruptControllerS_0/irq_number",
+          "CPU_0/i_IntNumber"
         ]
       },
       "interruptControllerS_0_irq_req": {
@@ -511,12 +558,6 @@
         "ports": [
           "interruptControllerS_0/o_RData",
           "CustomInterconnect_0/i_RData_1"
-        ]
-      },
-      "source2_1": {
-        "ports": [
-          "source2",
-          "interruptControllerS_0/int_source2"
         ]
       },
       "timerSlave_0_o_OnePulse": {
@@ -558,7 +599,7 @@
       "timerSlave_0_o_TimerOverflow": {
         "ports": [
           "timerSlave_0/o_TimerOverflow",
-          "interruptControllerS_0/int_source1"
+          "o_TimerOverflow_0"
         ]
       }
     }

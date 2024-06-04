@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Tue Jun  4 00:47:06 2024
+-- Date        : Tue Jun  4 16:40:18 2024
 -- Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0_stub.vhdl
+--               /home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/design_1_CPU_0_0_stub.vhdl
 -- Design      : design_1_CPU_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
@@ -32,7 +32,7 @@ entity design_1_CPU_0_0 is
     i_IntAttending : in STD_LOGIC;
     o_IntAckComplete : out STD_LOGIC;
     o_IntAckAttended : out STD_LOGIC;
-    halt_led : out STD_LOGIC;
+    led_teste : out STD_LOGIC;
     reg_leds : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
 
@@ -42,7 +42,7 @@ architecture stub of design_1_CPU_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "i_Clk,i_Rst,o_Clk,o_Rst,o_WEnable,o_WAddr[31:0],o_WData[31:0],o_REnable,o_RAddr[31:0],i_RData[31:0],i_DataMemRdy,i_IntRequest,i_IntNumber[1:0],i_IntPending,i_IntAttending,o_IntAckComplete,o_IntAckAttended,halt_led,reg_leds[2:0]";
+attribute black_box_pad_pin of stub : architecture is "i_Clk,i_Rst,o_Clk,o_Rst,o_WEnable,o_WAddr[31:0],o_WData[31:0],o_REnable,o_RAddr[31:0],i_RData[31:0],i_DataMemRdy,i_IntRequest,i_IntNumber[1:0],i_IntPending,i_IntAttending,o_IntAckComplete,o_IntAckAttended,led_teste,reg_leds[2:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "CPU,Vivado 2023.1";
 begin

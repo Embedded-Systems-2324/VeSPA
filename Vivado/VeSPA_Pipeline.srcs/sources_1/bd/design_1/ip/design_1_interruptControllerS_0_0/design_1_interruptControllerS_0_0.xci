@@ -4,7 +4,7 @@
     "xci_name": "design_1_interruptControllerS_0_0",
     "cell_name": "interruptControllerS_0",
     "component_reference": "user.org:user:interruptControllerSlave:1.0",
-    "ip_revision": "5",
+    "ip_revision": "3",
     "gen_directory": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "5" } ],
+        "IPREVISION": [ { "value": "3" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -51,10 +51,10 @@
         "int_source3": [ { "direction": "in" } ],
         "ack_complete": [ { "direction": "in" } ],
         "ack_attended": [ { "direction": "in" } ],
-        "irq_req": [ { "direction": "out" } ],
-        "irq_number": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
         "int_pending": [ { "direction": "out" } ],
-        "int_attending": [ { "direction": "out" } ]
+        "int_attending": [ { "direction": "out" } ],
+        "irq_req": [ { "direction": "out" } ],
+        "irq_number": [ { "direction": "out", "size_left": "1", "size_right": "0" } ]
       },
       "interfaces": {
         "i_Rst": {

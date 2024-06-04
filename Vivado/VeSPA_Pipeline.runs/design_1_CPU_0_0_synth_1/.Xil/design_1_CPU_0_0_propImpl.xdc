@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc rfile:../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc rfile:../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
 current_instance inst
 set_property src_info {type:SCOPED_XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K17 [get_ports i_Clk]

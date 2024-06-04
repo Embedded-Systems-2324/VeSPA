@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "DataMemory_0",
     "component_reference": "user.org:user:DataMemory:1.0",
-    "ip_revision": "1",
+    "ip_revision": "4",
     "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/ip/DataMemory_0",
     "parameters": {
       "component_parameters": {
@@ -24,7 +24,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "1" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../VeSPA_Pipeline.gen/sources_1/ip/DataMemory_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

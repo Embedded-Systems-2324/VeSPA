@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="63" Path="/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.xpr">
+<Project Product="Vivado" Version="7" Minor="63" Path="/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="b2240f6efe45453ea8b13aadcaa6d1ab"/>
@@ -60,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo-z7-10"/>
-    <Option Name="WTXSimLaunchSim" Val="662"/>
+    <Option Name="WTXSimLaunchSim" Val="688"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="126"/>
-    <Option Name="WTModelSimExportSim" Val="126"/>
-    <Option Name="WTQuestaExportSim" Val="126"/>
+    <Option Name="WTXSimExportSim" Val="142"/>
+    <Option Name="WTModelSimExportSim" Val="142"/>
+    <Option Name="WTQuestaExportSim" Val="142"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="126"/>
-    <Option Name="WTRivieraExportSim" Val="126"/>
-    <Option Name="WTActivehdlExportSim" Val="126"/>
+    <Option Name="WTVcsExportSim" Val="142"/>
+    <Option Name="WTRivieraExportSim" Val="142"/>
+    <Option Name="WTActivehdlExportSim" Val="142"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -105,23 +105,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci">
-          <Proxy FileSetName="design_1_CustomInterconnect_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci">
-          <Proxy FileSetName="design_1_GPIO_Slave_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0.xci">
-          <Proxy FileSetName="design_1_PS2_Slave_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0.xci">
-          <Proxy FileSetName="design_1_interruptControllerS_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CPU_0_0/design_1_CPU_0_0.xci">
+          <Proxy FileSetName="design_1_CPU_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0.xci">
           <Proxy FileSetName="design_1_timerSlave_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CPU_0_0/design_1_CPU_0_0.xci">
-          <Proxy FileSetName="design_1_CPU_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0.xci">
+          <Proxy FileSetName="design_1_PS2_Slave_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci">
+          <Proxy FileSetName="design_1_GPIO_Slave_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci">
+          <Proxy FileSetName="design_1_CustomInterconnect_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
@@ -134,6 +131,22 @@
       <File Path="$PSRCDIR/sources_1/code.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/interruptControllerSlave_0/interruptControllerSlave_0.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/DataMemory_0/DataMemory_0.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -201,7 +214,6 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
-        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="PamDesignTestbench" Val=""/>
         <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
@@ -250,13 +262,6 @@
     <FileSet Name="design_1_timerSlave_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_timerSlave_0_0" RelGenDir="$PGENDIR/design_1_timerSlave_0_0">
       <Config>
         <Option Name="TopModule" Val="design_1_timerSlave_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-        <Generic Name="BUS_MSB" Val="31"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_interruptControllerS_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_interruptControllerS_0_0" RelGenDir="$PGENDIR/design_1_interruptControllerS_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_interruptControllerS_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Generic Name="BUS_MSB" Val="31"/>
       </Config>
@@ -334,18 +339,6 @@
     <Run Id="design_1_timerSlave_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_timerSlave_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_timerSlave_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_timerSlave_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_timerSlave_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_timerSlave_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_interruptControllerS_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_interruptControllerS_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -436,25 +429,6 @@
     <Run Id="design_1_timerSlave_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_timerSlave_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_timerSlave_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_timerSlave_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_timerSlave_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_1_interruptControllerS_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:DataMemory:1.0
-// IP Revision: 1
+// IP Revision: 4
 
 `timescale 1ns/1ps
 

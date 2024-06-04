@@ -1,7 +1,0 @@
-Running: xsim.dir/SlaveInterfaceTestbench_behav/xsimk -simmode gui -wdb SlaveInterfaceTestbench_behav.wdb -simrunnum 0 -socket 47221
-Design successfully loaded
-Design Loading Memory Usage: 23800 KB (Peak: 23920 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 105796 KB (Peak: 163068 KB)
-Simulation CPU Usage: 2530 ms

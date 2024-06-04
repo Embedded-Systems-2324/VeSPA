@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:CPU:1.0
-// IP Revision: 27
+// IP Revision: 40
 
 (* X_CORE_INFO = "CPU,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_CPU_0_0,CPU,{}" *)
@@ -72,7 +72,7 @@ module design_1_CPU_0_0 (
   i_IntAttending,
   o_IntAckComplete,
   o_IntAckAttended,
-  halt_led,
+  led_teste,
   reg_leds
 );
 
@@ -101,7 +101,7 @@ input wire i_IntPending;
 input wire i_IntAttending;
 output wire o_IntAckComplete;
 output wire o_IntAckAttended;
-output wire halt_led;
+output wire led_teste;
 output wire [2 : 0] reg_leds;
 
   CPU inst (
@@ -122,7 +122,7 @@ output wire [2 : 0] reg_leds;
     .i_IntAttending(i_IntAttending),
     .o_IntAckComplete(o_IntAckComplete),
     .o_IntAckAttended(o_IntAckAttended),
-    .halt_led(halt_led),
+    .led_teste(led_teste),
     .reg_leds(reg_leds)
   );
 endmodule

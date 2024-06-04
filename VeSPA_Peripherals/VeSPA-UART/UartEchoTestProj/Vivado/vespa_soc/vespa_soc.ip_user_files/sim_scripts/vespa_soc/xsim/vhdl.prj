@@ -1,5 +1,0 @@
-vhdl fifo_generator_v13_2_8  \
-"../../../../vespa_soc.gen/sources_1/bd/vespa_soc/ip/vespa_soc_PS2_0_0/src/Ps2Fifo/hdl/fifo_generator_v13_2_rfs.vhd" \
-
-# Do not sort compile order
-nosort
