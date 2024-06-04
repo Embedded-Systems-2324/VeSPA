@@ -16,8 +16,8 @@ vcom -work xpm -93  -incr \
 "/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -incr -v2k5  +define+BUS_MSB=31  +define+BUS_WIDTH=32 "+incdir+../../../bd/design_1/ipshared/62f1/src" "+incdir+../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src" -l xpm -l xil_defaultlib -l blk_mem_gen_v8_4_6 \
-"../../../bd/design_1/ipshared/cee3/src/gpio.v" \
-"../../../bd/design_1/ipshared/cee3/src/Gpio_Slave.v" \
+"../../../bd/design_1/ipshared/a807/src/gpio.v" \
+"../../../bd/design_1/ipshared/a807/src/Gpio_Slave.v" \
 "../../../bd/design_1/ip/design_1_GPIO_Slave_0_0/sim/design_1_GPIO_Slave_0_0.v" \
 "../../../bd/design_1/ipshared/762d/src/ps2_new.v" \
 "../../../bd/design_1/ipshared/762d/src/custom_ps2_interface.v" \

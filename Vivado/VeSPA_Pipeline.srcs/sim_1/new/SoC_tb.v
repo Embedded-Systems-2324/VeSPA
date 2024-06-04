@@ -40,6 +40,11 @@ module SoC_tb(
   wire o_TimerOverflow_0;
   wire o_Tx_0;
   wire [7:0] pin_0; // Este pode precisar de mais detalhes dependendo do seu design
+  reg src0;
+  reg src1;
+  reg src2;
+  reg src3;
+  wire halt;
 
   // Instanciação do módulo design_1_wrapper
   design_1_wrapper dut (
@@ -56,8 +61,14 @@ module SoC_tb(
     .o_PWMChannel4_0(o_PWMChannel4_0),
     .o_TimerOverflow_0(o_TimerOverflow_0),
     .o_Tx_0(o_Tx_0),
-    .pin_0(pin_0)
+    .pin_0(pin_0),
+    .int_source0_0(src0),
+    .int_source1_0(src1),
+    .int_source2_0(src2),
+    .int_source3_0(src3),
+    .led_teste_0(halt)
   );
+  
   
   reg pin_IN;
   
@@ -73,66 +84,23 @@ module SoC_tb(
   initial begin
     // Inicialização dos sinais
     rst = 1;
+    src0 <= 0;
+    src1 <= 0;
+    src2 <= 0;
+    src3 <= 0;
+    pin_IN <= 1;
 
     // Sequência de reset
     #140
     rst <= 0;
     
-    #1000
-    pin_IN = 1'b1;
+    #608
+    //src1 <= 1;
+    //src2 <= 1;
     
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
-    
-    #4960
-    pin_IN = 1'b1;
-    
-    #500
-    pin_IN = 1'b0;
+    #10
+    src1 <= 0;
+    src2 <= 0;
     
   end
-
-
 endmodule

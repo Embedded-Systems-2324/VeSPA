@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Tue May 28 16:10:58 2024
-// Host        : joseleite-ThinkPad-L15-Gen-1 running 64-bit Ubuntu 22.04.3 LTS
+// Date        : Wed Jun  5 00:38:12 2024
+// Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0_sim_netlist.v
+//               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0_sim_netlist.v
 // Design      : design_1_GPIO_Slave_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,7 +27,7 @@ module design_1_GPIO_Slave_0_0
     o_RData,
     o_Err,
     pin);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input i_Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *) input i_Clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input i_Rst;
   input i_WEnable;
   input [31:0]i_WAddr;
@@ -95,33 +95,33 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
    (o_RData,
     o_Err,
     pin,
+    i_RAddr,
     i_Rst,
     i_WData,
     i_Clk,
-    i_RAddr,
     i_WAddr,
     i_WEnable,
     i_REnable);
   output [7:0]o_RData;
   output o_Err;
   inout [7:0]pin;
+  input [31:0]i_RAddr;
   input i_Rst;
   input [7:0]i_WData;
   input i_Clk;
-  input [31:0]i_RAddr;
   input [31:0]i_WAddr;
   input i_WEnable;
   input i_REnable;
 
-  wire data_in;
-  wire \data_in_reg_n_0_[0] ;
-  wire \data_in_reg_n_0_[1] ;
-  wire \data_in_reg_n_0_[2] ;
-  wire \data_in_reg_n_0_[3] ;
-  wire \data_in_reg_n_0_[4] ;
-  wire \data_in_reg_n_0_[5] ;
-  wire \data_in_reg_n_0_[6] ;
-  wire \data_in_reg_n_0_[7] ;
+  wire Wr_Output;
+  wire \Wr_Output_reg_n_0_[0] ;
+  wire \Wr_Output_reg_n_0_[1] ;
+  wire \Wr_Output_reg_n_0_[2] ;
+  wire \Wr_Output_reg_n_0_[3] ;
+  wire \Wr_Output_reg_n_0_[4] ;
+  wire \Wr_Output_reg_n_0_[5] ;
+  wire \Wr_Output_reg_n_0_[6] ;
+  wire \Wr_Output_reg_n_0_[7] ;
   wire direction;
   wire \direction_reg_n_0_[0] ;
   wire \direction_reg_n_0_[1] ;
@@ -150,9 +150,17 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
   wire o_Err_i_8_n_0;
   wire o_Err_i_9_n_0;
   wire [7:0]o_RData;
+  wire \o_RData[0]_i_1_n_0 ;
+  wire \o_RData[1]_i_1_n_0 ;
+  wire \o_RData[2]_i_1_n_0 ;
+  wire \o_RData[3]_i_1_n_0 ;
+  wire \o_RData[4]_i_1_n_0 ;
+  wire \o_RData[5]_i_1_n_0 ;
+  wire \o_RData[6]_i_1_n_0 ;
   wire \o_RData[7]_i_10_n_0 ;
   wire \o_RData[7]_i_11_n_0 ;
   wire \o_RData[7]_i_1_n_0 ;
+  wire \o_RData[7]_i_2_n_0 ;
   wire \o_RData[7]_i_3_n_0 ;
   wire \o_RData[7]_i_4_n_0 ;
   wire \o_RData[7]_i_5_n_0 ;
@@ -160,70 +168,67 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
   wire \o_RData[7]_i_7_n_0 ;
   wire \o_RData[7]_i_8_n_0 ;
   wire \o_RData[7]_i_9_n_0 ;
-  wire [7:0]p_0_in;
   wire [7:0]pin;
 
-  LUT3 #(
-    .INIT(8'h04)) 
-    \data_in[7]_i_1 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \Wr_Output[7]_i_1 
        (.I0(i_WAddr[0]),
-        .I1(i_WEnable),
-        .I2(o_Err_i_2_n_0),
-        .O(data_in));
-  FDRE \data_in_reg[0] 
+        .I1(o_Err_i_2_n_0),
+        .O(Wr_Output));
+  FDRE \Wr_Output_reg[0] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[0]),
-        .Q(\data_in_reg_n_0_[0] ),
+        .Q(\Wr_Output_reg_n_0_[0] ),
         .R(i_Rst));
-  FDRE \data_in_reg[1] 
+  FDRE \Wr_Output_reg[1] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[1]),
-        .Q(\data_in_reg_n_0_[1] ),
+        .Q(\Wr_Output_reg_n_0_[1] ),
         .R(i_Rst));
-  FDRE \data_in_reg[2] 
+  FDRE \Wr_Output_reg[2] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[2]),
-        .Q(\data_in_reg_n_0_[2] ),
+        .Q(\Wr_Output_reg_n_0_[2] ),
         .R(i_Rst));
-  FDRE \data_in_reg[3] 
+  FDRE \Wr_Output_reg[3] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[3]),
-        .Q(\data_in_reg_n_0_[3] ),
+        .Q(\Wr_Output_reg_n_0_[3] ),
         .R(i_Rst));
-  FDRE \data_in_reg[4] 
+  FDRE \Wr_Output_reg[4] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[4]),
-        .Q(\data_in_reg_n_0_[4] ),
+        .Q(\Wr_Output_reg_n_0_[4] ),
         .R(i_Rst));
-  FDRE \data_in_reg[5] 
+  FDRE \Wr_Output_reg[5] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[5]),
-        .Q(\data_in_reg_n_0_[5] ),
+        .Q(\Wr_Output_reg_n_0_[5] ),
         .R(i_Rst));
-  FDRE \data_in_reg[6] 
+  FDRE \Wr_Output_reg[6] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[6]),
-        .Q(\data_in_reg_n_0_[6] ),
+        .Q(\Wr_Output_reg_n_0_[6] ),
         .R(i_Rst));
-  FDRE \data_in_reg[7] 
+  FDRE \Wr_Output_reg[7] 
        (.C(i_Clk),
-        .CE(data_in),
+        .CE(Wr_Output),
         .D(i_WData[7]),
-        .Q(\data_in_reg_n_0_[7] ),
+        .Q(\Wr_Output_reg_n_0_[7] ),
         .R(i_Rst));
-  LUT3 #(
-    .INIT(8'h08)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \direction[7]_i_1 
        (.I0(i_WAddr[0]),
-        .I1(i_WEnable),
-        .I2(o_Err_i_2_n_0),
+        .I1(o_Err_i_2_n_0),
         .O(direction));
   FDRE \direction_reg[0] 
        (.C(i_Clk),
@@ -274,7 +279,7 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
         .Q(\direction_reg_n_0_[7] ),
         .R(i_Rst));
   LUT6 #(
-    .INIT(64'h00000000FEF20E02)) 
+    .INIT(64'h0000000002FE0202)) 
     o_Err_i_1
        (.I0(o_Err),
         .I1(i_REnable),
@@ -286,77 +291,78 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
   LUT4 #(
     .INIT(16'hFFFE)) 
     o_Err_i_10
-       (.I0(i_WAddr[27]),
-        .I1(i_WAddr[26]),
-        .I2(i_WAddr[29]),
-        .I3(i_WAddr[28]),
+       (.I0(i_WAddr[25]),
+        .I1(i_WAddr[7]),
+        .I2(i_WAddr[31]),
+        .I3(i_WAddr[24]),
         .O(o_Err_i_10_n_0));
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     o_Err_i_2
        (.I0(o_Err_i_3_n_0),
         .I1(o_Err_i_4_n_0),
         .I2(o_Err_i_5_n_0),
+        .I3(o_Err_i_6_n_0),
         .O(o_Err_i_2_n_0));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'hFFFFFFFB)) 
     o_Err_i_3
        (.I0(i_WAddr[12]),
-        .I1(i_WAddr[13]),
-        .I2(i_WAddr[10]),
-        .I3(i_WAddr[11]),
-        .I4(o_Err_i_6_n_0),
+        .I1(i_WEnable),
+        .I2(i_WAddr[9]),
+        .I3(i_WAddr[15]),
+        .I4(o_Err_i_7_n_0),
         .O(o_Err_i_3_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     o_Err_i_4
-       (.I0(i_WAddr[4]),
-        .I1(i_WAddr[5]),
-        .I2(i_WAddr[2]),
-        .I3(i_WAddr[3]),
-        .I4(o_Err_i_7_n_0),
+       (.I0(i_WAddr[1]),
+        .I1(i_WAddr[29]),
+        .I2(i_WAddr[16]),
+        .I3(i_WAddr[22]),
+        .I4(o_Err_i_8_n_0),
         .O(o_Err_i_4_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     o_Err_i_5
-       (.I0(o_Err_i_8_n_0),
-        .I1(o_Err_i_9_n_0),
-        .I2(i_WAddr[31]),
-        .I3(i_WAddr[30]),
-        .I4(i_WAddr[1]),
-        .I5(o_Err_i_10_n_0),
+       (.I0(i_WAddr[17]),
+        .I1(i_WAddr[23]),
+        .I2(i_WAddr[3]),
+        .I3(i_WAddr[28]),
+        .I4(o_Err_i_9_n_0),
         .O(o_Err_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     o_Err_i_6
-       (.I0(i_WAddr[15]),
-        .I1(i_WAddr[14]),
-        .I2(i_WAddr[17]),
-        .I3(i_WAddr[16]),
+       (.I0(i_WAddr[6]),
+        .I1(i_WAddr[30]),
+        .I2(i_WAddr[2]),
+        .I3(i_WAddr[27]),
+        .I4(o_Err_i_10_n_0),
         .O(o_Err_i_6_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     o_Err_i_7
-       (.I0(i_WAddr[7]),
-        .I1(i_WAddr[6]),
-        .I2(i_WAddr[9]),
-        .I3(i_WAddr[8]),
+       (.I0(i_WAddr[21]),
+        .I1(i_WAddr[19]),
+        .I2(i_WAddr[10]),
+        .I3(i_WAddr[5]),
         .O(o_Err_i_7_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     o_Err_i_8
-       (.I0(i_WAddr[23]),
-        .I1(i_WAddr[22]),
-        .I2(i_WAddr[25]),
-        .I3(i_WAddr[24]),
+       (.I0(i_WAddr[18]),
+        .I1(i_WAddr[14]),
+        .I2(i_WAddr[26]),
+        .I3(i_WAddr[4]),
         .O(o_Err_i_8_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     o_Err_i_9
-       (.I0(i_WAddr[19]),
-        .I1(i_WAddr[18]),
-        .I2(i_WAddr[21]),
-        .I3(i_WAddr[20]),
+       (.I0(i_WAddr[20]),
+        .I1(i_WAddr[8]),
+        .I2(i_WAddr[13]),
+        .I3(i_WAddr[11]),
         .O(o_Err_i_9_n_0));
   FDRE o_Err_reg
        (.C(i_Clk),
@@ -364,239 +370,256 @@ module design_1_GPIO_Slave_0_0_GPIO_Slave
         .D(o_Err_i_1_n_0),
         .Q(o_Err),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hE4)) 
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[0]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[0]),
+       (.I0(\Wr_Output_reg_n_0_[0] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[0] ),
-        .O(p_0_in[0]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[0]),
+        .O(\o_RData[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[1]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[1]),
+       (.I0(\Wr_Output_reg_n_0_[1] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[1] ),
-        .O(p_0_in[1]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[1]),
+        .O(\o_RData[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[2]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[2]),
+       (.I0(\Wr_Output_reg_n_0_[2] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[2] ),
-        .O(p_0_in[2]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[2]),
+        .O(\o_RData[2]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[3]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[3]),
+       (.I0(\Wr_Output_reg_n_0_[3] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[3] ),
-        .O(p_0_in[3]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[3]),
+        .O(\o_RData[3]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[4]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[4]),
+       (.I0(\Wr_Output_reg_n_0_[4] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[4] ),
-        .O(p_0_in[4]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[4]),
+        .O(\o_RData[4]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[5]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[5]),
+       (.I0(\Wr_Output_reg_n_0_[5] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[5] ),
-        .O(p_0_in[5]));
-  LUT3 #(
-    .INIT(8'hE4)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[5]),
+        .O(\o_RData[5]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[6]_i_1 
-       (.I0(i_RAddr[0]),
-        .I1(pin[6]),
+       (.I0(\Wr_Output_reg_n_0_[6] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[6] ),
-        .O(p_0_in[6]));
-  LUT4 #(
-    .INIT(16'h0004)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[6]),
+        .O(\o_RData[6]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h08)) 
     \o_RData[7]_i_1 
-       (.I0(i_Rst),
+       (.I0(\o_RData[7]_i_3_n_0 ),
         .I1(i_REnable),
-        .I2(i_WEnable),
-        .I3(\o_RData[7]_i_3_n_0 ),
+        .I2(i_Rst),
         .O(\o_RData[7]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \o_RData[7]_i_10 
-       (.I0(i_RAddr[19]),
-        .I1(i_RAddr[18]),
-        .I2(i_RAddr[21]),
-        .I3(i_RAddr[20]),
+       (.I0(i_RAddr[29]),
+        .I1(i_RAddr[2]),
+        .I2(i_RAddr[27]),
+        .I3(i_RAddr[3]),
         .O(\o_RData[7]_i_10_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \o_RData[7]_i_11 
-       (.I0(i_RAddr[27]),
-        .I1(i_RAddr[26]),
-        .I2(i_RAddr[29]),
-        .I3(i_RAddr[28]),
+       (.I0(i_RAddr[28]),
+        .I1(i_RAddr[7]),
+        .I2(i_RAddr[22]),
+        .I3(i_RAddr[8]),
         .O(\o_RData[7]_i_11_n_0 ));
-  LUT3 #(
-    .INIT(8'hE4)) 
+  LUT5 #(
+    .INIT(32'hFFB800B8)) 
     \o_RData[7]_i_2 
-       (.I0(i_RAddr[0]),
-        .I1(pin[7]),
+       (.I0(\Wr_Output_reg_n_0_[7] ),
+        .I1(i_RAddr[0]),
         .I2(\direction_reg_n_0_[7] ),
-        .O(p_0_in[7]));
-  LUT3 #(
-    .INIT(8'hFE)) 
+        .I3(i_RAddr[1]),
+        .I4(pin[7]),
+        .O(\o_RData[7]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0002)) 
     \o_RData[7]_i_3 
        (.I0(\o_RData[7]_i_4_n_0 ),
         .I1(\o_RData[7]_i_5_n_0 ),
         .I2(\o_RData[7]_i_6_n_0 ),
+        .I3(\o_RData[7]_i_7_n_0 ),
         .O(\o_RData[7]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'h00000001)) 
     \o_RData[7]_i_4 
-       (.I0(i_RAddr[12]),
-        .I1(i_RAddr[13]),
-        .I2(i_RAddr[10]),
-        .I3(i_RAddr[11]),
-        .I4(\o_RData[7]_i_7_n_0 ),
+       (.I0(i_RAddr[10]),
+        .I1(i_RAddr[12]),
+        .I2(i_RAddr[30]),
+        .I3(\o_RData[7]_i_8_n_0 ),
+        .I4(\o_RData[7]_i_9_n_0 ),
         .O(\o_RData[7]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \o_RData[7]_i_5 
-       (.I0(i_RAddr[4]),
-        .I1(i_RAddr[5]),
-        .I2(i_RAddr[2]),
-        .I3(i_RAddr[3]),
-        .I4(\o_RData[7]_i_8_n_0 ),
+       (.I0(i_RAddr[11]),
+        .I1(i_RAddr[19]),
+        .I2(i_WEnable),
+        .I3(i_RAddr[14]),
+        .I4(\o_RData[7]_i_10_n_0 ),
         .O(\o_RData[7]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \o_RData[7]_i_6 
-       (.I0(\o_RData[7]_i_9_n_0 ),
-        .I1(\o_RData[7]_i_10_n_0 ),
-        .I2(i_RAddr[31]),
-        .I3(i_RAddr[30]),
-        .I4(i_RAddr[1]),
-        .I5(\o_RData[7]_i_11_n_0 ),
+       (.I0(i_RAddr[4]),
+        .I1(i_RAddr[31]),
+        .I2(i_RAddr[5]),
+        .I3(i_RAddr[9]),
+        .I4(\o_RData[7]_i_11_n_0 ),
         .O(\o_RData[7]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFF8)) 
     \o_RData[7]_i_7 
-       (.I0(i_RAddr[15]),
-        .I1(i_RAddr[14]),
-        .I2(i_RAddr[17]),
-        .I3(i_RAddr[16]),
+       (.I0(i_RAddr[0]),
+        .I1(i_RAddr[1]),
+        .I2(i_RAddr[13]),
+        .I3(i_RAddr[21]),
+        .I4(i_RAddr[15]),
+        .I5(i_RAddr[25]),
         .O(\o_RData[7]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \o_RData[7]_i_8 
-       (.I0(i_RAddr[7]),
-        .I1(i_RAddr[6]),
-        .I2(i_RAddr[9]),
-        .I3(i_RAddr[8]),
+       (.I0(i_RAddr[26]),
+        .I1(i_RAddr[23]),
+        .I2(i_RAddr[24]),
+        .I3(i_RAddr[20]),
         .O(\o_RData[7]_i_8_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \o_RData[7]_i_9 
-       (.I0(i_RAddr[23]),
-        .I1(i_RAddr[22]),
-        .I2(i_RAddr[25]),
-        .I3(i_RAddr[24]),
+       (.I0(i_RAddr[16]),
+        .I1(i_RAddr[6]),
+        .I2(i_RAddr[18]),
+        .I3(i_RAddr[17]),
         .O(\o_RData[7]_i_9_n_0 ));
   FDRE \o_RData_reg[0] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[0]),
+        .D(\o_RData[0]_i_1_n_0 ),
         .Q(o_RData[0]),
         .R(1'b0));
   FDRE \o_RData_reg[1] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[1]),
+        .D(\o_RData[1]_i_1_n_0 ),
         .Q(o_RData[1]),
         .R(1'b0));
   FDRE \o_RData_reg[2] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[2]),
+        .D(\o_RData[2]_i_1_n_0 ),
         .Q(o_RData[2]),
         .R(1'b0));
   FDRE \o_RData_reg[3] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[3]),
+        .D(\o_RData[3]_i_1_n_0 ),
         .Q(o_RData[3]),
         .R(1'b0));
   FDRE \o_RData_reg[4] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[4]),
+        .D(\o_RData[4]_i_1_n_0 ),
         .Q(o_RData[4]),
         .R(1'b0));
   FDRE \o_RData_reg[5] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[5]),
+        .D(\o_RData[5]_i_1_n_0 ),
         .Q(o_RData[5]),
         .R(1'b0));
   FDRE \o_RData_reg[6] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[6]),
+        .D(\o_RData[6]_i_1_n_0 ),
         .Q(o_RData[6]),
         .R(1'b0));
   FDRE \o_RData_reg[7] 
        (.C(i_Clk),
         .CE(\o_RData[7]_i_1_n_0 ),
-        .D(p_0_in[7]),
+        .D(\o_RData[7]_i_2_n_0 ),
         .Q(o_RData[7]),
         .R(1'b0));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[0]_INST_0 
-       (.I0(\data_in_reg_n_0_[0] ),
+       (.I0(\Wr_Output_reg_n_0_[0] ),
         .I1(\direction_reg_n_0_[0] ),
         .O(pin[0]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[1]_INST_0 
-       (.I0(\data_in_reg_n_0_[1] ),
+       (.I0(\Wr_Output_reg_n_0_[1] ),
         .I1(\direction_reg_n_0_[1] ),
         .O(pin[1]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[2]_INST_0 
-       (.I0(\data_in_reg_n_0_[2] ),
+       (.I0(\Wr_Output_reg_n_0_[2] ),
         .I1(\direction_reg_n_0_[2] ),
         .O(pin[2]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[3]_INST_0 
-       (.I0(\data_in_reg_n_0_[3] ),
+       (.I0(\Wr_Output_reg_n_0_[3] ),
         .I1(\direction_reg_n_0_[3] ),
         .O(pin[3]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[4]_INST_0 
-       (.I0(\data_in_reg_n_0_[4] ),
+       (.I0(\Wr_Output_reg_n_0_[4] ),
         .I1(\direction_reg_n_0_[4] ),
         .O(pin[4]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[5]_INST_0 
-       (.I0(\data_in_reg_n_0_[5] ),
+       (.I0(\Wr_Output_reg_n_0_[5] ),
         .I1(\direction_reg_n_0_[5] ),
         .O(pin[5]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[6]_INST_0 
-       (.I0(\data_in_reg_n_0_[6] ),
+       (.I0(\Wr_Output_reg_n_0_[6] ),
         .I1(\direction_reg_n_0_[6] ),
         .O(pin[6]));
   LUT2 #(
     .INIT(4'h8)) 
     \pin[7]_INST_0 
-       (.I0(\data_in_reg_n_0_[7] ),
+       (.I0(\Wr_Output_reg_n_0_[7] ),
         .I1(\direction_reg_n_0_[7] ),
         .O(pin[7]));
 endmodule

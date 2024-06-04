@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bcf2e82c</spirit:value>
+            <spirit:value>a43a6014</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,7 +74,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bcf2e82c</spirit:value>
+            <spirit:value>a43a6014</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -272,7 +272,7 @@
       <spirit:file>
         <spirit:name>src/Gpio_Slave.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5231c480</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_27561e3c</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -346,13 +346,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>GPIO_Slave_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>25</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-22T13:18:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>28</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-06-04T23:37:21Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a87bed3b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1dd5d833"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="547fbaad"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9d18c3d3"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="e36084c9"/>
     </xilinx:packagingInfo>

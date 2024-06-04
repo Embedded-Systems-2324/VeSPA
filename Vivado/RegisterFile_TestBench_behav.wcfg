@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="SoC_tb_time_synth.wdb" id="1">
+      <db_ref path="SoC_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="SoC_tb" />
             <top_module name="glbl" />
@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="654.156 ns"></ZoomStartTime>
-      <ZoomEndTime time="865.584 ns"></ZoomEndTime>
-      <Cursor1Time time="900.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,577.990 ns"></ZoomEndTime>
+      <Cursor1Time time="1,202.007 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="126"></NameColumnWidth>
+      <NameColumnWidth column_width="118"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="25" />
    <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/i_Clk">
       <obj_property name="ElementShortName">i_Clk</obj_property>
       <obj_property name="ObjectShortName">i_Clk</obj_property>
@@ -28,11 +28,87 @@
       <obj_property name="ElementShortName">i_Rst</obj_property>
       <obj_property name="ObjectShortName">i_Rst</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/led_teste">
-      <obj_property name="ElementShortName">led_teste</obj_property>
-      <obj_property name="ObjectShortName">led_teste</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/i_InstructionRegister">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_InstructionRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_InstructionRegister[31:0]</obj_property>
+      <obj_property name="label">IR_FETCH</obj_property>
    </wvobject>
-   <wvobject fp_name="divider2158" type="divider">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_InstructionRegister">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_InstructionRegister[31:0]</obj_property>
+      <obj_property name="label">IR_WB</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/i_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_FETCH</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/o_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_DEC</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ExecuteMemoryReg/i_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_EXE</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ExecuteMemoryReg/o_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_MEM</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_ProgramCounter">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="label">PC_WB</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider207" type="divider">
+      <obj_property name="label">GPIO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/i_REnable">
+      <obj_property name="ElementShortName">i_REnable</obj_property>
+      <obj_property name="ObjectShortName">i_REnable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/i_RAddr">
+      <obj_property name="ElementShortName">i_RAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_RAddr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/o_RData">
+      <obj_property name="ElementShortName">o_RData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_RData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/gpio/direction">
+      <obj_property name="ElementShortName">direction[7:0]</obj_property>
+      <obj_property name="ObjectShortName">direction[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/gpio/write_reg">
+      <obj_property name="ElementShortName">write_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">write_reg[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/gpio/read_reg">
+      <obj_property name="ElementShortName">read_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">read_reg[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider212" type="divider">
       <obj_property name="label">CPU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
@@ -50,61 +126,28 @@
       <obj_property name="ObjectShortName">i_RData[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="divider59" type="divider">
-      <obj_property name="label">uart</obj_property>
+   <wvobject fp_name="divider216" type="divider">
+      <obj_property name="label">REG</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/UartSlave_0/i_REnable">
-      <obj_property name="ElementShortName">i_REnable</obj_property>
-      <obj_property name="ObjectShortName">i_REnable</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/UartSlave_0/i_RAddr">
-      <obj_property name="ElementShortName">i_RAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RAddr[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/UartSlave_0/o_RData">
-      <obj_property name="ElementShortName">o_RData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_RData[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider123" type="divider">
-      <obj_property name="label">Inter</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/i_REnable">
-      <obj_property name="ElementShortName">i_REnable</obj_property>
-      <obj_property name="ObjectShortName">i_REnable</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/i_RAddr">
-      <obj_property name="ElementShortName">i_RAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RAddr[31:0]</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/r_RegFile[1]">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/i_RData_3">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">i_RData_3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RData_3[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="label">uart_inter</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/r_RegFile[0]">
+      <obj_property name="ElementShortName">[0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/o_REnable_3">
-      <obj_property name="ElementShortName">o_REnable_3</obj_property>
-      <obj_property name="ObjectShortName">o_REnable_3</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/o_RData">
-      <obj_property name="ElementShortName">o_RData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_RData[31:0]</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/r_RegFile[4]">
+      <obj_property name="ElementShortName">[4][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[4][31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CustomInterconnect_0/i_RData_0">
-      <obj_property name="ElementShortName">i_RData_0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_RData_0[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/\r_RegFile[1]_30 ">
-      <obj_property name="ElementShortName">\r_RegFile[1]_30 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[1]_30 [31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/\r_RegFile[2]_29 ">
-      <obj_property name="ElementShortName">\r_RegFile[2]_29 [31:0]</obj_property>
-      <obj_property name="ObjectShortName">\r_RegFile[2]_29 [31:0]</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/r_RegFile[3]">
+      <obj_property name="ElementShortName">[3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

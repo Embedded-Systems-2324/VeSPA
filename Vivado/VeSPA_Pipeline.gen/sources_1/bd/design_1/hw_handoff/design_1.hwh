@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  4 21:20:41 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun  5 00:37:46 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -126,21 +126,21 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Clk"/>
-            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Rst"/>
-            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
@@ -515,7 +515,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="25" FULLNAME="/GPIO_Slave_0" HWVERSION="1.0" INSTANCE="GPIO_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Slave" VLNV="user.org:user:GPIO_Slave:1.0">
+    <MODULE COREREVISION="28" FULLNAME="/GPIO_Slave_0" HWVERSION="1.0" INSTANCE="GPIO_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Slave" VLNV="user.org:user:GPIO_Slave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_GPIO_Slave_0_0"/>

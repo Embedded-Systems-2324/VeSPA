@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:GPIO_Slave:1.0
-// IP Revision: 25
+// IP Revision: 28
 
 `timescale 1ns/1ps
 
@@ -67,7 +67,7 @@ module design_1_GPIO_Slave_0_0 (
   pin
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *)
 input wire i_Clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)

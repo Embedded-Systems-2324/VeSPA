@@ -1,6 +1,153 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:37:43 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_GPIO_Slave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_GPIO_Slave_0_0 (user.org:user:GPIO_Slave:1.0) from (Rev. 27) to (Rev. 28)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:35:08 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_GPIO_Slave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_GPIO_Slave_0_0 (user.org:user:GPIO_Slave:1.0) from (Rev. 26) to (Rev. 27)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:31:35 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_CPU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_CPU_0_0 (user.org:user:CPU:1.0 (Rev. 44)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:31:14 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_GPIO_Slave_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_GPIO_Slave_0_0 (user.org:user:GPIO_Slave:1.0) from (Rev. 25) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:14:22 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_CPU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_CPU_0_0 (user.org:user:CPU:1.0 (Rev. 44)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Wed Jun  5 00:07:15 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_CPU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_CPU_0_0 (user.org:user:CPU:1.0 (Rev. 44)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Jun  4 21:53:41 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_CPU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of design_1_CPU_0_0 (user.org:user:CPU:1.0 (Rev. 44)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
 | Date         : Tue Jun  4 21:20:38 2024
 | Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 | Command      : upgrade_ip

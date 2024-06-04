@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Tue May 28 16:10:57 2024
-| Host         : joseleite-ThinkPad-L15-Gen-1 running 64-bit Ubuntu 22.04.3 LTS
+| Date         : Wed Jun  5 00:38:12 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file design_1_GPIO_Slave_0_0_utilization_synth.rpt -pb design_1_GPIO_Slave_0_0_utilization_synth.pb
 | Design       : design_1_GPIO_Slave_0_0
 | Device       : xc7z010clg400-1
@@ -149,11 +149,11 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   25 |        Flop & Latch |
-| LUT3     |   12 |                 LUT |
-| LUT4     |   11 |                 LUT |
-| LUT2     |    8 |                 LUT |
-| LUT5     |    4 |                 LUT |
-| LUT6     |    3 |                 LUT |
+| LUT5     |   15 |                 LUT |
+| LUT4     |   10 |                 LUT |
+| LUT2     |   10 |                 LUT |
+| LUT6     |    2 |                 LUT |
+| LUT3     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

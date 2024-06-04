@@ -11,14 +11,14 @@
       "validated": "true"
     },
     "design_tree": {
-      "GPIO_Slave_0": "",
       "PS2_Slave_0": "",
       "timerSlave_0": "",
       "DataMemory_0": "",
       "interruptControllerS_0": "",
       "UartSlave_0": "",
       "CustomInterconnect_0": "",
-      "CPU_0": ""
+      "CPU_0": "",
+      "GPIO_Slave_0": ""
     },
     "ports": {
       "pin_0": {
@@ -122,12 +122,6 @@
       }
     },
     "components": {
-      "GPIO_Slave_0": {
-        "vlnv": "user.org:user:GPIO_Slave:1.0",
-        "xci_name": "design_1_GPIO_Slave_0_0",
-        "xci_path": "ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci",
-        "inst_hier_path": "GPIO_Slave_0"
-      },
       "PS2_Slave_0": {
         "vlnv": "user.org:user:PS2_Slave:1.0",
         "xci_name": "design_1_PS2_Slave_0_0",
@@ -169,6 +163,12 @@
         "xci_name": "design_1_CPU_0_0",
         "xci_path": "ip/design_1_CPU_0_0/design_1_CPU_0_0.xci",
         "inst_hier_path": "CPU_0"
+      },
+      "GPIO_Slave_0": {
+        "vlnv": "user.org:user:GPIO_Slave:1.0",
+        "xci_name": "design_1_GPIO_Slave_0_0",
+        "xci_path": "ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci",
+        "inst_hier_path": "GPIO_Slave_0"
       }
     },
     "nets": {
@@ -224,22 +224,22 @@
         "ports": [
           "CPU_0/o_Clk",
           "PS2_Slave_0/i_Clk",
-          "GPIO_Slave_0/i_Clk",
           "timerSlave_0/i_Clk",
           "DataMemory_0/i_Clk",
           "interruptControllerS_0/i_Clk",
-          "UartSlave_0/i_Clk"
+          "UartSlave_0/i_Clk",
+          "GPIO_Slave_0/i_Clk"
         ]
       },
       "CPU_1_o_Rst": {
         "ports": [
           "CPU_0/o_Rst",
           "PS2_Slave_0/i_Rst",
-          "GPIO_Slave_0/i_Rst",
           "timerSlave_0/i_Rst",
           "DataMemory_0/i_Rst",
           "interruptControllerS_0/i_Rst",
-          "UartSlave_0/i_Rst"
+          "UartSlave_0/i_Rst",
+          "GPIO_Slave_0/i_Rst"
         ]
       },
       "CustomInterconnect_0_o_RAddr_0": {
