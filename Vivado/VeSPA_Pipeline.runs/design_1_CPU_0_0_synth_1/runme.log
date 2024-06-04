@@ -12,25 +12,8 @@
 
 source design_1_CPU_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mariolima/Desktop/vespa_git/VeSPA/VeSPA_Peripherals'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:timerSlave:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-Timer/timer' will take precedence over the same IP in locations: 
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/timer
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/timer
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:teste:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/teste' will take precedence over the same IP in location /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/teste
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:vespa_cpu:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/cpu' will take precedence over the same IP in location /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/cpu
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:GPIO_Slave:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/GPIO_Slave_IP' will take precedence over the same IP in locations: 
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/GPIO_Slave_IP
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/GPIO_Slave_IP
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:PS2:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/ps2' will take precedence over the same IP in locations: 
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/ps2
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-PS2/PS2/ps2_ip_fifo/ps2
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:CustomInterconnect:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/interconnect' will take precedence over the same IP in location /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/interconnect
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:interruptControllerSlave:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/interruptController' will take precedence over the same IP in location /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/interruptController
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:DataMemory:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/dataMemory' will take precedence over the same IP in location /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/dataMemory
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:UartSlave:1.0'. The one found in IP location '/home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/UartEchoTestProj/Vivado/ip_repo/uart' will take precedence over the same IP in locations: 
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-UART/Uart_IP
-   /home/mariolima/Desktop/vespa_teste/VeSPA/VeSPA_Peripherals/VeSPA-GPIO/UartGpioTestProj/Vivado/ip_repo/uart
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_CPU_0_0
 Command: synth_design -top design_1_CPU_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -39,27 +22,27 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 90939
-INFO: [Synth 8-11241] undeclared symbol 'w_PcBackupDelay', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:90]
-INFO: [Synth 8-11241] undeclared symbol 'w_StartingIrq', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:91]
-INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:219]
+INFO: [Synth 8-7075] Helper process launched with PID 19404
+INFO: [Synth 8-11241] undeclared symbol 'w_PcBackupDelay', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:92]
+INFO: [Synth 8-11241] undeclared symbol 'w_StartingIrq', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:93]
+INFO: [Synth 8-11241] undeclared symbol 'w_PcRetExe', assumed default net type 'wire' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:221]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2032.832 ; gain = 378.699 ; free physical = 716 ; free virtual = 8344
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2029.984 ; gain = 377.730 ; free physical = 398 ; free virtual = 6811
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_CPU_0_0' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/synth/design_1_CPU_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:5]
-INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ControlUnit.v:5]
-INFO: [Synth 8-6157] synthesizing module 'check_branchcond' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/check_branchcond.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'check_branchcond' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/check_branchcond.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ControlUnit.v:5]
-INFO: [Synth 8-6157] synthesizing module 'HazardUnit' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/HazardUnit.v:28]
-INFO: [Synth 8-6157] synthesizing module 'control_hazards' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/control_hazards.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'control_hazards' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/control_hazards.v:5]
-INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/forwarding_unit.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/forwarding_unit.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'HazardUnit' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/HazardUnit.v:28]
-INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionFetch.v:17]
-INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:72]
+INFO: [Synth 8-6157] synthesizing module 'design_1_CPU_0_0' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/synth/design_1_CPU_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ControlUnit.v:5]
+INFO: [Synth 8-6157] synthesizing module 'check_branchcond' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/check_branchcond.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'check_branchcond' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/check_branchcond.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ControlUnit.v:5]
+INFO: [Synth 8-6157] synthesizing module 'HazardUnit' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/HazardUnit.v:28]
+INFO: [Synth 8-6157] synthesizing module 'control_hazards' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/control_hazards.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'control_hazards' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/control_hazards.v:5]
+INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/forwarding_unit.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/forwarding_unit.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'HazardUnit' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/HazardUnit.v:28]
+INFO: [Synth 8-6157] synthesizing module 'InstructionFetch' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionFetch.v:17]
+INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:72]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -135,40 +118,40 @@ INFO: [Synth 8-638] synthesizing module 'CodeMemory' [/home/mariolima/Desktop/ve
 	Parameter C_COUNT_36K_BRAM bound to: 4 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.194 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:239]
-INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:72]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionFetch.v:17]
-INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/FetchDecodeReg.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/FetchDecodeReg.v:11]
-INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/RegisterFile.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionDecode.v:25]
-INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/DecodeExecuteReg.v:5]
-INFO: [Synth 8-6157] synthesizing module 'InstructionExecute' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionExecute.v:4]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ALU.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ALU.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionExecute' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionExecute.v:4]
-INFO: [Synth 8-6157] synthesizing module 'ExecuteMemoryReg' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ExecuteMemoryReg.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ExecuteMemoryReg' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/ExecuteMemoryReg.v:3]
-INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionMemory.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionMemory.v:23]
-INFO: [Synth 8-6157] synthesizing module 'MemoryWriteBackReg' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/MemoryWriteBackReg.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'MemoryWriteBackReg' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/MemoryWriteBackReg.v:5]
-INFO: [Synth 8-6157] synthesizing module 'InstructionWriteBack' [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionWriteBack.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'InstructionWriteBack' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionWriteBack.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_CPU_0_0' (0#1) [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/synth/design_1_CPU_0_0.v:53]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_6' declared at '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_6' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'CodeMemory' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/synth/CodeMemory.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionFetch' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionFetch.v:17]
+INFO: [Synth 8-6157] synthesizing module 'FetchDecodeReg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/FetchDecodeReg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FetchDecodeReg' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/FetchDecodeReg.v:11]
+INFO: [Synth 8-6157] synthesizing module 'InstructionDecode' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionDecode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/RegisterFile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/RegisterFile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionDecode' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionDecode.v:25]
+INFO: [Synth 8-6157] synthesizing module 'DecodeExecuteReg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/DecodeExecuteReg.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'DecodeExecuteReg' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/DecodeExecuteReg.v:5]
+INFO: [Synth 8-6157] synthesizing module 'InstructionExecute' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionExecute.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ALU.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ALU.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionExecute' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionExecute.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ExecuteMemoryReg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ExecuteMemoryReg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ExecuteMemoryReg' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/ExecuteMemoryReg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionMemory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MemoryWriteBackReg' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/MemoryWriteBackReg.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'MemoryWriteBackReg' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/MemoryWriteBackReg.v:5]
+INFO: [Synth 8-6157] synthesizing module 'InstructionWriteBack' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionWriteBack.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionWriteBack' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionWriteBack.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_CPU_0_0' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/synth/design_1_CPU_0_0.v:53]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
-WARNING: [Synth 8-6014] Unused sequential element o_FlushExecute_reg was removed.  [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/control_hazards.v:37]
-WARNING: [Synth 8-6014] Unused sequential element o_FlushFetch_reg was removed.  [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/control_hazards.v:38]
-WARNING: [Synth 8-6014] Unused sequential element r_InterruptSignal_reg was removed.  [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/DecodeExecuteReg.v:195]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'alu'. This will prevent further optimization [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionExecute.v:77]
-WARNING: [Synth 8-3848] Net o_Imm22 in module/entity InstructionExecute does not have driver. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/InstructionExecute.v:47]
-WARNING: [Synth 8-3848] Net w_StallMem in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:36]
-WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:219]
-WARNING: [Synth 8-3848] Net w_StallWb in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/ccbd/src/CPU.v:36]
+WARNING: [Synth 8-6014] Unused sequential element o_FlushExecute_reg was removed.  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/control_hazards.v:37]
+WARNING: [Synth 8-6014] Unused sequential element o_FlushFetch_reg was removed.  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/control_hazards.v:38]
+WARNING: [Synth 8-6014] Unused sequential element r_InterruptSignal_reg was removed.  [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/DecodeExecuteReg.v:195]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'alu'. This will prevent further optimization [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionExecute.v:77]
+WARNING: [Synth 8-3848] Net o_Imm22 in module/entity InstructionExecute does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/InstructionExecute.v:47]
+WARNING: [Synth 8-3848] Net w_StallMem in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:36]
+WARNING: [Synth 8-3848] Net w_PcRetExe in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:221]
+WARNING: [Synth 8-3848] Net w_StallWb in module/entity CPU does not have driver. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/62f1/src/CPU.v:36]
 WARNING: [Synth 8-7129] Port i_Clk in module InstructionWriteBack is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_Rst in module InstructionWriteBack is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_InterruptSignal in module InstructionWriteBack is either unconnected or has no load
@@ -271,88 +254,88 @@ WARNING: [Synth 8-7129] Port DOUTB_I[3] in module blk_mem_output_block is either
 WARNING: [Synth 8-7129] Port DOUTB_I[2] in module blk_mem_output_block is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.277 ; gain = 654.145 ; free physical = 463 ; free virtual = 8054
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2307.430 ; gain = 655.176 ; free physical = 234 ; free virtual = 6531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.277 ; gain = 654.145 ; free physical = 463 ; free virtual = 8054
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2307.430 ; gain = 655.176 ; free physical = 233 ; free virtual = 6532
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2308.277 ; gain = 654.145 ; free physical = 463 ; free virtual = 8054
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2307.430 ; gain = 655.176 ; free physical = 233 ; free virtual = 6532
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2308.277 ; gain = 0.000 ; free physical = 461 ; free virtual = 8052
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2307.430 ; gain = 0.000 ; free physical = 233 ; free virtual = 6531
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc] for cell 'inst'
-WARNING: [Vivado 12-584] No ports matched 'led'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:16]
+Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc] for cell 'inst'
+WARNING: [Vivado 12-584] No ports matched 'led'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:16]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'led'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[3]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[3]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[2]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[2]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:19]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[1]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[1]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:20]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[0]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[0]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:21]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[3]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[3]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:22]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[2]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[2]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[1]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[1]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:24]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i_IntSources[0]'. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'i_IntSources[0]'. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc:25]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_CPU_0_0_propImpl.xdc].
+Finished Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_CPU_0_0/src/Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_CPU_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_CPU_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.277 ; gain = 0.000 ; free physical = 461 ; free virtual = 8052
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2371.461 ; gain = 0.000 ; free physical = 237 ; free virtual = 6533
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2375.277 ; gain = 0.000 ; free physical = 460 ; free virtual = 8052
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2371.461 ; gain = 0.000 ; free physical = 237 ; free virtual = 6533
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 413 ; free virtual = 8034
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2371.461 ; gain = 719.207 ; free physical = 215 ; free virtual = 6523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 413 ; free virtual = 8034
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2371.461 ; gain = 719.207 ; free physical = 215 ; free virtual = 6523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc, line 14).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/dont_touch.xdc, line 14).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/_InstrFetch/_CodeMem. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 413 ; free virtual = 8034
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2371.461 ; gain = 719.207 ; free physical = 215 ; free virtual = 6523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 419 ; free virtual = 8034
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2371.461 ; gain = 719.207 ; free physical = 216 ; free virtual = 6520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -403,25 +386,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 401 ; free virtual = 8009
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 194 ; free virtual = 6490
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 401 ; free virtual = 8008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 174 ; free virtual = 6479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 401 ; free virtual = 8008
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 174 ; free virtual = 6478
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 392 ; free virtual = 8008
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 173 ; free virtual = 6477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -439,37 +422,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 175 ; free virtual = 6476
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 175 ; free virtual = 6476
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 172 ; free virtual = 6474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 172 ; free virtual = 6474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 173 ; free virtual = 6474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 173 ; free virtual = 6474
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -514,31 +497,31 @@ Report Cell Usage:
 |16    |FDSE     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.277 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.562 ; gain = 737.309 ; free physical = 173 ; free virtual = 6474
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 245 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2375.277 ; gain = 654.145 ; free physical = 387 ; free virtual = 8006
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2375.285 ; gain = 721.145 ; free physical = 387 ; free virtual = 8006
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2389.562 ; gain = 673.277 ; free physical = 173 ; free virtual = 6474
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2389.570 ; gain = 737.309 ; free physical = 173 ; free virtual = 6474
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2375.285 ; gain = 0.000 ; free physical = 670 ; free virtual = 8290
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2389.570 ; gain = 0.000 ; free physical = 451 ; free virtual = 6752
 INFO: [Netlist 29-17] Analyzing 378 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2407.293 ; gain = 0.000 ; free physical = 670 ; free virtual = 8290
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2421.578 ; gain = 0.000 ; free physical = 450 ; free virtual = 6751
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 5ebaa5bf
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 128 Warnings, 10 Critical Warnings and 0 Errors encountered.
+66 Infos, 119 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2407.293 ; gain = 1064.559 ; free physical = 670 ; free virtual = 8290
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1967.340; main = 1683.048; forked = 373.890
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3321.375; main = 2407.297; forked = 978.109
-INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/design_1_CPU_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2421.578 ; gain = 1085.660 ; free physical = 450 ; free virtual = 6751
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1962.784; main = 1695.865; forked = 374.619
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3317.559; main = 2421.582; forked = 978.109
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/design_1_CPU_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 26 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_teste/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/design_1_CPU_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_CPU_0_0_synth_1/design_1_CPU_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_CPU_0_0_utilization_synth.rpt -pb design_1_CPU_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 16:40:19 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 21:21:13 2024...

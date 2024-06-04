@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.sim/sim_1/synth/timing/xsim/SoC_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.sim/sim_1/synth/timing/xsim/SoC_tb_time_synth.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1
 INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0
 INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0_ALU
@@ -16,6 +16,7 @@ INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0_MemoryWriteBackReg
 INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0_RegisterFile
 INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0_control_hazards
 INFO: [VRFC 10-311] analyzing module design_1_CustomInterconnect_0_0
+INFO: [VRFC 10-311] analyzing module design_1_CustomInterconnect_0_0_CustomInterconnect
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_SlaveInterface
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_VeSPA_RAM
@@ -55,5 +56,5 @@ INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_blk_mem_gen_top
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_blk_mem_gen_v8_4_6
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_blk_mem_gen_v8_4_6_synth
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/joseleite/Vivado_Projects/Vivado/VeSPA_Pipeline.srcs/sim_1/new/SoC_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.srcs/sim_1/new/SoC_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SoC_tb

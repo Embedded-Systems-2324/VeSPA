@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Sun Mar 24 19:41:15 2024
+-- Date        : Tue Jun  4 19:17:13 2024
 -- Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_UartSlave_0_0 -prefix
---               design_1_UartSlave_0_0_ vespa_soc_UartSlave_0_0_sim_netlist.vhdl
--- Design      : vespa_soc_UartSlave_0_0
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0_sim_netlist.vhdl
+-- Design      : design_1_UartSlave_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z010clg400-1
@@ -23,6 +23,8 @@ entity design_1_UartSlave_0_0_UartBaudRate is
     tick_reg_0 : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 30 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_UartSlave_0_0_UartBaudRate : entity is "UartBaudRate";
 end design_1_UartSlave_0_0_UartBaudRate;
 
 architecture STRUCTURE of design_1_UartSlave_0_0_UartBaudRate is
@@ -1281,6 +1283,8 @@ entity design_1_UartSlave_0_0_UartRx is
     \o_RData_reg[0]\ : in STD_LOGIC;
     w_TxDone : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_UartSlave_0_0_UartRx : entity is "UartRx";
 end design_1_UartSlave_0_0_UartRx;
 
 architecture STRUCTURE of design_1_UartSlave_0_0_UartRx is
@@ -1895,6 +1899,8 @@ entity design_1_UartSlave_0_0_UartTx is
     r_TxStart_reg_0 : in STD_LOGIC;
     r_TxStart_reg_1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_UartSlave_0_0_UartTx : entity is "UartTx";
 end design_1_UartSlave_0_0_UartTx;
 
 architecture STRUCTURE of design_1_UartSlave_0_0_UartTx is
@@ -2289,6 +2295,8 @@ entity design_1_UartSlave_0_0_Uart is
     i_Clk : in STD_LOGIC;
     i_WAddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_UartSlave_0_0_Uart : entity is "Uart";
 end design_1_UartSlave_0_0_Uart;
 
 architecture STRUCTURE of design_1_UartSlave_0_0_Uart is
@@ -3384,7 +3392,7 @@ entity design_1_UartSlave_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_1_UartSlave_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_UartSlave_0_0 : entity is "vespa_soc_UartSlave_0_0,Uart,{}";
+  attribute CHECK_LICENSE_TYPE of design_1_UartSlave_0_0 : entity is "design_1_UartSlave_0_0,Uart,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_UartSlave_0_0 : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
@@ -3397,7 +3405,7 @@ architecture STRUCTURE of design_1_UartSlave_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of i_Clk : signal is "xilinx.com:signal:clock:1.0 i_Clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of i_Clk : signal is "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vespa_soc_vespa_cpu_0_0_o_Clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of i_Clk : signal is "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of i_Rst : signal is "xilinx.com:signal:reset:1.0 i_Rst RST";
   attribute X_INTERFACE_PARAMETER of i_Rst : signal is "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin

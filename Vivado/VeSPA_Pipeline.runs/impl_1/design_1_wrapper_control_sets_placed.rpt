@@ -1,0 +1,157 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Jun  4 21:25:41 2024
+| Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    79 |
+|    Minimum number of control sets                        |    79 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    94 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    79 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    10 |
+| >= 6 to < 8        |     5 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    51 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           12 |
+| No           | No                    | Yes                    |               9 |            4 |
+| No           | Yes                   | No                     |             308 |          111 |
+| Yes          | No                    | No                     |             159 |           60 |
+| Yes          | No                    | Yes                    |               8 |            1 |
+| Yes          | Yes                   | No                     |            1513 |          645 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|                                  Clock Signal                                 |                            Enable Signal                            |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|  i_Rst_0_IBUF                                                                 |                                                                     |                                                            |                1 |              3 |         3.00 |
+|  design_1_i/timerSlave_0/inst/inst/r_TimerOverflow_i_2__0_n_0_BUFG            |                                                                     |                                                            |                2 |              3 |         1.50 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_ChannelEnable                        | i_Rst_0_IBUF                                               |                1 |              4 |         4.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/interruptControllerS_0/inst/r_ea_i_1_n_0                 | i_Rst_0_IBUF                                               |                1 |              4 |         4.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/interruptControllerS_0/inst/o_RData[3]_i_1_n_0           |                                                            |                1 |              4 |         4.00 |
+|  design_1_i/interruptControllerS_0/inst/inst1/int_sources_prev_reg[3]_i_2_n_0 |                                                                     | i_Clk_0_IBUF_BUFG                                          |                1 |              4 |         4.00 |
+|  design_1_i/interruptControllerS_0/inst/inst1/pending_reg[3]_i_2_n_0          |                                                                     | i_Clk_0_IBUF_BUFG                                          |                1 |              4 |         4.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_InstrExecute/alu/o_ConditionCodes[3]_i_1_n_0 | i_Rst_0_IBUF                                               |                4 |              4 |         1.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/PS2_Slave_0/inst/ps2/FSM_onehot_state[3]_i_1_n_0         | i_Rst_0_IBUF                                               |                1 |              4 |         4.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    |                                                                     |                                                            |                1 |              4 |         4.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    | design_1_i/UartSlave_0/inst/_UartRx/counter[3]_P_i_1_n_0            |                                                            |                1 |              4 |         4.00 |
+|  i_Rst_0_IBUF                                                                 |                                                                     | i_Clk_0_IBUF_BUFG                                          |                3 |              5 |         1.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_Divisor                              | i_Rst_0_IBUF                                               |                2 |              6 |         3.00 |
+|  i_Clk_0_IBUF_BUFG                                                            |                                                                     | design_1_i/CPU_0/inst/_ControlUnit/counter[8]_i_1_n_0      |                3 |              7 |         2.33 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/PS2_Slave_0/inst/o_RData[7]_i_2_n_0                      | design_1_i/PS2_Slave_0/inst/o_RData[7]_i_1_n_0             |                1 |              7 |         7.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    | design_1_i/UartSlave_0/inst/_UartRx/buffer[6]_i_2_n_0               | design_1_i/UartSlave_0/inst/_UartRx/buffer[6]_i_1_n_0      |                1 |              7 |         7.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    | design_1_i/UartSlave_0/inst/_UartTx/buffer[6]_P_i_1_n_0             |                                                            |                2 |              7 |         3.50 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/GPIO_Slave_0/inst/direction                              | i_Rst_0_IBUF                                               |                2 |              8 |         4.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/GPIO_Slave_0/inst/data_in                                | i_Rst_0_IBUF                                               |                3 |              8 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/UartSlave_0/inst/o_RData[31]_i_2_n_0                     |                                                            |                3 |              8 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/PS2_Slave_0/inst/ps2/key[7]_i_1_n_0                      | i_Rst_0_IBUF                                               |                1 |              8 |         8.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/GPIO_Slave_0/inst/o_RData[7]_i_1_n_0                     |                                                            |                4 |              8 |         2.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/UartSlave_0/inst/r_DataIn_0                              | i_Rst_0_IBUF                                               |                2 |              8 |         4.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    | design_1_i/UartSlave_0/inst/_UartRx/data_out[7]_i_1_n_0             | i_Rst_0_IBUF                                               |                1 |              8 |         8.00 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/w_UartTick_BUFG                    |                                                                     | i_Rst_0_IBUF                                               |                4 |              9 |         2.25 |
+|  design_1_i/timerSlave_0/inst/inst/r_TimerOverflow_i_2__0_n_0_BUFG            | design_1_i/timerSlave_0/inst/inst/o_PWMChannel1_i_1_n_0             | i_Rst_0_IBUF                                               |                5 |             12 |         2.40 |
+|  i_Clk_0_IBUF_BUFG                                                            |                                                                     |                                                            |                8 |             13 |         1.62 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/PS2_Slave_0/inst/ps2/counter[3]_i_1_n_0                  | i_Rst_0_IBUF                                               |                4 |             15 |         3.75 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_PulseChannel3                        | i_Rst_0_IBUF                                               |                5 |             16 |         3.20 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_PulseChannel1                        | i_Rst_0_IBUF                                               |                5 |             16 |         3.20 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_OnePulseLength_1                     | i_Rst_0_IBUF                                               |                3 |             16 |         5.33 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/UartSlave_0/inst/o_RData[31]_i_2_n_0                     | design_1_i/UartSlave_0/inst/o_RData[31]_i_1_n_0            |               10 |             24 |         2.40 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/o_RData[31]_i_1_n_0                    |                                                            |               15 |             32 |         2.13 |
+|  design_1_i/timerSlave_0/inst/inst/r_TimerOverflow_i_2__0_n_0_BUFG            | design_1_i/timerSlave_0/inst/inst/r_Counter_0                       | i_Rst_0_IBUF                                               |                9 |             32 |         3.56 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/UartSlave_0/inst/r_BaudRate                              | i_Rst_0_IBUF                                               |               14 |             32 |         2.29 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/timerSlave_0/inst/r_Period_0                             | i_Rst_0_IBUF                                               |                9 |             32 |         3.56 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_DecodeExecuteReg/E[0]                        | design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/SR[0]          |                6 |             32 |         5.33 |
+|  design_1_i/timerSlave_0/inst/inst/r_TimerOverflow_i_2__0_n_0_BUFG            | design_1_i/timerSlave_0/inst/inst/r_EventCounter                    | i_Rst_0_IBUF                                               |                8 |             32 |         4.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_26[0]        | i_Rst_0_IBUF                                               |               19 |             32 |         1.68 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_22[0]        | i_Rst_0_IBUF                                               |               11 |             32 |         2.91 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_25[0]        | i_Rst_0_IBUF                                               |               22 |             32 |         1.45 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_23[0]        | i_Rst_0_IBUF                                               |               20 |             32 |         1.60 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/E[0]                    | i_Rst_0_IBUF                                               |               12 |             32 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_11[0]        | i_Rst_0_IBUF                                               |               19 |             32 |         1.68 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_13[0]        | i_Rst_0_IBUF                                               |               16 |             32 |         2.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_21[0]        | i_Rst_0_IBUF                                               |               11 |             32 |         2.91 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_19[0]        | i_Rst_0_IBUF                                               |                9 |             32 |         3.56 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_2[0]         | i_Rst_0_IBUF                                               |               18 |             32 |         1.78 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_17[0]        | i_Rst_0_IBUF                                               |               12 |             32 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_18[0]        | i_Rst_0_IBUF                                               |               11 |             32 |         2.91 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_16[0]        | i_Rst_0_IBUF                                               |               18 |             32 |         1.78 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_10[0]        | i_Rst_0_IBUF                                               |               17 |             32 |         1.88 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_14[0]        | i_Rst_0_IBUF                                               |               14 |             32 |         2.29 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_20[0]        | i_Rst_0_IBUF                                               |               11 |             32 |         2.91 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_15[0]        | i_Rst_0_IBUF                                               |               17 |             32 |         1.88 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_1[0]         | i_Rst_0_IBUF                                               |               24 |             32 |         1.33 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_12[0]        | i_Rst_0_IBUF                                               |               12 |             32 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_29[0]        | i_Rst_0_IBUF                                               |               15 |             32 |         2.13 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_30[0]        | i_Rst_0_IBUF                                               |               12 |             32 |         2.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_24[0]        | i_Rst_0_IBUF                                               |               18 |             32 |         1.78 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_InstrFetch/o_JmpBxxSignal_reg_0              | i_Rst_0_IBUF                                               |               32 |             32 |         1.00 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_8[0]         | i_Rst_0_IBUF                                               |               14 |             32 |         2.29 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_7[0]         | i_Rst_0_IBUF                                               |               17 |             32 |         1.88 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_27[0]        | i_Rst_0_IBUF                                               |               14 |             32 |         2.29 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_9[0]         | i_Rst_0_IBUF                                               |               15 |             32 |         2.13 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_5[0]         | i_Rst_0_IBUF                                               |               10 |             32 |         3.20 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_6[0]         | i_Rst_0_IBUF                                               |               13 |             32 |         2.46 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_28[0]        | i_Rst_0_IBUF                                               |               15 |             32 |         2.13 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_31[0]        | i_Rst_0_IBUF                                               |                9 |             32 |         3.56 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_32[0]        | i_Rst_0_IBUF                                               |               10 |             32 |         3.20 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_4[0]         | i_Rst_0_IBUF                                               |               19 |             32 |         1.68 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_WrEnRf_reg_3[0]         | i_Rst_0_IBUF                                               |               17 |             32 |         1.88 |
+|  design_1_i/UartSlave_0/inst/_UartBaudRate/clk2_BUFG                          |                                                                     | i_Rst_0_IBUF                                               |                9 |             33 |         3.67 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_DecodeExecuteReg/r_CurrentState_reg[0][0]    | i_Rst_0_IBUF                                               |               10 |             34 |         3.40 |
+|  i_Clk_0_IBUF_BUFG                                                            |                                                                     | design_1_i/CPU_0/inst/_DecodeExecuteReg/o_IrRs2[4]_i_1_n_0 |               12 |             45 |         3.75 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_DecodeExecuteReg/o_RdEnMem_reg_0[0]          | i_Rst_0_IBUF                                               |               15 |             64 |         4.27 |
+|  i_Clk_0_IBUF_BUFG                                                            | design_1_i/CPU_0/inst/_InstrDecode/rf/E[0]                          |                                                            |               34 |             96 |         2.82 |
+|  i_Clk_0_IBUF_BUFG                                                            |                                                                     | i_Rst_0_IBUF                                               |               36 |            102 |         2.83 |
+|  i_Clk_0_IBUF_BUFG                                                            |                                                                     | design_1_i/CPU_0/inst/_HazardUnit/CTRL_HZRD/i_Rst_0        |               46 |            108 |         2.35 |
++-------------------------------------------------------------------------------+---------------------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+
+

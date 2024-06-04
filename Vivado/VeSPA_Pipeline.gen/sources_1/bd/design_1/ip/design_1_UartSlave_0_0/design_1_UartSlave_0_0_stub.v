@@ -2,11 +2,11 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Sun Mar 24 19:41:14 2024
+// Date        : Tue Jun  4 19:17:13 2024
 // Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_UartSlave_0_0 -prefix
-//               design_1_UartSlave_0_0_ vespa_soc_UartSlave_0_0_stub.v
-// Design      : vespa_soc_UartSlave_0_0
+// Command     : write_verilog -force -mode synth_stub
+//               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0_stub.v
+// Design      : design_1_UartSlave_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------

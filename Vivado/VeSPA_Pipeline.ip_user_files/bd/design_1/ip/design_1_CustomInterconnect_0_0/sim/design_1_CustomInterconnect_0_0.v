@@ -48,13 +48,15 @@
 
 
 // IP VLNV: user.org:user:CustomInterconnect:1.0
-// IP Revision: 4
+// IP Revision: 6
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_CustomInterconnect_0_0 (
+  i_Clk,
+  i_Rst,
   i_WEnable,
   i_WAddr,
   i_WData,
@@ -111,6 +113,12 @@ module design_1_CustomInterconnect_0_0 (
   i_RData_7
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_i_Clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *)
+input wire i_Clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *)
+input wire i_Rst;
 input wire i_WEnable;
 input wire [31 : 0] i_WAddr;
 input wire [31 : 0] i_WData;
@@ -167,6 +175,8 @@ output wire [31 : 0] o_RAddr_7;
 input wire [31 : 0] i_RData_7;
 
   CustomInterconnect inst (
+    .i_Clk(i_Clk),
+    .i_Rst(i_Rst),
     .i_WEnable(i_WEnable),
     .i_WAddr(i_WAddr),
     .i_WData(i_WData),

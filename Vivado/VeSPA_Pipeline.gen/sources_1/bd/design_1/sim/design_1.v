@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Tue Jun  4 18:09:57 2024
+//Date        : Tue Jun  4 21:20:40 2024
 //Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -160,7 +160,8 @@ module design_1
         .o_WData(CPU_0_o_WData),
         .o_WEnable(CPU_0_o_WEnable));
   design_1_CustomInterconnect_0_0 CustomInterconnect_0
-       (.i_RAddr(CPU_0_o_RAddr),
+       (.i_Clk(i_Clk_0_1),
+        .i_RAddr(CPU_0_o_RAddr),
         .i_RData_0(DataMemory_0_o_RData),
         .i_RData_1(interruptControllerS_0_o_RData),
         .i_RData_2(GPIO_Slave_0_o_RData),
@@ -170,6 +171,7 @@ module design_1
         .i_RData_6({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .i_RData_7(timerSlave_0_o_RData),
         .i_REnable(CPU_0_o_REnable),
+        .i_Rst(i_Rst_0_1),
         .i_WAddr(CPU_0_o_WAddr),
         .i_WData(CPU_0_o_WData),
         .i_WEnable(CPU_0_o_WEnable),

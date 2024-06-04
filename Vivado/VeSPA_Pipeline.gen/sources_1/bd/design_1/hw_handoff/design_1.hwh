@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  4 18:09:57 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  4 21:20:41 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -66,11 +66,13 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk_0" SIGIS="clk" SIGNAME="External_Ports_i_Clk_0">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_Clk"/>
         <CONNECTION INSTANCE="CPU_0" PORT="i_Clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_Rst_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_i_Rst_0">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="CustomInterconnect_0" PORT="i_Rst"/>
         <CONNECTION INSTANCE="CPU_0" PORT="i_Rst"/>
       </CONNECTIONS>
     </PORT>
@@ -104,7 +106,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="40" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
+    <MODULE COREREVISION="44" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
@@ -124,21 +126,21 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="o_Clk" SIGIS="clk" SIGNAME="CPU_0_o_Clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Clk"/>
-            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PS2_Slave_0" PORT="i_Rst"/>
-            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
@@ -215,13 +217,23 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/CustomInterconnect_0" HWVERSION="1.0" INSTANCE="CustomInterconnect_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CustomInterconnect" VLNV="user.org:user:CustomInterconnect:1.0">
+    <MODULE COREREVISION="6" FULLNAME="/CustomInterconnect_0" HWVERSION="1.0" INSTANCE="CustomInterconnect_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CustomInterconnect" VLNV="user.org:user:CustomInterconnect:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_CustomInterconnect_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clk" SIGIS="clk" SIGNAME="External_Ports_i_Clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_i_Rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="i_Rst_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="i_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CPU_0" PORT="o_WEnable"/>
@@ -625,7 +637,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/UartSlave_0" HWVERSION="1.0" INSTANCE="UartSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UartSlave" VLNV="user.org:user:UartSlave:1.0">
+    <MODULE COREREVISION="6" FULLNAME="/UartSlave_0" HWVERSION="1.0" INSTANCE="UartSlave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UartSlave" VLNV="user.org:user:UartSlave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_UartSlave_0_0"/>

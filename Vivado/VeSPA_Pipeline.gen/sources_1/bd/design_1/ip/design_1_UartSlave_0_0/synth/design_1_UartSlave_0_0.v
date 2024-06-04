@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:UartSlave:1.0
-// IP Revision: 2
+// IP Revision: 6
 
 (* X_CORE_INFO = "Uart,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_UartSlave_0_0,Uart,{}" *)
@@ -68,7 +68,7 @@ module design_1_UartSlave_0_0 (
   o_Tx
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_3_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *)
 input wire i_Clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)

@@ -2,17 +2,71 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Sun Mar 24 19:41:15 2024
+// Date        : Tue Jun  4 19:17:13 2024
 // Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_UartSlave_0_0 -prefix
-//               design_1_UartSlave_0_0_ vespa_soc_UartSlave_0_0_sim_netlist.v
-// Design      : vespa_soc_UartSlave_0_0
+// Command     : write_verilog -force -mode funcsim
+//               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0_sim_netlist.v
+// Design      : design_1_UartSlave_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_1_UartSlave_0_0,Uart,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "Uart,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_1_UartSlave_0_0
+   (i_Clk,
+    i_Rst,
+    i_WEnable,
+    i_WAddr,
+    i_WData,
+    i_REnable,
+    i_RAddr,
+    o_RData,
+    o_Err,
+    i_Rx,
+    o_Tx);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *) input i_Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input i_Rst;
+  input i_WEnable;
+  input [31:0]i_WAddr;
+  input [31:0]i_WData;
+  input i_REnable;
+  input [31:0]i_RAddr;
+  output [31:0]o_RData;
+  output o_Err;
+  input i_Rx;
+  output o_Tx;
+
+  wire i_Clk;
+  wire [31:0]i_RAddr;
+  wire i_REnable;
+  wire i_Rst;
+  wire i_Rx;
+  wire [31:0]i_WAddr;
+  wire [31:0]i_WData;
+  wire i_WEnable;
+  wire o_Err;
+  wire [31:0]o_RData;
+  wire o_Tx;
+
+  design_1_UartSlave_0_0_Uart inst
+       (.i_Clk(i_Clk),
+        .i_RAddr(i_RAddr),
+        .i_REnable(i_REnable),
+        .i_Rst(i_Rst),
+        .i_Rx(i_Rx),
+        .i_WAddr(i_WAddr),
+        .i_WData(i_WData),
+        .i_WEnable(i_WEnable),
+        .o_Err(o_Err),
+        .o_RData(o_RData),
+        .o_Tx(o_Tx));
+endmodule
+
+(* ORIG_REF_NAME = "Uart" *) 
 module design_1_UartSlave_0_0_Uart
    (o_RData,
     o_Tx,
@@ -859,6 +913,7 @@ module design_1_UartSlave_0_0_Uart
         .R(i_Rst));
 endmodule
 
+(* ORIG_REF_NAME = "UartBaudRate" *) 
 module design_1_UartSlave_0_0_UartBaudRate
    (w_UartTick,
     i_Rst,
@@ -1748,6 +1803,7 @@ module design_1_UartSlave_0_0_UartBaudRate
         .R(i_Rst));
 endmodule
 
+(* ORIG_REF_NAME = "UartRx" *) 
 module design_1_UartSlave_0_0_UartRx
    (D,
     w_UartTick,
@@ -2233,6 +2289,7 @@ module design_1_UartSlave_0_0_UartRx
         .Q(rx_done));
 endmodule
 
+(* ORIG_REF_NAME = "UartTx" *) 
 module design_1_UartSlave_0_0_UartTx
    (o_Tx,
     w_TxDone,
@@ -2550,59 +2607,6 @@ module design_1_UartSlave_0_0_UartTx
         .CLR(i_Rst),
         .D(tx_done_i_1_n_0),
         .Q(w_TxDone));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "vespa_soc_UartSlave_0_0,Uart,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "Uart,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_1_UartSlave_0_0
-   (i_Clk,
-    i_Rst,
-    i_WEnable,
-    i_WAddr,
-    i_WData,
-    i_REnable,
-    i_RAddr,
-    o_RData,
-    o_Err,
-    i_Rx,
-    o_Tx);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vespa_soc_vespa_cpu_0_0_o_Clk, INSERT_VIP 0" *) input i_Clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 i_Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input i_Rst;
-  input i_WEnable;
-  input [31:0]i_WAddr;
-  input [31:0]i_WData;
-  input i_REnable;
-  input [31:0]i_RAddr;
-  output [31:0]o_RData;
-  output o_Err;
-  input i_Rx;
-  output o_Tx;
-
-  wire i_Clk;
-  wire [31:0]i_RAddr;
-  wire i_REnable;
-  wire i_Rst;
-  wire i_Rx;
-  wire [31:0]i_WAddr;
-  wire [31:0]i_WData;
-  wire i_WEnable;
-  wire o_Err;
-  wire [31:0]o_RData;
-  wire o_Tx;
-
-  design_1_UartSlave_0_0_Uart inst
-       (.i_Clk(i_Clk),
-        .i_RAddr(i_RAddr),
-        .i_REnable(i_REnable),
-        .i_Rst(i_Rst),
-        .i_Rx(i_Rx),
-        .i_WAddr(i_WAddr),
-        .i_WData(i_WData),
-        .i_WEnable(i_WEnable),
-        .o_Err(o_Err),
-        .o_RData(o_RData),
-        .o_Tx(o_Tx));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -13,9 +13,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64;/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin;";
+  PathVal = "/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64;/tools/Xilinx/Vivado/2023.1/bin;";
 } else {
-  PathVal = "/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64;/media/joseleite/ExternDisk/Xilinx/Vivado/2023.1/bin;" + PathVal;
+  PathVal = "/tools/Xilinx/Vivado/2023.1/ids_lite/ISE/bin/lin64;/tools/Xilinx/Vivado/2023.1/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
