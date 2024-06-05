@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "interruptControllerSlave_0",
     "component_reference": "user.org:user:interruptControllerSlave:1.0",
-    "ip_revision": "3",
+    "ip_revision": "4",
     "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0",
     "parameters": {
       "component_parameters": {
@@ -24,7 +24,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "3" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Tue Jun  4 18:16:02 2024
+// Date        : Wed Jun  5 12:52:55 2024
 // Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0_stub.v
@@ -18,11 +18,10 @@
 module design_1_interruptControllerS_0_0(i_Clk, i_Rst, i_WEnable, i_WAddr, i_WData, 
   i_REnable, i_RAddr, o_RData, o_Err, int_source0, int_source1, int_source2, int_source3, 
   ack_complete, ack_attended, int_pending, int_attending, irq_req, irq_number)
-/* synthesis syn_black_box black_box_pad_pin="i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_Err,int_source0,int_source1,int_source2,int_source3,ack_complete,ack_attended,int_pending,int_attending,irq_req,irq_number[1:0]" */
-/* synthesis syn_force_seq_prim="i_Clk" */
-/* synthesis syn_force_seq_prim="i_Rst" */;
+/* synthesis syn_black_box black_box_pad_pin="i_Rst,i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_Err,int_source0,int_source1,int_source2,int_source3,ack_complete,ack_attended,int_pending,int_attending,irq_req,irq_number[1:0]" */
+/* synthesis syn_force_seq_prim="i_Clk" */;
   input i_Clk /* synthesis syn_isclock = 1 */;
-  input i_Rst /* synthesis syn_isclock = 1 */;
+  input i_Rst;
   input i_WEnable;
   input [31:0]i_WAddr;
   input [31:0]i_WData;

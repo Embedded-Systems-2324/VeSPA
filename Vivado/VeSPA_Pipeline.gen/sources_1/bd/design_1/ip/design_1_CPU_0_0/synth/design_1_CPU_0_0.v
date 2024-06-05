@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:CPU:1.0
-// IP Revision: 44
+// IP Revision: 46
 
 (* X_CORE_INFO = "CPU,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_CPU_0_0,CPU,{}" *)

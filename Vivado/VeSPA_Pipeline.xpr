@@ -60,20 +60,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo-z7-10"/>
-    <Option Name="WTXSimLaunchSim" Val="713"/>
+    <Option Name="WTXSimLaunchSim" Val="724"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="165"/>
-    <Option Name="WTModelSimExportSim" Val="165"/>
-    <Option Name="WTQuestaExportSim" Val="165"/>
+    <Option Name="WTXSimExportSim" Val="184"/>
+    <Option Name="WTModelSimExportSim" Val="184"/>
+    <Option Name="WTQuestaExportSim" Val="184"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="165"/>
-    <Option Name="WTRivieraExportSim" Val="165"/>
-    <Option Name="WTActivehdlExportSim" Val="165"/>
+    <Option Name="WTVcsExportSim" Val="184"/>
+    <Option Name="WTRivieraExportSim" Val="184"/>
+    <Option Name="WTActivehdlExportSim" Val="184"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -105,6 +105,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CPU_0_0/design_1_CPU_0_0.xci">
+          <Proxy FileSetName="design_1_CPU_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci">
+          <Proxy FileSetName="design_1_CustomInterconnect_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci">
           <Proxy FileSetName="design_1_GPIO_Slave_0_0"/>
         </CompFileExtendedInfo>
@@ -122,12 +128,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0.xci">
           <Proxy FileSetName="design_1_UartSlave_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CPU_0_0/design_1_CPU_0_0.xci">
-          <Proxy FileSetName="design_1_CPU_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci">
-          <Proxy FileSetName="design_1_CustomInterconnect_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
@@ -199,6 +199,7 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
+        <Option Name="SimMode" Val="post-synthesis"/>
         <Option Name="PamDesignTestbench" Val=""/>
         <Option Name="PamDutBypassFile" Val="xil_dut_bypass"/>
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
@@ -244,13 +245,6 @@
         <Generic Name="BUS_MSB" Val="31"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_interruptControllerS_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_interruptControllerS_0_0" RelGenDir="$PGENDIR/design_1_interruptControllerS_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_interruptControllerS_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-        <Generic Name="BUS_MSB" Val="31"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_UartSlave_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_UartSlave_0_0" RelGenDir="$PGENDIR/design_1_UartSlave_0_0">
       <Config>
         <Option Name="TopModule" Val="design_1_UartSlave_0_0"/>
@@ -265,16 +259,23 @@
         <Generic Name="BUS_MSB" Val="31"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_CPU_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_CPU_0_0" RelGenDir="$PGENDIR/design_1_CPU_0_0">
+    <FileSet Name="design_1_GPIO_Slave_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_GPIO_Slave_0_0" RelGenDir="$PGENDIR/design_1_GPIO_Slave_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_CPU_0_0"/>
+        <Option Name="TopModule" Val="design_1_GPIO_Slave_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Generic Name="BUS_MSB" Val="31"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_GPIO_Slave_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_GPIO_Slave_0_0" RelGenDir="$PGENDIR/design_1_GPIO_Slave_0_0">
+    <FileSet Name="design_1_interruptControllerS_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_interruptControllerS_0_0" RelGenDir="$PGENDIR/design_1_interruptControllerS_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_GPIO_Slave_0_0"/>
+        <Option Name="TopModule" Val="design_1_interruptControllerS_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+        <Generic Name="BUS_MSB" Val="31"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_CPU_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_CPU_0_0" RelGenDir="$PGENDIR/design_1_CPU_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_CPU_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
         <Generic Name="BUS_MSB" Val="31"/>
       </Config>
@@ -342,16 +343,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_interruptControllerS_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_interruptControllerS_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="design_1_UartSlave_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_UartSlave_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_UartSlave_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_UartSlave_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_UartSlave_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_UartSlave_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
@@ -364,9 +355,7 @@
     </Run>
     <Run Id="design_1_CustomInterconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_CustomInterconnect_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_CustomInterconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_CustomInterconnect_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CustomInterconnect_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CustomInterconnect_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -374,7 +363,17 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_CPU_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_CPU_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_CPU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_CPU_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_synth_1">
+    <Run Id="design_1_GPIO_Slave_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_GPIO_Slave_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_GPIO_Slave_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_GPIO_Slave_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_interruptControllerS_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_interruptControllerS_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -386,7 +385,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_GPIO_Slave_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_GPIO_Slave_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_GPIO_Slave_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_GPIO_Slave_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_synth_1">
+    <Run Id="design_1_CPU_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_CPU_0_0" Part="xc7z010clg400-1" ConstrsSet="design_1_CPU_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_CPU_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -467,23 +466,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_interruptControllerS_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="design_1_UartSlave_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_UartSlave_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_UartSlave_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_UartSlave_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_UartSlave_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
@@ -503,9 +485,7 @@
     </Run>
     <Run Id="design_1_CustomInterconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_CustomInterconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_CustomInterconnect_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CustomInterconnect_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CustomInterconnect_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -520,7 +500,24 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_CPU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_CPU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_CPU_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_impl_1">
+    <Run Id="design_1_GPIO_Slave_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_GPIO_Slave_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_GPIO_Slave_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_1_interruptControllerS_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_interruptControllerS_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_interruptControllerS_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_interruptControllerS_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -539,7 +536,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_1_GPIO_Slave_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_GPIO_Slave_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_GPIO_Slave_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_GPIO_Slave_0_0_impl_1">
+    <Run Id="design_1_CPU_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_1_CPU_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_CPU_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/design_1_CPU_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

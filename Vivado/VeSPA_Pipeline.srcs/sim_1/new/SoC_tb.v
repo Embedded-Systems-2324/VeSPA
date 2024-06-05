@@ -77,7 +77,7 @@ module SoC_tb(
   // Geração do clock
   initial begin
     clk = 0;
-    forever #10 clk = ~clk; // clock de 10ns de período
+    forever #4 clk = ~clk; // clock de 10ns de período
   end
 
   // Geração de reset e outros sinais
@@ -95,12 +95,12 @@ module SoC_tb(
     rst <= 0;
     
     #608
-    //src1 <= 1;
-    //src2 <= 1;
+    src1 <= 1;
+    src2 <= 1;
     
-    #10
-    src1 <= 0;
-    src2 <= 0;
+    //#10
+    //src1 <= 0;
+    //src2 <= 0;
     
   end
 endmodule

@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 -- IP VLNV: user.org:user:interruptControllerSlave:1.0
--- IP Revision: 3
+-- IP Revision: 4
 
 -- The following code must appear in the VHDL architecture header.
 
