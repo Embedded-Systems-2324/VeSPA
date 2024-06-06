@@ -19,13 +19,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/V
 INFO: [VRFC 10-311] analyzing module SlaveInterface
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_DataMemory_0_0/sim/design_1_DataMemory_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module interruptController
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController_wrapper.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module interruptController_wrapper
-WARNING: [VRFC 10-2938] 'r_ea' is already implicitly declared on line 58 [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController_wrapper.v:64]
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_interruptControllerS_0_0/sim/design_1_interruptControllerS_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1_interruptControllerS_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/8a87/src/UartBaudRate.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module UartBaudRate
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/8a87/src/UartRx.v" into library xil_defaultlib
@@ -41,47 +34,54 @@ WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'BUS_WIDTH'
 INFO: [VRFC 10-311] analyzing module CustomInterconnect
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_CustomInterconnect_0_0/sim/design_1_CustomInterconnect_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_CustomInterconnect_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/a807/src/gpio.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module interruptController
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module interruptController_wrapper
+WARNING: [VRFC 10-2938] 'r_ea' is already implicitly declared on line 58 [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/f98f/src/interruptController_wrapper.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_interruptControllerS_0_0/sim/design_1_interruptControllerS_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_interruptControllerS_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/1af0/src/gpio.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module GPIO_PORT
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/a807/src/Gpio_Slave.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/1af0/src/Gpio_Slave.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module GPIO_Slave
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_GPIO_Slave_0_0/sim/design_1_GPIO_Slave_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_GPIO_Slave_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_CPU_0_0/src/CodeMemory/sim/CodeMemory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CodeMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/ALU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/ControlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/ControlUnit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ControlUnit
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/DecodeExecuteReg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/DecodeExecuteReg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module DecodeExecuteReg
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/ExecuteMemoryReg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/ExecuteMemoryReg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ExecuteMemoryReg
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/FetchDecodeReg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/FetchDecodeReg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FetchDecodeReg
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/HazardUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/HazardUnit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module HazardUnit
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/InstructionDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/InstructionDecode.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstructionDecode
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/InstructionExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/InstructionExecute.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstructionExecute
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/InstructionFetch.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/InstructionFetch.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstructionFetch
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/InstructionMemory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstructionMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/InstructionWriteBack.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/InstructionWriteBack.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module InstructionWriteBack
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/MemoryWriteBackReg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/MemoryWriteBackReg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MemoryWriteBackReg
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/RegisterFile.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/RegisterFile.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RegisterFile
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/check_branchcond.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/check_branchcond.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module check_branchcond
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/control_hazards.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/control_hazards.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module control_hazards
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/forwarding_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/forwarding_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module forwarding_unit
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/d902/src/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ipshared/c5c1/src/CPU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.ip_user_files/bd/design_1/ip/design_1_CPU_0_0/sim/design_1_CPU_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_CPU_0_0

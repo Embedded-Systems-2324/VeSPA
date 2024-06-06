@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Jun  5 00:37:50 2024
-# Process ID: 117846
+# Start of session at: Wed Jun  5 18:07:36 2024
+# Process ID: 345829
 # Current directory: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1
 # Command line: vivado -log design_1_GPIO_Slave_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_GPIO_Slave_0_0.tcl
 # Log file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/design_1_GPIO_Slave_0_0.vds
 # Journal file: /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/vivado.jou
-# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 2218.652 MHz, CPU Physical cores: 14, Host memory: 16471 MB
+# Running On: mariolima-CREF-XX, OS: Linux, CPU Frequency: 2541.099 MHz, CPU Physical cores: 14, Host memory: 16471 MB
 #-----------------------------------------------------------
 source design_1_GPIO_Slave_0_0.tcl -notrace

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Wed Jun  5 14:32:18 2024
+//Date        : Thu Jun  6 14:51:07 2024
 //Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -29,7 +29,8 @@ module design_1_wrapper
     o_PWMChannel4_0,
     o_TimerOverflow_0,
     o_Tx_0,
-    pin_0);
+    pin_in_0,
+    pin_out_0);
   input PS2C_0;
   input PS2D_0;
   input i_Clk_0;
@@ -48,7 +49,8 @@ module design_1_wrapper
   output o_PWMChannel4_0;
   output o_TimerOverflow_0;
   output o_Tx_0;
-  inout [7:0]pin_0;
+  input [3:0]pin_in_0;
+  output [3:0]pin_out_0;
 
   wire PS2C_0;
   wire PS2D_0;
@@ -68,7 +70,8 @@ module design_1_wrapper
   wire o_PWMChannel4_0;
   wire o_TimerOverflow_0;
   wire o_Tx_0;
-  wire [7:0]pin_0;
+  wire [3:0]pin_in_0;
+  wire [3:0]pin_out_0;
 
   design_1 design_1_i
        (.PS2C_0(PS2C_0),
@@ -89,5 +92,6 @@ module design_1_wrapper
         .o_PWMChannel4_0(o_PWMChannel4_0),
         .o_TimerOverflow_0(o_TimerOverflow_0),
         .o_Tx_0(o_Tx_0),
-        .pin_0(pin_0));
+        .pin_in_0(pin_in_0),
+        .pin_out_0(pin_out_0));
 endmodule

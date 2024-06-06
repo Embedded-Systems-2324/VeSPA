@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="SoC_tb_behav.wdb" id="1">
+      <db_ref path="SoC_tb_time_synth.wdb" id="1">
          <top_modules>
             <top_module name="SoC_tb" />
             <top_module name="glbl" />
@@ -11,15 +11,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="377.831 ns"></ZoomStartTime>
-      <ZoomEndTime time="554.902 ns"></ZoomEndTime>
-      <Cursor1Time time="399.944 ns"></Cursor1Time>
+      <ZoomStartTime time="880.814 ns"></ZoomStartTime>
+      <ZoomEndTime time="908.815 ns"></ZoomEndTime>
+      <Cursor1Time time="885.480 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="126"></NameColumnWidth>
-      <ValueColumnWidth column_width="83"></ValueColumnWidth>
+      <NameColumnWidth column_width="129"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="31" />
+   <wave_markers>
+      <marker label="" time="391448" />
+      <marker label="" time="888414" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/i_Clk">
       <obj_property name="ElementShortName">i_Clk</obj_property>
       <obj_property name="ObjectShortName">i_Clk</obj_property>
@@ -28,83 +32,136 @@
       <obj_property name="ElementShortName">i_Rst</obj_property>
       <obj_property name="ObjectShortName">i_Rst</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/i_InstructionRegister">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/\o_InstructionRegister_reg[31]_2 ">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">i_InstructionRegister[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_InstructionRegister[31:0]</obj_property>
-      <obj_property name="label">IR_FETCH</obj_property>
+      <obj_property name="ElementShortName">\o_InstructionRegister_reg[31]_2 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_InstructionRegister_reg[31]_2 [31:0]</obj_property>
+      <obj_property name="label">IR</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_InstructionRegister">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/\o_ProgramCounter_reg[31]_2 ">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">o_InstructionRegister[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_InstructionRegister[31:0]</obj_property>
-      <obj_property name="label">IR_WB</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/i_ProgramCounter">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_2 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_2 [31:0]</obj_property>
       <obj_property name="label">PC_FETCH</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/o_ProgramCounter">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ProgramCounter_reg[31]_1 ">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
       <obj_property name="label">PC_DEC</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ExecuteMemoryReg/i_ProgramCounter">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ProgramCounter_reg[31]_0 ">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">i_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_0 [31:0]</obj_property>
       <obj_property name="label">PC_EXE</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_ExecuteMemoryReg/o_ProgramCounter">
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_MemoryWriteBackReg/\o_ProgramCounter_reg[31]_1 ">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
       <obj_property name="label">PC_MEM</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_MemoryWriteBackReg/o_ProgramCounter">
+   <wvobject fp_name="divider990" type="divider">
+      <obj_property name="label">DECODE SIGNALS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="ObjectShortName">o_ProgramCounter[31:0]</obj_property>
-      <obj_property name="label">PC_WB</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/DataMemory_0/inst/_Bram/wea">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/DataMemory_0/inst/_Bram/dina">
+      <obj_property name="ElementShortName">dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/DataMemory_0/inst/_Bram/addra">
+      <obj_property name="ElementShortName">addra[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_WrEnRfDec">
+      <obj_property name="ElementShortName">w_WrEnRfDec</obj_property>
+      <obj_property name="ObjectShortName">w_WrEnRfDec</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_AluCtrl_reg[2]_1 ">
+      <obj_property name="ElementShortName">\o_AluCtrl_reg[2]_1 [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_AluCtrl_reg[2]_1 [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_RfDataInSelMem">
+      <obj_property name="ElementShortName">w_RfDataInSelMem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">w_RfDataInSelMem[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_IrRs2_reg[1]_0 ">
+      <obj_property name="ElementShortName">\o_IrRs2_reg[1]_0 [0:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_IrRs2_reg[1]_0 [0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_IrRs2Dec">
+      <obj_property name="ElementShortName">w_IrRs2Dec[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_IrRs2Dec[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/\o_DataOutB_reg[31]_0 ">
+      <obj_property name="ElementShortName">\o_DataOutB_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_DataOutB_reg[31]_0 [31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="divider463" type="divider">
-      <obj_property name="label">INTERRUPT</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrDecode/rf/\o_DataOutA_reg[31]_0 ">
+      <obj_property name="ElementShortName">\o_DataOutA_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_DataOutA_reg[31]_0 [31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/interruptControllerS_0/ack_complete">
-      <obj_property name="ElementShortName">ack_complete</obj_property>
-      <obj_property name="ObjectShortName">ack_complete</obj_property>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/o_MemAddrSel_reg_0">
+      <obj_property name="ElementShortName">o_MemAddrSel_reg_0</obj_property>
+      <obj_property name="ObjectShortName">o_MemAddrSel_reg_0</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/interruptControllerS_0/ack_attended">
-      <obj_property name="ElementShortName">ack_attended</obj_property>
-      <obj_property name="ObjectShortName">ack_attended</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_PcSel_reg[2]_2 ">
+      <obj_property name="ElementShortName">\o_PcSel_reg[2]_2 [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_PcSel_reg[2]_2 [2:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/interruptControllerS_0/int_pending">
-      <obj_property name="ElementShortName">int_pending</obj_property>
-      <obj_property name="ObjectShortName">int_pending</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_RfWrAddrWb">
+      <obj_property name="ElementShortName">w_RfWrAddrWb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w_RfWrAddrWb[4:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/interruptControllerS_0/int_attending">
-      <obj_property name="ElementShortName">int_attending</obj_property>
-      <obj_property name="ObjectShortName">int_attending</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ImmOpX_reg[3] ">
+      <obj_property name="ElementShortName">\o_ImmOpX_reg[3] [3:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ImmOpX_reg[3] [3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="divider435" type="divider">
-      <obj_property name="label">GPIO</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ImmOpX_reg[11] ">
+      <obj_property name="ElementShortName">\o_ImmOpX_reg[11] [3:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ImmOpX_reg[11] [3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/Wr_Output">
-      <obj_property name="ElementShortName">Wr_Output[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Wr_Output[7:0]</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ImmOpX_reg[15] ">
+      <obj_property name="ElementShortName">\o_ImmOpX_reg[15] [3:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ImmOpX_reg[15] [3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/GPIO_Slave_0/inst/direction">
-      <obj_property name="ElementShortName">direction[7:0]</obj_property>
-      <obj_property name="ObjectShortName">direction[7:0]</obj_property>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ImmOpX_reg[7] ">
+      <obj_property name="ElementShortName">\o_ImmOpX_reg[7] [3:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ImmOpX_reg[7] [3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_WrEnRfMem">
+      <obj_property name="ElementShortName">w_WrEnRfMem</obj_property>
+      <obj_property name="ObjectShortName">w_WrEnRfMem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_BranchBit">
+      <obj_property name="ElementShortName">w_BranchBit</obj_property>
+      <obj_property name="ObjectShortName">w_BranchBit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_JmpBit">
+      <obj_property name="ElementShortName">w_JmpBit</obj_property>
+      <obj_property name="ObjectShortName">w_JmpBit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/w_RdEnMemDec">
+      <obj_property name="ElementShortName">w_RdEnMemDec</obj_property>
+      <obj_property name="ObjectShortName">w_RdEnMemDec</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/DataMemory_0/inst/_Bram/dina">
+      <obj_property name="ElementShortName">dina[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/DataMemory_0/inst/_Bram/wea">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
    </wvobject>
 </wave_config>

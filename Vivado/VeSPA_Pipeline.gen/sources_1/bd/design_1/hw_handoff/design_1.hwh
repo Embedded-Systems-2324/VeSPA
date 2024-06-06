@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun  5 14:32:18 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun  6 14:51:07 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="IO" LEFT="7" NAME="pin_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GPIO_Slave_0" PORT="pin"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" NAME="o_Tx_0" SIGIS="undef" SIGNAME="UartSlave_0_o_Tx">
       <CONNECTIONS>
         <CONNECTION INSTANCE="UartSlave_0" PORT="o_Tx"/>
@@ -101,12 +96,22 @@
         <CONNECTION INSTANCE="CPU_0" PORT="led_teste"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="3" NAME="pin_out_0" RIGHT="0" SIGIS="undef" SIGNAME="GPIO_Slave_0_pin_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GPIO_Slave_0" PORT="pin_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="pin_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_in_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GPIO_Slave_0" PORT="pin_in"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="46" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
+    <MODULE COREREVISION="49" FULLNAME="/CPU_0" HWVERSION="1.0" INSTANCE="CPU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CPU" VLNV="user.org:user:CPU:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_CPU_0_0"/>
@@ -129,8 +134,8 @@
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Clk"/>
-            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Clk"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CPU_0_o_Rst">
@@ -139,8 +144,8 @@
             <CONNECTION INSTANCE="timerSlave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="DataMemory_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="UartSlave_0" PORT="i_Rst"/>
-            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
             <CONNECTION INSTANCE="interruptControllerS_0" PORT="i_Rst"/>
+            <CONNECTION INSTANCE="GPIO_Slave_0" PORT="i_Rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_WEnable" SIGIS="undef" SIGNAME="CPU_0_o_WEnable">
@@ -515,7 +520,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="28" FULLNAME="/GPIO_Slave_0" HWVERSION="1.0" INSTANCE="GPIO_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Slave" VLNV="user.org:user:GPIO_Slave:1.0">
+    <MODULE COREREVISION="31" FULLNAME="/GPIO_Slave_0" HWVERSION="1.0" INSTANCE="GPIO_Slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GPIO_Slave" VLNV="user.org:user:GPIO_Slave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="design_1_GPIO_Slave_0_0"/>
@@ -563,9 +568,14 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="o_Err" SIGIS="undef"/>
-        <PORT DIR="IO" LEFT="7" NAME="pin" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_0">
+        <PORT DIR="I" LEFT="3" NAME="pin_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_pin_in_0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pin_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pin_in_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="pin_out" RIGHT="0" SIGIS="undef" SIGNAME="GPIO_Slave_0_pin_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pin_out_0"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

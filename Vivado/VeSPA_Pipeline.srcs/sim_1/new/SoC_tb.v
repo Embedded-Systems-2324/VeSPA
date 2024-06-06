@@ -39,12 +39,15 @@ module SoC_tb(
   wire o_PWMChannel4_0;
   wire o_TimerOverflow_0;
   wire o_Tx_0;
-  wire [7:0] pin_0; // Este pode precisar de mais detalhes dependendo do seu design
+  wire [7:0] pin_0; 
   reg src0;
   reg src1;
   reg src2;
   reg src3;
   wire halt;
+
+ reg [3:0]r_pin_in;
+ wire [3:0]r_pin_out;
 
   // Instanciação do módulo design_1_wrapper
   design_1_wrapper dut (
@@ -61,7 +64,8 @@ module SoC_tb(
     .o_PWMChannel4_0(o_PWMChannel4_0),
     .o_TimerOverflow_0(o_TimerOverflow_0),
     .o_Tx_0(o_Tx_0),
-    .pin_0(pin_0),
+    .pin_in_0(r_pin_in),
+    .pin_out_0(r_pin_out),
     .int_source0_0(src0),
     .int_source1_0(src1),
     .int_source2_0(src2),
@@ -69,38 +73,28 @@ module SoC_tb(
     .led_teste_0(halt)
   );
   
-  
-  reg pin_IN;
-  
-  assign pin_0 [0] = pin_IN;
-
-  // Geração do clock
-  initial begin
-    clk = 0;
-    forever #4 clk = ~clk; // clock de 10ns de período
-  end
-
-  // Geração de reset e outros sinais
-  initial begin
-    // Inicialização dos sinais
-    rst = 1;
-    src0 <= 0;
-    src1 <= 0;
-    src2 <= 0;
-    src3 <= 0;
-    pin_IN <= 1;
-
-    // Sequência de reset
-    #140
-    rst <= 0;
     
-    #608
-    src1 <= 1;
-    src2 <= 1;
+    initial begin
+        rst <= 1;
+        clk <= 0;
+        r_pin_in <= 0;
+        src0 <= 0;
+        src1 <= 0;
+        src2 <= 0;
+        src3 <= 0;
     
-    //#10
-    //src1 <= 0;
-    //src2 <= 0;
+        #140
+        rst <= 0;
+        
+        #716
+        src1 <= 1;
+        src2 <= 0;
+        
+        #10
+        src1 <= 0;
+        src2 <= 0;
+    end
     
-  end
+    always #4 clk=~clk;        
+    
 endmodule

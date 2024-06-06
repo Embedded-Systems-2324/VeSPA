@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Wed Jun  5 14:32:17 2024
+//Date        : Thu Jun  6 14:51:07 2024
 //Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -30,7 +30,8 @@ module design_1
     o_PWMChannel4_0,
     o_TimerOverflow_0,
     o_Tx_0,
-    pin_0);
+    pin_in_0,
+    pin_out_0);
   input PS2C_0;
   input PS2D_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.I_CLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.I_CLK_0, ASSOCIATED_RESET i_Rst_0, CLK_DOMAIN design_1_i_Clk_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input i_Clk_0;
@@ -49,7 +50,8 @@ module design_1
   output o_PWMChannel4_0;
   output o_TimerOverflow_0;
   output o_Tx_0;
-  inout [7:0]pin_0;
+  input [3:0]pin_in_0;
+  output [3:0]pin_out_0;
 
   wire CPU_0_led_teste;
   wire CPU_0_o_IntAckAttended;
@@ -95,7 +97,7 @@ module design_1
   wire DataMemory_0_o_MemBusy;
   wire [31:0]DataMemory_0_o_RData;
   wire [31:0]GPIO_Slave_0_o_RData;
-  wire [7:0]Net;
+  wire [3:0]GPIO_Slave_0_pin_out;
   wire PS2C_0_1;
   wire PS2D_0_1;
   wire [3:0]PS2_Slave_0_o_Data;
@@ -114,6 +116,7 @@ module design_1
   wire [1:0]interruptControllerS_0_irq_number;
   wire interruptControllerS_0_irq_req;
   wire [31:0]interruptControllerS_0_o_RData;
+  wire [3:0]pin_in_0_1;
   wire timerSlave_0_o_OnePulse;
   wire timerSlave_0_o_PWMChannel1;
   wire timerSlave_0_o_PWMChannel2;
@@ -140,6 +143,8 @@ module design_1
   assign o_PWMChannel4_0 = timerSlave_0_o_PWMChannel4;
   assign o_TimerOverflow_0 = timerSlave_0_o_TimerOverflow;
   assign o_Tx_0 = UartSlave_0_o_Tx;
+  assign pin_in_0_1 = pin_in_0[3:0];
+  assign pin_out_0[3:0] = GPIO_Slave_0_pin_out;
   design_1_CPU_0_0 CPU_0
        (.i_Clk(i_Clk_0_1),
         .i_DataMemRdy(DataMemory_0_o_MemBusy),
@@ -225,7 +230,8 @@ module design_1
         .i_WData(CustomInterconnect_0_o_WData_2),
         .i_WEnable(CustomInterconnect_0_o_WEnable_2),
         .o_RData(GPIO_Slave_0_o_RData),
-        .pin(pin_0[7:0]));
+        .pin_in(pin_in_0_1),
+        .pin_out(GPIO_Slave_0_pin_out));
   design_1_PS2_Slave_0_0 PS2_Slave_0
        (.PS2C(PS2C_0_1),
         .PS2D(PS2D_0_1),

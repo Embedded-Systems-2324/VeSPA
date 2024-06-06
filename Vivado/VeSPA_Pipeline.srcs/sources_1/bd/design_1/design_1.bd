@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x56C187D2BD5E5213",
+      "boundary_crc": "0x8C4E619C95B23D87",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -16,16 +16,11 @@
       "DataMemory_0": "",
       "UartSlave_0": "",
       "CustomInterconnect_0": "",
-      "GPIO_Slave_0": "",
       "interruptControllerS_0": "",
+      "GPIO_Slave_0": "",
       "CPU_0": ""
     },
     "ports": {
-      "pin_0": {
-        "direction": "IO",
-        "left": "7",
-        "right": "0"
-      },
       "o_Tx_0": {
         "direction": "O"
       },
@@ -119,6 +114,16 @@
       },
       "led_teste_0": {
         "direction": "O"
+      },
+      "pin_out_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "pin_in_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -152,17 +157,17 @@
         "xci_path": "ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci",
         "inst_hier_path": "CustomInterconnect_0"
       },
-      "GPIO_Slave_0": {
-        "vlnv": "user.org:user:GPIO_Slave:1.0",
-        "xci_name": "design_1_GPIO_Slave_0_0",
-        "xci_path": "ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci",
-        "inst_hier_path": "GPIO_Slave_0"
-      },
       "interruptControllerS_0": {
         "vlnv": "user.org:user:interruptControllerSlave:1.0",
         "xci_name": "design_1_interruptControllerS_0_0",
         "xci_path": "ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0.xci",
         "inst_hier_path": "interruptControllerS_0"
+      },
+      "GPIO_Slave_0": {
+        "vlnv": "user.org:user:GPIO_Slave:1.0",
+        "xci_name": "design_1_GPIO_Slave_0_0",
+        "xci_path": "ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci",
+        "inst_hier_path": "GPIO_Slave_0"
       },
       "CPU_0": {
         "vlnv": "user.org:user:CPU:1.0",
@@ -227,8 +232,8 @@
           "timerSlave_0/i_Clk",
           "DataMemory_0/i_Clk",
           "UartSlave_0/i_Clk",
-          "GPIO_Slave_0/i_Clk",
-          "interruptControllerS_0/i_Clk"
+          "interruptControllerS_0/i_Clk",
+          "GPIO_Slave_0/i_Clk"
         ]
       },
       "CPU_1_o_Rst": {
@@ -238,8 +243,8 @@
           "timerSlave_0/i_Rst",
           "DataMemory_0/i_Rst",
           "UartSlave_0/i_Rst",
-          "GPIO_Slave_0/i_Rst",
-          "interruptControllerS_0/i_Rst"
+          "interruptControllerS_0/i_Rst",
+          "GPIO_Slave_0/i_Rst"
         ]
       },
       "CustomInterconnect_0_o_RAddr_0": {
@@ -446,10 +451,10 @@
           "CustomInterconnect_0/i_RData_2"
         ]
       },
-      "Net": {
+      "GPIO_Slave_0_pin_out": {
         "ports": [
-          "pin_0",
-          "GPIO_Slave_0/pin"
+          "GPIO_Slave_0/pin_out",
+          "pin_out_0"
         ]
       },
       "PS2C_0_1": {
@@ -560,6 +565,12 @@
         "ports": [
           "interruptControllerS_0/o_RData",
           "CustomInterconnect_0/i_RData_1"
+        ]
+      },
+      "pin_in_0_1": {
+        "ports": [
+          "pin_in_0",
+          "GPIO_Slave_0/pin_in"
         ]
       },
       "timerSlave_0_o_OnePulse": {

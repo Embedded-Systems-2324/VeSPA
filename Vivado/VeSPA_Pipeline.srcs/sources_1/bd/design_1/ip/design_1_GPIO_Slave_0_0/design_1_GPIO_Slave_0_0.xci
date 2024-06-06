@@ -4,7 +4,7 @@
     "xci_name": "design_1_GPIO_Slave_0_0",
     "cell_name": "GPIO_Slave_0",
     "component_reference": "user.org:user:GPIO_Slave:1.0",
-    "ip_revision": "28",
+    "ip_revision": "31",
     "gen_directory": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "28" } ],
+        "IPREVISION": [ { "value": "31" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -45,7 +45,8 @@
         "i_RAddr": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "o_RData": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "o_Err": [ { "direction": "out" } ],
-        "pin": [ { "direction": "inout", "size_left": "7", "size_right": "0" } ]
+        "pin_in": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "pin_out": [ { "direction": "out", "size_left": "3", "size_right": "0" } ]
       },
       "interfaces": {
         "i_Rst": {

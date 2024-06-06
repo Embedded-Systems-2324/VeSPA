@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Wed Jun  5 14:33:04 2024
+| Date         : Thu Jun  6 14:51:37 2024
 | Host         : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file design_1_CPU_0_0_utilization_synth.rpt -pb design_1_CPU_0_0_utilization_synth.pb
 | Design       : design_1_CPU_0_0
@@ -154,8 +154,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | FDRE     | 1583 |        Flop & Latch |
 | LUT3     | 1105 |                 LUT |
 | LUT6     |  838 |                 LUT |
-| LUT5     |  283 |                 LUT |
-| LUT4     |  172 |                 LUT |
+| LUT5     |  282 |                 LUT |
+| LUT4     |  173 |                 LUT |
 | LUT2     |  162 |                 LUT |
 | MUXF7    |   65 |               MuxFx |
 | CARRY4   |   53 |          CarryLogic |

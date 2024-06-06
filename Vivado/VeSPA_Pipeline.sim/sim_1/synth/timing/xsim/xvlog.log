@@ -21,6 +21,7 @@ INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_SlaveInterface
 INFO: [VRFC 10-311] analyzing module design_1_DataMemory_0_0_VeSPA_RAM
 INFO: [VRFC 10-311] analyzing module design_1_GPIO_Slave_0_0
+INFO: [VRFC 10-311] analyzing module design_1_GPIO_Slave_0_0_GPIO_PORT
 INFO: [VRFC 10-311] analyzing module design_1_GPIO_Slave_0_0_GPIO_Slave
 INFO: [VRFC 10-311] analyzing module design_1_PS2_Slave_0_0
 INFO: [VRFC 10-311] analyzing module design_1_PS2_Slave_0_0_custom_ps2_interface

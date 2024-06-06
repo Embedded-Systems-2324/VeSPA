@@ -22,17 +22,25 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 117889
+INFO: [Synth 8-7075] Helper process launched with PID 345869
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2029.801 ; gain = 376.801 ; free physical = 1007 ; free virtual = 4935
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2029.902 ; gain = 376.801 ; free physical = 1138 ; free virtual = 6246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_GPIO_Slave_0_0' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/synth/design_1_GPIO_Slave_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'GPIO_Slave' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/a807/src/Gpio_Slave.v:1]
-INFO: [Synth 8-6157] synthesizing module 'GPIO_PORT' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/a807/src/gpio.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'GPIO_PORT' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/a807/src/gpio.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'GPIO_Slave' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/a807/src/Gpio_Slave.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GPIO_Slave' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/1af0/src/Gpio_Slave.v:1]
+INFO: [Synth 8-6157] synthesizing module 'GPIO_PORT' [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/1af0/src/gpio.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'GPIO_PORT' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/1af0/src/gpio.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'GPIO_Slave' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ipshared/1af0/src/Gpio_Slave.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_GPIO_Slave_0_0' (0#1) [/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/synth/design_1_GPIO_Slave_0_0.v:53]
 WARNING: [Synth 8-3301] Unused top level parameter/generic BUS_MSB
+WARNING: [Synth 8-7129] Port direction[7] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direction[6] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direction[5] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port direction[4] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_reg[7] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_reg[6] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_reg[5] in module GPIO_PORT is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_reg[4] in module GPIO_PORT is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_WData[31] in module GPIO_Slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_WData[30] in module GPIO_Slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_WData[29] in module GPIO_Slave is either unconnected or has no load
@@ -58,48 +66,48 @@ WARNING: [Synth 8-7129] Port i_WData[10] in module GPIO_Slave is either unconnec
 WARNING: [Synth 8-7129] Port i_WData[9] in module GPIO_Slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_WData[8] in module GPIO_Slave is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2098.738 ; gain = 445.738 ; free physical = 919 ; free virtual = 4836
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2098.840 ; gain = 445.738 ; free physical = 1050 ; free virtual = 6158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.582 ; gain = 460.582 ; free physical = 924 ; free virtual = 4842
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.684 ; gain = 460.582 ; free physical = 1047 ; free virtual = 6155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.582 ; gain = 460.582 ; free physical = 924 ; free virtual = 4842
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.684 ; gain = 460.582 ; free physical = 1047 ; free virtual = 6155
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2113.582 ; gain = 0.000 ; free physical = 924 ; free virtual = 4842
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2116.652 ; gain = 0.000 ; free physical = 1046 ; free virtual = 6154
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2246.332 ; gain = 0.000 ; free physical = 917 ; free virtual = 4835
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.434 ; gain = 0.000 ; free physical = 1039 ; free virtual = 6145
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2246.332 ; gain = 0.000 ; free physical = 923 ; free virtual = 4841
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2251.434 ; gain = 0.000 ; free physical = 1039 ; free virtual = 6144
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 787 ; free virtual = 4690
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1033 ; free virtual = 6142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 787 ; free virtual = 4690
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1033 ; free virtual = 6142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 786 ; free virtual = 4689
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1033 ; free virtual = 6142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 779 ; free virtual = 4683
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1033 ; free virtual = 6143
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -178,25 +186,25 @@ WARNING: [Synth 8-7129] Port i_WData[10] in module design_1_GPIO_Slave_0_0 is ei
 WARNING: [Synth 8-7129] Port i_WData[9] in module design_1_GPIO_Slave_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_WData[8] in module design_1_GPIO_Slave_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 779 ; free virtual = 4683
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1027 ; free virtual = 6134
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 896 ; free virtual = 4800
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 998 ; free virtual = 6130
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 896 ; free virtual = 4800
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 998 ; free virtual = 6130
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 888 ; free virtual = 4793
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 998 ; free virtual = 6130
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -217,42 +225,38 @@ CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_0' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_1' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_2' to logic
 CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_3' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_4' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_5' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_6' to logic
-CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'gpioi_7' to logic
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -268,36 +272,38 @@ Report Cell Usage:
 +------+-----+------+
 |      |Cell |Count |
 +------+-----+------+
-|1     |LUT2 |    10|
-|2     |LUT3 |     1|
-|3     |LUT4 |    10|
-|4     |LUT5 |    15|
-|5     |LUT6 |     2|
-|6     |FDRE |    25|
+|1     |LUT1 |     4|
+|2     |LUT2 |     6|
+|3     |LUT3 |     1|
+|4     |LUT4 |    10|
+|5     |LUT5 |    15|
+|6     |LUT6 |     2|
+|7     |FDRE |    25|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 862 ; free virtual = 4783
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1024 ; free virtual = 6132
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 8 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2246.332 ; gain = 460.582 ; free physical = 854 ; free virtual = 4775
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2246.332 ; gain = 593.332 ; free physical = 854 ; free virtual = 4775
+Synthesis finished with 0 errors, 4 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2251.434 ; gain = 460.582 ; free physical = 1020 ; free virtual = 6131
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2251.434 ; gain = 598.332 ; free physical = 1020 ; free virtual = 6131
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2246.332 ; gain = 0.000 ; free physical = 1117 ; free virtual = 5039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.434 ; gain = 0.000 ; free physical = 1020 ; free virtual = 6131
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2246.332 ; gain = 0.000 ; free physical = 1161 ; free virtual = 5068
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.434 ; gain = 0.000 ; free physical = 1300 ; free virtual = 6415
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 4f480bc2
+Synth Design complete | Checksum: e99e65e0
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 50 Warnings, 8 Critical Warnings and 0 Errors encountered.
+47 Infos, 58 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2246.332 ; gain = 901.668 ; free physical = 1161 ; free virtual = 5068
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1930.476; main = 1638.346; forked = 414.315
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3195.355; main = 2214.320; forked = 981.035
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2251.434 ; gain = 915.637 ; free physical = 1300 ; free virtual = 6415
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1791.573; main = 1464.253; forked = 373.939
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3197.535; main = 2219.422; forked = 978.113
 INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/design_1_GPIO_Slave_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.runs/design_1_GPIO_Slave_0_0_synth_1/design_1_GPIO_Slave_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_GPIO_Slave_0_0_utilization_synth.rpt -pb design_1_GPIO_Slave_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 00:38:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  5 18:07:54 2024...

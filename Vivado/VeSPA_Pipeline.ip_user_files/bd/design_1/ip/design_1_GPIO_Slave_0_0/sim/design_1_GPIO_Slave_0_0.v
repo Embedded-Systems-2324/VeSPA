@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:GPIO_Slave:1.0
-// IP Revision: 28
+// IP Revision: 31
 
 `timescale 1ns/1ps
 
@@ -64,7 +64,8 @@ module design_1_GPIO_Slave_0_0 (
   i_RAddr,
   o_RData,
   o_Err,
-  pin
+  pin_in,
+  pin_out
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME i_Clk, ASSOCIATED_RESET i_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_CPU_0_0_o_Clk, INSERT_VIP 0" *)
@@ -80,7 +81,8 @@ input wire i_REnable;
 input wire [31 : 0] i_RAddr;
 output wire [31 : 0] o_RData;
 output wire o_Err;
-inout wire [7 : 0] pin;
+input wire [3 : 0] pin_in;
+output wire [3 : 0] pin_out;
 
   GPIO_Slave inst (
     .i_Clk(i_Clk),
@@ -92,6 +94,7 @@ inout wire [7 : 0] pin;
     .i_RAddr(i_RAddr),
     .o_RData(o_RData),
     .o_Err(o_Err),
-    .pin(pin)
+    .pin_in(pin_in),
+    .pin_out(pin_out)
   );
 endmodule

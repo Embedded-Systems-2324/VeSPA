@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Wed Jun  5 00:38:12 2024
+-- Date        : Wed Jun  5 18:07:54 2024
 -- Host        : mariolima-CREF-XX running 64-bit Ubuntu 22.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/mariolima/Desktop/vespa_git/VeSPA/Vivado/VeSPA_Pipeline.gen/sources_1/bd/design_1/ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0_stub.vhdl
@@ -24,7 +24,8 @@ entity design_1_GPIO_Slave_0_0 is
     i_RAddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     o_RData : out STD_LOGIC_VECTOR ( 31 downto 0 );
     o_Err : out STD_LOGIC;
-    pin : inout STD_LOGIC_VECTOR ( 7 downto 0 )
+    pin_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    pin_out : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 
 end design_1_GPIO_Slave_0_0;
@@ -33,7 +34,7 @@ architecture stub of design_1_GPIO_Slave_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "i_Clk,i_Rst,i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_Err,pin[7:0]";
+attribute black_box_pad_pin of stub : architecture is "i_Clk,i_Rst,i_WEnable,i_WAddr[31:0],i_WData[31:0],i_REnable,i_RAddr[31:0],o_RData[31:0],o_Err,pin_in[3:0],pin_out[3:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "GPIO_Slave,Vivado 2023.1";
 begin

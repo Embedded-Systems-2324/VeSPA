@@ -1,7 +1,7 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L secureip --snapshot Pipeline_tb_func_synth xil_defaultlib.Pipeline_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -d BUS_MSB=31 -d BUS_WIDTH=32 -L xil_defaultlib -L unisims_ver -L secureip --snapshot SoC_tb_func_synth xil_defaultlib.SoC_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -9,56 +9,76 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.LUT6
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.FDSE_default
-Compiling module unisims_ver.FDRE_default
-Compiling module unisims_ver.LUT4
-Compiling module xil_defaultlib.ControlUnit
-Compiling module unisims_ver.FDCE_default
-Compiling module unisims_ver.LUT5
-Compiling module unisims_ver.MUXF7
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.FDPE_default
-Compiling module xil_defaultlib.DecodeExecuteReg
-Compiling module xil_defaultlib.ExecuteMemoryReg
-Compiling module xil_defaultlib.FetchDecodeReg
-Compiling module unisims_ver.latchsre_ldce
-Compiling module unisims_ver.LDCE
-Compiling module xil_defaultlib.control_hazards
-Compiling module xil_defaultlib.HazardUnit
-Compiling module xil_defaultlib.RegisterFile
-Compiling module xil_defaultlib.InstructionDecode
-Compiling module xil_defaultlib.ALU
-Compiling module xil_defaultlib.InstructionExecute
-Compiling module unisims_ver.GND
-Compiling module unisims_ver.SRL16E_default
-Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100000000...
-Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100000000...
-Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100000000...
-Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
-Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111110001...
-Compiling module xil_defaultlib.CodeMemory
+Compiling module unisims_ver.IBUF
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
-Compiling module xil_defaultlib.InstructionFetch
-Compiling module xil_defaultlib.MemoryWriteBackReg
-Compiling module xil_defaultlib.CPU
-Compiling module unisims_ver.BUFG
-Compiling module unisims_ver.IBUF
-Compiling module xil_defaultlib.interruptController
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDRE_default
+Compiling module xil_defaultlib.design_1_CPU_0_0_ControlUnit
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.FDSE_default
+Compiling module xil_defaultlib.design_1_CPU_0_0_DecodeExecuteRe...
+Compiling module xil_defaultlib.design_1_CPU_0_0_ExecuteMemoryRe...
+Compiling module xil_defaultlib.design_1_CPU_0_0_FetchDecodeReg
+Compiling module xil_defaultlib.design_1_CPU_0_0_control_hazards
+Compiling module xil_defaultlib.design_1_CPU_0_0_HazardUnit
+Compiling module unisims_ver.MUXF7
+Compiling module xil_defaultlib.design_1_CPU_0_0_RegisterFile
+Compiling module xil_defaultlib.design_1_CPU_0_0_InstructionDeco...
+Compiling module xil_defaultlib.design_1_CPU_0_0_ALU
+Compiling module xil_defaultlib.design_1_CPU_0_0_InstructionExec...
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0110000000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100000000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111110000...
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100100000...
+Compiling module xil_defaultlib.design_1_CPU_0_0_CodeMemory
+Compiling module xil_defaultlib.design_1_CPU_0_0_InstructionFetc...
+Compiling module xil_defaultlib.design_1_CPU_0_0_MemoryWriteBack...
+Compiling module xil_defaultlib.design_1_CPU_0_0_CPU
+Compiling module xil_defaultlib.design_1_CPU_0_0
+Compiling module xil_defaultlib.design_1_CustomInterconnect_0_0_...
+Compiling module xil_defaultlib.design_1_CustomInterconnect_0_0
 Compiling module unisims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
 Compiling module unisims_ver.RAMB36E1(RDADDR_COLLISION_HWCONF...
-Compiling module xil_defaultlib.RAM
-Compiling module xil_defaultlib.memory_wrapper
-Compiling module unisims_ver.OBUFT
-Compiling module xil_defaultlib.top_level
-Compiling module xil_defaultlib.Pipeline_tb
+Compiling module xil_defaultlib.design_1_DataMemory_0_0_VeSPA_RA...
+Compiling module xil_defaultlib.design_1_DataMemory_0_0_SlaveInt...
+Compiling module xil_defaultlib.design_1_DataMemory_0_0
+Compiling module xil_defaultlib.design_1_GPIO_Slave_0_0_GPIO_POR...
+Compiling module xil_defaultlib.design_1_GPIO_Slave_0_0_GPIO_Sla...
+Compiling module xil_defaultlib.design_1_GPIO_Slave_0_0
+Compiling module xil_defaultlib.design_1_PS2_Slave_0_0_ps2_new
+Compiling module xil_defaultlib.design_1_PS2_Slave_0_0_custom_ps...
+Compiling module xil_defaultlib.design_1_PS2_Slave_0_0
+Compiling module xil_defaultlib.design_1_UartSlave_0_0_UartBaudR...
+Compiling module unisims_ver.FDPE_default
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.design_1_UartSlave_0_0_UartRx
+Compiling module xil_defaultlib.design_1_UartSlave_0_0_UartTx
+Compiling module xil_defaultlib.design_1_UartSlave_0_0_Uart
+Compiling module xil_defaultlib.design_1_UartSlave_0_0
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module xil_defaultlib.design_1_interruptControllerS_0_...
+Compiling module xil_defaultlib.design_1_interruptControllerS_0_...
+Compiling module xil_defaultlib.design_1_interruptControllerS_0_...
+Compiling module xil_defaultlib.design_1_timerSlave_0_0_Timer
+Compiling module xil_defaultlib.design_1_timerSlave_0_0_timerSla...
+Compiling module xil_defaultlib.design_1_timerSlave_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module unisims_ver.OBUF
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.SoC_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot Pipeline_tb_func_synth
+Built simulation snapshot SoC_tb_func_synth
