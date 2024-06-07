@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance VgaTopLevel_tb._Vga._VgaPll.inst.plle2_adv_inst are not same.
+INFO: xsimkernel Simulation Memory Usage: 137864 KB (Peak: 190776 KB), Simulation CPU Usage: 18470 ms

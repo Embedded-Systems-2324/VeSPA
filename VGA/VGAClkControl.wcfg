@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="VGAClkControl_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="VGAClkControl_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="100.401 ns"></ZoomEndTime>
+      <Cursor1Time time="3.267 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="166"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject type="logic" fp_name="/VGAClkControl_tb/r_Clk">
+      <obj_property name="ElementShortName">r_Clk</obj_property>
+      <obj_property name="ObjectShortName">r_Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkControl_tb/r_Rst">
+      <obj_property name="ElementShortName">r_Rst</obj_property>
+      <obj_property name="ObjectShortName">r_Rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkControl_tb/r_VgaEn">
+      <obj_property name="ElementShortName">r_VgaEn</obj_property>
+      <obj_property name="ObjectShortName">r_VgaEn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkControl_tb/r_PllRdy">
+      <obj_property name="ElementShortName">r_PllRdy</obj_property>
+      <obj_property name="ObjectShortName">r_PllRdy</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VGAClkControl_tb/r_VgaMode">
+      <obj_property name="ElementShortName">r_VgaMode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">r_VgaMode[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkControl_tb/w_ClkErr">
+      <obj_property name="ElementShortName">w_ClkErr</obj_property>
+      <obj_property name="ObjectShortName">w_ClkErr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VGAClkControl_tb/w_ClkSel">
+      <obj_property name="ElementShortName">w_ClkSel[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w_ClkSel[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VGAClkControl_tb/_Dut/r_CurrentState">
+      <obj_property name="ElementShortName">r_CurrentState[1:0]</obj_property>
+      <obj_property name="ObjectShortName">r_CurrentState[1:0]</obj_property>
+   </wvobject>
+</wave_config>

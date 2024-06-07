@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/VideoMemory/sim/VideoMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VideoMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VGAClkControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkDatapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VGAClkDatapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VgaDataManagerDatapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaTopLevel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VgaTopLevel
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/_VgaDataManagerControlFSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VgaDataManagerControlFSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sim_1/new/VgaTopLevel_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VgaTopLevel_tb

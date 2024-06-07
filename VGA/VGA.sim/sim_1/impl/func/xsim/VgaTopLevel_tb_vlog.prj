@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../VGA.ip_user_files/ipstatic" \
+"VgaTopLevel_tb_func_impl.v" \
+"../../../../../VGA.srcs/sim_1/new/VgaTopLevel_tb.v" \
+
+# Do not sort compile order
+nosort

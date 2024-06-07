@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Mon Jun  3 12:18:42 2024
+# Process ID: 6400
+# Current directory: /home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.runs/impl_1
+# Command line: vivado -log VgaTopLevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source VgaTopLevel.tcl -notrace
+# Log file: /home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.runs/impl_1/VgaTopLevel.vdi
+# Journal file: /home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.runs/impl_1/vivado.jou
+# Running On: tiago-Lenovo-Legion-5-15IMH05, OS: Linux, CPU Frequency: 4200.002 MHz, CPU Physical cores: 4, Host memory: 8172 MB
+#-----------------------------------------------------------
+source VgaTopLevel.tcl -notrace

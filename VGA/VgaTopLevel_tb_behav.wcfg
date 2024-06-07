@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="VgaTopLevel_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="VgaTopLevel_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999,993 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,000,002 ps"></ZoomEndTime>
+      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="112"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/i_Clk">
+      <obj_property name="ElementShortName">i_Clk</obj_property>
+      <obj_property name="ObjectShortName">i_Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/i_Rst">
+      <obj_property name="ElementShortName">i_Rst</obj_property>
+      <obj_property name="ObjectShortName">i_Rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/o_HSync">
+      <obj_property name="ElementShortName">o_HSync</obj_property>
+      <obj_property name="ObjectShortName">o_HSync</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/o_VSync">
+      <obj_property name="ElementShortName">o_VSync</obj_property>
+      <obj_property name="ObjectShortName">o_VSync</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/o_Red">
+      <obj_property name="ElementShortName">o_Red[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Red[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/o_Green">
+      <obj_property name="ElementShortName">o_Green[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Green[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/o_Blue">
+      <obj_property name="ElementShortName">o_Blue[3:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Blue[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/w_Clk25">
+      <obj_property name="ElementShortName">w_Clk25</obj_property>
+      <obj_property name="ObjectShortName">w_Clk25</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/w_PllRdy">
+      <obj_property name="ElementShortName">w_PllRdy</obj_property>
+      <obj_property name="ObjectShortName">w_PllRdy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/w_OutEn">
+      <obj_property name="ElementShortName">w_OutEn</obj_property>
+      <obj_property name="ObjectShortName">w_OutEn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/w_MemAddr">
+      <obj_property name="ElementShortName">w_MemAddr[19:0]</obj_property>
+      <obj_property name="ObjectShortName">w_MemAddr[19:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/w_MemRdy">
+      <obj_property name="ElementShortName">w_MemRdy</obj_property>
+      <obj_property name="ObjectShortName">w_MemRdy</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/w_Red">
+      <obj_property name="ElementShortName">w_Red[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_Red[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/w_Green">
+      <obj_property name="ElementShortName">w_Green[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_Green[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/VgaTopLevel_tb/_Vga/w_Blue">
+      <obj_property name="ElementShortName">w_Blue[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_Blue[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VgaTopLevel_tb/_Vga/w_ClkBuffered">
+      <obj_property name="ElementShortName">w_ClkBuffered</obj_property>
+      <obj_property name="ObjectShortName">w_ClkBuffered</obj_property>
+   </wvobject>
+</wave_config>

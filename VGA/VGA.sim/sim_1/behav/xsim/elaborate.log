@@ -1,0 +1,32 @@
+Vivado Simulator v2023.1.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot VgaTopLevel_tb_behav xil_defaultlib.VgaTopLevel_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 18 differs from formal bit length 17 for port 'addra' [/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v:27]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 16 for port 'douta' [/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v:29]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=8,CLKIN1...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.VgaDataManagerControlFSM_default
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.VideoMemory
+Compiling module xil_defaultlib.VgaDataManagerDatapath
+Compiling module xil_defaultlib.VGAClkControl
+Compiling module xil_defaultlib.VGAClkDatapath
+Compiling module xil_defaultlib.VgaTopLevel
+Compiling module xil_defaultlib.VgaTopLevel_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot VgaTopLevel_tb_behav

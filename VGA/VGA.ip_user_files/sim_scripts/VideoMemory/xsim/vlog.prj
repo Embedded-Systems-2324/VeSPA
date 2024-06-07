@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../VGA.gen/sources_1/ip/VideoMemory/sim/VideoMemory.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

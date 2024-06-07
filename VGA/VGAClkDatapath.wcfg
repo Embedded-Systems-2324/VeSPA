@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="VGAClkDatapath_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="VGAClkDatapath_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="158.085 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="161"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject type="logic" fp_name="/VGAClkDatapath_tb/r_ClkSel">
+      <obj_property name="ElementShortName">r_ClkSel</obj_property>
+      <obj_property name="ObjectShortName">r_ClkSel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkDatapath_tb/r_Clk25M">
+      <obj_property name="ElementShortName">r_Clk25M</obj_property>
+      <obj_property name="ObjectShortName">r_Clk25M</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkDatapath_tb/r_Clk40M">
+      <obj_property name="ElementShortName">r_Clk40M</obj_property>
+      <obj_property name="ObjectShortName">r_Clk40M</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VGAClkDatapath_tb/w_VgaClk">
+      <obj_property name="ElementShortName">w_VgaClk</obj_property>
+      <obj_property name="ObjectShortName">w_VgaClk</obj_property>
+   </wvobject>
+</wave_config>

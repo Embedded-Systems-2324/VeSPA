@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../VGA.ip_user_files/ipstatic" \
+"../../../../VGA.gen/sources_1/ip/VideoMemory/sim/VideoMemory.v" \
+"../../../../VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../VGA.srcs/sources_1/new/VGAClkControl.v" \
+"../../../../VGA.srcs/sources_1/new/VGAClkDatapath.v" \
+"../../../../VGA.srcs/sources_1/new/VgaDataManagerDatapath.v" \
+"../../../../VGA.srcs/sources_1/new/VgaTopLevel.v" \
+"../../../../VGA.srcs/sources_1/new/_VgaDataManagerControlFSM.v" \
+"../../../../VGA.srcs/sim_1/new/VgaTopLevel_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

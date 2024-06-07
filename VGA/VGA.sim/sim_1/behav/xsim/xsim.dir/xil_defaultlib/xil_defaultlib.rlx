@@ -1,0 +1,15 @@
+0.7
+2020.2
+Jun 16 2023
+19:36:26
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/VideoMemory/sim/VideoMemory.v,1717408522,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,,VideoMemory,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1716219521,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkControl.v,,clk_wiz_0,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1716219521,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.sim/sim_1/behav/xsim/glbl.v,1683266558,verilog,,,,glbl,,,,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sim_1/new/VgaTopLevel_tb.v,1716802545,verilog,,,,VgaTopLevel_tb,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkControl.v,1717407675,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkDatapath.v,,VGAClkControl,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VGAClkDatapath.v,1716802472,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v,,VGAClkDatapath,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerControl.v,1716802404,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v,,VgaDataManagerControl,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaDataManagerDatapath.v,1716802430,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaTopLevel.v,,VgaDataManagerDatapath,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/VgaTopLevel.v,1717409328,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/_VgaDataManagerControlFSM.v,,VgaTopLevel,,,../../../../VGA.ip_user_files/ipstatic,,,,,
+/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sources_1/new/_VgaDataManagerControlFSM.v,1717412340,verilog,,/home/tiago/Desktop/VGAStuff/VGA_working/VGA/VGA.srcs/sim_1/new/VgaTopLevel_tb.v,,VgaDataManagerControlFSM,,,../../../../VGA.ip_user_files/ipstatic,,,,,
