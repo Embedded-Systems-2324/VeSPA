@@ -1,0 +1,9 @@
+verilog xil_defaultlib  \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0/src/interruptController.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0/src/interruptController_wrapper.v" \
+"../../../../VeSPA_Pipeline.gen/sources_1/ip/interruptControllerSlave_0/sim/interruptControllerSlave_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

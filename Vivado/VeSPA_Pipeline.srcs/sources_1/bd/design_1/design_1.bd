@@ -1,0 +1,620 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8C4E619C95B23D87",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../VeSPA_Pipeline.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PS2_Slave_0": "",
+      "timerSlave_0": "",
+      "DataMemory_0": "",
+      "UartSlave_0": "",
+      "CustomInterconnect_0": "",
+      "interruptControllerS_0": "",
+      "GPIO_Slave_0": "",
+      "CPU_0": ""
+    },
+    "ports": {
+      "o_Tx_0": {
+        "direction": "O"
+      },
+      "o_Data_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "i_Rx_0": {
+        "direction": "I"
+      },
+      "PS2C_0": {
+        "direction": "I"
+      },
+      "PS2D_0": {
+        "direction": "I"
+      },
+      "o_TimerOverflow_0": {
+        "direction": "O"
+      },
+      "o_PWMChannel1_0": {
+        "direction": "O"
+      },
+      "o_PWMChannel2_0": {
+        "direction": "O"
+      },
+      "o_PWMChannel3_0": {
+        "direction": "O"
+      },
+      "o_PWMChannel4_0": {
+        "direction": "O"
+      },
+      "o_OnePulse_0": {
+        "direction": "O"
+      },
+      "i_Clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "i_Rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_i_Clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_Rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "int_source3_0": {
+        "direction": "I"
+      },
+      "int_source2_0": {
+        "direction": "I"
+      },
+      "int_source1_0": {
+        "direction": "I"
+      },
+      "int_source0_0": {
+        "direction": "I"
+      },
+      "led_teste_0": {
+        "direction": "O"
+      },
+      "pin_out_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "pin_in_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "PS2_Slave_0": {
+        "vlnv": "user.org:user:PS2_Slave:1.0",
+        "xci_name": "design_1_PS2_Slave_0_0",
+        "xci_path": "ip/design_1_PS2_Slave_0_0/design_1_PS2_Slave_0_0.xci",
+        "inst_hier_path": "PS2_Slave_0"
+      },
+      "timerSlave_0": {
+        "vlnv": "user.org:user:timerSlave:1.0",
+        "xci_name": "design_1_timerSlave_0_0",
+        "xci_path": "ip/design_1_timerSlave_0_0/design_1_timerSlave_0_0.xci",
+        "inst_hier_path": "timerSlave_0"
+      },
+      "DataMemory_0": {
+        "vlnv": "user.org:user:DataMemory:1.0",
+        "xci_name": "design_1_DataMemory_0_0",
+        "xci_path": "ip/design_1_DataMemory_0_0/design_1_DataMemory_0_0.xci",
+        "inst_hier_path": "DataMemory_0"
+      },
+      "UartSlave_0": {
+        "vlnv": "user.org:user:UartSlave:1.0",
+        "xci_name": "design_1_UartSlave_0_0",
+        "xci_path": "ip/design_1_UartSlave_0_0/design_1_UartSlave_0_0.xci",
+        "inst_hier_path": "UartSlave_0"
+      },
+      "CustomInterconnect_0": {
+        "vlnv": "user.org:user:CustomInterconnect:1.0",
+        "xci_name": "design_1_CustomInterconnect_0_0",
+        "xci_path": "ip/design_1_CustomInterconnect_0_0/design_1_CustomInterconnect_0_0.xci",
+        "inst_hier_path": "CustomInterconnect_0"
+      },
+      "interruptControllerS_0": {
+        "vlnv": "user.org:user:interruptControllerSlave:1.0",
+        "xci_name": "design_1_interruptControllerS_0_0",
+        "xci_path": "ip/design_1_interruptControllerS_0_0/design_1_interruptControllerS_0_0.xci",
+        "inst_hier_path": "interruptControllerS_0"
+      },
+      "GPIO_Slave_0": {
+        "vlnv": "user.org:user:GPIO_Slave:1.0",
+        "xci_name": "design_1_GPIO_Slave_0_0",
+        "xci_path": "ip/design_1_GPIO_Slave_0_0/design_1_GPIO_Slave_0_0.xci",
+        "inst_hier_path": "GPIO_Slave_0"
+      },
+      "CPU_0": {
+        "vlnv": "user.org:user:CPU:1.0",
+        "xci_name": "design_1_CPU_0_0",
+        "xci_path": "ip/design_1_CPU_0_0/design_1_CPU_0_0.xci",
+        "inst_hier_path": "CPU_0"
+      }
+    },
+    "nets": {
+      "CPU_0_led_teste": {
+        "ports": [
+          "CPU_0/led_teste",
+          "led_teste_0"
+        ]
+      },
+      "CPU_0_o_IntAckAttended": {
+        "ports": [
+          "CPU_0/o_IntAckAttended",
+          "interruptControllerS_0/ack_attended"
+        ]
+      },
+      "CPU_0_o_IntAckComplete": {
+        "ports": [
+          "CPU_0/o_IntAckComplete",
+          "interruptControllerS_0/ack_complete"
+        ]
+      },
+      "CPU_0_o_RAddr": {
+        "ports": [
+          "CPU_0/o_RAddr",
+          "CustomInterconnect_0/i_RAddr"
+        ]
+      },
+      "CPU_0_o_REnable": {
+        "ports": [
+          "CPU_0/o_REnable",
+          "CustomInterconnect_0/i_REnable"
+        ]
+      },
+      "CPU_0_o_WAddr": {
+        "ports": [
+          "CPU_0/o_WAddr",
+          "CustomInterconnect_0/i_WAddr"
+        ]
+      },
+      "CPU_0_o_WData": {
+        "ports": [
+          "CPU_0/o_WData",
+          "CustomInterconnect_0/i_WData"
+        ]
+      },
+      "CPU_0_o_WEnable": {
+        "ports": [
+          "CPU_0/o_WEnable",
+          "CustomInterconnect_0/i_WEnable"
+        ]
+      },
+      "CPU_1_o_Clk": {
+        "ports": [
+          "CPU_0/o_Clk",
+          "PS2_Slave_0/i_Clk",
+          "timerSlave_0/i_Clk",
+          "DataMemory_0/i_Clk",
+          "UartSlave_0/i_Clk",
+          "interruptControllerS_0/i_Clk",
+          "GPIO_Slave_0/i_Clk"
+        ]
+      },
+      "CPU_1_o_Rst": {
+        "ports": [
+          "CPU_0/o_Rst",
+          "PS2_Slave_0/i_Rst",
+          "timerSlave_0/i_Rst",
+          "DataMemory_0/i_Rst",
+          "UartSlave_0/i_Rst",
+          "interruptControllerS_0/i_Rst",
+          "GPIO_Slave_0/i_Rst"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_0": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_0",
+          "DataMemory_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_1": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_1",
+          "interruptControllerS_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_2": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_2",
+          "GPIO_Slave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_3": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_3",
+          "UartSlave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_4": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_4",
+          "PS2_Slave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RAddr_7": {
+        "ports": [
+          "CustomInterconnect_0/o_RAddr_7",
+          "timerSlave_0/i_RAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_RData": {
+        "ports": [
+          "CustomInterconnect_0/o_RData",
+          "CPU_0/i_RData"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_0": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_0",
+          "DataMemory_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_1": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_1",
+          "interruptControllerS_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_2": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_2",
+          "GPIO_Slave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_3": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_3",
+          "UartSlave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_4": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_4",
+          "PS2_Slave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_REnable_7": {
+        "ports": [
+          "CustomInterconnect_0/o_REnable_7",
+          "timerSlave_0/i_REnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_0",
+          "DataMemory_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_1",
+          "interruptControllerS_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_2": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_2",
+          "GPIO_Slave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_3",
+          "UartSlave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_4": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_4",
+          "PS2_Slave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WAddr_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WAddr_7",
+          "timerSlave_0/i_WAddr"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_0",
+          "DataMemory_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_1",
+          "interruptControllerS_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_2": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_2",
+          "GPIO_Slave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_3",
+          "UartSlave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_4": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_4",
+          "PS2_Slave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WData_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WData_7",
+          "timerSlave_0/i_WData"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_0": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_0",
+          "DataMemory_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_1": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_1",
+          "interruptControllerS_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_2": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_2",
+          "GPIO_Slave_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_3": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_3",
+          "UartSlave_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_4": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_4",
+          "PS2_Slave_0/i_WEnable"
+        ]
+      },
+      "CustomInterconnect_0_o_WEnable_7": {
+        "ports": [
+          "CustomInterconnect_0/o_WEnable_7",
+          "timerSlave_0/i_WEnable"
+        ]
+      },
+      "DataMemory_0_o_MemBusy": {
+        "ports": [
+          "DataMemory_0/o_MemBusy",
+          "CPU_0/i_DataMemRdy"
+        ]
+      },
+      "DataMemory_0_o_RData": {
+        "ports": [
+          "DataMemory_0/o_RData",
+          "CustomInterconnect_0/i_RData_0"
+        ]
+      },
+      "GPIO_Slave_0_o_RData": {
+        "ports": [
+          "GPIO_Slave_0/o_RData",
+          "CustomInterconnect_0/i_RData_2"
+        ]
+      },
+      "GPIO_Slave_0_pin_out": {
+        "ports": [
+          "GPIO_Slave_0/pin_out",
+          "pin_out_0"
+        ]
+      },
+      "PS2C_0_1": {
+        "ports": [
+          "PS2C_0",
+          "PS2_Slave_0/PS2C"
+        ]
+      },
+      "PS2D_0_1": {
+        "ports": [
+          "PS2D_0",
+          "PS2_Slave_0/PS2D"
+        ]
+      },
+      "PS2_Slave_0_o_Data": {
+        "ports": [
+          "PS2_Slave_0/o_Data",
+          "o_Data_0"
+        ]
+      },
+      "PS2_Slave_0_o_RData": {
+        "ports": [
+          "PS2_Slave_0/o_RData",
+          "CustomInterconnect_0/i_RData_4"
+        ]
+      },
+      "UartSlave_0_o_RData": {
+        "ports": [
+          "UartSlave_0/o_RData",
+          "CustomInterconnect_0/i_RData_3"
+        ]
+      },
+      "UartSlave_0_o_Tx": {
+        "ports": [
+          "UartSlave_0/o_Tx",
+          "o_Tx_0"
+        ]
+      },
+      "i_Clk_0_1": {
+        "ports": [
+          "i_Clk_0",
+          "CustomInterconnect_0/i_Clk",
+          "CPU_0/i_Clk"
+        ]
+      },
+      "i_Rst_0_1": {
+        "ports": [
+          "i_Rst_0",
+          "CustomInterconnect_0/i_Rst",
+          "CPU_0/i_Rst"
+        ]
+      },
+      "i_Rx_0_1": {
+        "ports": [
+          "i_Rx_0",
+          "UartSlave_0/i_Rx"
+        ]
+      },
+      "int_source0_0_1": {
+        "ports": [
+          "int_source0_0",
+          "interruptControllerS_0/int_source0"
+        ]
+      },
+      "int_source1_0_1": {
+        "ports": [
+          "int_source1_0",
+          "interruptControllerS_0/int_source1"
+        ]
+      },
+      "int_source2_0_1": {
+        "ports": [
+          "int_source2_0",
+          "interruptControllerS_0/int_source2"
+        ]
+      },
+      "int_source3_0_1": {
+        "ports": [
+          "int_source3_0",
+          "interruptControllerS_0/int_source3"
+        ]
+      },
+      "interruptControllerS_0_int_attending": {
+        "ports": [
+          "interruptControllerS_0/int_attending",
+          "CPU_0/i_IntAttending"
+        ]
+      },
+      "interruptControllerS_0_int_pending": {
+        "ports": [
+          "interruptControllerS_0/int_pending",
+          "CPU_0/i_IntPending"
+        ]
+      },
+      "interruptControllerS_0_irq_number": {
+        "ports": [
+          "interruptControllerS_0/irq_number",
+          "CPU_0/i_IntNumber"
+        ]
+      },
+      "interruptControllerS_0_irq_req": {
+        "ports": [
+          "interruptControllerS_0/irq_req",
+          "CPU_0/i_IntRequest"
+        ]
+      },
+      "interruptControllerS_0_o_RData": {
+        "ports": [
+          "interruptControllerS_0/o_RData",
+          "CustomInterconnect_0/i_RData_1"
+        ]
+      },
+      "pin_in_0_1": {
+        "ports": [
+          "pin_in_0",
+          "GPIO_Slave_0/pin_in"
+        ]
+      },
+      "timerSlave_0_o_OnePulse": {
+        "ports": [
+          "timerSlave_0/o_OnePulse",
+          "o_OnePulse_0"
+        ]
+      },
+      "timerSlave_0_o_PWMChannel1": {
+        "ports": [
+          "timerSlave_0/o_PWMChannel1",
+          "o_PWMChannel1_0"
+        ]
+      },
+      "timerSlave_0_o_PWMChannel2": {
+        "ports": [
+          "timerSlave_0/o_PWMChannel2",
+          "o_PWMChannel2_0"
+        ]
+      },
+      "timerSlave_0_o_PWMChannel3": {
+        "ports": [
+          "timerSlave_0/o_PWMChannel3",
+          "o_PWMChannel3_0"
+        ]
+      },
+      "timerSlave_0_o_PWMChannel4": {
+        "ports": [
+          "timerSlave_0/o_PWMChannel4",
+          "o_PWMChannel4_0"
+        ]
+      },
+      "timerSlave_0_o_RData": {
+        "ports": [
+          "timerSlave_0/o_RData",
+          "CustomInterconnect_0/i_RData_7"
+        ]
+      },
+      "timerSlave_0_o_TimerOverflow": {
+        "ports": [
+          "timerSlave_0/o_TimerOverflow",
+          "o_TimerOverflow_0"
+        ]
+      }
+    }
+  }
+}

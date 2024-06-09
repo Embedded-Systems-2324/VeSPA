@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SoC_tb_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="SoC_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="364.652 ns"></ZoomStartTime>
+      <ZoomEndTime time="379.073 ns"></ZoomEndTime>
+      <Cursor1Time time="372.872 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="134"></NameColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+      <marker label="" time="888414" />
+      <marker label="" time="380640" />
+      <marker label="" time="365480" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/i_Clk">
+      <obj_property name="ElementShortName">i_Clk</obj_property>
+      <obj_property name="ObjectShortName">i_Clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SoC_tb/dut/design_1_i/CPU_0/i_Rst">
+      <obj_property name="ElementShortName">i_Rst</obj_property>
+      <obj_property name="ObjectShortName">i_Rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_FetchDecodeReg/\o_ProgramCounter_reg[31]_3 ">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_3 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_3 [31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">PC_FECTH</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_DecodeExecuteReg/\o_ProgramCounter_reg[31]_1 ">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[31]_1 [31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">PC_DECODE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/\o_ProgramCounter_reg[22]_i_2 ">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">\o_ProgramCounter_reg[22]_i_2 [22:0]</obj_property>
+      <obj_property name="ObjectShortName">\o_ProgramCounter_reg[22]_i_2 [22:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">PC_EXECUTE</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/alu/i_LeftOp">
+      <obj_property name="ElementShortName">i_LeftOp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_LeftOp[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/alu/i_RigthOp">
+      <obj_property name="ElementShortName">i_RigthOp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_RigthOp[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SoC_tb/dut/design_1_i/CPU_0/inst/_InstrExecute/alu/o_Output">
+      <obj_property name="ElementShortName">o_Output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_Output[31:0]</obj_property>
+   </wvobject>
+</wave_config>
