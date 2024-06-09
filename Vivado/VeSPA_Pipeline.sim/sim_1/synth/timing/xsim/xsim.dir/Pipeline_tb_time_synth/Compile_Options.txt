@@ -1,1 +1,0 @@
---incr --debug "typical" --relax --mt "8" --maxdelay -d "BUS_MSB=31" -d "BUS_WIDTH=32" -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "Pipeline_tb_time_synth" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.Pipeline_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

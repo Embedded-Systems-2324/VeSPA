@@ -1,7 +1,0 @@
-Running: xsim.dir/Pipeline_tb_func_synth/xsimk -simmode gui -wdb Pipeline_tb_func_synth.wdb -simrunnum 0 -socket 55807
-Design successfully loaded
-Design Loading Memory Usage: 46508 KB (Peak: 46704 KB)
-Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 132284 KB (Peak: 185776 KB)
-Simulation CPU Usage: 260 ms
